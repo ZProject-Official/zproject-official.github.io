@@ -7,12 +7,12 @@ const config: Config = {
   tagline: 'Transformez vos idées en réalité.',
   favicon: 'img/favicon.ico',
 
-  url: 'http://localhost:3000',
+  url: 'https://zproject-official.github.io',
   baseUrl: '/',
 
   organizationName: 'ZProject-Official', 
-  projectName: 'zUI',
-  deploymentBranch: 'ZProject-Official.github.io',
+  projectName: 'ZProject-Official.github.io',
+  deploymentBranch: 'deployment',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
