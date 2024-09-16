@@ -11,7 +11,8 @@ const config: Config = {
   baseUrl: '/',
 
   organizationName: 'ZProject-Official', 
-  projectName: 'zUI', 
+  projectName: 'zUI',
+  deploymentBranch: 'ZProject-Official.github.io',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
