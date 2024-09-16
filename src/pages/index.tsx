@@ -4,7 +4,7 @@ import HomepageCards from "../components/HomepageCards";
 
 export default function Home(): JSX.Element {
   return (
-    <Layout description="Description will go into a meta tag in <head />">
+    <Layout description="Transformez vos idées en réalité.<head />">
       <HomepageHeader />
       <HomepageCards />
     </Layout>
