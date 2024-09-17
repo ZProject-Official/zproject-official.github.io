@@ -16,7 +16,15 @@
   padding: 5% 20% 5% 20%;
 }
 
+#header-icon {
+  width: 50%;
+}
+
 @media screen and (max-width: 996px) {
+  #header-icon {
+    width: 50vw;
+    height: 50vw;
+  }
   .header-contain {
     height: 50vh;
     flex-direction: column-reverse;

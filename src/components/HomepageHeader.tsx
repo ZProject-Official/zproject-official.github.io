@@ -30,12 +30,7 @@ function HomepageHeader() {
             />
           </div>
         </div>
-        <img
-          src={illustration}
-          style={{
-            width: "50%",
-          }}
-        />
+        <img src={illustration} id="header-icon" />
       </div>
     </header>
   );

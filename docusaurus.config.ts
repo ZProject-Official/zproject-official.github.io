@@ -3,16 +3,15 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'zDocumentation',
+  title: 'zSquad',
   tagline: 'Transformez vos idées en réalité.',
   favicon: 'img/favicon.ico',
 
-  url: 'https://zproject-official.github.io',
+  url: 'http://localhost:3000',
   baseUrl: '/',
 
   organizationName: 'ZProject-Official', 
-  projectName: 'ZProject-Official.github.io',
-  deploymentBranch: 'deployment',
+  projectName: 'zUI', 
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -37,7 +36,15 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-
+  plugins: [
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      ({
+        hashed: true,
+        language: "fr"
+      }),
+    ],
+  ],
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
@@ -106,15 +113,6 @@ const config: Config = {
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} zProject - All rights reserved.`,
-    },
-    algolia: {
-      apiKey: '9d780b838c85fb96b0a3b7ad71142277', 
-      indexName: 'zDocumentation',
-      appId: '86AC4GM0FR', 
-      contextualSearch: true, 
-      searchParameters: {
-  
-      }, 
     },
     prism: {
       theme: prismThemes.github,
