@@ -231,6 +231,432 @@ function MDXContent(props = {}) {
 
 /***/ }),
 
+/***/ 2290:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   assets: () => (/* binding */ assets),
+/* harmony export */   contentTitle: () => (/* binding */ contentTitle),
+/* harmony export */   "default": () => (/* binding */ MDXContent),
+/* harmony export */   frontMatter: () => (/* binding */ frontMatter),
+/* harmony export */   metadata: () => (/* binding */ metadata),
+/* harmony export */   toc: () => (/* binding */ toc)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4848);
+/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8453);
+
+
+const frontMatter = {
+	sidebar_position: 2
+};
+const contentTitle = 'Installation';
+const metadata = {
+  "id": "zSleep/instal",
+  "title": "Installation",
+  "description": "Voici un guide d'installation détaillé pour zSleep, destiné aux administrateurs de serveurs FiveM. Ce guide inclut les étapes nécessaires pour installer le script sur votre serveur, ainsi que les informations de configuration à personnaliser pour répondre à vos besoins.",
+  "source": "@site/docs/zSleep/instal.md",
+  "sourceDirName": "zSleep",
+  "slug": "/zSleep/instal",
+  "permalink": "/docs/zSleep/instal",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/docs/zSleep/intro"
+  }
+};
+const assets = {
+
+};
+
+
+
+const toc = [{
+  "value": "Prérequis",
+  "id": "prérequis",
+  "level": 3
+}, {
+  "value": "Étape 1 : Téléchargement de zSleep",
+  "id": "étape-1--téléchargement-de-zsleep",
+  "level": 3
+}, {
+  "value": "Étape 2 : Configuration de la Base de Données",
+  "id": "étape-2--configuration-de-la-base-de-données",
+  "level": 3
+}, {
+  "value": "Étape 3 : Configuration du Script",
+  "id": "étape-3--configuration-du-script",
+  "level": 3
+}, {
+  "value": "Étape 4 : Démarrer le Script sur votre Serveur",
+  "id": "étape-4--démarrer-le-script-sur-votre-serveur",
+  "level": 3
+}, {
+  "value": "Étape 5 : Vérification et Tests",
+  "id": "étape-5--vérification-et-tests",
+  "level": 3
+}, {
+  "value": "Support",
+  "id": "support",
+  "level": 3
+}];
+function _createMdxContent(props) {
+  const _components = {
+    a: "a",
+    code: "code",
+    h1: "h1",
+    h3: "h3",
+    header: "header",
+    hr: "hr",
+    li: "li",
+    ol: "ol",
+    p: "p",
+    pre: "pre",
+    strong: "strong",
+    ul: "ul",
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.header, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h1, {
+        id: "installation",
+        children: "Installation"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Voici un guide d'installation détaillé pour ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "zSleep"
+      }), ", destiné aux administrateurs de serveurs FiveM. Ce guide inclut les étapes nécessaires pour installer le script sur votre serveur, ainsi que les informations de configuration à personnaliser pour répondre à vos besoins."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.hr, {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "prérequis",
+      children: "Prérequis"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+        children: "Un serveur FiveM fonctionnel."
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+        children: "Accès à la base de données MySQL de votre serveur."
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["Connaissance de base de la configuration de scripts et de l'édition de fichiers ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: ".lua"
+        }), "."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "étape-1--téléchargement-de-zsleep",
+      children: "Étape 1 : Téléchargement de zSleep"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+        children: "Téléchargez le script zSleep depuis le lien de téléchargement fourni après votre achat."
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["Décompressez le fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: ".zip"
+        }), " téléchargé."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["Copiez le dossier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "zSleep"
+        }), " dans le répertoire ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "resources"
+        }), " de votre serveur FiveM."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "étape-2--configuration-de-la-base-de-données",
+      children: "Étape 2 : Configuration de la Base de Données"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["Ouvrez le fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: ".sql"
+        }), " fourni dans le dossier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "zSleep"
+        }), "."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+        children: "Connectez-vous à votre base de données MySQL (via un outil comme phpMyAdmin ou un autre client SQL)."
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["Importez le fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: ".sql"
+        }), " pour créer les tables nécessaires au bon fonctionnement de zSleep :", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+              children: "Important"
+            }), " : Assurez-vous que la base de donnée est bien reliée à votre serveur dans le ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+              children: "server.cfg"
+            }), "."]
+          }), "\n"]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "étape-3--configuration-du-script",
+      children: "Étape 3 : Configuration du Script"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["Dans le dossier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "zSleep"
+        }), ", ouvrez le fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "config.lua"
+        }), " dans le dossier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "shared"
+        }), "."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+        children: "Vous y trouverez la configuration suivante, à ajuster selon les besoins de votre serveur :"
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-lua",
+        children: "local Config <const> = {\r\n    Identifier = \"license\", -- Type d'identifiant utilisé pour les joueurs (par défaut : \"license\").\r\n    Carry = {\r\n        Command = \"carry\", -- Commande pour porter un joueur à proximité.\r\n        Description = \"Porter une personne à proximité.\",\r\n        MaxRadius = 5 -- Rayon maximal (en mètres) pour porter un joueur.\r\n    },\r\n    Animations = {\r\n        [\"sleeping\"] = {\r\n            Dictionary = \"timetable@tracy@sleep@\",\r\n            Animation = \"idle_c\" -- Animation pour le personnage en train de dormir.\r\n        },\r\n        [\"gettingUp\"] = {\r\n            Dictionary = \"get_up@sat_on_floor@to_stand\",\r\n            Animation = \"getup_0\" -- Animation pour le personnage qui se relève.\r\n        },\r\n        [\"sleepingInCar\"] = {\r\n            Dictionary = \"random@car_sleeping\",\r\n            Animation = \"sleeping_idle\" -- Animation pour le personnage dormant dans un véhicule.\r\n        },\r\n    },\r\n    Peds = {\r\n        Alpha = false, -- Rendre les Peds semi-transparents.\r\n        Invincible = true, -- Rendre les Peds invincibles.\r\n        Collision = false -- Désactiver la collision pour les Peds.\r\n    },\r\n    SendNotification = function(message)\r\n        zUI.ShowNotification(message) -- Fonction pour afficher une notification.\r\n    end\r\n}\r\n\r\n_ENV.Config = Config\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
+      start: "3",
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["Modifiez les paramètres de la section ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "Carry"
+        }), " pour ajuster la commande et le rayon de portée selon les préférences de votre serveur."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["Si vous souhaitez changer les animations, remplacez les dictionnaires et noms d'animations dans la section ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "Animations"
+        }), "."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["Vous pouvez également ajuster les paramètres dans la section ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "Peds"
+        }), " pour gérer la visibilité, l'invincibilité et la collision des personnages non-joueurs (Peds)."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "étape-4--démarrer-le-script-sur-votre-serveur",
+      children: "Étape 4 : Démarrer le Script sur votre Serveur"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["Ouvrez le fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "server.cfg"
+        }), " de votre serveur FiveM."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+        children: "Ajoutez la ligne suivante pour démarrer le script zSleep :"
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "ensure zSleep\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
+      start: "3",
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+        children: "Redémarrez votre serveur FiveM pour appliquer les modifications."
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "étape-5--vérification-et-tests",
+      children: "Étape 5 : Vérification et Tests"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+        children: "Connectez-vous à votre serveur FiveM."
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["Testez la commande ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "/carry"
+        }), " pour vous assurer que le script fonctionne correctement."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+        children: "Vérifiez que les animations de sommeil et de relevé s’exécutent bien et que la reconnexion des joueurs après déconnexion fonctionne comme prévu."
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["Si vous rencontrez des erreurs ou des messages dans la console, vérifiez la configuration du fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "config.lua"
+        }), " et assurez-vous que les dépendances sont bien installées."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "support",
+      children: "Support"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Pour toute question supplémentaire ou assistance technique, n'hésitez pas à nous rejoindre sur notre ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+        href: "https://discord.gg/zproject",
+        children: "serveur Discord"
+      }), ". Nous sommes à votre disposition pour vous aider avec l'installation et la configuration de zSleep."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.hr, {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Ce guide vous permettra de configurer et d'intégrer rapidement ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "zSleep"
+      }), " à votre serveur FiveM, offrant ainsi une expérience de sommeil immersive et réaliste à vos joueurs."]
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
+    ...props,
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+
+
+
+/***/ }),
+
+/***/ 9681:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   assets: () => (/* binding */ assets),
+/* harmony export */   contentTitle: () => (/* binding */ contentTitle),
+/* harmony export */   "default": () => (/* binding */ MDXContent),
+/* harmony export */   frontMatter: () => (/* binding */ frontMatter),
+/* harmony export */   metadata: () => (/* binding */ metadata),
+/* harmony export */   toc: () => (/* binding */ toc)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4848);
+/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8453);
+
+
+const frontMatter = {
+	sidebar_position: 1
+};
+const contentTitle = 'Introduction';
+const metadata = {
+  "id": "zSleep/intro",
+  "title": "Introduction",
+  "description": "Bienvenue dans la documentation officielle de zSleep, le script de sommeil ultime pour les administrateurs de serveurs FiveM. Avec zSleep, offrez à votre communauté de nouvelles possibilités immersives grâce à une mécanique de sommeil réaliste et intuitive.",
+  "source": "@site/docs/zSleep/intro.md",
+  "sourceDirName": "zSleep",
+  "slug": "/zSleep/intro",
+  "permalink": "/docs/zSleep/intro",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "SetVisible",
+    "permalink": "/docs/zUI/Methods/setVisible"
+  },
+  "next": {
+    "title": "Installation",
+    "permalink": "/docs/zSleep/instal"
+  }
+};
+const assets = {
+
+};
+
+
+
+const toc = [{
+  "value": "À propos de zSleep",
+  "id": "à-propos-de-zsleep",
+  "level": 2
+}, {
+  "value": "Contenu de la Documentation",
+  "id": "contenu-de-la-documentation",
+  "level": 2
+}, {
+  "value": "Contribuez à l&#39;Amélioration",
+  "id": "contribuez-à-lamélioration",
+  "level": 2
+}, {
+  "value": "Rejoignez-nous sur Discord",
+  "id": "rejoignez-nous-sur-discord",
+  "level": 2
+}, {
+  "value": "Suivez les Mises à Jour",
+  "id": "suivez-les-mises-à-jour",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    a: "a",
+    em: "em",
+    h1: "h1",
+    h2: "h2",
+    header: "header",
+    li: "li",
+    p: "p",
+    strong: "strong",
+    ul: "ul",
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.header, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h1, {
+        id: "introduction",
+        children: "Introduction"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Bienvenue dans la documentation officielle de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "zSleep"
+      }), ", le script de sommeil ultime pour les administrateurs de serveurs FiveM. Avec zSleep, offrez à votre communauté de nouvelles possibilités immersives grâce à une mécanique de sommeil réaliste et intuitive."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "à-propos-de-zsleep",
+      children: "À propos de zSleep"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "zSleep"
+      }), " a été conçu pour enrichir l'expérience des serveurs de roleplay sur FiveM. Ce script permet à vos joueurs de faire dormir leur personnage n'importe où, que ce soit au sol ou à l'intérieur d'un véhicule. En cas de déconnexion alors qu'un joueur est porté ou à l'intérieur d'un véhicule, il reprendra sa place exacte à son retour. Le script est entièrement configurable, permettant aux administrateurs de l'adapter parfaitement aux besoins de leur serveur."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Important :"
+      }), " Actuellement, zSleep n'est pas compatible avec les scripts ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+        children: "multi_character"
+      }), ". Cependant, une mise à jour est en cours de développement pour assurer cette compatibilité dans un futur proche."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "contenu-de-la-documentation",
+      children: "Contenu de la Documentation"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Cette documentation inclut :"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+        children: "Les étapes détaillées pour installer et configurer zSleep sur votre serveur."
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Notre objectif est de fournir une documentation claire et complète pour garantir une intégration réussie de zSleep sur votre serveur."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "contribuez-à-lamélioration",
+      children: "Contribuez à l'Amélioration"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Nous nous efforçons de maintenir cette documentation à jour et pertinente. Si vous remarquez des informations incomplètes ou des erreurs, ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "nous vous invitons à ouvrir un ticket sur notre serveur Discord [Support zSleep]"
+      }), ". Votre retour est essentiel pour améliorer notre support."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "rejoignez-nous-sur-discord",
+      children: "Rejoignez-nous sur Discord"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Pour toute question ou assistance concernant l'installation et l'utilisation de zSleep, rejoignez notre ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+        href: "https://discord.gg/zproject",
+        children: "serveur Discord"
+      }), ". C’est également le lieu idéal pour échanger avec d'autres administrateurs, partager vos retours, et suivre les dernières mises à jour de zSleep."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "suivez-les-mises-à-jour",
+      children: "Suivez les Mises à Jour"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Nous mettons régulièrement à jour cette documentation pour intégrer les retours de la communauté et les nouvelles fonctionnalités de zSleep. Pensez à consulter cette page fréquemment pour rester à jour et tirer le meilleur parti de votre script."
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
+    ...props,
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+
+
+
+/***/ }),
+
 /***/ 7606:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -4817,6 +5243,10 @@ const metadata = {
   "previous": {
     "title": "SetItems",
     "permalink": "/docs/zUI/Methods/setItems"
+  },
+  "next": {
+    "title": "Introduction",
+    "permalink": "/docs/zSleep/intro"
   }
 };
 const assets = {
@@ -10104,9 +10534,9 @@ var interopRequireWildcard = __webpack_require__(9309);
 var lib = __webpack_require__(3259);
 var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
 ;// CONCATENATED MODULE: ./.docusaurus/routesChunkNames.json
-const routesChunkNames_namespaceObject = /*#__PURE__*/JSON.parse('{"/markdown-page-3d7":{"__comp":"1f391b9e","__context":{"plugin":"a7456010"},"content":"393be207"},"/search-822":{"__comp":"1a4e3797","__context":{"plugin":"138e0e15"}},"/tools-4ef":{"__comp":"4471e4eb","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"},"/docs-5a6":{"__comp":"5e95c892","__context":{"plugin":"aba21aa0"}},"/docs-823":{"__comp":"a7bd4aaa","__props":"0058b4c6"},"/docs-cda":{"__comp":"a94703ab"},"/docs/category/fonctions-7b5":{"__comp":"14eb3368","__props":"77edc38e"},"/docs/category/items-2c4":{"__comp":"14eb3368","__props":"f517399b"},"/docs/category/méthodes-d08":{"__comp":"14eb3368","__props":"86f8f604"},"/docs/category/zui-6ef":{"__comp":"14eb3368","__props":"20ddddd6"},"/docs/intro-61d":{"__comp":"17896441","content":"0e384e19"},"/docs/zUI/Fonctions/alertInput-b90":{"__comp":"17896441","content":"0c2eb47b"},"/docs/zUI/Fonctions/keyboardInput-d89":{"__comp":"17896441","content":"a03d2c35"},"/docs/zUI/Fonctions/renderSprite-d9d":{"__comp":"17896441","content":"5e283e32"},"/docs/zUI/Fonctions/showHelpNotification-303":{"__comp":"17896441","content":"a7e2b75e"},"/docs/zUI/installation-d42":{"__comp":"17896441","content":"6245e738"},"/docs/zUI/Items/button-1c7":{"__comp":"17896441","content":"48947c21"},"/docs/zUI/Items/checkbox-89f":{"__comp":"17896441","content":"d08fa093"},"/docs/zUI/Items/features-bfe":{"__comp":"17896441","content":"577f092c"},"/docs/zUI/Items/line-954":{"__comp":"17896441","content":"521c893a"},"/docs/zUI/Items/linkButton-c43":{"__comp":"17896441","content":"7c93d25a"},"/docs/zUI/Items/list-5ba":{"__comp":"17896441","content":"8df8a293"},"/docs/zUI/Items/separator-8e4":{"__comp":"17896441","content":"1b16c826"},"/docs/zUI/Methods/goBack-dc7":{"__comp":"17896441","content":"9b784c70"},"/docs/zUI/Methods/goTo-6a3":{"__comp":"17896441","content":"b821d7d8"},"/docs/zUI/Methods/isVisible-2c1":{"__comp":"17896441","content":"7df3f12d"},"/docs/zUI/Methods/onClose-ee1":{"__comp":"17896441","content":"14db5828"},"/docs/zUI/Methods/onOpen-e2e":{"__comp":"17896441","content":"93110188"},"/docs/zUI/Methods/setItems-f2b":{"__comp":"17896441","content":"7e6e0e0e"},"/docs/zUI/Methods/setVisible-036":{"__comp":"17896441","content":"d901ba3d"},"/docs/zUI/presentation-21e":{"__comp":"17896441","content":"f127a06f"},"/docs/zUI/theme-673":{"__comp":"17896441","content":"4ad557b0"},"/docs/zUI/utilisation-870":{"__comp":"17896441","content":"8d7384cd"},"/-e5f":{"__comp":"1df93b7f","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"}}');
+const routesChunkNames_namespaceObject = /*#__PURE__*/JSON.parse('{"/markdown-page-3d7":{"__comp":"1f391b9e","__context":{"plugin":"a7456010"},"content":"393be207"},"/search-822":{"__comp":"1a4e3797","__context":{"plugin":"138e0e15"}},"/tools-4ef":{"__comp":"4471e4eb","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"},"/docs-fdf":{"__comp":"5e95c892","__context":{"plugin":"aba21aa0"}},"/docs-eca":{"__comp":"a7bd4aaa","__props":"0058b4c6"},"/docs-c3e":{"__comp":"a94703ab"},"/docs/category/fonctions-7b5":{"__comp":"14eb3368","__props":"77edc38e"},"/docs/category/items-2c4":{"__comp":"14eb3368","__props":"f517399b"},"/docs/category/méthodes-d08":{"__comp":"14eb3368","__props":"86f8f604"},"/docs/category/zui-6ef":{"__comp":"14eb3368","__props":"20ddddd6"},"/docs/intro-61d":{"__comp":"17896441","content":"0e384e19"},"/docs/zSleep/instal-cdf":{"__comp":"17896441","content":"c416a5cb"},"/docs/zSleep/intro-edb":{"__comp":"17896441","content":"72b1f434"},"/docs/zUI/Fonctions/alertInput-b90":{"__comp":"17896441","content":"0c2eb47b"},"/docs/zUI/Fonctions/keyboardInput-d89":{"__comp":"17896441","content":"a03d2c35"},"/docs/zUI/Fonctions/renderSprite-d9d":{"__comp":"17896441","content":"5e283e32"},"/docs/zUI/Fonctions/showHelpNotification-303":{"__comp":"17896441","content":"a7e2b75e"},"/docs/zUI/installation-d42":{"__comp":"17896441","content":"6245e738"},"/docs/zUI/Items/button-1c7":{"__comp":"17896441","content":"48947c21"},"/docs/zUI/Items/checkbox-89f":{"__comp":"17896441","content":"d08fa093"},"/docs/zUI/Items/features-bfe":{"__comp":"17896441","content":"577f092c"},"/docs/zUI/Items/line-954":{"__comp":"17896441","content":"521c893a"},"/docs/zUI/Items/linkButton-c43":{"__comp":"17896441","content":"7c93d25a"},"/docs/zUI/Items/list-5ba":{"__comp":"17896441","content":"8df8a293"},"/docs/zUI/Items/separator-8e4":{"__comp":"17896441","content":"1b16c826"},"/docs/zUI/Methods/goBack-dc7":{"__comp":"17896441","content":"9b784c70"},"/docs/zUI/Methods/goTo-6a3":{"__comp":"17896441","content":"b821d7d8"},"/docs/zUI/Methods/isVisible-2c1":{"__comp":"17896441","content":"7df3f12d"},"/docs/zUI/Methods/onClose-ee1":{"__comp":"17896441","content":"14db5828"},"/docs/zUI/Methods/onOpen-e2e":{"__comp":"17896441","content":"93110188"},"/docs/zUI/Methods/setItems-f2b":{"__comp":"17896441","content":"7e6e0e0e"},"/docs/zUI/Methods/setVisible-036":{"__comp":"17896441","content":"d901ba3d"},"/docs/zUI/presentation-21e":{"__comp":"17896441","content":"f127a06f"},"/docs/zUI/theme-673":{"__comp":"17896441","content":"4ad557b0"},"/docs/zUI/utilisation-870":{"__comp":"17896441","content":"8d7384cd"},"/-e5f":{"__comp":"1df93b7f","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"}}');
 ;// CONCATENATED MODULE: ./.docusaurus/registry.js
-/* harmony default export */ const registry = ({"0058b4c6":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(6164))),"@generated/docusaurus-plugin-content-docs/default/p/docs-175.json",/*require.resolve*/(6164)],"0c2eb47b":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7606))),"@site/docs/zUI/Fonctions/alertInput.md",/*require.resolve*/(7606)],"0e384e19":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(619))),"@site/docs/intro.md",/*require.resolve*/(619)],"138e0e15":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(1597))),"@generated/@easyops-cn/docusaurus-search-local/default/__plugin.json",/*require.resolve*/(1597)],"14db5828":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4232))),"@site/docs/zUI/Methods/onClose.md",/*require.resolve*/(4232)],"14eb3368":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8367))),"@theme/DocCategoryGeneratedIndexPage",/*require.resolve*/(8367)],"17896441":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8950))),"@theme/DocItem",/*require.resolve*/(8950)],"1a4e3797":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4809))),"@theme/SearchPage",/*require.resolve*/(4809)],"1b16c826":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(5690))),"@site/docs/zUI/Items/separator.md",/*require.resolve*/(5690)],"1df93b7f":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7988))),"@site/src/pages/index.tsx",/*require.resolve*/(7988)],"1f391b9e":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4250))),"@theme/MDXPage",/*require.resolve*/(4250)],"20ddddd6":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(6783))),"@generated/docusaurus-plugin-content-docs/default/p/docs-category-zui-6d4.json",/*require.resolve*/(6783)],"393be207":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(633))),"@site/src/pages/markdown-page.md",/*require.resolve*/(633)],"4471e4eb":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(2032))),"@site/src/pages/tools.tsx",/*require.resolve*/(2032)],"48947c21":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4721))),"@site/docs/zUI/Items/button.md",/*require.resolve*/(4721)],"4ad557b0":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(5251))),"@site/docs/zUI/theme.md",/*require.resolve*/(5251)],"521c893a":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8747))),"@site/docs/zUI/Items/line.md",/*require.resolve*/(8747)],"577f092c":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(2226))),"@site/docs/zUI/Items/features.md",/*require.resolve*/(2226)],"5e283e32":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9133))),"@site/docs/zUI/Fonctions/renderSprite.md",/*require.resolve*/(9133)],"5e95c892":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7121))),"@theme/DocsRoot",/*require.resolve*/(7121)],"5e9f5e1a":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4784))),"@generated/docusaurus.config",/*require.resolve*/(4784)],"6245e738":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(6740))),"@site/docs/zUI/installation.md",/*require.resolve*/(6740)],"77edc38e":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(553))),"@generated/docusaurus-plugin-content-docs/default/p/docs-category-fonctions-5b6.json",/*require.resolve*/(553)],"7c93d25a":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7201))),"@site/docs/zUI/Items/linkButton.md",/*require.resolve*/(7201)],"7df3f12d":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(5077))),"@site/docs/zUI/Methods/isVisible.md",/*require.resolve*/(5077)],"7e6e0e0e":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4951))),"@site/docs/zUI/Methods/setItems.md",/*require.resolve*/(4951)],"86f8f604":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9599))),"@generated/docusaurus-plugin-content-docs/default/p/docs-category-methodes-d96.json",/*require.resolve*/(9599)],"8d7384cd":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(1427))),"@site/docs/zUI/utilisation.md",/*require.resolve*/(1427)],"8df8a293":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8533))),"@site/docs/zUI/Items/list.md",/*require.resolve*/(8533)],"93110188":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8002))),"@site/docs/zUI/Methods/onOpen.md",/*require.resolve*/(8002)],"9b784c70":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(3526))),"@site/docs/zUI/Methods/goBack.md",/*require.resolve*/(3526)],"a03d2c35":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7977))),"@site/docs/zUI/Fonctions/keyboardInput.md",/*require.resolve*/(7977)],"a7456010":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8552))),"@generated/docusaurus-plugin-content-pages/default/__plugin.json",/*require.resolve*/(8552)],"a7bd4aaa":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4532))),"@theme/DocVersionRoot",/*require.resolve*/(4532)],"a7e2b75e":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7073))),"@site/docs/zUI/Fonctions/showHelpNotification.md",/*require.resolve*/(7073)],"a94703ab":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8319))),"@theme/DocRoot",/*require.resolve*/(8319)],"aba21aa0":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7093))),"@generated/docusaurus-plugin-content-docs/default/__plugin.json",/*require.resolve*/(7093)],"b821d7d8":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(1056))),"@site/docs/zUI/Methods/goTo.md",/*require.resolve*/(1056)],"d08fa093":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(3464))),"@site/docs/zUI/Items/checkbox.md",/*require.resolve*/(3464)],"d901ba3d":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(2369))),"@site/docs/zUI/Methods/setVisible.md",/*require.resolve*/(2369)],"f127a06f":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(424))),"@site/docs/zUI/presentation.md",/*require.resolve*/(424)],"f517399b":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8936))),"@generated/docusaurus-plugin-content-docs/default/p/docs-category-items-9db.json",/*require.resolve*/(8936)]});
+/* harmony default export */ const registry = ({"0058b4c6":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(6164))),"@generated/docusaurus-plugin-content-docs/default/p/docs-175.json",/*require.resolve*/(6164)],"0c2eb47b":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7606))),"@site/docs/zUI/Fonctions/alertInput.md",/*require.resolve*/(7606)],"0e384e19":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(619))),"@site/docs/intro.md",/*require.resolve*/(619)],"138e0e15":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(1597))),"@generated/@easyops-cn/docusaurus-search-local/default/__plugin.json",/*require.resolve*/(1597)],"14db5828":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4232))),"@site/docs/zUI/Methods/onClose.md",/*require.resolve*/(4232)],"14eb3368":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8367))),"@theme/DocCategoryGeneratedIndexPage",/*require.resolve*/(8367)],"17896441":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8950))),"@theme/DocItem",/*require.resolve*/(8950)],"1a4e3797":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4809))),"@theme/SearchPage",/*require.resolve*/(4809)],"1b16c826":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(5690))),"@site/docs/zUI/Items/separator.md",/*require.resolve*/(5690)],"1df93b7f":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7988))),"@site/src/pages/index.tsx",/*require.resolve*/(7988)],"1f391b9e":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4250))),"@theme/MDXPage",/*require.resolve*/(4250)],"20ddddd6":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(6783))),"@generated/docusaurus-plugin-content-docs/default/p/docs-category-zui-6d4.json",/*require.resolve*/(6783)],"393be207":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(633))),"@site/src/pages/markdown-page.md",/*require.resolve*/(633)],"4471e4eb":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(2032))),"@site/src/pages/tools.tsx",/*require.resolve*/(2032)],"48947c21":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4721))),"@site/docs/zUI/Items/button.md",/*require.resolve*/(4721)],"4ad557b0":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(5251))),"@site/docs/zUI/theme.md",/*require.resolve*/(5251)],"521c893a":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8747))),"@site/docs/zUI/Items/line.md",/*require.resolve*/(8747)],"577f092c":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(2226))),"@site/docs/zUI/Items/features.md",/*require.resolve*/(2226)],"5e283e32":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9133))),"@site/docs/zUI/Fonctions/renderSprite.md",/*require.resolve*/(9133)],"5e95c892":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7121))),"@theme/DocsRoot",/*require.resolve*/(7121)],"5e9f5e1a":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4784))),"@generated/docusaurus.config",/*require.resolve*/(4784)],"6245e738":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(6740))),"@site/docs/zUI/installation.md",/*require.resolve*/(6740)],"72b1f434":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9681))),"@site/docs/zSleep/intro.md",/*require.resolve*/(9681)],"77edc38e":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(553))),"@generated/docusaurus-plugin-content-docs/default/p/docs-category-fonctions-5b6.json",/*require.resolve*/(553)],"7c93d25a":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7201))),"@site/docs/zUI/Items/linkButton.md",/*require.resolve*/(7201)],"7df3f12d":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(5077))),"@site/docs/zUI/Methods/isVisible.md",/*require.resolve*/(5077)],"7e6e0e0e":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4951))),"@site/docs/zUI/Methods/setItems.md",/*require.resolve*/(4951)],"86f8f604":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9599))),"@generated/docusaurus-plugin-content-docs/default/p/docs-category-methodes-d96.json",/*require.resolve*/(9599)],"8d7384cd":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(1427))),"@site/docs/zUI/utilisation.md",/*require.resolve*/(1427)],"8df8a293":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8533))),"@site/docs/zUI/Items/list.md",/*require.resolve*/(8533)],"93110188":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8002))),"@site/docs/zUI/Methods/onOpen.md",/*require.resolve*/(8002)],"9b784c70":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(3526))),"@site/docs/zUI/Methods/goBack.md",/*require.resolve*/(3526)],"a03d2c35":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7977))),"@site/docs/zUI/Fonctions/keyboardInput.md",/*require.resolve*/(7977)],"a7456010":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8552))),"@generated/docusaurus-plugin-content-pages/default/__plugin.json",/*require.resolve*/(8552)],"a7bd4aaa":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4532))),"@theme/DocVersionRoot",/*require.resolve*/(4532)],"a7e2b75e":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7073))),"@site/docs/zUI/Fonctions/showHelpNotification.md",/*require.resolve*/(7073)],"a94703ab":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8319))),"@theme/DocRoot",/*require.resolve*/(8319)],"aba21aa0":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7093))),"@generated/docusaurus-plugin-content-docs/default/__plugin.json",/*require.resolve*/(7093)],"b821d7d8":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(1056))),"@site/docs/zUI/Methods/goTo.md",/*require.resolve*/(1056)],"c416a5cb":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(2290))),"@site/docs/zSleep/instal.md",/*require.resolve*/(2290)],"d08fa093":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(3464))),"@site/docs/zUI/Items/checkbox.md",/*require.resolve*/(3464)],"d901ba3d":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(2369))),"@site/docs/zUI/Methods/setVisible.md",/*require.resolve*/(2369)],"f127a06f":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(424))),"@site/docs/zUI/presentation.md",/*require.resolve*/(424)],"f517399b":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8936))),"@generated/docusaurus-plugin-content-docs/default/p/docs-category-items-9db.json",/*require.resolve*/(8936)]});
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(4848);
 ;// CONCATENATED MODULE: ./node_modules/@docusaurus/core/lib/client/theme-fallback/Loading/index.js
@@ -10170,7 +10600,7 @@ if(typeof chunk==='object'||typeof chunk==='function'){Object.keys(loadedModule)
 let val=loadedModules;const keyPaths=keyPath.split('.');keyPaths.slice(0,-1).forEach(k=>{val=val[k];});val[keyPaths[keyPaths.length-1]]=chunk;});/* eslint-disable no-underscore-dangle */const Component=loadedModules.__comp;delete loadedModules.__comp;const routeContext=loadedModules.__context;delete loadedModules.__context;const routeProps=loadedModules.__props;delete loadedModules.__props;/* eslint-enable no-underscore-dangle */// Is there any way to put this RouteContextProvider upper in the tree?
 return/*#__PURE__*/(0,jsx_runtime.jsx)(client_routeContext/* RouteContextProvider */.W,{value:routeContext,children:/*#__PURE__*/(0,jsx_runtime.jsx)(Component,{...loadedModules,...routeProps,...props})});}});}
 ;// CONCATENATED MODULE: ./.docusaurus/routes.js
-/* harmony default export */ const routes = ([{path:'/markdown-page',component:ComponentCreator('/markdown-page','3d7'),exact:true},{path:'/search',component:ComponentCreator('/search','822'),exact:true},{path:'/tools',component:ComponentCreator('/tools','4ef'),exact:true},{path:'/docs',component:ComponentCreator('/docs','5a6'),routes:[{path:'/docs',component:ComponentCreator('/docs','823'),routes:[{path:'/docs',component:ComponentCreator('/docs','cda'),routes:[{path:'/docs/category/fonctions',component:ComponentCreator('/docs/category/fonctions','7b5'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/category/items',component:ComponentCreator('/docs/category/items','2c4'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/category/méthodes',component:ComponentCreator('/docs/category/méthodes','d08'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/category/zui',component:ComponentCreator('/docs/category/zui','6ef'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/intro',component:ComponentCreator('/docs/intro','61d'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Fonctions/alertInput',component:ComponentCreator('/docs/zUI/Fonctions/alertInput','b90'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Fonctions/keyboardInput',component:ComponentCreator('/docs/zUI/Fonctions/keyboardInput','d89'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Fonctions/renderSprite',component:ComponentCreator('/docs/zUI/Fonctions/renderSprite','d9d'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Fonctions/showHelpNotification',component:ComponentCreator('/docs/zUI/Fonctions/showHelpNotification','303'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/installation',component:ComponentCreator('/docs/zUI/installation','d42'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/button',component:ComponentCreator('/docs/zUI/Items/button','1c7'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/checkbox',component:ComponentCreator('/docs/zUI/Items/checkbox','89f'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/features',component:ComponentCreator('/docs/zUI/Items/features','bfe'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/line',component:ComponentCreator('/docs/zUI/Items/line','954'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/linkButton',component:ComponentCreator('/docs/zUI/Items/linkButton','c43'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/list',component:ComponentCreator('/docs/zUI/Items/list','5ba'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/separator',component:ComponentCreator('/docs/zUI/Items/separator','8e4'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/goBack',component:ComponentCreator('/docs/zUI/Methods/goBack','dc7'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/goTo',component:ComponentCreator('/docs/zUI/Methods/goTo','6a3'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/isVisible',component:ComponentCreator('/docs/zUI/Methods/isVisible','2c1'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/onClose',component:ComponentCreator('/docs/zUI/Methods/onClose','ee1'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/onOpen',component:ComponentCreator('/docs/zUI/Methods/onOpen','e2e'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/setItems',component:ComponentCreator('/docs/zUI/Methods/setItems','f2b'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/setVisible',component:ComponentCreator('/docs/zUI/Methods/setVisible','036'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/presentation',component:ComponentCreator('/docs/zUI/presentation','21e'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/theme',component:ComponentCreator('/docs/zUI/theme','673'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/utilisation',component:ComponentCreator('/docs/zUI/utilisation','870'),exact:true,sidebar:"tutorialSidebar"}]}]}]},{path:'/',component:ComponentCreator('/','e5f'),exact:true},{path:'*',component:ComponentCreator('*')}]);
+/* harmony default export */ const routes = ([{path:'/markdown-page',component:ComponentCreator('/markdown-page','3d7'),exact:true},{path:'/search',component:ComponentCreator('/search','822'),exact:true},{path:'/tools',component:ComponentCreator('/tools','4ef'),exact:true},{path:'/docs',component:ComponentCreator('/docs','fdf'),routes:[{path:'/docs',component:ComponentCreator('/docs','eca'),routes:[{path:'/docs',component:ComponentCreator('/docs','c3e'),routes:[{path:'/docs/category/fonctions',component:ComponentCreator('/docs/category/fonctions','7b5'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/category/items',component:ComponentCreator('/docs/category/items','2c4'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/category/méthodes',component:ComponentCreator('/docs/category/méthodes','d08'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/category/zui',component:ComponentCreator('/docs/category/zui','6ef'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/intro',component:ComponentCreator('/docs/intro','61d'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zSleep/instal',component:ComponentCreator('/docs/zSleep/instal','cdf'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zSleep/intro',component:ComponentCreator('/docs/zSleep/intro','edb'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Fonctions/alertInput',component:ComponentCreator('/docs/zUI/Fonctions/alertInput','b90'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Fonctions/keyboardInput',component:ComponentCreator('/docs/zUI/Fonctions/keyboardInput','d89'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Fonctions/renderSprite',component:ComponentCreator('/docs/zUI/Fonctions/renderSprite','d9d'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Fonctions/showHelpNotification',component:ComponentCreator('/docs/zUI/Fonctions/showHelpNotification','303'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/installation',component:ComponentCreator('/docs/zUI/installation','d42'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/button',component:ComponentCreator('/docs/zUI/Items/button','1c7'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/checkbox',component:ComponentCreator('/docs/zUI/Items/checkbox','89f'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/features',component:ComponentCreator('/docs/zUI/Items/features','bfe'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/line',component:ComponentCreator('/docs/zUI/Items/line','954'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/linkButton',component:ComponentCreator('/docs/zUI/Items/linkButton','c43'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/list',component:ComponentCreator('/docs/zUI/Items/list','5ba'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/separator',component:ComponentCreator('/docs/zUI/Items/separator','8e4'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/goBack',component:ComponentCreator('/docs/zUI/Methods/goBack','dc7'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/goTo',component:ComponentCreator('/docs/zUI/Methods/goTo','6a3'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/isVisible',component:ComponentCreator('/docs/zUI/Methods/isVisible','2c1'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/onClose',component:ComponentCreator('/docs/zUI/Methods/onClose','ee1'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/onOpen',component:ComponentCreator('/docs/zUI/Methods/onOpen','e2e'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/setItems',component:ComponentCreator('/docs/zUI/Methods/setItems','f2b'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/setVisible',component:ComponentCreator('/docs/zUI/Methods/setVisible','036'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/presentation',component:ComponentCreator('/docs/zUI/presentation','21e'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/theme',component:ComponentCreator('/docs/zUI/theme','673'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/utilisation',component:ComponentCreator('/docs/zUI/utilisation','870'),exact:true,sidebar:"tutorialSidebar"}]}]}]},{path:'/',component:ComponentCreator('/','e5f'),exact:true},{path:'*',component:ComponentCreator('*')}]);
 
 /***/ }),
 
@@ -10239,7 +10669,7 @@ var react = __webpack_require__(6540);
 // EXTERNAL MODULE: ./.docusaurus/docusaurus.config.mjs
 var docusaurus_config = __webpack_require__(4784);
 ;// CONCATENATED MODULE: ./.docusaurus/globalData.json
-const globalData_namespaceObject = /*#__PURE__*/JSON.parse('{"docusaurus-plugin-content-docs":{"default":{"path":"/docs","versions":[{"name":"current","label":"Next","isLast":true,"path":"/docs","mainDocId":"intro","docs":[{"id":"intro","path":"/docs/intro","sidebar":"tutorialSidebar"},{"id":"zUI/Fonctions/alertInput","path":"/docs/zUI/Fonctions/alertInput","sidebar":"tutorialSidebar"},{"id":"zUI/Fonctions/keyboardInput","path":"/docs/zUI/Fonctions/keyboardInput","sidebar":"tutorialSidebar"},{"id":"zUI/Fonctions/renderSprite","path":"/docs/zUI/Fonctions/renderSprite","sidebar":"tutorialSidebar"},{"id":"zUI/Fonctions/showHelpNotification","path":"/docs/zUI/Fonctions/showHelpNotification","sidebar":"tutorialSidebar"},{"id":"zUI/installation","path":"/docs/zUI/installation","sidebar":"tutorialSidebar"},{"id":"zUI/Items/button","path":"/docs/zUI/Items/button","sidebar":"tutorialSidebar"},{"id":"zUI/Items/checkbox","path":"/docs/zUI/Items/checkbox","sidebar":"tutorialSidebar"},{"id":"zUI/Items/features","path":"/docs/zUI/Items/features","sidebar":"tutorialSidebar"},{"id":"zUI/Items/line","path":"/docs/zUI/Items/line","sidebar":"tutorialSidebar"},{"id":"zUI/Items/linkButton","path":"/docs/zUI/Items/linkButton","sidebar":"tutorialSidebar"},{"id":"zUI/Items/list","path":"/docs/zUI/Items/list","sidebar":"tutorialSidebar"},{"id":"zUI/Items/separator","path":"/docs/zUI/Items/separator","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/goBack","path":"/docs/zUI/Methods/goBack","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/goTo","path":"/docs/zUI/Methods/goTo","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/isVisible","path":"/docs/zUI/Methods/isVisible","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/onClose","path":"/docs/zUI/Methods/onClose","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/onOpen","path":"/docs/zUI/Methods/onOpen","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/setItems","path":"/docs/zUI/Methods/setItems","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/setVisible","path":"/docs/zUI/Methods/setVisible","sidebar":"tutorialSidebar"},{"id":"zUI/presentation","path":"/docs/zUI/presentation","sidebar":"tutorialSidebar"},{"id":"zUI/theme","path":"/docs/zUI/theme","sidebar":"tutorialSidebar"},{"id":"zUI/utilisation","path":"/docs/zUI/utilisation","sidebar":"tutorialSidebar"},{"id":"/category/zui","path":"/docs/category/zui","sidebar":"tutorialSidebar"},{"id":"/category/items","path":"/docs/category/items","sidebar":"tutorialSidebar"},{"id":"/category/fonctions","path":"/docs/category/fonctions","sidebar":"tutorialSidebar"},{"id":"/category/méthodes","path":"/docs/category/méthodes","sidebar":"tutorialSidebar"}],"draftIds":[],"sidebars":{"tutorialSidebar":{"link":{"path":"/docs/intro","label":"intro"}}}}],"breadcrumbs":true}}}');
+const globalData_namespaceObject = /*#__PURE__*/JSON.parse('{"docusaurus-plugin-content-docs":{"default":{"path":"/docs","versions":[{"name":"current","label":"Next","isLast":true,"path":"/docs","mainDocId":"intro","docs":[{"id":"intro","path":"/docs/intro","sidebar":"tutorialSidebar"},{"id":"zSleep/instal","path":"/docs/zSleep/instal","sidebar":"tutorialSidebar"},{"id":"zSleep/intro","path":"/docs/zSleep/intro","sidebar":"tutorialSidebar"},{"id":"zUI/Fonctions/alertInput","path":"/docs/zUI/Fonctions/alertInput","sidebar":"tutorialSidebar"},{"id":"zUI/Fonctions/keyboardInput","path":"/docs/zUI/Fonctions/keyboardInput","sidebar":"tutorialSidebar"},{"id":"zUI/Fonctions/renderSprite","path":"/docs/zUI/Fonctions/renderSprite","sidebar":"tutorialSidebar"},{"id":"zUI/Fonctions/showHelpNotification","path":"/docs/zUI/Fonctions/showHelpNotification","sidebar":"tutorialSidebar"},{"id":"zUI/installation","path":"/docs/zUI/installation","sidebar":"tutorialSidebar"},{"id":"zUI/Items/button","path":"/docs/zUI/Items/button","sidebar":"tutorialSidebar"},{"id":"zUI/Items/checkbox","path":"/docs/zUI/Items/checkbox","sidebar":"tutorialSidebar"},{"id":"zUI/Items/features","path":"/docs/zUI/Items/features","sidebar":"tutorialSidebar"},{"id":"zUI/Items/line","path":"/docs/zUI/Items/line","sidebar":"tutorialSidebar"},{"id":"zUI/Items/linkButton","path":"/docs/zUI/Items/linkButton","sidebar":"tutorialSidebar"},{"id":"zUI/Items/list","path":"/docs/zUI/Items/list","sidebar":"tutorialSidebar"},{"id":"zUI/Items/separator","path":"/docs/zUI/Items/separator","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/goBack","path":"/docs/zUI/Methods/goBack","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/goTo","path":"/docs/zUI/Methods/goTo","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/isVisible","path":"/docs/zUI/Methods/isVisible","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/onClose","path":"/docs/zUI/Methods/onClose","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/onOpen","path":"/docs/zUI/Methods/onOpen","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/setItems","path":"/docs/zUI/Methods/setItems","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/setVisible","path":"/docs/zUI/Methods/setVisible","sidebar":"tutorialSidebar"},{"id":"zUI/presentation","path":"/docs/zUI/presentation","sidebar":"tutorialSidebar"},{"id":"zUI/theme","path":"/docs/zUI/theme","sidebar":"tutorialSidebar"},{"id":"zUI/utilisation","path":"/docs/zUI/utilisation","sidebar":"tutorialSidebar"},{"id":"/category/zui","path":"/docs/category/zui","sidebar":"tutorialSidebar"},{"id":"/category/items","path":"/docs/category/items","sidebar":"tutorialSidebar"},{"id":"/category/fonctions","path":"/docs/category/fonctions","sidebar":"tutorialSidebar"},{"id":"/category/méthodes","path":"/docs/category/méthodes","sidebar":"tutorialSidebar"}],"draftIds":[],"sidebars":{"tutorialSidebar":{"link":{"path":"/docs/intro","label":"intro"}}}}],"breadcrumbs":true}}}');
 ;// CONCATENATED MODULE: ./.docusaurus/i18n.json
 const i18n_namespaceObject = /*#__PURE__*/JSON.parse('{"defaultLocale":"fr","locales":["fr"],"path":"i18n","currentLocale":"fr","localeConfigs":{"fr":{"label":"Français","direction":"ltr","htmlLang":"fr","calendar":"gregory","path":"fr"}}}');
 // EXTERNAL MODULE: ./.docusaurus/codeTranslations.json
@@ -15155,7 +15585,7 @@ __webpack_require__.d(__webpack_exports__, {
 var lunr = __webpack_require__(8291);
 var lunr_default = /*#__PURE__*/__webpack_require__.n(lunr);
 ;// CONCATENATED MODULE: ./.docusaurus/@easyops-cn/docusaurus-search-local/default/generated.js
-__webpack_require__(6121)((lunr_default()));__webpack_require__(7923)((lunr_default()));const language=["fr"];const removeDefaultStopWordFilter=false;const removeDefaultStemmer=false;const Mark=null;const searchIndexUrl="search-index{dir}.json?_=46c6631d";const searchResultLimits=8;const searchResultContextMaxLength=50;const explicitSearchResultPath=false;const searchBarShortcut=true;const searchBarShortcutHint=true;const searchBarPosition="right";const docsPluginIdForPreferredVersion=undefined;const indexDocs=true;const searchContextByPaths=null;const hideSearchBarWithNoSearchContext=false;const useAllContextsWithNoSearchContext=false;
+__webpack_require__(6121)((lunr_default()));__webpack_require__(7923)((lunr_default()));const language=["fr"];const removeDefaultStopWordFilter=false;const removeDefaultStemmer=false;const Mark=null;const searchIndexUrl="search-index{dir}.json?_=25c4761b";const searchResultLimits=8;const searchResultContextMaxLength=50;const explicitSearchResultPath=false;const searchBarShortcut=true;const searchBarShortcutHint=true;const searchBarPosition="right";const docsPluginIdForPreferredVersion=undefined;const indexDocs=true;const searchContextByPaths=null;const hideSearchBarWithNoSearchContext=false;const useAllContextsWithNoSearchContext=false;
 ;// CONCATENATED MODULE: ./node_modules/@easyops-cn/docusaurus-search-local/dist/client/client/utils/proxiedGenerated.js
 // This file is auto generated while building.
 
@@ -42312,7 +42742,7 @@ module.exports = /*#__PURE__*/JSON.parse('{"name":"docusaurus-plugin-content-doc
 /***/ ((module) => {
 
 "use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"version":{"pluginId":"default","version":"current","label":"Next","banner":null,"badge":false,"noIndex":false,"className":"docs-version-current","isLast":true,"docsSidebars":{"tutorialSidebar":[{"type":"link","label":"Introduction","href":"/docs/intro","docId":"intro","unlisted":false},{"type":"category","label":"zUI","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"Présentation","href":"/docs/zUI/presentation","docId":"zUI/presentation","unlisted":false},{"type":"link","label":"Installation","href":"/docs/zUI/installation","docId":"zUI/installation","unlisted":false},{"type":"link","label":"Utilisation","href":"/docs/zUI/utilisation","docId":"zUI/utilisation","unlisted":false},{"type":"category","label":"Items","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"Features","href":"/docs/zUI/Items/features","docId":"zUI/Items/features","unlisted":false},{"type":"link","label":"Séparateur","href":"/docs/zUI/Items/separator","docId":"zUI/Items/separator","unlisted":false},{"type":"link","label":"Ligne","href":"/docs/zUI/Items/line","docId":"zUI/Items/line","unlisted":false},{"type":"link","label":"Bouton","href":"/docs/zUI/Items/button","docId":"zUI/Items/button","unlisted":false},{"type":"link","label":"Bouton Lien","href":"/docs/zUI/Items/linkButton","docId":"zUI/Items/linkButton","unlisted":false},{"type":"link","label":"Liste","href":"/docs/zUI/Items/list","docId":"zUI/Items/list","unlisted":false},{"type":"link","label":"Checkbox","href":"/docs/zUI/Items/checkbox","docId":"zUI/Items/checkbox","unlisted":false}],"href":"/docs/category/items"},{"type":"link","label":"Thème","href":"/docs/zUI/theme","docId":"zUI/theme","unlisted":false},{"type":"category","label":"Fonctions","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"ShowHelpNotification","href":"/docs/zUI/Fonctions/showHelpNotification","docId":"zUI/Fonctions/showHelpNotification","unlisted":false},{"type":"link","label":"AlertInput","href":"/docs/zUI/Fonctions/alertInput","docId":"zUI/Fonctions/alertInput","unlisted":false},{"type":"link","label":"KeyboardInput","href":"/docs/zUI/Fonctions/keyboardInput","docId":"zUI/Fonctions/keyboardInput","unlisted":false},{"type":"link","label":"RenderSprite","href":"/docs/zUI/Fonctions/renderSprite","docId":"zUI/Fonctions/renderSprite","unlisted":false}],"href":"/docs/category/fonctions"},{"type":"category","label":"Méthodes","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"GoBack","href":"/docs/zUI/Methods/goBack","docId":"zUI/Methods/goBack","unlisted":false},{"type":"link","label":"Goto","href":"/docs/zUI/Methods/goTo","docId":"zUI/Methods/goTo","unlisted":false},{"type":"link","label":"IsVisible","href":"/docs/zUI/Methods/isVisible","docId":"zUI/Methods/isVisible","unlisted":false},{"type":"link","label":"OnClose","href":"/docs/zUI/Methods/onClose","docId":"zUI/Methods/onClose","unlisted":false},{"type":"link","label":"OnOpen","href":"/docs/zUI/Methods/onOpen","docId":"zUI/Methods/onOpen","unlisted":false},{"type":"link","label":"SetItems","href":"/docs/zUI/Methods/setItems","docId":"zUI/Methods/setItems","unlisted":false},{"type":"link","label":"SetVisible","href":"/docs/zUI/Methods/setVisible","docId":"zUI/Methods/setVisible","unlisted":false}],"href":"/docs/category/méthodes"}],"href":"/docs/category/zui"}]},"docs":{"intro":{"id":"intro","title":"Introduction","description":"Bienvenue dans la documentation officielle de toutes les ressources développées par zSquad. Ici, vous trouverez toutes les informations nécessaires pour comprendre, utiliser et tirer pleinement parti des projets, outils et technologies créés par notre équipe.","sidebar":"tutorialSidebar"},"zUI/Fonctions/alertInput":{"id":"zUI/Fonctions/alertInput","title":"AlertInput","description":"La fonction AlertInput est utile lorsque vous devez demander une confirmation au joueur.","sidebar":"tutorialSidebar"},"zUI/Fonctions/keyboardInput":{"id":"zUI/Fonctions/keyboardInput","title":"KeyboardInput","description":"La fonction KeyboardInput est utile lorsque vous devez demander une saisie de texte à l\'utilisateur via un clavier virtuel.","sidebar":"tutorialSidebar"},"zUI/Fonctions/renderSprite":{"id":"zUI/Fonctions/renderSprite","title":"RenderSprite","description":"La fonction RenderSprite permet d\'afficher une image sous un menu spécifique dans l\'interface utilisateur.","sidebar":"tutorialSidebar"},"zUI/Fonctions/showHelpNotification":{"id":"zUI/Fonctions/showHelpNotification","title":"ShowHelpNotification","description":"La fonction ShowHelpNotification est utile dans le cas où vous devriez indiquer au joueur sur quelle touche il devra appuyer pour interagir avec votre script.","sidebar":"tutorialSidebar"},"zUI/installation":{"id":"zUI/installation","title":"Installation","description":"zUI est une bibliothèque avancée qui s\'intègre directement dans une resource existante sur votre serveur FiveM. Suivez les étapes ci-dessous pour l\'installer correctement et vous assurer qu\'elle fonctionne de manière optimale.","sidebar":"tutorialSidebar"},"zUI/Items/button":{"id":"zUI/Items/button","title":"Bouton","description":"Les boutons dans zUI sont des éléments interactifs essentiels qui permettent aux utilisateurs de réaliser des actions lorsqu\'ils sont cliqués. Vous pouvez ajouter des boutons à vos menus en utilisant la fonction Items:AddButton. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/checkbox":{"id":"zUI/Items/checkbox","title":"Checkbox","description":"Les checkboxes dans zUI permettent aux utilisateurs de sélectionner ou désélectionner des options, offrant ainsi un moyen interactif pour gérer les états binaires dans vos menus. Vous pouvez ajouter des checkboxes à vos menus en utilisant la fonction zUI:AddCheckbox. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/features":{"id":"zUI/Items/features","title":"Features","description":"Badges","sidebar":"tutorialSidebar"},"zUI/Items/line":{"id":"zUI/Items/line","title":"Ligne","description":"Les lignes dans zUI sont des éléments visuels utilisés pour ajouter des séparations horizontales dans vos menus. Elles peuvent être utilisées pour séparer visuellement les différentes sections ou pour améliorer l\'organisation de l\'interface utilisateur. Vous pouvez ajouter des lignes à vos menus en utilisant la fonction zUI:AddLine. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/linkButton":{"id":"zUI/Items/linkButton","title":"Bouton Lien","description":"Les boutons lien dans zUI sont des éléments interactifs qui redirigent les utilisateurs vers une URL lorsqu\'ils sont cliqués. Ils sont utiles pour ajouter des liens externes ou des pages web à vos menus. Vous pouvez ajouter des boutons lien à vos menus en utilisant la fonction zUI:AddLinkButton. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/list":{"id":"zUI/Items/list","title":"Liste","description":"Les listes dans zUI permettent aux utilisateurs de sélectionner parmi plusieurs options. Elles sont idéales pour offrir des choix dynamiques ou pour afficher des éléments dans vos menus. Vous pouvez ajouter des listes à vos menus en utilisant la fonction zUI:AddList. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/separator":{"id":"zUI/Items/separator","title":"Séparateur","description":"Les séparateurs dans zUI sont des éléments visuels utilisés pour diviser et organiser les éléments dans un menu. Ils aident à améliorer la lisibilité et à structurer l\'interface utilisateur. Vous pouvez ajouter des séparateurs à vos menus en utilisant la fonction zUI:AddSeparator. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Methods/goBack":{"id":"zUI/Methods/goBack","title":"GoBack","description":"La méthode GoBack est utile lorsque vous souhaitez revenir à un menu parent dans l\'interface utilisateur.","sidebar":"tutorialSidebar"},"zUI/Methods/goTo":{"id":"zUI/Methods/goTo","title":"Goto","description":"La méthode Goto est utilisée pour naviguer vers un menu spécifique dans l\'interface utilisateur.","sidebar":"tutorialSidebar"},"zUI/Methods/isVisible":{"id":"zUI/Methods/isVisible","title":"IsVisible","description":"La méthode IsVisible est utilisée pour vérifier si un menu principal est actuellement visible.","sidebar":"tutorialSidebar"},"zUI/Methods/onClose":{"id":"zUI/Methods/onClose","title":"OnClose","description":"La méthode OnClose est utilisée pour définir une fonction à exécuter lors de la fermeture d\'un menu principal.","sidebar":"tutorialSidebar"},"zUI/Methods/onOpen":{"id":"zUI/Methods/onOpen","title":"OnOpen","description":"La méthode OnOpen est utilisée pour définir une fonction à exécuter lors de l\'ouverture d\'un menu principal.","sidebar":"tutorialSidebar"},"zUI/Methods/setItems":{"id":"zUI/Methods/setItems","title":"SetItems","description":"La méthode SetItems est utilisée pour définir les éléments d\'un menu.","sidebar":"tutorialSidebar"},"zUI/Methods/setVisible":{"id":"zUI/Methods/setVisible","title":"SetVisible","description":"La méthode SetVisible est utilisée pour afficher ou masquer un menu principal.","sidebar":"tutorialSidebar"},"zUI/presentation":{"id":"zUI/presentation","title":"Présentation","description":"zUI est une bibliothèque avancée dédiée à la création de menus NUI pour FiveM, qui allie sobriété, optimisation et esthétique. Ce projet vise à moderniser la création de menus tout en facilitant le travail des développeurs grâce à une interface intuitive et performante.","sidebar":"tutorialSidebar"},"zUI/theme":{"id":"zUI/theme","title":"Thème","description":"Le fichier theme.json vous permet de personnaliser l\'apparence de zUI en ajustant divers paramètres du menu. Vous pouvez modifier la position, les couleurs, les styles et plus encore pour adapter l\'interface à vos besoins spécifiques.","sidebar":"tutorialSidebar"},"zUI/utilisation":{"id":"zUI/utilisation","title":"Utilisation","description":"Dans cette section, nous allons explorer comment utiliser zUI pour créer et gérer des menus NUI dans FiveM. Vous apprendrez à créer des menus et des sous-menus, à ajouter des éléments, et à gérer leur visibilité.","sidebar":"tutorialSidebar"}}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"version":{"pluginId":"default","version":"current","label":"Next","banner":null,"badge":false,"noIndex":false,"className":"docs-version-current","isLast":true,"docsSidebars":{"tutorialSidebar":[{"type":"link","label":"Introduction","href":"/docs/intro","docId":"intro","unlisted":false},{"type":"category","label":"zUI","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"Présentation","href":"/docs/zUI/presentation","docId":"zUI/presentation","unlisted":false},{"type":"link","label":"Installation","href":"/docs/zUI/installation","docId":"zUI/installation","unlisted":false},{"type":"link","label":"Utilisation","href":"/docs/zUI/utilisation","docId":"zUI/utilisation","unlisted":false},{"type":"category","label":"Items","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"Features","href":"/docs/zUI/Items/features","docId":"zUI/Items/features","unlisted":false},{"type":"link","label":"Séparateur","href":"/docs/zUI/Items/separator","docId":"zUI/Items/separator","unlisted":false},{"type":"link","label":"Ligne","href":"/docs/zUI/Items/line","docId":"zUI/Items/line","unlisted":false},{"type":"link","label":"Bouton","href":"/docs/zUI/Items/button","docId":"zUI/Items/button","unlisted":false},{"type":"link","label":"Bouton Lien","href":"/docs/zUI/Items/linkButton","docId":"zUI/Items/linkButton","unlisted":false},{"type":"link","label":"Liste","href":"/docs/zUI/Items/list","docId":"zUI/Items/list","unlisted":false},{"type":"link","label":"Checkbox","href":"/docs/zUI/Items/checkbox","docId":"zUI/Items/checkbox","unlisted":false}],"href":"/docs/category/items"},{"type":"link","label":"Thème","href":"/docs/zUI/theme","docId":"zUI/theme","unlisted":false},{"type":"category","label":"Fonctions","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"ShowHelpNotification","href":"/docs/zUI/Fonctions/showHelpNotification","docId":"zUI/Fonctions/showHelpNotification","unlisted":false},{"type":"link","label":"AlertInput","href":"/docs/zUI/Fonctions/alertInput","docId":"zUI/Fonctions/alertInput","unlisted":false},{"type":"link","label":"KeyboardInput","href":"/docs/zUI/Fonctions/keyboardInput","docId":"zUI/Fonctions/keyboardInput","unlisted":false},{"type":"link","label":"RenderSprite","href":"/docs/zUI/Fonctions/renderSprite","docId":"zUI/Fonctions/renderSprite","unlisted":false}],"href":"/docs/category/fonctions"},{"type":"category","label":"Méthodes","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"GoBack","href":"/docs/zUI/Methods/goBack","docId":"zUI/Methods/goBack","unlisted":false},{"type":"link","label":"Goto","href":"/docs/zUI/Methods/goTo","docId":"zUI/Methods/goTo","unlisted":false},{"type":"link","label":"IsVisible","href":"/docs/zUI/Methods/isVisible","docId":"zUI/Methods/isVisible","unlisted":false},{"type":"link","label":"OnClose","href":"/docs/zUI/Methods/onClose","docId":"zUI/Methods/onClose","unlisted":false},{"type":"link","label":"OnOpen","href":"/docs/zUI/Methods/onOpen","docId":"zUI/Methods/onOpen","unlisted":false},{"type":"link","label":"SetItems","href":"/docs/zUI/Methods/setItems","docId":"zUI/Methods/setItems","unlisted":false},{"type":"link","label":"SetVisible","href":"/docs/zUI/Methods/setVisible","docId":"zUI/Methods/setVisible","unlisted":false}],"href":"/docs/category/méthodes"}],"href":"/docs/category/zui"},{"type":"category","label":"zSleep","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"Introduction","href":"/docs/zSleep/intro","docId":"zSleep/intro","unlisted":false},{"type":"link","label":"Installation","href":"/docs/zSleep/instal","docId":"zSleep/instal","unlisted":false}]}]},"docs":{"intro":{"id":"intro","title":"Introduction","description":"Bienvenue dans la documentation officielle de toutes les ressources développées par zSquad. Ici, vous trouverez toutes les informations nécessaires pour comprendre, utiliser et tirer pleinement parti des projets, outils et technologies créés par notre équipe.","sidebar":"tutorialSidebar"},"zSleep/instal":{"id":"zSleep/instal","title":"Installation","description":"Voici un guide d\'installation détaillé pour zSleep, destiné aux administrateurs de serveurs FiveM. Ce guide inclut les étapes nécessaires pour installer le script sur votre serveur, ainsi que les informations de configuration à personnaliser pour répondre à vos besoins.","sidebar":"tutorialSidebar"},"zSleep/intro":{"id":"zSleep/intro","title":"Introduction","description":"Bienvenue dans la documentation officielle de zSleep, le script de sommeil ultime pour les administrateurs de serveurs FiveM. Avec zSleep, offrez à votre communauté de nouvelles possibilités immersives grâce à une mécanique de sommeil réaliste et intuitive.","sidebar":"tutorialSidebar"},"zUI/Fonctions/alertInput":{"id":"zUI/Fonctions/alertInput","title":"AlertInput","description":"La fonction AlertInput est utile lorsque vous devez demander une confirmation au joueur.","sidebar":"tutorialSidebar"},"zUI/Fonctions/keyboardInput":{"id":"zUI/Fonctions/keyboardInput","title":"KeyboardInput","description":"La fonction KeyboardInput est utile lorsque vous devez demander une saisie de texte à l\'utilisateur via un clavier virtuel.","sidebar":"tutorialSidebar"},"zUI/Fonctions/renderSprite":{"id":"zUI/Fonctions/renderSprite","title":"RenderSprite","description":"La fonction RenderSprite permet d\'afficher une image sous un menu spécifique dans l\'interface utilisateur.","sidebar":"tutorialSidebar"},"zUI/Fonctions/showHelpNotification":{"id":"zUI/Fonctions/showHelpNotification","title":"ShowHelpNotification","description":"La fonction ShowHelpNotification est utile dans le cas où vous devriez indiquer au joueur sur quelle touche il devra appuyer pour interagir avec votre script.","sidebar":"tutorialSidebar"},"zUI/installation":{"id":"zUI/installation","title":"Installation","description":"zUI est une bibliothèque avancée qui s\'intègre directement dans une resource existante sur votre serveur FiveM. Suivez les étapes ci-dessous pour l\'installer correctement et vous assurer qu\'elle fonctionne de manière optimale.","sidebar":"tutorialSidebar"},"zUI/Items/button":{"id":"zUI/Items/button","title":"Bouton","description":"Les boutons dans zUI sont des éléments interactifs essentiels qui permettent aux utilisateurs de réaliser des actions lorsqu\'ils sont cliqués. Vous pouvez ajouter des boutons à vos menus en utilisant la fonction Items:AddButton. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/checkbox":{"id":"zUI/Items/checkbox","title":"Checkbox","description":"Les checkboxes dans zUI permettent aux utilisateurs de sélectionner ou désélectionner des options, offrant ainsi un moyen interactif pour gérer les états binaires dans vos menus. Vous pouvez ajouter des checkboxes à vos menus en utilisant la fonction zUI:AddCheckbox. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/features":{"id":"zUI/Items/features","title":"Features","description":"Badges","sidebar":"tutorialSidebar"},"zUI/Items/line":{"id":"zUI/Items/line","title":"Ligne","description":"Les lignes dans zUI sont des éléments visuels utilisés pour ajouter des séparations horizontales dans vos menus. Elles peuvent être utilisées pour séparer visuellement les différentes sections ou pour améliorer l\'organisation de l\'interface utilisateur. Vous pouvez ajouter des lignes à vos menus en utilisant la fonction zUI:AddLine. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/linkButton":{"id":"zUI/Items/linkButton","title":"Bouton Lien","description":"Les boutons lien dans zUI sont des éléments interactifs qui redirigent les utilisateurs vers une URL lorsqu\'ils sont cliqués. Ils sont utiles pour ajouter des liens externes ou des pages web à vos menus. Vous pouvez ajouter des boutons lien à vos menus en utilisant la fonction zUI:AddLinkButton. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/list":{"id":"zUI/Items/list","title":"Liste","description":"Les listes dans zUI permettent aux utilisateurs de sélectionner parmi plusieurs options. Elles sont idéales pour offrir des choix dynamiques ou pour afficher des éléments dans vos menus. Vous pouvez ajouter des listes à vos menus en utilisant la fonction zUI:AddList. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/separator":{"id":"zUI/Items/separator","title":"Séparateur","description":"Les séparateurs dans zUI sont des éléments visuels utilisés pour diviser et organiser les éléments dans un menu. Ils aident à améliorer la lisibilité et à structurer l\'interface utilisateur. Vous pouvez ajouter des séparateurs à vos menus en utilisant la fonction zUI:AddSeparator. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Methods/goBack":{"id":"zUI/Methods/goBack","title":"GoBack","description":"La méthode GoBack est utile lorsque vous souhaitez revenir à un menu parent dans l\'interface utilisateur.","sidebar":"tutorialSidebar"},"zUI/Methods/goTo":{"id":"zUI/Methods/goTo","title":"Goto","description":"La méthode Goto est utilisée pour naviguer vers un menu spécifique dans l\'interface utilisateur.","sidebar":"tutorialSidebar"},"zUI/Methods/isVisible":{"id":"zUI/Methods/isVisible","title":"IsVisible","description":"La méthode IsVisible est utilisée pour vérifier si un menu principal est actuellement visible.","sidebar":"tutorialSidebar"},"zUI/Methods/onClose":{"id":"zUI/Methods/onClose","title":"OnClose","description":"La méthode OnClose est utilisée pour définir une fonction à exécuter lors de la fermeture d\'un menu principal.","sidebar":"tutorialSidebar"},"zUI/Methods/onOpen":{"id":"zUI/Methods/onOpen","title":"OnOpen","description":"La méthode OnOpen est utilisée pour définir une fonction à exécuter lors de l\'ouverture d\'un menu principal.","sidebar":"tutorialSidebar"},"zUI/Methods/setItems":{"id":"zUI/Methods/setItems","title":"SetItems","description":"La méthode SetItems est utilisée pour définir les éléments d\'un menu.","sidebar":"tutorialSidebar"},"zUI/Methods/setVisible":{"id":"zUI/Methods/setVisible","title":"SetVisible","description":"La méthode SetVisible est utilisée pour afficher ou masquer un menu principal.","sidebar":"tutorialSidebar"},"zUI/presentation":{"id":"zUI/presentation","title":"Présentation","description":"zUI est une bibliothèque avancée dédiée à la création de menus NUI pour FiveM, qui allie sobriété, optimisation et esthétique. Ce projet vise à moderniser la création de menus tout en facilitant le travail des développeurs grâce à une interface intuitive et performante.","sidebar":"tutorialSidebar"},"zUI/theme":{"id":"zUI/theme","title":"Thème","description":"Le fichier theme.json vous permet de personnaliser l\'apparence de zUI en ajustant divers paramètres du menu. Vous pouvez modifier la position, les couleurs, les styles et plus encore pour adapter l\'interface à vos besoins spécifiques.","sidebar":"tutorialSidebar"},"zUI/utilisation":{"id":"zUI/utilisation","title":"Utilisation","description":"Dans cette section, nous allons explorer comment utiliser zUI pour créer et gérer des menus NUI dans FiveM. Vous apprendrez à créer des menus et des sous-menus, à ajouter des éléments, et à gérer leur visibilité.","sidebar":"tutorialSidebar"}}}}');
 
 /***/ }),
 
