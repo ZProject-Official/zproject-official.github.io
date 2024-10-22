@@ -409,22 +409,50 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         className: "language-lua",
-        children: "local Config <const> = {\r\n    Identifier = \"license\", -- Type d'identifiant utilisé pour les joueurs (par défaut : \"license\").\r\n    Carry = {\r\n        Command = \"carry\", -- Commande pour porter un joueur à proximité.\r\n        Description = \"Porter une personne à proximité.\",\r\n        MaxRadius = 5 -- Rayon maximal (en mètres) pour porter un joueur.\r\n    },\r\n    Animations = {\r\n        [\"sleeping\"] = {\r\n            Dictionary = \"timetable@tracy@sleep@\",\r\n            Animation = \"idle_c\" -- Animation pour le personnage en train de dormir.\r\n        },\r\n        [\"gettingUp\"] = {\r\n            Dictionary = \"get_up@sat_on_floor@to_stand\",\r\n            Animation = \"getup_0\" -- Animation pour le personnage qui se relève.\r\n        },\r\n        [\"sleepingInCar\"] = {\r\n            Dictionary = \"random@car_sleeping\",\r\n            Animation = \"sleeping_idle\" -- Animation pour le personnage dormant dans un véhicule.\r\n        },\r\n    },\r\n    Peds = {\r\n        Alpha = false, -- Rendre les Peds semi-transparents.\r\n        Invincible = true, -- Rendre les Peds invincibles.\r\n        Collision = false -- Désactiver la collision pour les Peds.\r\n    },\r\n    SendNotification = function(message)\r\n        zUI.ShowNotification(message) -- Fonction pour afficher une notification.\r\n    end\r\n}\r\n\r\n_ENV.Config = Config\n"
+        children: "local Config <const> = {\r\n    Identifier = \"license\",\r\n    Locale = \"fr\",\r\n    RespawnEvent = nil,\r\n    Carry = {\r\n        Command = \"carry\",\r\n        Description = \"Porter une personne à proximité.\",\r\n        Key = \"RCONTROL\",\r\n        MaxRadius = 5\r\n    },\r\n    Animations = {\r\n        [\"sleeping\"] = {\r\n            Dictionary = \"timetable@tracy@sleep@\",\r\n            Animation = \"idle_c\"\r\n        },\r\n        [\"gettingUp\"] = {\r\n            Dictionary = \"get_up@sat_on_floor@to_stand\",\r\n            Animation = \"getup_0\"\r\n        },\r\n        [\"sleepingInCar\"] = {\r\n            Dictionary = \"random@car_sleeping\",\r\n            Animation = \"sleeping_idle\"\r\n        },\r\n    },\r\n    Peds = {\r\n        Alpha = false,\r\n        Invincible = true,\r\n        Collision = false,\r\n    },\r\n    SendNotification = function(message)\r\n        local ESX = exports[\"es_extended\"]:getSharedObject()\r\n        ESX.ShowNotification(message)\r\n    end\r\n}\r\n\r\n_ENV.Config = Config\n"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
       start: "3",
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: ["Modifiez les paramètres de la section ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-          children: "Carry"
-        }), " pour ajuster la commande et le rayon de portée selon les préférences de votre serveur."]
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.strong, {
+            children: ["Personnalisation de la Section ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+              children: "Carry"
+            })]
+          }), " : Modifiez les paramètres de cette section pour adapter la commande de transport, la touche associée et le rayon de portée selon les préférences de votre serveur. Par exemple, vous pouvez changer la touche pour rendre la commande plus accessible aux joueurs."]
+        }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: ["Si vous souhaitez changer les animations, remplacez les dictionnaires et noms d'animations dans la section ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-          children: "Animations"
-        }), "."]
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+            children: "Modification des Animations"
+          }), " : Si vous souhaitez personnaliser les animations, remplacez les dictionnaires et les noms d'animations dans la section ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+            children: "Animations"
+          }), ". Assurez-vous que les animations que vous choisissez sont compatibles avec le contexte du script pour une meilleure immersion."]
+        }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: ["Vous pouvez également ajuster les paramètres dans la section ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-          children: "Peds"
-        }), " pour gérer la visibilité, l'invincibilité et la collision des personnages non-joueurs (Peds)."]
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+            children: "Ajustements des Paramètres des Peds"
+          }), " : Vous pouvez régler les paramètres dans la section ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+            children: "Peds"
+          }), " pour contrôler la visibilité, l'invincibilité et la collision des personnages non-joueurs (Peds). Cela vous permettra de mieux gérer l'interaction entre les joueurs et les Peds dans le jeu."]
+        }), "\n"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+            children: "Configuration de la Langue"
+          }), " : Il est possible de configurer la langue du script en modifiant la valeur de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+            children: "Locale"
+          }), ". Cela permet d'afficher les notifications et messages dans la langue de votre choix, offrant ainsi une expérience utilisateur plus cohérente pour vos joueurs."]
+        }), "\n"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+            children: "Utilisation d’un Multicharacter"
+          }), " : Si votre serveur utilise un système multicharacter, vous pouvez le configurer pour déclencher le script en modifiant le trigger ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+            children: "RespawnEvent"
+          }), ". Cela permet de s'assurer que le script s'intègre parfaitement avec votre système de gestion de personnages multiples."]
+        }), "\n"]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
       id: "étape-4--démarrer-le-script-sur-votre-serveur",
@@ -572,7 +600,6 @@ const toc = [{
 function _createMdxContent(props) {
   const _components = {
     a: "a",
-    em: "em",
     h1: "h1",
     h2: "h2",
     header: "header",
@@ -600,12 +627,6 @@ function _createMdxContent(props) {
       children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
         children: "zSleep"
       }), " a été conçu pour enrichir l'expérience des serveurs de roleplay sur FiveM. Ce script permet à vos joueurs de faire dormir leur personnage n'importe où, que ce soit au sol ou à l'intérieur d'un véhicule. En cas de déconnexion alors qu'un joueur est porté ou à l'intérieur d'un véhicule, il reprendra sa place exacte à son retour. Le script est entièrement configurable, permettant aux administrateurs de l'adapter parfaitement aux besoins de leur serveur."]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-        children: "Important :"
-      }), " Actuellement, zSleep n'est pas compatible avec les scripts ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
-        children: "multi_character"
-      }), ". Cependant, une mise à jour est en cours de développement pour assurer cette compatibilité dans un futur proche."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
       id: "contenu-de-la-documentation",
       children: "Contenu de la Documentation"
@@ -15585,7 +15606,7 @@ __webpack_require__.d(__webpack_exports__, {
 var lunr = __webpack_require__(8291);
 var lunr_default = /*#__PURE__*/__webpack_require__.n(lunr);
 ;// CONCATENATED MODULE: ./.docusaurus/@easyops-cn/docusaurus-search-local/default/generated.js
-__webpack_require__(6121)((lunr_default()));__webpack_require__(7923)((lunr_default()));const language=["fr"];const removeDefaultStopWordFilter=false;const removeDefaultStemmer=false;const Mark=null;const searchIndexUrl="search-index{dir}.json?_=25c4761b";const searchResultLimits=8;const searchResultContextMaxLength=50;const explicitSearchResultPath=false;const searchBarShortcut=true;const searchBarShortcutHint=true;const searchBarPosition="right";const docsPluginIdForPreferredVersion=undefined;const indexDocs=true;const searchContextByPaths=null;const hideSearchBarWithNoSearchContext=false;const useAllContextsWithNoSearchContext=false;
+__webpack_require__(6121)((lunr_default()));__webpack_require__(7923)((lunr_default()));const language=["fr"];const removeDefaultStopWordFilter=false;const removeDefaultStemmer=false;const Mark=null;const searchIndexUrl="search-index{dir}.json?_=6059a55c";const searchResultLimits=8;const searchResultContextMaxLength=50;const explicitSearchResultPath=false;const searchBarShortcut=true;const searchBarShortcutHint=true;const searchBarPosition="right";const docsPluginIdForPreferredVersion=undefined;const indexDocs=true;const searchContextByPaths=null;const hideSearchBarWithNoSearchContext=false;const useAllContextsWithNoSearchContext=false;
 ;// CONCATENATED MODULE: ./node_modules/@easyops-cn/docusaurus-search-local/dist/client/client/utils/proxiedGenerated.js
 // This file is auto generated while building.
 
