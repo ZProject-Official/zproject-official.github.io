@@ -3903,7 +3903,7 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         className: "language-lua",
-        children: "Menu:SetItems(function(Items)\r\n    Items:AddList(\r\n        \"Choisissez une couleur\", -- Title\r\n        \"Sélectionnez votre couleur préférée\", -- Description\r\n        { \"Rouge\", \"Vert\", \"Bleu\" }, -- Items\r\n        { RightLabel = \"→\", Color = \"#ffffff\" }, -- Styles\r\n        function(onSelected, onHovered, onListChange, index)\r\n            if onSelected then\r\n                print(\"Couleur sélectionnée : \" .. Items[index])\r\n            end\r\n        end -- Action\r\n    )\r\nend)\n"
+        children: "Menu:SetItems(function(Items)\r\n    local ListItems = { \"Rouge\", \"Vert\", \"Bleu\" }\r\n    Items:AddList(\r\n        \"Choisissez une couleur\", -- Title\r\n        \"Sélectionnez votre couleur préférée\", -- Description\r\n        ListItems, -- Items\r\n        { RightLabel = \"→\", Color = \"#ffffff\" }, -- Styles\r\n        function(onSelected, onHovered, onListChange, index)\r\n            if onSelected then\r\n                print(\"Couleur sélectionnée : \" .. ListItems[index])\r\n            end\r\n        end -- Action\r\n    )\r\nend)\n"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
       id: "explication",
@@ -15606,7 +15606,7 @@ __webpack_require__.d(__webpack_exports__, {
 var lunr = __webpack_require__(8291);
 var lunr_default = /*#__PURE__*/__webpack_require__.n(lunr);
 ;// CONCATENATED MODULE: ./.docusaurus/@easyops-cn/docusaurus-search-local/default/generated.js
-__webpack_require__(6121)((lunr_default()));__webpack_require__(7923)((lunr_default()));const language=["fr"];const removeDefaultStopWordFilter=false;const removeDefaultStemmer=false;const Mark=null;const searchIndexUrl="search-index{dir}.json?_=6059a55c";const searchResultLimits=8;const searchResultContextMaxLength=50;const explicitSearchResultPath=false;const searchBarShortcut=true;const searchBarShortcutHint=true;const searchBarPosition="right";const docsPluginIdForPreferredVersion=undefined;const indexDocs=true;const searchContextByPaths=null;const hideSearchBarWithNoSearchContext=false;const useAllContextsWithNoSearchContext=false;
+__webpack_require__(6121)((lunr_default()));__webpack_require__(7923)((lunr_default()));const language=["fr"];const removeDefaultStopWordFilter=false;const removeDefaultStemmer=false;const Mark=null;const searchIndexUrl="search-index{dir}.json?_=99ce2e9b";const searchResultLimits=8;const searchResultContextMaxLength=50;const explicitSearchResultPath=false;const searchBarShortcut=true;const searchBarShortcutHint=true;const searchBarPosition="right";const docsPluginIdForPreferredVersion=undefined;const indexDocs=true;const searchContextByPaths=null;const hideSearchBarWithNoSearchContext=false;const useAllContextsWithNoSearchContext=false;
 ;// CONCATENATED MODULE: ./node_modules/@easyops-cn/docusaurus-search-local/dist/client/client/utils/proxiedGenerated.js
 // This file is auto generated while building.
 
