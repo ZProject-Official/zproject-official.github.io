@@ -255,7 +255,7 @@ const contentTitle = 'Installation';
 const metadata = {
   "id": "zSleep/instal",
   "title": "Installation",
-  "description": "Voici un guide d'installation détaillé pour zSleep, destiné aux administrateurs de serveurs FiveM. Ce guide inclut les étapes nécessaires pour installer le script sur votre serveur, ainsi que les informations de configuration à personnaliser pour répondre à vos besoins.",
+  "description": "Ce guide d'installation de zSleep s'adresse aux administrateurs de serveurs FiveM et détaille les étapes nécessaires pour installer et configurer le script selon vos besoins.",
   "source": "@site/docs/zSleep/instal.md",
   "sourceDirName": "zSleep",
   "slug": "/zSleep/instal",
@@ -285,24 +285,24 @@ const toc = [{
   "id": "prérequis",
   "level": 3
 }, {
-  "value": "Étape 1 : Téléchargement de zSleep",
-  "id": "étape-1--téléchargement-de-zsleep",
+  "value": "Étape 1 : Télécharger zSleep",
+  "id": "étape-1--télécharger-zsleep",
   "level": 3
 }, {
-  "value": "Étape 2 : Configuration de la Base de Données",
-  "id": "étape-2--configuration-de-la-base-de-données",
+  "value": "Étape 2 : Configurer la Base de Données",
+  "id": "étape-2--configurer-la-base-de-données",
   "level": 3
 }, {
-  "value": "Étape 3 : Configuration du Script",
-  "id": "étape-3--configuration-du-script",
+  "value": "Étape 3 : Configurer le Script",
+  "id": "étape-3--configurer-le-script",
   "level": 3
 }, {
-  "value": "Étape 4 : Démarrer le Script sur votre Serveur",
-  "id": "étape-4--démarrer-le-script-sur-votre-serveur",
+  "value": "Étape 4 : Démarrer le Script",
+  "id": "étape-4--démarrer-le-script",
   "level": 3
 }, {
-  "value": "Étape 5 : Vérification et Tests",
-  "id": "étape-5--vérification-et-tests",
+  "value": "Étape 5 : Vérifications et Tests",
+  "id": "étape-5--vérifications-et-tests",
   "level": 3
 }, {
   "value": "Support",
@@ -312,6 +312,7 @@ const toc = [{
 function _createMdxContent(props) {
   const _components = {
     a: "a",
+    blockquote: "blockquote",
     code: "code",
     h1: "h1",
     h3: "h3",
@@ -333,30 +334,30 @@ function _createMdxContent(props) {
         children: "Installation"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Voici un guide d'installation détaillé pour ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+      children: ["Ce guide d'installation de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
         children: "zSleep"
-      }), ", destiné aux administrateurs de serveurs FiveM. Ce guide inclut les étapes nécessaires pour installer le script sur votre serveur, ainsi que les informations de configuration à personnaliser pour répondre à vos besoins."]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.hr, {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      }), " s'adresse aux administrateurs de serveurs FiveM et détaille les étapes nécessaires pour installer et configurer le script selon vos besoins."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
       id: "prérequis",
       children: "Prérequis"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-        children: "Un serveur FiveM fonctionnel."
+        children: "Un serveur FiveM opérationnel."
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
         children: "Accès à la base de données MySQL de votre serveur."
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: ["Connaissance de base de la configuration de scripts et de l'édition de fichiers ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: ["Connaissances de base en configuration de scripts et édition de fichiers ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
           children: ".lua"
         }), "."]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "étape-1--téléchargement-de-zsleep",
-      children: "Étape 1 : Téléchargement de zSleep"
+      id: "étape-1--télécharger-zsleep",
+      children: "Étape 1 : Télécharger zSleep"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-        children: "Téléchargez le script zSleep depuis le lien de téléchargement fourni après votre achat."
+        children: "Obtenez le script zSleep via le lien fourni après votre achat."
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: ["Décompressez le fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: ["Extrayez le fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
           children: ".zip"
         }), " téléchargé."]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
@@ -364,106 +365,110 @@ function _createMdxContent(props) {
           children: "zSleep"
         }), " dans le répertoire ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
           children: "resources"
-        }), " de votre serveur FiveM."]
+        }), " de votre serveur FiveM.", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.blockquote, {
+          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+            children: ["⚠️ Assurez-vous qu'il démarre après ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+              children: "oxmysql"
+            }), " mais avant votre ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+              children: "multicharacter"
+            }), " (si applicable)."]
+          }), "\n"]
+        }), "\n"]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "étape-2--configuration-de-la-base-de-données",
-      children: "Étape 2 : Configuration de la Base de Données"
+      id: "étape-2--configurer-la-base-de-données",
+      children: "Étape 2 : Configurer la Base de Données"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["Ouvrez le fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
           children: ".sql"
-        }), " fourni dans le dossier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        }), " situé dans le dossier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
           children: "zSleep"
         }), "."]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-        children: "Connectez-vous à votre base de données MySQL (via un outil comme phpMyAdmin ou un autre client SQL)."
+        children: "Connectez-vous à votre base de données MySQL (via un outil comme phpMyAdmin ou tout autre client SQL)."
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["Importez le fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
           children: ".sql"
-        }), " pour créer les tables nécessaires au bon fonctionnement de zSleep :", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+        }), " afin de créer les tables nécessaires au bon fonctionnement de zSleep :", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
               children: "Important"
-            }), " : Assurez-vous que la base de donnée est bien reliée à votre serveur dans le ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+            }), " : Vérifiez que la base de données est bien liée à votre serveur dans le ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
               children: "server.cfg"
             }), "."]
           }), "\n"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "étape-3--configuration-du-script",
-      children: "Étape 3 : Configuration du Script"
+      id: "étape-3--configurer-le-script",
+      children: "Étape 3 : Configurer le Script"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: ["Dans le dossier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-          children: "zSleep"
-        }), ", ouvrez le fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: ["Accédez au fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
           children: "config.lua"
         }), " dans le dossier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-          children: "shared"
+          children: "zSleep"
         }), "."]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-        children: "Vous y trouverez la configuration suivante, à ajuster selon les besoins de votre serveur :"
+        children: "Adaptez la configuration selon vos besoins :"
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         className: "language-lua",
-        children: "local Config <const> = {\r\n    Identifier = \"license\",\r\n    Locale = \"fr\",\r\n    RespawnEvent = nil,\r\n    Carry = {\r\n        Command = \"carry\",\r\n        Description = \"Porter une personne à proximité.\",\r\n        Key = \"RCONTROL\",\r\n        MaxRadius = 5\r\n    },\r\n    Animations = {\r\n        [\"sleeping\"] = {\r\n            Dictionary = \"timetable@tracy@sleep@\",\r\n            Animation = \"idle_c\"\r\n        },\r\n        [\"gettingUp\"] = {\r\n            Dictionary = \"get_up@sat_on_floor@to_stand\",\r\n            Animation = \"getup_0\"\r\n        },\r\n        [\"sleepingInCar\"] = {\r\n            Dictionary = \"random@car_sleeping\",\r\n            Animation = \"sleeping_idle\"\r\n        },\r\n    },\r\n    Peds = {\r\n        Alpha = false,\r\n        Invincible = true,\r\n        Collision = false,\r\n    },\r\n    SendNotification = function(message)\r\n        local ESX = exports[\"es_extended\"]:getSharedObject()\r\n        ESX.ShowNotification(message)\r\n    end\r\n}\r\n\r\n_ENV.Config = Config\n"
+        children: "local Config <const> = {\r\n    Framework = \"esx\", -- esx ou qbcore\r\n    Locale = \"fr\",\r\n    LogoutEvent = \"\",\r\n    Carry = {\r\n        isEnabled = true,\r\n        commandName = \"carry\",\r\n        targetEvent = \"\",\r\n        key = \"RCONTROL\",\r\n        maxRadius = 5\r\n    },\r\n    Animations = {\r\n        [\"sleeping\"] = {\r\n            dictionnary = \"timetable@tracy@sleep@\",\r\n            animation = \"idle_c\"\r\n        },\r\n        [\"gettingUp\"] = {\r\n            dictionnary = \"get_up@sat_on_floor@to_stand\",\r\n            animation = \"getup_0\"\r\n        },\r\n        [\"sleepingInCar\"] = {\r\n            dictionnary = \"random@car_sleeping\",\r\n            animation = \"sleeping_idle\"\r\n        }\r\n    },\r\n    Peds = {\r\n        alpha = true,\r\n        invincible = true,\r\n        collision = false\r\n    },\r\n    SendNotification = function(message)\r\n        local ESX = exports[\"es_extended\"]:getSharedObject()\r\n        ESX.ShowNotification(message)\r\n    end\r\n}\r\n\r\n_ENV.Config = Config\n"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
       start: "3",
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+            children: "Événement de déconnexion"
+          }), " : Si un script multicharacter gère les changements de personnages sans déconnexion, configurez l'événement pour que zSleep le prenne en compte."]
+        }), "\n"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.strong, {
             children: ["Personnalisation de la Section ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
               children: "Carry"
             })]
-          }), " : Modifiez les paramètres de cette section pour adapter la commande de transport, la touche associée et le rayon de portée selon les préférences de votre serveur. Par exemple, vous pouvez changer la touche pour rendre la commande plus accessible aux joueurs."]
+          }), " : Ajustez cette section pour configurer la commande de transport, la touche associée, le target (le cas échéant) et le rayon selon vos préférences."]
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-            children: "Modification des Animations"
-          }), " : Si vous souhaitez personnaliser les animations, remplacez les dictionnaires et les noms d'animations dans la section ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+            children: "Modifications des Animations"
+          }), " : Pour personnaliser les animations, remplacez les dictionnaires et noms d'animations dans la section ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
             children: "Animations"
-          }), ". Assurez-vous que les animations que vous choisissez sont compatibles avec le contexte du script pour une meilleure immersion."]
+          }), ". Assurez-vous que les animations sont adaptées au contexte du script."]
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-            children: "Ajustements des Paramètres des Peds"
-          }), " : Vous pouvez régler les paramètres dans la section ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+            children: "Réglages des Peds"
+          }), " : Modifiez les paramètres de la section ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
             children: "Peds"
-          }), " pour contrôler la visibilité, l'invincibilité et la collision des personnages non-joueurs (Peds). Cela vous permettra de mieux gérer l'interaction entre les joueurs et les Peds dans le jeu."]
+          }), " pour ajuster la visibilité, l'invincibilité et la collision des Peds selon vos besoins, garantissant une meilleure interaction joueur-Ped."]
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
             children: "Configuration de la Langue"
-          }), " : Il est possible de configurer la langue du script en modifiant la valeur de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          }), " : Modifiez la valeur de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
             children: "Locale"
-          }), ". Cela permet d'afficher les notifications et messages dans la langue de votre choix, offrant ainsi une expérience utilisateur plus cohérente pour vos joueurs."]
-        }), "\n"]
-      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-            children: "Utilisation d’un Multicharacter"
-          }), " : Si votre serveur utilise un système multicharacter, vous pouvez le configurer pour déclencher le script en modifiant le trigger ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-            children: "RespawnEvent"
-          }), ". Cela permet de s'assurer que le script s'intègre parfaitement avec votre système de gestion de personnages multiples."]
+          }), " pour choisir la langue du script et proposer une expérience utilisateur personnalisée."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "étape-4--démarrer-le-script-sur-votre-serveur",
-      children: "Étape 4 : Démarrer le Script sur votre Serveur"
+      id: "étape-4--démarrer-le-script",
+      children: "Étape 4 : Démarrer le Script"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["Ouvrez le fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
           children: "server.cfg"
         }), " de votre serveur FiveM."]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-        children: "Ajoutez la ligne suivante pour démarrer le script zSleep :"
+        children: "Ajoutez la ligne suivante pour activer zSleep :"
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
@@ -472,37 +477,37 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
       start: "3",
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-        children: "Redémarrez votre serveur FiveM pour appliquer les modifications."
+        children: "Redémarrez votre serveur pour appliquer les changements."
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "étape-5--vérification-et-tests",
-      children: "Étape 5 : Vérification et Tests"
+      id: "étape-5--vérifications-et-tests",
+      children: "Étape 5 : Vérifications et Tests"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
         children: "Connectez-vous à votre serveur FiveM."
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["Testez la commande ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
           children: "/carry"
-        }), " pour vous assurer que le script fonctionne correctement."]
+        }), " (ou celle que vous avez configurée) pour valider le bon fonctionnement du script."]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-        children: "Vérifiez que les animations de sommeil et de relevé s’exécutent bien et que la reconnexion des joueurs après déconnexion fonctionne comme prévu."
+        children: "Vérifiez les animations de sommeil, de réveil et les reconnexions après déconnexion."
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: ["Si vous rencontrez des erreurs ou des messages dans la console, vérifiez la configuration du fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: ["En cas d'erreurs ou de messages dans la console, examinez la configuration du fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
           children: "config.lua"
-        }), " et assurez-vous que les dépendances sont bien installées."]
+        }), " et les dépendances nécessaires."]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
       id: "support",
       children: "Support"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Pour toute question supplémentaire ou assistance technique, n'hésitez pas à nous rejoindre sur notre ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+      children: ["Pour toute question ou aide technique, rejoignez-nous sur notre ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
         href: "https://discord.gg/zproject",
         children: "serveur Discord"
-      }), ". Nous sommes à votre disposition pour vous aider avec l'installation et la configuration de zSleep."]
+      }), ". Notre équipe est disponible pour vous aider avec l'installation et la configuration de zSleep."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.hr, {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Ce guide vous permettra de configurer et d'intégrer rapidement ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+      children: ["Ce guide vous permet de configurer et intégrer rapidement ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
         children: "zSleep"
-      }), " à votre serveur FiveM, offrant ainsi une expérience de sommeil immersive et réaliste à vos joueurs."]
+      }), " à votre serveur FiveM, offrant une expérience immersive de sommeil à vos joueurs."]
     })]
   });
 }
@@ -15606,7 +15611,7 @@ __webpack_require__.d(__webpack_exports__, {
 var lunr = __webpack_require__(8291);
 var lunr_default = /*#__PURE__*/__webpack_require__.n(lunr);
 ;// CONCATENATED MODULE: ./.docusaurus/@easyops-cn/docusaurus-search-local/default/generated.js
-__webpack_require__(6121)((lunr_default()));__webpack_require__(7923)((lunr_default()));const language=["fr"];const removeDefaultStopWordFilter=false;const removeDefaultStemmer=false;const Mark=null;const searchIndexUrl="search-index{dir}.json?_=99ce2e9b";const searchResultLimits=8;const searchResultContextMaxLength=50;const explicitSearchResultPath=false;const searchBarShortcut=true;const searchBarShortcutHint=true;const searchBarPosition="right";const docsPluginIdForPreferredVersion=undefined;const indexDocs=true;const searchContextByPaths=null;const hideSearchBarWithNoSearchContext=false;const useAllContextsWithNoSearchContext=false;
+__webpack_require__(6121)((lunr_default()));__webpack_require__(7923)((lunr_default()));const language=["fr"];const removeDefaultStopWordFilter=false;const removeDefaultStemmer=false;const Mark=null;const searchIndexUrl="search-index{dir}.json?_=032b26d2";const searchResultLimits=8;const searchResultContextMaxLength=50;const explicitSearchResultPath=false;const searchBarShortcut=true;const searchBarShortcutHint=true;const searchBarPosition="right";const docsPluginIdForPreferredVersion=undefined;const indexDocs=true;const searchContextByPaths=null;const hideSearchBarWithNoSearchContext=false;const useAllContextsWithNoSearchContext=false;
 ;// CONCATENATED MODULE: ./node_modules/@easyops-cn/docusaurus-search-local/dist/client/client/utils/proxiedGenerated.js
 // This file is auto generated while building.
 
@@ -42763,7 +42768,7 @@ module.exports = /*#__PURE__*/JSON.parse('{"name":"docusaurus-plugin-content-doc
 /***/ ((module) => {
 
 "use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"version":{"pluginId":"default","version":"current","label":"Next","banner":null,"badge":false,"noIndex":false,"className":"docs-version-current","isLast":true,"docsSidebars":{"tutorialSidebar":[{"type":"link","label":"Introduction","href":"/docs/intro","docId":"intro","unlisted":false},{"type":"category","label":"zUI","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"Présentation","href":"/docs/zUI/presentation","docId":"zUI/presentation","unlisted":false},{"type":"link","label":"Installation","href":"/docs/zUI/installation","docId":"zUI/installation","unlisted":false},{"type":"link","label":"Utilisation","href":"/docs/zUI/utilisation","docId":"zUI/utilisation","unlisted":false},{"type":"category","label":"Items","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"Features","href":"/docs/zUI/Items/features","docId":"zUI/Items/features","unlisted":false},{"type":"link","label":"Séparateur","href":"/docs/zUI/Items/separator","docId":"zUI/Items/separator","unlisted":false},{"type":"link","label":"Ligne","href":"/docs/zUI/Items/line","docId":"zUI/Items/line","unlisted":false},{"type":"link","label":"Bouton","href":"/docs/zUI/Items/button","docId":"zUI/Items/button","unlisted":false},{"type":"link","label":"Bouton Lien","href":"/docs/zUI/Items/linkButton","docId":"zUI/Items/linkButton","unlisted":false},{"type":"link","label":"Liste","href":"/docs/zUI/Items/list","docId":"zUI/Items/list","unlisted":false},{"type":"link","label":"Checkbox","href":"/docs/zUI/Items/checkbox","docId":"zUI/Items/checkbox","unlisted":false}],"href":"/docs/category/items"},{"type":"link","label":"Thème","href":"/docs/zUI/theme","docId":"zUI/theme","unlisted":false},{"type":"category","label":"Fonctions","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"ShowHelpNotification","href":"/docs/zUI/Fonctions/showHelpNotification","docId":"zUI/Fonctions/showHelpNotification","unlisted":false},{"type":"link","label":"AlertInput","href":"/docs/zUI/Fonctions/alertInput","docId":"zUI/Fonctions/alertInput","unlisted":false},{"type":"link","label":"KeyboardInput","href":"/docs/zUI/Fonctions/keyboardInput","docId":"zUI/Fonctions/keyboardInput","unlisted":false},{"type":"link","label":"RenderSprite","href":"/docs/zUI/Fonctions/renderSprite","docId":"zUI/Fonctions/renderSprite","unlisted":false}],"href":"/docs/category/fonctions"},{"type":"category","label":"Méthodes","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"GoBack","href":"/docs/zUI/Methods/goBack","docId":"zUI/Methods/goBack","unlisted":false},{"type":"link","label":"Goto","href":"/docs/zUI/Methods/goTo","docId":"zUI/Methods/goTo","unlisted":false},{"type":"link","label":"IsVisible","href":"/docs/zUI/Methods/isVisible","docId":"zUI/Methods/isVisible","unlisted":false},{"type":"link","label":"OnClose","href":"/docs/zUI/Methods/onClose","docId":"zUI/Methods/onClose","unlisted":false},{"type":"link","label":"OnOpen","href":"/docs/zUI/Methods/onOpen","docId":"zUI/Methods/onOpen","unlisted":false},{"type":"link","label":"SetItems","href":"/docs/zUI/Methods/setItems","docId":"zUI/Methods/setItems","unlisted":false},{"type":"link","label":"SetVisible","href":"/docs/zUI/Methods/setVisible","docId":"zUI/Methods/setVisible","unlisted":false}],"href":"/docs/category/méthodes"}],"href":"/docs/category/zui"},{"type":"category","label":"zSleep","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"Introduction","href":"/docs/zSleep/intro","docId":"zSleep/intro","unlisted":false},{"type":"link","label":"Installation","href":"/docs/zSleep/instal","docId":"zSleep/instal","unlisted":false}]}]},"docs":{"intro":{"id":"intro","title":"Introduction","description":"Bienvenue dans la documentation officielle de toutes les ressources développées par zSquad. Ici, vous trouverez toutes les informations nécessaires pour comprendre, utiliser et tirer pleinement parti des projets, outils et technologies créés par notre équipe.","sidebar":"tutorialSidebar"},"zSleep/instal":{"id":"zSleep/instal","title":"Installation","description":"Voici un guide d\'installation détaillé pour zSleep, destiné aux administrateurs de serveurs FiveM. Ce guide inclut les étapes nécessaires pour installer le script sur votre serveur, ainsi que les informations de configuration à personnaliser pour répondre à vos besoins.","sidebar":"tutorialSidebar"},"zSleep/intro":{"id":"zSleep/intro","title":"Introduction","description":"Bienvenue dans la documentation officielle de zSleep, le script de sommeil ultime pour les administrateurs de serveurs FiveM. Avec zSleep, offrez à votre communauté de nouvelles possibilités immersives grâce à une mécanique de sommeil réaliste et intuitive.","sidebar":"tutorialSidebar"},"zUI/Fonctions/alertInput":{"id":"zUI/Fonctions/alertInput","title":"AlertInput","description":"La fonction AlertInput est utile lorsque vous devez demander une confirmation au joueur.","sidebar":"tutorialSidebar"},"zUI/Fonctions/keyboardInput":{"id":"zUI/Fonctions/keyboardInput","title":"KeyboardInput","description":"La fonction KeyboardInput est utile lorsque vous devez demander une saisie de texte à l\'utilisateur via un clavier virtuel.","sidebar":"tutorialSidebar"},"zUI/Fonctions/renderSprite":{"id":"zUI/Fonctions/renderSprite","title":"RenderSprite","description":"La fonction RenderSprite permet d\'afficher une image sous un menu spécifique dans l\'interface utilisateur.","sidebar":"tutorialSidebar"},"zUI/Fonctions/showHelpNotification":{"id":"zUI/Fonctions/showHelpNotification","title":"ShowHelpNotification","description":"La fonction ShowHelpNotification est utile dans le cas où vous devriez indiquer au joueur sur quelle touche il devra appuyer pour interagir avec votre script.","sidebar":"tutorialSidebar"},"zUI/installation":{"id":"zUI/installation","title":"Installation","description":"zUI est une bibliothèque avancée qui s\'intègre directement dans une resource existante sur votre serveur FiveM. Suivez les étapes ci-dessous pour l\'installer correctement et vous assurer qu\'elle fonctionne de manière optimale.","sidebar":"tutorialSidebar"},"zUI/Items/button":{"id":"zUI/Items/button","title":"Bouton","description":"Les boutons dans zUI sont des éléments interactifs essentiels qui permettent aux utilisateurs de réaliser des actions lorsqu\'ils sont cliqués. Vous pouvez ajouter des boutons à vos menus en utilisant la fonction Items:AddButton. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/checkbox":{"id":"zUI/Items/checkbox","title":"Checkbox","description":"Les checkboxes dans zUI permettent aux utilisateurs de sélectionner ou désélectionner des options, offrant ainsi un moyen interactif pour gérer les états binaires dans vos menus. Vous pouvez ajouter des checkboxes à vos menus en utilisant la fonction zUI:AddCheckbox. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/features":{"id":"zUI/Items/features","title":"Features","description":"Badges","sidebar":"tutorialSidebar"},"zUI/Items/line":{"id":"zUI/Items/line","title":"Ligne","description":"Les lignes dans zUI sont des éléments visuels utilisés pour ajouter des séparations horizontales dans vos menus. Elles peuvent être utilisées pour séparer visuellement les différentes sections ou pour améliorer l\'organisation de l\'interface utilisateur. Vous pouvez ajouter des lignes à vos menus en utilisant la fonction zUI:AddLine. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/linkButton":{"id":"zUI/Items/linkButton","title":"Bouton Lien","description":"Les boutons lien dans zUI sont des éléments interactifs qui redirigent les utilisateurs vers une URL lorsqu\'ils sont cliqués. Ils sont utiles pour ajouter des liens externes ou des pages web à vos menus. Vous pouvez ajouter des boutons lien à vos menus en utilisant la fonction zUI:AddLinkButton. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/list":{"id":"zUI/Items/list","title":"Liste","description":"Les listes dans zUI permettent aux utilisateurs de sélectionner parmi plusieurs options. Elles sont idéales pour offrir des choix dynamiques ou pour afficher des éléments dans vos menus. Vous pouvez ajouter des listes à vos menus en utilisant la fonction zUI:AddList. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/separator":{"id":"zUI/Items/separator","title":"Séparateur","description":"Les séparateurs dans zUI sont des éléments visuels utilisés pour diviser et organiser les éléments dans un menu. Ils aident à améliorer la lisibilité et à structurer l\'interface utilisateur. Vous pouvez ajouter des séparateurs à vos menus en utilisant la fonction zUI:AddSeparator. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Methods/goBack":{"id":"zUI/Methods/goBack","title":"GoBack","description":"La méthode GoBack est utile lorsque vous souhaitez revenir à un menu parent dans l\'interface utilisateur.","sidebar":"tutorialSidebar"},"zUI/Methods/goTo":{"id":"zUI/Methods/goTo","title":"Goto","description":"La méthode Goto est utilisée pour naviguer vers un menu spécifique dans l\'interface utilisateur.","sidebar":"tutorialSidebar"},"zUI/Methods/isVisible":{"id":"zUI/Methods/isVisible","title":"IsVisible","description":"La méthode IsVisible est utilisée pour vérifier si un menu principal est actuellement visible.","sidebar":"tutorialSidebar"},"zUI/Methods/onClose":{"id":"zUI/Methods/onClose","title":"OnClose","description":"La méthode OnClose est utilisée pour définir une fonction à exécuter lors de la fermeture d\'un menu principal.","sidebar":"tutorialSidebar"},"zUI/Methods/onOpen":{"id":"zUI/Methods/onOpen","title":"OnOpen","description":"La méthode OnOpen est utilisée pour définir une fonction à exécuter lors de l\'ouverture d\'un menu principal.","sidebar":"tutorialSidebar"},"zUI/Methods/setItems":{"id":"zUI/Methods/setItems","title":"SetItems","description":"La méthode SetItems est utilisée pour définir les éléments d\'un menu.","sidebar":"tutorialSidebar"},"zUI/Methods/setVisible":{"id":"zUI/Methods/setVisible","title":"SetVisible","description":"La méthode SetVisible est utilisée pour afficher ou masquer un menu principal.","sidebar":"tutorialSidebar"},"zUI/presentation":{"id":"zUI/presentation","title":"Présentation","description":"zUI est une bibliothèque avancée dédiée à la création de menus NUI pour FiveM, qui allie sobriété, optimisation et esthétique. Ce projet vise à moderniser la création de menus tout en facilitant le travail des développeurs grâce à une interface intuitive et performante.","sidebar":"tutorialSidebar"},"zUI/theme":{"id":"zUI/theme","title":"Thème","description":"Le fichier theme.json vous permet de personnaliser l\'apparence de zUI en ajustant divers paramètres du menu. Vous pouvez modifier la position, les couleurs, les styles et plus encore pour adapter l\'interface à vos besoins spécifiques.","sidebar":"tutorialSidebar"},"zUI/utilisation":{"id":"zUI/utilisation","title":"Utilisation","description":"Dans cette section, nous allons explorer comment utiliser zUI pour créer et gérer des menus NUI dans FiveM. Vous apprendrez à créer des menus et des sous-menus, à ajouter des éléments, et à gérer leur visibilité.","sidebar":"tutorialSidebar"}}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"version":{"pluginId":"default","version":"current","label":"Next","banner":null,"badge":false,"noIndex":false,"className":"docs-version-current","isLast":true,"docsSidebars":{"tutorialSidebar":[{"type":"link","label":"Introduction","href":"/docs/intro","docId":"intro","unlisted":false},{"type":"category","label":"zUI","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"Présentation","href":"/docs/zUI/presentation","docId":"zUI/presentation","unlisted":false},{"type":"link","label":"Installation","href":"/docs/zUI/installation","docId":"zUI/installation","unlisted":false},{"type":"link","label":"Utilisation","href":"/docs/zUI/utilisation","docId":"zUI/utilisation","unlisted":false},{"type":"category","label":"Items","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"Features","href":"/docs/zUI/Items/features","docId":"zUI/Items/features","unlisted":false},{"type":"link","label":"Séparateur","href":"/docs/zUI/Items/separator","docId":"zUI/Items/separator","unlisted":false},{"type":"link","label":"Ligne","href":"/docs/zUI/Items/line","docId":"zUI/Items/line","unlisted":false},{"type":"link","label":"Bouton","href":"/docs/zUI/Items/button","docId":"zUI/Items/button","unlisted":false},{"type":"link","label":"Bouton Lien","href":"/docs/zUI/Items/linkButton","docId":"zUI/Items/linkButton","unlisted":false},{"type":"link","label":"Liste","href":"/docs/zUI/Items/list","docId":"zUI/Items/list","unlisted":false},{"type":"link","label":"Checkbox","href":"/docs/zUI/Items/checkbox","docId":"zUI/Items/checkbox","unlisted":false}],"href":"/docs/category/items"},{"type":"link","label":"Thème","href":"/docs/zUI/theme","docId":"zUI/theme","unlisted":false},{"type":"category","label":"Fonctions","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"ShowHelpNotification","href":"/docs/zUI/Fonctions/showHelpNotification","docId":"zUI/Fonctions/showHelpNotification","unlisted":false},{"type":"link","label":"AlertInput","href":"/docs/zUI/Fonctions/alertInput","docId":"zUI/Fonctions/alertInput","unlisted":false},{"type":"link","label":"KeyboardInput","href":"/docs/zUI/Fonctions/keyboardInput","docId":"zUI/Fonctions/keyboardInput","unlisted":false},{"type":"link","label":"RenderSprite","href":"/docs/zUI/Fonctions/renderSprite","docId":"zUI/Fonctions/renderSprite","unlisted":false}],"href":"/docs/category/fonctions"},{"type":"category","label":"Méthodes","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"GoBack","href":"/docs/zUI/Methods/goBack","docId":"zUI/Methods/goBack","unlisted":false},{"type":"link","label":"Goto","href":"/docs/zUI/Methods/goTo","docId":"zUI/Methods/goTo","unlisted":false},{"type":"link","label":"IsVisible","href":"/docs/zUI/Methods/isVisible","docId":"zUI/Methods/isVisible","unlisted":false},{"type":"link","label":"OnClose","href":"/docs/zUI/Methods/onClose","docId":"zUI/Methods/onClose","unlisted":false},{"type":"link","label":"OnOpen","href":"/docs/zUI/Methods/onOpen","docId":"zUI/Methods/onOpen","unlisted":false},{"type":"link","label":"SetItems","href":"/docs/zUI/Methods/setItems","docId":"zUI/Methods/setItems","unlisted":false},{"type":"link","label":"SetVisible","href":"/docs/zUI/Methods/setVisible","docId":"zUI/Methods/setVisible","unlisted":false}],"href":"/docs/category/méthodes"}],"href":"/docs/category/zui"},{"type":"category","label":"zSleep","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"Introduction","href":"/docs/zSleep/intro","docId":"zSleep/intro","unlisted":false},{"type":"link","label":"Installation","href":"/docs/zSleep/instal","docId":"zSleep/instal","unlisted":false}]}]},"docs":{"intro":{"id":"intro","title":"Introduction","description":"Bienvenue dans la documentation officielle de toutes les ressources développées par zSquad. Ici, vous trouverez toutes les informations nécessaires pour comprendre, utiliser et tirer pleinement parti des projets, outils et technologies créés par notre équipe.","sidebar":"tutorialSidebar"},"zSleep/instal":{"id":"zSleep/instal","title":"Installation","description":"Ce guide d\'installation de zSleep s\'adresse aux administrateurs de serveurs FiveM et détaille les étapes nécessaires pour installer et configurer le script selon vos besoins.","sidebar":"tutorialSidebar"},"zSleep/intro":{"id":"zSleep/intro","title":"Introduction","description":"Bienvenue dans la documentation officielle de zSleep, le script de sommeil ultime pour les administrateurs de serveurs FiveM. Avec zSleep, offrez à votre communauté de nouvelles possibilités immersives grâce à une mécanique de sommeil réaliste et intuitive.","sidebar":"tutorialSidebar"},"zUI/Fonctions/alertInput":{"id":"zUI/Fonctions/alertInput","title":"AlertInput","description":"La fonction AlertInput est utile lorsque vous devez demander une confirmation au joueur.","sidebar":"tutorialSidebar"},"zUI/Fonctions/keyboardInput":{"id":"zUI/Fonctions/keyboardInput","title":"KeyboardInput","description":"La fonction KeyboardInput est utile lorsque vous devez demander une saisie de texte à l\'utilisateur via un clavier virtuel.","sidebar":"tutorialSidebar"},"zUI/Fonctions/renderSprite":{"id":"zUI/Fonctions/renderSprite","title":"RenderSprite","description":"La fonction RenderSprite permet d\'afficher une image sous un menu spécifique dans l\'interface utilisateur.","sidebar":"tutorialSidebar"},"zUI/Fonctions/showHelpNotification":{"id":"zUI/Fonctions/showHelpNotification","title":"ShowHelpNotification","description":"La fonction ShowHelpNotification est utile dans le cas où vous devriez indiquer au joueur sur quelle touche il devra appuyer pour interagir avec votre script.","sidebar":"tutorialSidebar"},"zUI/installation":{"id":"zUI/installation","title":"Installation","description":"zUI est une bibliothèque avancée qui s\'intègre directement dans une resource existante sur votre serveur FiveM. Suivez les étapes ci-dessous pour l\'installer correctement et vous assurer qu\'elle fonctionne de manière optimale.","sidebar":"tutorialSidebar"},"zUI/Items/button":{"id":"zUI/Items/button","title":"Bouton","description":"Les boutons dans zUI sont des éléments interactifs essentiels qui permettent aux utilisateurs de réaliser des actions lorsqu\'ils sont cliqués. Vous pouvez ajouter des boutons à vos menus en utilisant la fonction Items:AddButton. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/checkbox":{"id":"zUI/Items/checkbox","title":"Checkbox","description":"Les checkboxes dans zUI permettent aux utilisateurs de sélectionner ou désélectionner des options, offrant ainsi un moyen interactif pour gérer les états binaires dans vos menus. Vous pouvez ajouter des checkboxes à vos menus en utilisant la fonction zUI:AddCheckbox. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/features":{"id":"zUI/Items/features","title":"Features","description":"Badges","sidebar":"tutorialSidebar"},"zUI/Items/line":{"id":"zUI/Items/line","title":"Ligne","description":"Les lignes dans zUI sont des éléments visuels utilisés pour ajouter des séparations horizontales dans vos menus. Elles peuvent être utilisées pour séparer visuellement les différentes sections ou pour améliorer l\'organisation de l\'interface utilisateur. Vous pouvez ajouter des lignes à vos menus en utilisant la fonction zUI:AddLine. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/linkButton":{"id":"zUI/Items/linkButton","title":"Bouton Lien","description":"Les boutons lien dans zUI sont des éléments interactifs qui redirigent les utilisateurs vers une URL lorsqu\'ils sont cliqués. Ils sont utiles pour ajouter des liens externes ou des pages web à vos menus. Vous pouvez ajouter des boutons lien à vos menus en utilisant la fonction zUI:AddLinkButton. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/list":{"id":"zUI/Items/list","title":"Liste","description":"Les listes dans zUI permettent aux utilisateurs de sélectionner parmi plusieurs options. Elles sont idéales pour offrir des choix dynamiques ou pour afficher des éléments dans vos menus. Vous pouvez ajouter des listes à vos menus en utilisant la fonction zUI:AddList. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/separator":{"id":"zUI/Items/separator","title":"Séparateur","description":"Les séparateurs dans zUI sont des éléments visuels utilisés pour diviser et organiser les éléments dans un menu. Ils aident à améliorer la lisibilité et à structurer l\'interface utilisateur. Vous pouvez ajouter des séparateurs à vos menus en utilisant la fonction zUI:AddSeparator. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Methods/goBack":{"id":"zUI/Methods/goBack","title":"GoBack","description":"La méthode GoBack est utile lorsque vous souhaitez revenir à un menu parent dans l\'interface utilisateur.","sidebar":"tutorialSidebar"},"zUI/Methods/goTo":{"id":"zUI/Methods/goTo","title":"Goto","description":"La méthode Goto est utilisée pour naviguer vers un menu spécifique dans l\'interface utilisateur.","sidebar":"tutorialSidebar"},"zUI/Methods/isVisible":{"id":"zUI/Methods/isVisible","title":"IsVisible","description":"La méthode IsVisible est utilisée pour vérifier si un menu principal est actuellement visible.","sidebar":"tutorialSidebar"},"zUI/Methods/onClose":{"id":"zUI/Methods/onClose","title":"OnClose","description":"La méthode OnClose est utilisée pour définir une fonction à exécuter lors de la fermeture d\'un menu principal.","sidebar":"tutorialSidebar"},"zUI/Methods/onOpen":{"id":"zUI/Methods/onOpen","title":"OnOpen","description":"La méthode OnOpen est utilisée pour définir une fonction à exécuter lors de l\'ouverture d\'un menu principal.","sidebar":"tutorialSidebar"},"zUI/Methods/setItems":{"id":"zUI/Methods/setItems","title":"SetItems","description":"La méthode SetItems est utilisée pour définir les éléments d\'un menu.","sidebar":"tutorialSidebar"},"zUI/Methods/setVisible":{"id":"zUI/Methods/setVisible","title":"SetVisible","description":"La méthode SetVisible est utilisée pour afficher ou masquer un menu principal.","sidebar":"tutorialSidebar"},"zUI/presentation":{"id":"zUI/presentation","title":"Présentation","description":"zUI est une bibliothèque avancée dédiée à la création de menus NUI pour FiveM, qui allie sobriété, optimisation et esthétique. Ce projet vise à moderniser la création de menus tout en facilitant le travail des développeurs grâce à une interface intuitive et performante.","sidebar":"tutorialSidebar"},"zUI/theme":{"id":"zUI/theme","title":"Thème","description":"Le fichier theme.json vous permet de personnaliser l\'apparence de zUI en ajustant divers paramètres du menu. Vous pouvez modifier la position, les couleurs, les styles et plus encore pour adapter l\'interface à vos besoins spécifiques.","sidebar":"tutorialSidebar"},"zUI/utilisation":{"id":"zUI/utilisation","title":"Utilisation","description":"Dans cette section, nous allons explorer comment utiliser zUI pour créer et gérer des menus NUI dans FiveM. Vous apprendrez à créer des menus et des sous-menus, à ajouter des éléments, et à gérer leur visibilité.","sidebar":"tutorialSidebar"}}}}');
 
 /***/ }),
 
