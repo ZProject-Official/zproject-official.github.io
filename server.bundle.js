@@ -2157,8 +2157,8 @@ const metadata = {
     "permalink": "/docs/zUI/Items/list"
   },
   "next": {
-    "title": "Thèmes",
-    "permalink": "/docs/category/thèmes"
+    "title": "Liste de Couleurs",
+    "permalink": "/docs/zUI/Items/colorList"
   }
 };
 const assets = {
@@ -2355,6 +2355,309 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: "Les checkboxes sont des éléments interactifs utiles pour gérer des choix binaires dans vos menus, offrant une expérience utilisateur fluide et intuitive."
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
+    ...props,
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+
+
+
+/***/ }),
+
+/***/ 9826:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   assets: () => (/* binding */ assets),
+/* harmony export */   contentTitle: () => (/* binding */ contentTitle),
+/* harmony export */   "default": () => (/* binding */ MDXContent),
+/* harmony export */   frontMatter: () => (/* binding */ frontMatter),
+/* harmony export */   metadata: () => (/* binding */ metadata),
+/* harmony export */   toc: () => (/* binding */ toc)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4848);
+/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8453);
+
+
+const frontMatter = {
+	sidebar_position: 9
+};
+const contentTitle = 'Liste de Couleurs';
+const metadata = {
+  "id": "zUI/Items/colorList",
+  "title": "Liste de Couleurs",
+  "description": "La fonction AddColorList dans zUI permet d'ajouter une liste de couleurs personnalisable à vos menus. Cette fonctionnalité est idéale pour offrir des options colorées, telles que des thèmes ou des choix de personnalisation visuelle. Voici comment utiliser cette fonction pour enrichir vos menus.",
+  "source": "@site/docs/zUI/Items/colorList.md",
+  "sourceDirName": "zUI/Items",
+  "slug": "/zUI/Items/colorList",
+  "permalink": "/docs/zUI/Items/colorList",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "sidebar_position": 9
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Checkbox",
+    "permalink": "/docs/zUI/Items/checkbox"
+  },
+  "next": {
+    "title": "Slider",
+    "permalink": "/docs/zUI/Items/slider"
+  }
+};
+const assets = {
+
+};
+
+
+
+const toc = [{
+  "value": "Fonction <code>AddColorList</code>",
+  "id": "fonction-addcolorlist",
+  "level": 2
+}, {
+  "value": "Paramètres",
+  "id": "paramètres",
+  "level": 3
+}, {
+  "value": "Exemple de Création d&#39;une Liste de Couleurs",
+  "id": "exemple-de-création-dune-liste-de-couleurs",
+  "level": 3
+}, {
+  "value": "Explication",
+  "id": "explication",
+  "level": 3
+}, {
+  "value": "Résumé",
+  "id": "résumé",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    blockquote: "blockquote",
+    code: "code",
+    em: "em",
+    h1: "h1",
+    h2: "h2",
+    h3: "h3",
+    header: "header",
+    li: "li",
+    ol: "ol",
+    p: "p",
+    pre: "pre",
+    strong: "strong",
+    ul: "ul",
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.header, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h1, {
+        id: "liste-de-couleurs",
+        children: "Liste de Couleurs"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["La fonction ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "AddColorList"
+        })
+      }), " dans ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "zUI"
+      }), " permet d'ajouter une liste de couleurs personnalisable à vos menus. Cette fonctionnalité est idéale pour offrir des options colorées, telles que des thèmes ou des choix de personnalisation visuelle. Voici comment utiliser cette fonction pour enrichir vos menus."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h2, {
+      id: "fonction-addcolorlist",
+      children: ["Fonction ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "AddColorList"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "La syntaxe pour ajouter une liste de couleurs est la suivante :"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-lua",
+        children: "zUI:AddColorList(Title, Description, Index, Items, Styles, Action)\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "paramètres",
+      children: "Paramètres"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Title"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[string | number]"
+        }), " : Le titre affiché en haut de la liste."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Description"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[string | number | nil]"
+        }), " : (Optionnel) Une description qui apparaît sous le titre."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Index"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[number]"
+        }), " : L'index initial sélectionné dans la liste."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Items"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[table]"
+        }), " : Un tableau contenant les couleurs disponibles. Chaque élément représente une couleur."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Styles"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[table]"
+        }), " : Des éléments pour personnaliser l'apparence de la liste. Ces styles incluent :", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.blockquote, {
+          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+            children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+                children: "IsDisabled"
+              }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+                children: "[boolean]"
+              }), " : Indique si la liste est désactivée."]
+            }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+                children: "LeftBadge"
+              }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+                children: "[BadgeName]"
+              }), " : Affiche un badge à gauche de la liste."]
+            }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+                children: "Color"
+              }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+                children: "[string]"
+              }), " : Définit la couleur principale du texte."]
+            }), "\n"]
+          }), "\n"]
+        }), "\n"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Action"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[function(onSelected, onHovered, onListChange, index)]"
+        }), " : Une fonction qui s'exécute lorsque l'utilisateur interagit avec la liste. Cette fonction reçoit les paramètres suivants :", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.blockquote, {
+          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+            children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+                children: "onSelected"
+              }), " (vrai si un élément est sélectionné)"]
+            }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+                children: "onHovered"
+              }), " (vrai si un élément est survolé)"]
+            }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+                children: "onListChange"
+              }), " (vrai si la sélection a changé)"]
+            }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+                children: "index"
+              }), " (index de l'élément sélectionné)"]
+            }), "\n"]
+          }), "\n"]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "exemple-de-création-dune-liste-de-couleurs",
+      children: "Exemple de Création d'une Liste de Couleurs"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Voici un exemple illustrant l'ajout d'une liste de couleurs dans un menu :"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-lua",
+        children: "local currentIndex = 0\r\nlocal Colors = { \"Rouge\", \"Vert\", \"Bleu\", \"Jaune\", \"Violet\" }\r\nMenu:SetItems(function(Items)\r\n    Items:AddColorList(\r\n        \"Choisissez une couleur\",\r\n        \"Personnalisez votre thème\",\r\n        currentIndex,\r\n        Colors,\r\n        { IsDisabled = false, LeftBadge = \"Star\", Color = \"#ff0000\" },\r\n        function(onSelected, onHovered, onListChange, index)\r\n            if onListChange then\r\n                currentIndex = index\r\n            end\r\n        end\r\n    )\r\nend)\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "explication",
+      children: "Explication"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Title"
+        }), " : \"Choisissez une couleur\" est le titre affiché en haut de la liste."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Description"
+        }), " : \"Personnalisez votre thème\" est la description affichée sous le titre."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Index"
+        }), " : ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "0"
+        }), " indique que l'élément initialement sélectionné est \"Rouge\"."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Items"
+        }), " : ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "{ \"Rouge\", \"Vert\", \"Bleu\", \"Jaune\", \"Violet\" }"
+        }), " définit les couleurs disponibles dans la liste."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Styles"
+        }), " : Ces styles incluent :", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+              children: "IsDisabled"
+            }), " : La liste est interactive car ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+              children: "false"
+            }), "."]
+          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+              children: "LeftBadge"
+            }), " : Ajoute un badge \"Star\" à gauche de la liste."]
+          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+              children: "Color"
+            }), " : Utilise le code couleur rouge ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+              children: "\"#ff0000\""
+            }), "."]
+          }), "\n"]
+        }), "\n"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Action"
+        }), " : La fonction affiche dans la console les couleurs sélectionnées ou confirmées."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "résumé",
+      children: "Résumé"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Pour ajouter une liste de couleurs dans ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "zUI"
+      }), " :"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["Utilisez ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "zUI:AddColorList"
+        }), " pour créer une liste dans votre menu."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+        children: "Spécifiez le titre, la description, l'index initial, les couleurs disponibles et les styles."
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["Implémentez une fonction ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "Action"
+        }), " pour réagir aux interactions de l'utilisateur."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Les listes de couleurs enrichissent vos menus en permettant aux utilisateurs de personnaliser visuellement leur expérience. Utilisez cette fonction pour des thèmes, des préférences esthétiques ou toute situation nécessitant des choix colorés."
     })]
   });
 }
@@ -4559,6 +4862,321 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: "Les séparateurs sont essentiels pour organiser les éléments dans vos menus NUI et améliorer l'expérience utilisateur en rendant les menus plus clairs et structurés."
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
+    ...props,
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+
+
+
+/***/ }),
+
+/***/ 2668:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   assets: () => (/* binding */ assets),
+/* harmony export */   contentTitle: () => (/* binding */ contentTitle),
+/* harmony export */   "default": () => (/* binding */ MDXContent),
+/* harmony export */   frontMatter: () => (/* binding */ frontMatter),
+/* harmony export */   metadata: () => (/* binding */ metadata),
+/* harmony export */   toc: () => (/* binding */ toc)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4848);
+/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8453);
+
+
+const frontMatter = {
+	sidebar_position: 9
+};
+const contentTitle = 'Slider';
+const metadata = {
+  "id": "zUI/Items/slider",
+  "title": "Slider",
+  "description": "Les curseurs dans zUI permettent d’ajouter des contrôles de type slider à vos menus, offrant une manière intuitive d’ajuster des valeurs numériques, telles que des volumes, des niveaux ou des options de personnalisation. Voici comment configurer et utiliser la fonction AddSlider.",
+  "source": "@site/docs/zUI/Items/slider.md",
+  "sourceDirName": "zUI/Items",
+  "slug": "/zUI/Items/slider",
+  "permalink": "/docs/zUI/Items/slider",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "sidebar_position": 9
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Liste de Couleurs",
+    "permalink": "/docs/zUI/Items/colorList"
+  },
+  "next": {
+    "title": "Thèmes",
+    "permalink": "/docs/category/thèmes"
+  }
+};
+const assets = {
+
+};
+
+
+
+const toc = [{
+  "value": "Fonction <code>AddSlider</code>",
+  "id": "fonction-addslider",
+  "level": 2
+}, {
+  "value": "Paramètres",
+  "id": "paramètres",
+  "level": 3
+}, {
+  "value": "Exemple de Création d&#39;un Curseur",
+  "id": "exemple-de-création-dun-curseur",
+  "level": 3
+}, {
+  "value": "Explication",
+  "id": "explication",
+  "level": 3
+}, {
+  "value": "Résumé",
+  "id": "résumé",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    blockquote: "blockquote",
+    code: "code",
+    em: "em",
+    h1: "h1",
+    h2: "h2",
+    h3: "h3",
+    header: "header",
+    li: "li",
+    ol: "ol",
+    p: "p",
+    pre: "pre",
+    strong: "strong",
+    ul: "ul",
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.header, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h1, {
+        id: "slider",
+        children: "Slider"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Les curseurs dans ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "zUI"
+      }), " permettent d’ajouter des contrôles de type slider à vos menus, offrant une manière intuitive d’ajuster des valeurs numériques, telles que des volumes, des niveaux ou des options de personnalisation. Voici comment configurer et utiliser la fonction ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "AddSlider"
+        })
+      }), "."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h2, {
+      id: "fonction-addslider",
+      children: ["Fonction ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "AddSlider"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "La syntaxe pour ajouter un curseur est la suivante :"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-lua",
+        children: "zUI:AddSlider(Title, Description, Percentage, Step, Styles, Action)\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "paramètres",
+      children: "Paramètres"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Title"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[string]"
+        }), " : Le titre affiché au-dessus du curseur."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Description"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[string | number | nil]"
+        }), " : (Optionnel) Une description ou un sous-titre affiché sous le titre."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Percentage"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[number | nil]"
+        }), " : (Optionnel) La valeur initiale du curseur, exprimée en pourcentage (0-100). La valeur par défaut est ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "100"
+        }), "."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Step"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[number]"
+        }), " : La valeur d'incrément ou de décrément à chaque ajustement."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Styles"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[table]"
+        }), " : Un tableau contenant les styles pour personnaliser le curseur :", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.blockquote, {
+          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+            children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+                children: "IsDisabled"
+              }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+                children: "[boolean]"
+              }), " : Désactive le curseur si ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+                children: "true"
+              }), "."]
+            }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+                children: "Color"
+              }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+                children: "[string]"
+              }), " : Détermine la couleur principale du curseur."]
+            }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+                children: "ShowPercentage"
+              }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+                children: "[boolean]"
+              }), " : Affiche ou masque le pourcentage actuel sur le curseur."]
+            }), "\n"]
+          }), "\n"]
+        }), "\n"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Action"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[function(onSelected, onHovered, onChange, percentage)]"
+        }), " : Une fonction à exécuter lorsque l’utilisateur interagit avec le curseur. Cette fonction reçoit les paramètres suivants :", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.blockquote, {
+          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+            children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+                children: "onSelected"
+              }), " (vrai si l'utilisateur valide le curseur)"]
+            }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+                children: "onHovered"
+              }), " (vrai si le curseur est survolé)"]
+            }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+                children: "onChange"
+              }), " (vrai si la valeur du curseur a changé)"]
+            }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+                children: "percentage"
+              }), " (la nouvelle valeur du curseur en pourcentage)"]
+            }), "\n"]
+          }), "\n"]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "exemple-de-création-dun-curseur",
+      children: "Exemple de Création d'un Curseur"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Voici un exemple d'utilisation de la fonction ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "AddSlider"
+        })
+      }), " pour ajouter un curseur à un menu :"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-lua",
+        children: "local currentPercentage = 0\r\nMenu:SetItems(function(Items)\r\n    Items:AddSlider(\r\n        \"Volume général\",\r\n        \"Ajustez le volume principal\",\r\n        currentPercentage,\r\n        5,\r\n        { IsDisabled = false, Color = \"#00ff00\", ShowPercentage = true },\r\n        function(onSelected, onHovered, onChange, percentage)\r\n            if onChange then\r\n                currentPercentage = percentage\r\n            end\r\n        end\r\n    )\r\nend)\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "explication",
+      children: "Explication"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Title"
+        }), " : \"Volume général\" s’affiche comme titre du curseur."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Description"
+        }), " : \"Ajustez le volume principal\" fournit des informations supplémentaires."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Percentage"
+        }), " : ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "currentPercentage"
+        }), " indique que le curseur démarre à 0%."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Step"
+        }), " : ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "5"
+        }), " signifie que chaque ajustement augmente ou diminue la valeur de 5%."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Styles"
+        }), " :", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+              children: "IsDisabled"
+            }), " : Le curseur est actif car ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+              children: "false"
+            }), "."]
+          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+              children: "Color"
+            }), " : La couleur principale est définie sur ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+              children: "\"#00ff00\""
+            }), " (vert)."]
+          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+              children: "ShowPercentage"
+            }), " : Le pourcentage actuel est affiché."]
+          }), "\n"]
+        }), "\n"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Action"
+        }), " : La fonction réagit aux changements (", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "onChange"
+        }), ") ou à la confirmation (", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "onSelected"
+        }), ") de l'utilisateur."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "résumé",
+      children: "Résumé"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Pour ajouter un curseur dans ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "zUI"
+      }), " :"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["Utilisez ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "zUI:AddSlider"
+        }), " pour intégrer un curseur à votre menu."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+        children: "Spécifiez les paramètres comme le titre, la description, le pourcentage initial, l’incrément et les styles."
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["Implémentez une fonction ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "Action"
+        }), " pour gérer les interactions utilisateur."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Les curseurs enrichissent vos menus en permettant des ajustements précis et interactifs. Utilisez-les pour des paramètres, des niveaux ou toute valeur nécessitant un contrôle visuel et accessible."
     })]
   });
 }
@@ -13123,9 +13741,9 @@ var interopRequireWildcard = __webpack_require__(9309);
 var lib = __webpack_require__(3259);
 var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
 ;// CONCATENATED MODULE: ./.docusaurus/routesChunkNames.json
-const routesChunkNames_namespaceObject = /*#__PURE__*/JSON.parse('{"/markdown-page-3d7":{"__comp":"1f391b9e","__context":{"plugin":"a7456010"},"content":"393be207"},"/search-822":{"__comp":"1a4e3797","__context":{"plugin":"138e0e15"}},"/tools-4ef":{"__comp":"4471e4eb","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"},"/docs-651":{"__comp":"5e95c892","__context":{"plugin":"aba21aa0"}},"/docs-72a":{"__comp":"a7bd4aaa","__props":"0058b4c6"},"/docs-467":{"__comp":"a94703ab"},"/docs/category/fonctions-7b5":{"__comp":"14eb3368","__props":"77edc38e"},"/docs/category/items-2c4":{"__comp":"14eb3368","__props":"f517399b"},"/docs/category/méthodes-d08":{"__comp":"14eb3368","__props":"86f8f604"},"/docs/category/notifications-ba9":{"__comp":"14eb3368","__props":"d0fbaa5c"},"/docs/category/thèmes-365":{"__comp":"14eb3368","__props":"24c962a7"},"/docs/category/zui-6ef":{"__comp":"14eb3368","__props":"20ddddd6"},"/docs/intro-61d":{"__comp":"17896441","content":"0e384e19"},"/docs/zSleep/instal-cdf":{"__comp":"17896441","content":"c416a5cb"},"/docs/zSleep/intro-edb":{"__comp":"17896441","content":"72b1f434"},"/docs/zUI/ContextUI-185":{"__comp":"17896441","content":"f95060f9"},"/docs/zUI/Fonctions/alertInput-b90":{"__comp":"17896441","content":"0c2eb47b"},"/docs/zUI/Fonctions/keyboardInput-d89":{"__comp":"17896441","content":"a03d2c35"},"/docs/zUI/Fonctions/renderSprite-d9d":{"__comp":"17896441","content":"5e283e32"},"/docs/zUI/Fonctions/showHelpNotification-303":{"__comp":"17896441","content":"a7e2b75e"},"/docs/zUI/installation-d42":{"__comp":"17896441","content":"6245e738"},"/docs/zUI/Items/button-1c7":{"__comp":"17896441","content":"48947c21"},"/docs/zUI/Items/checkbox-89f":{"__comp":"17896441","content":"d08fa093"},"/docs/zUI/Items/features-bfe":{"__comp":"17896441","content":"577f092c"},"/docs/zUI/Items/line-954":{"__comp":"17896441","content":"521c893a"},"/docs/zUI/Items/linkButton-c43":{"__comp":"17896441","content":"7c93d25a"},"/docs/zUI/Items/list-5ba":{"__comp":"17896441","content":"8df8a293"},"/docs/zUI/Items/separator-8e4":{"__comp":"17896441","content":"1b16c826"},"/docs/zUI/menu-7f0":{"__comp":"17896441","content":"bf310a1f"},"/docs/zUI/Methods/goBack-dc7":{"__comp":"17896441","content":"9b784c70"},"/docs/zUI/Methods/goTo-6a3":{"__comp":"17896441","content":"b821d7d8"},"/docs/zUI/Methods/isVisible-2c1":{"__comp":"17896441","content":"7df3f12d"},"/docs/zUI/Methods/onClose-ee1":{"__comp":"17896441","content":"14db5828"},"/docs/zUI/Methods/onOpen-e2e":{"__comp":"17896441","content":"93110188"},"/docs/zUI/Methods/setItems-f2b":{"__comp":"17896441","content":"7e6e0e0e"},"/docs/zUI/Methods/setVisible-036":{"__comp":"17896441","content":"d901ba3d"},"/docs/zUI/modal-8f0":{"__comp":"17896441","content":"4935dcfb"},"/docs/zUI/Notifications/helpNotif-28f":{"__comp":"17896441","content":"ad3a5a65"},"/docs/zUI/Notifications/notif-933":{"__comp":"17896441","content":"8b2e78d0"},"/docs/zUI/Notifications/pulsing-115":{"__comp":"17896441","content":"768626e0"},"/docs/zUI/presentation-21e":{"__comp":"17896441","content":"f127a06f"},"/docs/zUI/Themes/context-955":{"__comp":"17896441","content":"5cd445a3"},"/docs/zUI/Themes/introduction-b67":{"__comp":"17896441","content":"b96eb3b0"},"/docs/zUI/Themes/menu-02b":{"__comp":"17896441","content":"30592cf8"},"/docs/zUI/Themes/modal-817":{"__comp":"17896441","content":"658c47c5"},"/docs/zUI/Themes/notifs-cec":{"__comp":"17896441","content":"c206b3bb"},"/-e5f":{"__comp":"1df93b7f","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"}}');
+const routesChunkNames_namespaceObject = /*#__PURE__*/JSON.parse('{"/markdown-page-3d7":{"__comp":"1f391b9e","__context":{"plugin":"a7456010"},"content":"393be207"},"/search-822":{"__comp":"1a4e3797","__context":{"plugin":"138e0e15"}},"/tools-4ef":{"__comp":"4471e4eb","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"},"/docs-430":{"__comp":"5e95c892","__context":{"plugin":"aba21aa0"}},"/docs-b0e":{"__comp":"a7bd4aaa","__props":"0058b4c6"},"/docs-e0e":{"__comp":"a94703ab"},"/docs/category/fonctions-7b5":{"__comp":"14eb3368","__props":"77edc38e"},"/docs/category/items-2c4":{"__comp":"14eb3368","__props":"f517399b"},"/docs/category/méthodes-d08":{"__comp":"14eb3368","__props":"86f8f604"},"/docs/category/notifications-ba9":{"__comp":"14eb3368","__props":"d0fbaa5c"},"/docs/category/thèmes-365":{"__comp":"14eb3368","__props":"24c962a7"},"/docs/category/zui-6ef":{"__comp":"14eb3368","__props":"20ddddd6"},"/docs/intro-61d":{"__comp":"17896441","content":"0e384e19"},"/docs/zSleep/instal-cdf":{"__comp":"17896441","content":"c416a5cb"},"/docs/zSleep/intro-edb":{"__comp":"17896441","content":"72b1f434"},"/docs/zUI/ContextUI-185":{"__comp":"17896441","content":"f95060f9"},"/docs/zUI/Fonctions/alertInput-b90":{"__comp":"17896441","content":"0c2eb47b"},"/docs/zUI/Fonctions/keyboardInput-d89":{"__comp":"17896441","content":"a03d2c35"},"/docs/zUI/Fonctions/renderSprite-d9d":{"__comp":"17896441","content":"5e283e32"},"/docs/zUI/Fonctions/showHelpNotification-303":{"__comp":"17896441","content":"a7e2b75e"},"/docs/zUI/installation-d42":{"__comp":"17896441","content":"6245e738"},"/docs/zUI/Items/button-1c7":{"__comp":"17896441","content":"48947c21"},"/docs/zUI/Items/checkbox-89f":{"__comp":"17896441","content":"d08fa093"},"/docs/zUI/Items/colorList-659":{"__comp":"17896441","content":"66aa8f60"},"/docs/zUI/Items/features-bfe":{"__comp":"17896441","content":"577f092c"},"/docs/zUI/Items/line-954":{"__comp":"17896441","content":"521c893a"},"/docs/zUI/Items/linkButton-c43":{"__comp":"17896441","content":"7c93d25a"},"/docs/zUI/Items/list-5ba":{"__comp":"17896441","content":"8df8a293"},"/docs/zUI/Items/separator-8e4":{"__comp":"17896441","content":"1b16c826"},"/docs/zUI/Items/slider-6b3":{"__comp":"17896441","content":"58fd3a74"},"/docs/zUI/menu-7f0":{"__comp":"17896441","content":"bf310a1f"},"/docs/zUI/Methods/goBack-dc7":{"__comp":"17896441","content":"9b784c70"},"/docs/zUI/Methods/goTo-6a3":{"__comp":"17896441","content":"b821d7d8"},"/docs/zUI/Methods/isVisible-2c1":{"__comp":"17896441","content":"7df3f12d"},"/docs/zUI/Methods/onClose-ee1":{"__comp":"17896441","content":"14db5828"},"/docs/zUI/Methods/onOpen-e2e":{"__comp":"17896441","content":"93110188"},"/docs/zUI/Methods/setItems-f2b":{"__comp":"17896441","content":"7e6e0e0e"},"/docs/zUI/Methods/setVisible-036":{"__comp":"17896441","content":"d901ba3d"},"/docs/zUI/modal-8f0":{"__comp":"17896441","content":"4935dcfb"},"/docs/zUI/Notifications/helpNotif-28f":{"__comp":"17896441","content":"ad3a5a65"},"/docs/zUI/Notifications/notif-933":{"__comp":"17896441","content":"8b2e78d0"},"/docs/zUI/Notifications/pulsing-115":{"__comp":"17896441","content":"768626e0"},"/docs/zUI/presentation-21e":{"__comp":"17896441","content":"f127a06f"},"/docs/zUI/Themes/context-955":{"__comp":"17896441","content":"5cd445a3"},"/docs/zUI/Themes/introduction-b67":{"__comp":"17896441","content":"b96eb3b0"},"/docs/zUI/Themes/menu-02b":{"__comp":"17896441","content":"30592cf8"},"/docs/zUI/Themes/modal-817":{"__comp":"17896441","content":"658c47c5"},"/docs/zUI/Themes/notifs-cec":{"__comp":"17896441","content":"c206b3bb"},"/-e5f":{"__comp":"1df93b7f","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"}}');
 ;// CONCATENATED MODULE: ./.docusaurus/registry.js
-/* harmony default export */ const registry = ({"0058b4c6":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(6164))),"@generated/docusaurus-plugin-content-docs/default/p/docs-175.json",/*require.resolve*/(6164)],"0c2eb47b":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7606))),"@site/docs/zUI/Fonctions/alertInput.md",/*require.resolve*/(7606)],"0e384e19":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(619))),"@site/docs/intro.md",/*require.resolve*/(619)],"138e0e15":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(1597))),"@generated/@easyops-cn/docusaurus-search-local/default/__plugin.json",/*require.resolve*/(1597)],"14db5828":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4232))),"@site/docs/zUI/Methods/onClose.md",/*require.resolve*/(4232)],"14eb3368":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8367))),"@theme/DocCategoryGeneratedIndexPage",/*require.resolve*/(8367)],"17896441":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8950))),"@theme/DocItem",/*require.resolve*/(8950)],"1a4e3797":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4809))),"@theme/SearchPage",/*require.resolve*/(4809)],"1b16c826":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(5690))),"@site/docs/zUI/Items/separator.md",/*require.resolve*/(5690)],"1df93b7f":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7988))),"@site/src/pages/index.tsx",/*require.resolve*/(7988)],"1f391b9e":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4250))),"@theme/MDXPage",/*require.resolve*/(4250)],"20ddddd6":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(6783))),"@generated/docusaurus-plugin-content-docs/default/p/docs-category-zui-6d4.json",/*require.resolve*/(6783)],"24c962a7":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9075))),"@generated/docusaurus-plugin-content-docs/default/p/docs-category-themes-65a.json",/*require.resolve*/(9075)],"30592cf8":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4358))),"@site/docs/zUI/Themes/menu.md",/*require.resolve*/(4358)],"393be207":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(633))),"@site/src/pages/markdown-page.md",/*require.resolve*/(633)],"4471e4eb":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9155))),"@site/src/pages/tools.tsx",/*require.resolve*/(9155)],"48947c21":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4721))),"@site/docs/zUI/Items/button.md",/*require.resolve*/(4721)],"4935dcfb":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(3060))),"@site/docs/zUI/modal.md",/*require.resolve*/(3060)],"521c893a":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8747))),"@site/docs/zUI/Items/line.md",/*require.resolve*/(8747)],"577f092c":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(2226))),"@site/docs/zUI/Items/features.md",/*require.resolve*/(2226)],"5cd445a3":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(3082))),"@site/docs/zUI/Themes/context.md",/*require.resolve*/(3082)],"5e283e32":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9133))),"@site/docs/zUI/Fonctions/renderSprite.md",/*require.resolve*/(9133)],"5e95c892":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7121))),"@theme/DocsRoot",/*require.resolve*/(7121)],"5e9f5e1a":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4784))),"@generated/docusaurus.config",/*require.resolve*/(4784)],"6245e738":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(6740))),"@site/docs/zUI/installation.md",/*require.resolve*/(6740)],"658c47c5":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9820))),"@site/docs/zUI/Themes/modal.md",/*require.resolve*/(9820)],"72b1f434":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9681))),"@site/docs/zSleep/intro.md",/*require.resolve*/(9681)],"768626e0":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(2611))),"@site/docs/zUI/Notifications/pulsing.md",/*require.resolve*/(2611)],"77edc38e":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(553))),"@generated/docusaurus-plugin-content-docs/default/p/docs-category-fonctions-5b6.json",/*require.resolve*/(553)],"7c93d25a":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7201))),"@site/docs/zUI/Items/linkButton.md",/*require.resolve*/(7201)],"7df3f12d":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(5077))),"@site/docs/zUI/Methods/isVisible.md",/*require.resolve*/(5077)],"7e6e0e0e":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4951))),"@site/docs/zUI/Methods/setItems.md",/*require.resolve*/(4951)],"86f8f604":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9599))),"@generated/docusaurus-plugin-content-docs/default/p/docs-category-methodes-d96.json",/*require.resolve*/(9599)],"8b2e78d0":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(907))),"@site/docs/zUI/Notifications/notif.md",/*require.resolve*/(907)],"8df8a293":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8533))),"@site/docs/zUI/Items/list.md",/*require.resolve*/(8533)],"93110188":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8002))),"@site/docs/zUI/Methods/onOpen.md",/*require.resolve*/(8002)],"9b784c70":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(3526))),"@site/docs/zUI/Methods/goBack.md",/*require.resolve*/(3526)],"a03d2c35":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7977))),"@site/docs/zUI/Fonctions/keyboardInput.md",/*require.resolve*/(7977)],"a7456010":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8552))),"@generated/docusaurus-plugin-content-pages/default/__plugin.json",/*require.resolve*/(8552)],"a7bd4aaa":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4532))),"@theme/DocVersionRoot",/*require.resolve*/(4532)],"a7e2b75e":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7073))),"@site/docs/zUI/Fonctions/showHelpNotification.md",/*require.resolve*/(7073)],"a94703ab":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8319))),"@theme/DocRoot",/*require.resolve*/(8319)],"aba21aa0":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7093))),"@generated/docusaurus-plugin-content-docs/default/__plugin.json",/*require.resolve*/(7093)],"ad3a5a65":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9158))),"@site/docs/zUI/Notifications/helpNotif.md",/*require.resolve*/(9158)],"b821d7d8":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(1056))),"@site/docs/zUI/Methods/goTo.md",/*require.resolve*/(1056)],"b96eb3b0":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(5229))),"@site/docs/zUI/Themes/introduction.md",/*require.resolve*/(5229)],"bf310a1f":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(6627))),"@site/docs/zUI/menu.md",/*require.resolve*/(6627)],"c206b3bb":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4850))),"@site/docs/zUI/Themes/notifs.md",/*require.resolve*/(4850)],"c416a5cb":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(2290))),"@site/docs/zSleep/instal.md",/*require.resolve*/(2290)],"d08fa093":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(3464))),"@site/docs/zUI/Items/checkbox.md",/*require.resolve*/(3464)],"d0fbaa5c":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(2516))),"@generated/docusaurus-plugin-content-docs/default/p/docs-category-notifications-740.json",/*require.resolve*/(2516)],"d901ba3d":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(2369))),"@site/docs/zUI/Methods/setVisible.md",/*require.resolve*/(2369)],"f127a06f":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(424))),"@site/docs/zUI/presentation.md",/*require.resolve*/(424)],"f517399b":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8936))),"@generated/docusaurus-plugin-content-docs/default/p/docs-category-items-9db.json",/*require.resolve*/(8936)],"f95060f9":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9743))),"@site/docs/zUI/ContextUI.md",/*require.resolve*/(9743)]});
+/* harmony default export */ const registry = ({"0058b4c6":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(6164))),"@generated/docusaurus-plugin-content-docs/default/p/docs-175.json",/*require.resolve*/(6164)],"0c2eb47b":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7606))),"@site/docs/zUI/Fonctions/alertInput.md",/*require.resolve*/(7606)],"0e384e19":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(619))),"@site/docs/intro.md",/*require.resolve*/(619)],"138e0e15":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(1597))),"@generated/@easyops-cn/docusaurus-search-local/default/__plugin.json",/*require.resolve*/(1597)],"14db5828":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4232))),"@site/docs/zUI/Methods/onClose.md",/*require.resolve*/(4232)],"14eb3368":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8367))),"@theme/DocCategoryGeneratedIndexPage",/*require.resolve*/(8367)],"17896441":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8950))),"@theme/DocItem",/*require.resolve*/(8950)],"1a4e3797":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4809))),"@theme/SearchPage",/*require.resolve*/(4809)],"1b16c826":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(5690))),"@site/docs/zUI/Items/separator.md",/*require.resolve*/(5690)],"1df93b7f":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7988))),"@site/src/pages/index.tsx",/*require.resolve*/(7988)],"1f391b9e":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4250))),"@theme/MDXPage",/*require.resolve*/(4250)],"20ddddd6":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(6783))),"@generated/docusaurus-plugin-content-docs/default/p/docs-category-zui-6d4.json",/*require.resolve*/(6783)],"24c962a7":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9075))),"@generated/docusaurus-plugin-content-docs/default/p/docs-category-themes-65a.json",/*require.resolve*/(9075)],"30592cf8":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4358))),"@site/docs/zUI/Themes/menu.md",/*require.resolve*/(4358)],"393be207":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(633))),"@site/src/pages/markdown-page.md",/*require.resolve*/(633)],"4471e4eb":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9155))),"@site/src/pages/tools.tsx",/*require.resolve*/(9155)],"48947c21":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4721))),"@site/docs/zUI/Items/button.md",/*require.resolve*/(4721)],"4935dcfb":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(3060))),"@site/docs/zUI/modal.md",/*require.resolve*/(3060)],"521c893a":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8747))),"@site/docs/zUI/Items/line.md",/*require.resolve*/(8747)],"577f092c":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(2226))),"@site/docs/zUI/Items/features.md",/*require.resolve*/(2226)],"58fd3a74":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(2668))),"@site/docs/zUI/Items/slider.md",/*require.resolve*/(2668)],"5cd445a3":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(3082))),"@site/docs/zUI/Themes/context.md",/*require.resolve*/(3082)],"5e283e32":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9133))),"@site/docs/zUI/Fonctions/renderSprite.md",/*require.resolve*/(9133)],"5e95c892":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7121))),"@theme/DocsRoot",/*require.resolve*/(7121)],"5e9f5e1a":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4784))),"@generated/docusaurus.config",/*require.resolve*/(4784)],"6245e738":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(6740))),"@site/docs/zUI/installation.md",/*require.resolve*/(6740)],"658c47c5":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9820))),"@site/docs/zUI/Themes/modal.md",/*require.resolve*/(9820)],"66aa8f60":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9826))),"@site/docs/zUI/Items/colorList.md",/*require.resolve*/(9826)],"72b1f434":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9681))),"@site/docs/zSleep/intro.md",/*require.resolve*/(9681)],"768626e0":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(2611))),"@site/docs/zUI/Notifications/pulsing.md",/*require.resolve*/(2611)],"77edc38e":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(553))),"@generated/docusaurus-plugin-content-docs/default/p/docs-category-fonctions-5b6.json",/*require.resolve*/(553)],"7c93d25a":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7201))),"@site/docs/zUI/Items/linkButton.md",/*require.resolve*/(7201)],"7df3f12d":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(5077))),"@site/docs/zUI/Methods/isVisible.md",/*require.resolve*/(5077)],"7e6e0e0e":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4951))),"@site/docs/zUI/Methods/setItems.md",/*require.resolve*/(4951)],"86f8f604":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9599))),"@generated/docusaurus-plugin-content-docs/default/p/docs-category-methodes-d96.json",/*require.resolve*/(9599)],"8b2e78d0":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(907))),"@site/docs/zUI/Notifications/notif.md",/*require.resolve*/(907)],"8df8a293":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8533))),"@site/docs/zUI/Items/list.md",/*require.resolve*/(8533)],"93110188":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8002))),"@site/docs/zUI/Methods/onOpen.md",/*require.resolve*/(8002)],"9b784c70":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(3526))),"@site/docs/zUI/Methods/goBack.md",/*require.resolve*/(3526)],"a03d2c35":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7977))),"@site/docs/zUI/Fonctions/keyboardInput.md",/*require.resolve*/(7977)],"a7456010":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8552))),"@generated/docusaurus-plugin-content-pages/default/__plugin.json",/*require.resolve*/(8552)],"a7bd4aaa":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4532))),"@theme/DocVersionRoot",/*require.resolve*/(4532)],"a7e2b75e":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7073))),"@site/docs/zUI/Fonctions/showHelpNotification.md",/*require.resolve*/(7073)],"a94703ab":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8319))),"@theme/DocRoot",/*require.resolve*/(8319)],"aba21aa0":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7093))),"@generated/docusaurus-plugin-content-docs/default/__plugin.json",/*require.resolve*/(7093)],"ad3a5a65":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9158))),"@site/docs/zUI/Notifications/helpNotif.md",/*require.resolve*/(9158)],"b821d7d8":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(1056))),"@site/docs/zUI/Methods/goTo.md",/*require.resolve*/(1056)],"b96eb3b0":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(5229))),"@site/docs/zUI/Themes/introduction.md",/*require.resolve*/(5229)],"bf310a1f":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(6627))),"@site/docs/zUI/menu.md",/*require.resolve*/(6627)],"c206b3bb":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4850))),"@site/docs/zUI/Themes/notifs.md",/*require.resolve*/(4850)],"c416a5cb":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(2290))),"@site/docs/zSleep/instal.md",/*require.resolve*/(2290)],"d08fa093":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(3464))),"@site/docs/zUI/Items/checkbox.md",/*require.resolve*/(3464)],"d0fbaa5c":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(2516))),"@generated/docusaurus-plugin-content-docs/default/p/docs-category-notifications-740.json",/*require.resolve*/(2516)],"d901ba3d":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(2369))),"@site/docs/zUI/Methods/setVisible.md",/*require.resolve*/(2369)],"f127a06f":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(424))),"@site/docs/zUI/presentation.md",/*require.resolve*/(424)],"f517399b":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8936))),"@generated/docusaurus-plugin-content-docs/default/p/docs-category-items-9db.json",/*require.resolve*/(8936)],"f95060f9":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9743))),"@site/docs/zUI/ContextUI.md",/*require.resolve*/(9743)]});
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(4848);
 ;// CONCATENATED MODULE: ./node_modules/@docusaurus/core/lib/client/theme-fallback/Loading/index.js
@@ -13189,7 +13807,7 @@ if(typeof chunk==='object'||typeof chunk==='function'){Object.keys(loadedModule)
 let val=loadedModules;const keyPaths=keyPath.split('.');keyPaths.slice(0,-1).forEach(k=>{val=val[k];});val[keyPaths[keyPaths.length-1]]=chunk;});/* eslint-disable no-underscore-dangle */const Component=loadedModules.__comp;delete loadedModules.__comp;const routeContext=loadedModules.__context;delete loadedModules.__context;const routeProps=loadedModules.__props;delete loadedModules.__props;/* eslint-enable no-underscore-dangle */// Is there any way to put this RouteContextProvider upper in the tree?
 return/*#__PURE__*/(0,jsx_runtime.jsx)(client_routeContext/* RouteContextProvider */.W,{value:routeContext,children:/*#__PURE__*/(0,jsx_runtime.jsx)(Component,{...loadedModules,...routeProps,...props})});}});}
 ;// CONCATENATED MODULE: ./.docusaurus/routes.js
-/* harmony default export */ const routes = ([{path:'/markdown-page',component:ComponentCreator('/markdown-page','3d7'),exact:true},{path:'/search',component:ComponentCreator('/search','822'),exact:true},{path:'/tools',component:ComponentCreator('/tools','4ef'),exact:true},{path:'/docs',component:ComponentCreator('/docs','651'),routes:[{path:'/docs',component:ComponentCreator('/docs','72a'),routes:[{path:'/docs',component:ComponentCreator('/docs','467'),routes:[{path:'/docs/category/fonctions',component:ComponentCreator('/docs/category/fonctions','7b5'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/category/items',component:ComponentCreator('/docs/category/items','2c4'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/category/méthodes',component:ComponentCreator('/docs/category/méthodes','d08'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/category/notifications',component:ComponentCreator('/docs/category/notifications','ba9'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/category/thèmes',component:ComponentCreator('/docs/category/thèmes','365'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/category/zui',component:ComponentCreator('/docs/category/zui','6ef'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/intro',component:ComponentCreator('/docs/intro','61d'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zSleep/instal',component:ComponentCreator('/docs/zSleep/instal','cdf'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zSleep/intro',component:ComponentCreator('/docs/zSleep/intro','edb'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/ContextUI',component:ComponentCreator('/docs/zUI/ContextUI','185'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Fonctions/alertInput',component:ComponentCreator('/docs/zUI/Fonctions/alertInput','b90'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Fonctions/keyboardInput',component:ComponentCreator('/docs/zUI/Fonctions/keyboardInput','d89'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Fonctions/renderSprite',component:ComponentCreator('/docs/zUI/Fonctions/renderSprite','d9d'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Fonctions/showHelpNotification',component:ComponentCreator('/docs/zUI/Fonctions/showHelpNotification','303'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/installation',component:ComponentCreator('/docs/zUI/installation','d42'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/button',component:ComponentCreator('/docs/zUI/Items/button','1c7'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/checkbox',component:ComponentCreator('/docs/zUI/Items/checkbox','89f'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/features',component:ComponentCreator('/docs/zUI/Items/features','bfe'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/line',component:ComponentCreator('/docs/zUI/Items/line','954'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/linkButton',component:ComponentCreator('/docs/zUI/Items/linkButton','c43'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/list',component:ComponentCreator('/docs/zUI/Items/list','5ba'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/separator',component:ComponentCreator('/docs/zUI/Items/separator','8e4'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/menu',component:ComponentCreator('/docs/zUI/menu','7f0'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/goBack',component:ComponentCreator('/docs/zUI/Methods/goBack','dc7'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/goTo',component:ComponentCreator('/docs/zUI/Methods/goTo','6a3'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/isVisible',component:ComponentCreator('/docs/zUI/Methods/isVisible','2c1'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/onClose',component:ComponentCreator('/docs/zUI/Methods/onClose','ee1'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/onOpen',component:ComponentCreator('/docs/zUI/Methods/onOpen','e2e'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/setItems',component:ComponentCreator('/docs/zUI/Methods/setItems','f2b'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/setVisible',component:ComponentCreator('/docs/zUI/Methods/setVisible','036'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/modal',component:ComponentCreator('/docs/zUI/modal','8f0'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Notifications/helpNotif',component:ComponentCreator('/docs/zUI/Notifications/helpNotif','28f'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Notifications/notif',component:ComponentCreator('/docs/zUI/Notifications/notif','933'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Notifications/pulsing',component:ComponentCreator('/docs/zUI/Notifications/pulsing','115'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/presentation',component:ComponentCreator('/docs/zUI/presentation','21e'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Themes/context',component:ComponentCreator('/docs/zUI/Themes/context','955'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Themes/introduction',component:ComponentCreator('/docs/zUI/Themes/introduction','b67'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Themes/menu',component:ComponentCreator('/docs/zUI/Themes/menu','02b'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Themes/modal',component:ComponentCreator('/docs/zUI/Themes/modal','817'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Themes/notifs',component:ComponentCreator('/docs/zUI/Themes/notifs','cec'),exact:true,sidebar:"tutorialSidebar"}]}]}]},{path:'/',component:ComponentCreator('/','e5f'),exact:true},{path:'*',component:ComponentCreator('*')}]);
+/* harmony default export */ const routes = ([{path:'/markdown-page',component:ComponentCreator('/markdown-page','3d7'),exact:true},{path:'/search',component:ComponentCreator('/search','822'),exact:true},{path:'/tools',component:ComponentCreator('/tools','4ef'),exact:true},{path:'/docs',component:ComponentCreator('/docs','430'),routes:[{path:'/docs',component:ComponentCreator('/docs','b0e'),routes:[{path:'/docs',component:ComponentCreator('/docs','e0e'),routes:[{path:'/docs/category/fonctions',component:ComponentCreator('/docs/category/fonctions','7b5'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/category/items',component:ComponentCreator('/docs/category/items','2c4'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/category/méthodes',component:ComponentCreator('/docs/category/méthodes','d08'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/category/notifications',component:ComponentCreator('/docs/category/notifications','ba9'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/category/thèmes',component:ComponentCreator('/docs/category/thèmes','365'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/category/zui',component:ComponentCreator('/docs/category/zui','6ef'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/intro',component:ComponentCreator('/docs/intro','61d'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zSleep/instal',component:ComponentCreator('/docs/zSleep/instal','cdf'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zSleep/intro',component:ComponentCreator('/docs/zSleep/intro','edb'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/ContextUI',component:ComponentCreator('/docs/zUI/ContextUI','185'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Fonctions/alertInput',component:ComponentCreator('/docs/zUI/Fonctions/alertInput','b90'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Fonctions/keyboardInput',component:ComponentCreator('/docs/zUI/Fonctions/keyboardInput','d89'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Fonctions/renderSprite',component:ComponentCreator('/docs/zUI/Fonctions/renderSprite','d9d'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Fonctions/showHelpNotification',component:ComponentCreator('/docs/zUI/Fonctions/showHelpNotification','303'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/installation',component:ComponentCreator('/docs/zUI/installation','d42'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/button',component:ComponentCreator('/docs/zUI/Items/button','1c7'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/checkbox',component:ComponentCreator('/docs/zUI/Items/checkbox','89f'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/colorList',component:ComponentCreator('/docs/zUI/Items/colorList','659'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/features',component:ComponentCreator('/docs/zUI/Items/features','bfe'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/line',component:ComponentCreator('/docs/zUI/Items/line','954'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/linkButton',component:ComponentCreator('/docs/zUI/Items/linkButton','c43'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/list',component:ComponentCreator('/docs/zUI/Items/list','5ba'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/separator',component:ComponentCreator('/docs/zUI/Items/separator','8e4'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/slider',component:ComponentCreator('/docs/zUI/Items/slider','6b3'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/menu',component:ComponentCreator('/docs/zUI/menu','7f0'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/goBack',component:ComponentCreator('/docs/zUI/Methods/goBack','dc7'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/goTo',component:ComponentCreator('/docs/zUI/Methods/goTo','6a3'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/isVisible',component:ComponentCreator('/docs/zUI/Methods/isVisible','2c1'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/onClose',component:ComponentCreator('/docs/zUI/Methods/onClose','ee1'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/onOpen',component:ComponentCreator('/docs/zUI/Methods/onOpen','e2e'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/setItems',component:ComponentCreator('/docs/zUI/Methods/setItems','f2b'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/setVisible',component:ComponentCreator('/docs/zUI/Methods/setVisible','036'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/modal',component:ComponentCreator('/docs/zUI/modal','8f0'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Notifications/helpNotif',component:ComponentCreator('/docs/zUI/Notifications/helpNotif','28f'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Notifications/notif',component:ComponentCreator('/docs/zUI/Notifications/notif','933'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Notifications/pulsing',component:ComponentCreator('/docs/zUI/Notifications/pulsing','115'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/presentation',component:ComponentCreator('/docs/zUI/presentation','21e'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Themes/context',component:ComponentCreator('/docs/zUI/Themes/context','955'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Themes/introduction',component:ComponentCreator('/docs/zUI/Themes/introduction','b67'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Themes/menu',component:ComponentCreator('/docs/zUI/Themes/menu','02b'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Themes/modal',component:ComponentCreator('/docs/zUI/Themes/modal','817'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Themes/notifs',component:ComponentCreator('/docs/zUI/Themes/notifs','cec'),exact:true,sidebar:"tutorialSidebar"}]}]}]},{path:'/',component:ComponentCreator('/','e5f'),exact:true},{path:'*',component:ComponentCreator('*')}]);
 
 /***/ }),
 
@@ -13258,7 +13876,7 @@ var react = __webpack_require__(6540);
 // EXTERNAL MODULE: ./.docusaurus/docusaurus.config.mjs
 var docusaurus_config = __webpack_require__(4784);
 ;// CONCATENATED MODULE: ./.docusaurus/globalData.json
-const globalData_namespaceObject = /*#__PURE__*/JSON.parse('{"docusaurus-plugin-content-docs":{"default":{"path":"/docs","versions":[{"name":"current","label":"Next","isLast":true,"path":"/docs","mainDocId":"intro","docs":[{"id":"intro","path":"/docs/intro","sidebar":"tutorialSidebar"},{"id":"zSleep/instal","path":"/docs/zSleep/instal","sidebar":"tutorialSidebar"},{"id":"zSleep/intro","path":"/docs/zSleep/intro","sidebar":"tutorialSidebar"},{"id":"zUI/ContextUI","path":"/docs/zUI/ContextUI","sidebar":"tutorialSidebar"},{"id":"zUI/Fonctions/alertInput","path":"/docs/zUI/Fonctions/alertInput","sidebar":"tutorialSidebar"},{"id":"zUI/Fonctions/keyboardInput","path":"/docs/zUI/Fonctions/keyboardInput","sidebar":"tutorialSidebar"},{"id":"zUI/Fonctions/renderSprite","path":"/docs/zUI/Fonctions/renderSprite","sidebar":"tutorialSidebar"},{"id":"zUI/Fonctions/showHelpNotification","path":"/docs/zUI/Fonctions/showHelpNotification","sidebar":"tutorialSidebar"},{"id":"zUI/installation","path":"/docs/zUI/installation","sidebar":"tutorialSidebar"},{"id":"zUI/Items/button","path":"/docs/zUI/Items/button","sidebar":"tutorialSidebar"},{"id":"zUI/Items/checkbox","path":"/docs/zUI/Items/checkbox","sidebar":"tutorialSidebar"},{"id":"zUI/Items/features","path":"/docs/zUI/Items/features","sidebar":"tutorialSidebar"},{"id":"zUI/Items/line","path":"/docs/zUI/Items/line","sidebar":"tutorialSidebar"},{"id":"zUI/Items/linkButton","path":"/docs/zUI/Items/linkButton","sidebar":"tutorialSidebar"},{"id":"zUI/Items/list","path":"/docs/zUI/Items/list","sidebar":"tutorialSidebar"},{"id":"zUI/Items/separator","path":"/docs/zUI/Items/separator","sidebar":"tutorialSidebar"},{"id":"zUI/menu","path":"/docs/zUI/menu","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/goBack","path":"/docs/zUI/Methods/goBack","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/goTo","path":"/docs/zUI/Methods/goTo","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/isVisible","path":"/docs/zUI/Methods/isVisible","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/onClose","path":"/docs/zUI/Methods/onClose","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/onOpen","path":"/docs/zUI/Methods/onOpen","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/setItems","path":"/docs/zUI/Methods/setItems","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/setVisible","path":"/docs/zUI/Methods/setVisible","sidebar":"tutorialSidebar"},{"id":"zUI/modal","path":"/docs/zUI/modal","sidebar":"tutorialSidebar"},{"id":"zUI/Notifications/helpNotif","path":"/docs/zUI/Notifications/helpNotif","sidebar":"tutorialSidebar"},{"id":"zUI/Notifications/notif","path":"/docs/zUI/Notifications/notif","sidebar":"tutorialSidebar"},{"id":"zUI/Notifications/pulsing","path":"/docs/zUI/Notifications/pulsing","sidebar":"tutorialSidebar"},{"id":"zUI/presentation","path":"/docs/zUI/presentation","sidebar":"tutorialSidebar"},{"id":"zUI/Themes/context","path":"/docs/zUI/Themes/context","sidebar":"tutorialSidebar"},{"id":"zUI/Themes/introduction","path":"/docs/zUI/Themes/introduction","sidebar":"tutorialSidebar"},{"id":"zUI/Themes/menu","path":"/docs/zUI/Themes/menu","sidebar":"tutorialSidebar"},{"id":"zUI/Themes/modal","path":"/docs/zUI/Themes/modal","sidebar":"tutorialSidebar"},{"id":"zUI/Themes/notifs","path":"/docs/zUI/Themes/notifs","sidebar":"tutorialSidebar"},{"id":"/category/zui","path":"/docs/category/zui","sidebar":"tutorialSidebar"},{"id":"/category/items","path":"/docs/category/items","sidebar":"tutorialSidebar"},{"id":"/category/thèmes","path":"/docs/category/thèmes","sidebar":"tutorialSidebar"},{"id":"/category/fonctions","path":"/docs/category/fonctions","sidebar":"tutorialSidebar"},{"id":"/category/méthodes","path":"/docs/category/méthodes","sidebar":"tutorialSidebar"},{"id":"/category/notifications","path":"/docs/category/notifications","sidebar":"tutorialSidebar"}],"draftIds":[],"sidebars":{"tutorialSidebar":{"link":{"path":"/docs/intro","label":"intro"}}}}],"breadcrumbs":true}}}');
+const globalData_namespaceObject = /*#__PURE__*/JSON.parse('{"docusaurus-plugin-content-docs":{"default":{"path":"/docs","versions":[{"name":"current","label":"Next","isLast":true,"path":"/docs","mainDocId":"intro","docs":[{"id":"intro","path":"/docs/intro","sidebar":"tutorialSidebar"},{"id":"zSleep/instal","path":"/docs/zSleep/instal","sidebar":"tutorialSidebar"},{"id":"zSleep/intro","path":"/docs/zSleep/intro","sidebar":"tutorialSidebar"},{"id":"zUI/ContextUI","path":"/docs/zUI/ContextUI","sidebar":"tutorialSidebar"},{"id":"zUI/Fonctions/alertInput","path":"/docs/zUI/Fonctions/alertInput","sidebar":"tutorialSidebar"},{"id":"zUI/Fonctions/keyboardInput","path":"/docs/zUI/Fonctions/keyboardInput","sidebar":"tutorialSidebar"},{"id":"zUI/Fonctions/renderSprite","path":"/docs/zUI/Fonctions/renderSprite","sidebar":"tutorialSidebar"},{"id":"zUI/Fonctions/showHelpNotification","path":"/docs/zUI/Fonctions/showHelpNotification","sidebar":"tutorialSidebar"},{"id":"zUI/installation","path":"/docs/zUI/installation","sidebar":"tutorialSidebar"},{"id":"zUI/Items/button","path":"/docs/zUI/Items/button","sidebar":"tutorialSidebar"},{"id":"zUI/Items/checkbox","path":"/docs/zUI/Items/checkbox","sidebar":"tutorialSidebar"},{"id":"zUI/Items/colorList","path":"/docs/zUI/Items/colorList","sidebar":"tutorialSidebar"},{"id":"zUI/Items/features","path":"/docs/zUI/Items/features","sidebar":"tutorialSidebar"},{"id":"zUI/Items/line","path":"/docs/zUI/Items/line","sidebar":"tutorialSidebar"},{"id":"zUI/Items/linkButton","path":"/docs/zUI/Items/linkButton","sidebar":"tutorialSidebar"},{"id":"zUI/Items/list","path":"/docs/zUI/Items/list","sidebar":"tutorialSidebar"},{"id":"zUI/Items/separator","path":"/docs/zUI/Items/separator","sidebar":"tutorialSidebar"},{"id":"zUI/Items/slider","path":"/docs/zUI/Items/slider","sidebar":"tutorialSidebar"},{"id":"zUI/menu","path":"/docs/zUI/menu","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/goBack","path":"/docs/zUI/Methods/goBack","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/goTo","path":"/docs/zUI/Methods/goTo","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/isVisible","path":"/docs/zUI/Methods/isVisible","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/onClose","path":"/docs/zUI/Methods/onClose","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/onOpen","path":"/docs/zUI/Methods/onOpen","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/setItems","path":"/docs/zUI/Methods/setItems","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/setVisible","path":"/docs/zUI/Methods/setVisible","sidebar":"tutorialSidebar"},{"id":"zUI/modal","path":"/docs/zUI/modal","sidebar":"tutorialSidebar"},{"id":"zUI/Notifications/helpNotif","path":"/docs/zUI/Notifications/helpNotif","sidebar":"tutorialSidebar"},{"id":"zUI/Notifications/notif","path":"/docs/zUI/Notifications/notif","sidebar":"tutorialSidebar"},{"id":"zUI/Notifications/pulsing","path":"/docs/zUI/Notifications/pulsing","sidebar":"tutorialSidebar"},{"id":"zUI/presentation","path":"/docs/zUI/presentation","sidebar":"tutorialSidebar"},{"id":"zUI/Themes/context","path":"/docs/zUI/Themes/context","sidebar":"tutorialSidebar"},{"id":"zUI/Themes/introduction","path":"/docs/zUI/Themes/introduction","sidebar":"tutorialSidebar"},{"id":"zUI/Themes/menu","path":"/docs/zUI/Themes/menu","sidebar":"tutorialSidebar"},{"id":"zUI/Themes/modal","path":"/docs/zUI/Themes/modal","sidebar":"tutorialSidebar"},{"id":"zUI/Themes/notifs","path":"/docs/zUI/Themes/notifs","sidebar":"tutorialSidebar"},{"id":"/category/zui","path":"/docs/category/zui","sidebar":"tutorialSidebar"},{"id":"/category/items","path":"/docs/category/items","sidebar":"tutorialSidebar"},{"id":"/category/thèmes","path":"/docs/category/thèmes","sidebar":"tutorialSidebar"},{"id":"/category/fonctions","path":"/docs/category/fonctions","sidebar":"tutorialSidebar"},{"id":"/category/méthodes","path":"/docs/category/méthodes","sidebar":"tutorialSidebar"},{"id":"/category/notifications","path":"/docs/category/notifications","sidebar":"tutorialSidebar"}],"draftIds":[],"sidebars":{"tutorialSidebar":{"link":{"path":"/docs/intro","label":"intro"}}}}],"breadcrumbs":true}}}');
 ;// CONCATENATED MODULE: ./.docusaurus/i18n.json
 const i18n_namespaceObject = /*#__PURE__*/JSON.parse('{"defaultLocale":"fr","locales":["fr"],"path":"i18n","currentLocale":"fr","localeConfigs":{"fr":{"label":"Français","direction":"ltr","htmlLang":"fr","calendar":"gregory","path":"fr"}}}');
 // EXTERNAL MODULE: ./.docusaurus/codeTranslations.json
@@ -18174,7 +18792,7 @@ __webpack_require__.d(__webpack_exports__, {
 var lunr = __webpack_require__(8291);
 var lunr_default = /*#__PURE__*/__webpack_require__.n(lunr);
 ;// CONCATENATED MODULE: ./.docusaurus/@easyops-cn/docusaurus-search-local/default/generated.js
-__webpack_require__(6121)((lunr_default()));__webpack_require__(7923)((lunr_default()));const language=["fr"];const removeDefaultStopWordFilter=false;const removeDefaultStemmer=false;const Mark=null;const searchIndexUrl="search-index{dir}.json?_=9a351d4a";const searchResultLimits=8;const searchResultContextMaxLength=50;const explicitSearchResultPath=false;const searchBarShortcut=true;const searchBarShortcutHint=true;const searchBarPosition="right";const docsPluginIdForPreferredVersion=undefined;const indexDocs=true;const searchContextByPaths=null;const hideSearchBarWithNoSearchContext=false;const useAllContextsWithNoSearchContext=false;
+__webpack_require__(6121)((lunr_default()));__webpack_require__(7923)((lunr_default()));const language=["fr"];const removeDefaultStopWordFilter=false;const removeDefaultStemmer=false;const Mark=null;const searchIndexUrl="search-index{dir}.json?_=73547512";const searchResultLimits=8;const searchResultContextMaxLength=50;const explicitSearchResultPath=false;const searchBarShortcut=true;const searchBarShortcutHint=true;const searchBarPosition="right";const docsPluginIdForPreferredVersion=undefined;const indexDocs=true;const searchContextByPaths=null;const hideSearchBarWithNoSearchContext=false;const useAllContextsWithNoSearchContext=false;
 ;// CONCATENATED MODULE: ./node_modules/@easyops-cn/docusaurus-search-local/dist/client/client/utils/proxiedGenerated.js
 // This file is auto generated while building.
 
@@ -45416,7 +46034,7 @@ module.exports = /*#__PURE__*/JSON.parse('{"name":"docusaurus-plugin-content-doc
 /***/ ((module) => {
 
 "use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"version":{"pluginId":"default","version":"current","label":"Next","banner":null,"badge":false,"noIndex":false,"className":"docs-version-current","isLast":true,"docsSidebars":{"tutorialSidebar":[{"type":"link","label":"Introduction","href":"/docs/intro","docId":"intro","unlisted":false},{"type":"category","label":"zUI","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"Présentation","href":"/docs/zUI/presentation","docId":"zUI/presentation","unlisted":false},{"type":"link","label":"Installation","href":"/docs/zUI/installation","docId":"zUI/installation","unlisted":false},{"type":"link","label":"Menu","href":"/docs/zUI/menu","docId":"zUI/menu","unlisted":false},{"type":"category","label":"Items","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"Features","href":"/docs/zUI/Items/features","docId":"zUI/Items/features","unlisted":false},{"type":"link","label":"Séparateur","href":"/docs/zUI/Items/separator","docId":"zUI/Items/separator","unlisted":false},{"type":"link","label":"Ligne","href":"/docs/zUI/Items/line","docId":"zUI/Items/line","unlisted":false},{"type":"link","label":"Bouton","href":"/docs/zUI/Items/button","docId":"zUI/Items/button","unlisted":false},{"type":"link","label":"Bouton Lien","href":"/docs/zUI/Items/linkButton","docId":"zUI/Items/linkButton","unlisted":false},{"type":"link","label":"Liste","href":"/docs/zUI/Items/list","docId":"zUI/Items/list","unlisted":false},{"type":"link","label":"Checkbox","href":"/docs/zUI/Items/checkbox","docId":"zUI/Items/checkbox","unlisted":false}],"href":"/docs/category/items"},{"type":"category","label":"Thèmes","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"Introduction","href":"/docs/zUI/Themes/introduction","docId":"zUI/Themes/introduction","unlisted":false},{"type":"link","label":"Thème du Menu","href":"/docs/zUI/Themes/menu","docId":"zUI/Themes/menu","unlisted":false},{"type":"link","label":"Thème du ContextUI","href":"/docs/zUI/Themes/context","docId":"zUI/Themes/context","unlisted":false},{"type":"link","label":"Thème des Notifications","href":"/docs/zUI/Themes/notifs","docId":"zUI/Themes/notifs","unlisted":false},{"type":"link","label":"Thème du Modal","href":"/docs/zUI/Themes/modal","docId":"zUI/Themes/modal","unlisted":false}],"href":"/docs/category/thèmes"},{"type":"category","label":"Fonctions","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"ShowHelpNotification","href":"/docs/zUI/Fonctions/showHelpNotification","docId":"zUI/Fonctions/showHelpNotification","unlisted":false},{"type":"link","label":"AlertInput","href":"/docs/zUI/Fonctions/alertInput","docId":"zUI/Fonctions/alertInput","unlisted":false},{"type":"link","label":"KeyboardInput","href":"/docs/zUI/Fonctions/keyboardInput","docId":"zUI/Fonctions/keyboardInput","unlisted":false},{"type":"link","label":"RenderSprite","href":"/docs/zUI/Fonctions/renderSprite","docId":"zUI/Fonctions/renderSprite","unlisted":false}],"href":"/docs/category/fonctions"},{"type":"category","label":"Méthodes","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"GoBack","href":"/docs/zUI/Methods/goBack","docId":"zUI/Methods/goBack","unlisted":false},{"type":"link","label":"Goto","href":"/docs/zUI/Methods/goTo","docId":"zUI/Methods/goTo","unlisted":false},{"type":"link","label":"IsVisible","href":"/docs/zUI/Methods/isVisible","docId":"zUI/Methods/isVisible","unlisted":false},{"type":"link","label":"OnClose","href":"/docs/zUI/Methods/onClose","docId":"zUI/Methods/onClose","unlisted":false},{"type":"link","label":"OnOpen","href":"/docs/zUI/Methods/onOpen","docId":"zUI/Methods/onOpen","unlisted":false},{"type":"link","label":"SetItems","href":"/docs/zUI/Methods/setItems","docId":"zUI/Methods/setItems","unlisted":false},{"type":"link","label":"SetVisible","href":"/docs/zUI/Methods/setVisible","docId":"zUI/Methods/setVisible","unlisted":false}],"href":"/docs/category/méthodes"},{"type":"link","label":"Menu Contextuel","href":"/docs/zUI/ContextUI","docId":"zUI/ContextUI","unlisted":false},{"type":"category","label":"Notifications","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"Pulsing Notification","href":"/docs/zUI/Notifications/pulsing","docId":"zUI/Notifications/pulsing","unlisted":false},{"type":"link","label":"Notifications","href":"/docs/zUI/Notifications/notif","docId":"zUI/Notifications/notif","unlisted":false},{"type":"link","label":"Help Notification","href":"/docs/zUI/Notifications/helpNotif","docId":"zUI/Notifications/helpNotif","unlisted":false}],"href":"/docs/category/notifications"},{"type":"link","label":"Modal","href":"/docs/zUI/modal","docId":"zUI/modal","unlisted":false}],"href":"/docs/category/zui"},{"type":"category","label":"zSleep","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"Introduction","href":"/docs/zSleep/intro","docId":"zSleep/intro","unlisted":false},{"type":"link","label":"Installation","href":"/docs/zSleep/instal","docId":"zSleep/instal","unlisted":false}]}]},"docs":{"intro":{"id":"intro","title":"Introduction","description":"Bienvenue dans la documentation officielle de toutes les ressources développées par zSquad. Ici, vous trouverez toutes les informations nécessaires pour comprendre, utiliser et tirer pleinement parti des projets, outils et technologies créés par notre équipe.","sidebar":"tutorialSidebar"},"zSleep/instal":{"id":"zSleep/instal","title":"Installation","description":"Ce guide d\'installation de zSleep s\'adresse aux administrateurs de serveurs FiveM et détaille les étapes nécessaires pour installer et configurer le script selon vos besoins.","sidebar":"tutorialSidebar"},"zSleep/intro":{"id":"zSleep/intro","title":"Introduction","description":"Bienvenue dans la documentation officielle de zSleep, le script de sommeil ultime pour les administrateurs de serveurs FiveM. Avec zSleep, offrez à votre communauté de nouvelles possibilités immersives grâce à une mécanique de sommeil réaliste et intuitive.","sidebar":"tutorialSidebar"},"zUI/ContextUI":{"id":"zUI/ContextUI","title":"Menu Contextuel","description":"Les menus contextuels dans zUI permettent d\'afficher des actions spécifiques en fonction de l\'élément ou de la situation sur laquelle l\'utilisateur interagit. Ces menus sont polyvalents et peuvent être adaptés à différents types d\'entités comme des véhicules, des objets, des personnages, ou même des emplacements spécifiques.","sidebar":"tutorialSidebar"},"zUI/Fonctions/alertInput":{"id":"zUI/Fonctions/alertInput","title":"AlertInput","description":"La fonction AlertInput est utile lorsque vous devez demander une confirmation au joueur.","sidebar":"tutorialSidebar"},"zUI/Fonctions/keyboardInput":{"id":"zUI/Fonctions/keyboardInput","title":"KeyboardInput","description":"La fonction KeyboardInput est utile lorsque vous devez demander une saisie de texte à l\'utilisateur via un clavier virtuel.","sidebar":"tutorialSidebar"},"zUI/Fonctions/renderSprite":{"id":"zUI/Fonctions/renderSprite","title":"RenderSprite","description":"La fonction RenderSprite permet d\'afficher une image sous un menu spécifique dans l\'interface utilisateur.","sidebar":"tutorialSidebar"},"zUI/Fonctions/showHelpNotification":{"id":"zUI/Fonctions/showHelpNotification","title":"ShowHelpNotification","description":"La fonction ShowHelpNotification est utile dans le cas où vous devriez indiquer au joueur sur quelle touche il devra appuyer pour interagir avec votre script.","sidebar":"tutorialSidebar"},"zUI/installation":{"id":"zUI/installation","title":"Installation","description":"zUI est une bibliothèque avancée qui s\'intègre directement dans une resource existante sur votre serveur FiveM. Suivez les étapes ci-dessous pour l\'installer correctement et vous assurer qu\'elle fonctionne de manière optimale.","sidebar":"tutorialSidebar"},"zUI/Items/button":{"id":"zUI/Items/button","title":"Bouton","description":"Les boutons dans zUI sont des éléments interactifs essentiels qui permettent aux utilisateurs de réaliser des actions lorsqu\'ils sont cliqués. Vous pouvez ajouter des boutons à vos menus en utilisant la fonction Items:AddButton. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/checkbox":{"id":"zUI/Items/checkbox","title":"Checkbox","description":"Les checkboxes dans zUI permettent aux utilisateurs de sélectionner ou désélectionner des options, offrant ainsi un moyen interactif pour gérer les états binaires dans vos menus. Vous pouvez ajouter des checkboxes à vos menus en utilisant la fonction zUI:AddCheckbox. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/features":{"id":"zUI/Items/features","title":"Features","description":"Badges","sidebar":"tutorialSidebar"},"zUI/Items/line":{"id":"zUI/Items/line","title":"Ligne","description":"Les lignes dans zUI sont des éléments visuels utilisés pour ajouter des séparations horizontales dans vos menus. Elles peuvent être utilisées pour séparer visuellement les différentes sections ou pour améliorer l\'organisation de l\'interface utilisateur. Vous pouvez ajouter des lignes à vos menus en utilisant la fonction zUI:AddLine. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/linkButton":{"id":"zUI/Items/linkButton","title":"Bouton Lien","description":"Les boutons lien dans zUI sont des éléments interactifs qui redirigent les utilisateurs vers une URL lorsqu\'ils sont cliqués. Ils sont utiles pour ajouter des liens externes ou des pages web à vos menus. Vous pouvez ajouter des boutons lien à vos menus en utilisant la fonction zUI:AddLinkButton. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/list":{"id":"zUI/Items/list","title":"Liste","description":"Les listes dans zUI permettent aux utilisateurs de sélectionner parmi plusieurs options. Elles sont idéales pour offrir des choix dynamiques ou pour afficher des éléments dans vos menus. Vous pouvez ajouter des listes à vos menus en utilisant la fonction zUI:AddList. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/separator":{"id":"zUI/Items/separator","title":"Séparateur","description":"Les séparateurs dans zUI sont des éléments visuels utilisés pour diviser et organiser les éléments dans un menu. Ils aident à améliorer la lisibilité et à structurer l\'interface utilisateur. Vous pouvez ajouter des séparateurs à vos menus en utilisant la fonction zUI:AddSeparator. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/menu":{"id":"zUI/menu","title":"Menu","description":"Dans cette section, nous allons explorer comment utiliser zUI pour créer et gérer des menus NUI dans FiveM. Vous apprendrez à créer des menus et des sous-menus, à ajouter des éléments, et à gérer leur visibilité.","sidebar":"tutorialSidebar"},"zUI/Methods/goBack":{"id":"zUI/Methods/goBack","title":"GoBack","description":"La méthode GoBack est utile lorsque vous souhaitez revenir à un menu parent dans l\'interface utilisateur.","sidebar":"tutorialSidebar"},"zUI/Methods/goTo":{"id":"zUI/Methods/goTo","title":"Goto","description":"La méthode Goto est utilisée pour naviguer vers un menu spécifique dans l\'interface utilisateur.","sidebar":"tutorialSidebar"},"zUI/Methods/isVisible":{"id":"zUI/Methods/isVisible","title":"IsVisible","description":"La méthode IsVisible est utilisée pour vérifier si un menu principal est actuellement visible.","sidebar":"tutorialSidebar"},"zUI/Methods/onClose":{"id":"zUI/Methods/onClose","title":"OnClose","description":"La méthode OnClose est utilisée pour définir une fonction à exécuter lors de la fermeture d\'un menu principal.","sidebar":"tutorialSidebar"},"zUI/Methods/onOpen":{"id":"zUI/Methods/onOpen","title":"OnOpen","description":"La méthode OnOpen est utilisée pour définir une fonction à exécuter lors de l\'ouverture d\'un menu principal.","sidebar":"tutorialSidebar"},"zUI/Methods/setItems":{"id":"zUI/Methods/setItems","title":"SetItems","description":"La méthode SetItems est utilisée pour définir les éléments d\'un menu.","sidebar":"tutorialSidebar"},"zUI/Methods/setVisible":{"id":"zUI/Methods/setVisible","title":"SetVisible","description":"La méthode SetVisible est utilisée pour afficher ou masquer un menu principal.","sidebar":"tutorialSidebar"},"zUI/modal":{"id":"zUI/modal","title":"Modal","description":"Les modals dans zUI permettent d\'afficher des fenêtres interactives contenant des champs de saisie pour recueillir des informations de l\'utilisateur. Ces fenêtres sont généralement utilisées pour obtenir des données spécifiques dans des scénarios nécessitant plusieurs options de saisie.","sidebar":"tutorialSidebar"},"zUI/Notifications/helpNotif":{"id":"zUI/Notifications/helpNotif","title":"Help Notification","description":"Les notifications d\'aide dans zUI sont des messages visuels destinés à fournir des instructions ou des informations supplémentaires à l\'utilisateur, généralement sous la forme d\'une notification pulsante. Elles sont utiles pour guider l\'utilisateur à travers des actions spécifiques.","sidebar":"tutorialSidebar"},"zUI/Notifications/notif":{"id":"zUI/Notifications/notif","title":"Notifications","description":"Les notifications dans zUI permettent d\'afficher des messages à l\'utilisateur pour signaler des événements, des informations ou des alertes. Ces notifications peuvent inclure un titre, un message, une icône et une bannière pour personnaliser l\'expérience utilisateur.","sidebar":"tutorialSidebar"},"zUI/Notifications/pulsing":{"id":"zUI/Notifications/pulsing","title":"Pulsing Notification","description":"Les notifications pulsatiles dans zUI permettent d\'afficher des messages visuels qui attirent l\'attention de l\'utilisateur grâce à un effet pulsant. Cela peut être utilisé pour signaler des événements importants ou attirer l\'attention sur un élément spécifique.","sidebar":"tutorialSidebar"},"zUI/presentation":{"id":"zUI/presentation","title":"Présentation","description":"zUI est une bibliothèque avancée dédiée à la création de menus NUI pour FiveM, qui allie sobriété, optimisation et esthétique. Ce projet vise à moderniser la création de menus tout en facilitant le travail des développeurs grâce à une interface intuitive et performante.","sidebar":"tutorialSidebar"},"zUI/Themes/context":{"id":"zUI/Themes/context","title":"Thème du ContextUI","description":"Le ContextUI de zUI permet de personnaliser l\'apparence des éléments de l\'interface en fonction du contexte. Vous pouvez ajuster les couleurs, les animations, et les styles pour créer une expérience utilisateur cohérente et interactive.","sidebar":"tutorialSidebar"},"zUI/Themes/introduction":{"id":"zUI/Themes/introduction","title":"Introduction","description":"Le fichier theme.json vous permet de personnaliser l\'apparence de zUI en ajustant divers paramètres du menu. Vous pouvez modifier la position, les couleurs, les styles et plus encore pour adapter l\'interface à vos besoins spécifiques.","sidebar":"tutorialSidebar"},"zUI/Themes/menu":{"id":"zUI/Themes/menu","title":"Thème du Menu","description":"Le menu dans zUI est un élément essentiel pour créer une interface interactive. Vous pouvez personnaliser son apparence, sa position, et ajouter des animations pour améliorer l\'expérience utilisateur.","sidebar":"tutorialSidebar"},"zUI/Themes/modal":{"id":"zUI/Themes/modal","title":"Thème du Modal","description":"Le Thème de Personnalisation vous permet d\'ajuster l\'apparence de l\'interface en fonction de vos préférences. Vous pouvez modifier les couleurs, les animations, les polices, et bien plus pour créer une expérience utilisateur unique.","sidebar":"tutorialSidebar"},"zUI/Themes/notifs":{"id":"zUI/Themes/notifs","title":"Thème des Notifications","description":"Les notifications de zUI permettent de personnaliser les messages affichés à l\'utilisateur en fonction de l\'événement ou du contexte. Elles peuvent être configurées pour s\'afficher avec différentes couleurs, animations et polices, offrant ainsi une expérience utilisateur plus interactive et esthétique.","sidebar":"tutorialSidebar"}}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"version":{"pluginId":"default","version":"current","label":"Next","banner":null,"badge":false,"noIndex":false,"className":"docs-version-current","isLast":true,"docsSidebars":{"tutorialSidebar":[{"type":"link","label":"Introduction","href":"/docs/intro","docId":"intro","unlisted":false},{"type":"category","label":"zUI","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"Présentation","href":"/docs/zUI/presentation","docId":"zUI/presentation","unlisted":false},{"type":"link","label":"Installation","href":"/docs/zUI/installation","docId":"zUI/installation","unlisted":false},{"type":"link","label":"Menu","href":"/docs/zUI/menu","docId":"zUI/menu","unlisted":false},{"type":"category","label":"Items","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"Features","href":"/docs/zUI/Items/features","docId":"zUI/Items/features","unlisted":false},{"type":"link","label":"Séparateur","href":"/docs/zUI/Items/separator","docId":"zUI/Items/separator","unlisted":false},{"type":"link","label":"Ligne","href":"/docs/zUI/Items/line","docId":"zUI/Items/line","unlisted":false},{"type":"link","label":"Bouton","href":"/docs/zUI/Items/button","docId":"zUI/Items/button","unlisted":false},{"type":"link","label":"Bouton Lien","href":"/docs/zUI/Items/linkButton","docId":"zUI/Items/linkButton","unlisted":false},{"type":"link","label":"Liste","href":"/docs/zUI/Items/list","docId":"zUI/Items/list","unlisted":false},{"type":"link","label":"Checkbox","href":"/docs/zUI/Items/checkbox","docId":"zUI/Items/checkbox","unlisted":false},{"type":"link","label":"Liste de Couleurs","href":"/docs/zUI/Items/colorList","docId":"zUI/Items/colorList","unlisted":false},{"type":"link","label":"Slider","href":"/docs/zUI/Items/slider","docId":"zUI/Items/slider","unlisted":false}],"href":"/docs/category/items"},{"type":"category","label":"Thèmes","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"Introduction","href":"/docs/zUI/Themes/introduction","docId":"zUI/Themes/introduction","unlisted":false},{"type":"link","label":"Thème du Menu","href":"/docs/zUI/Themes/menu","docId":"zUI/Themes/menu","unlisted":false},{"type":"link","label":"Thème du ContextUI","href":"/docs/zUI/Themes/context","docId":"zUI/Themes/context","unlisted":false},{"type":"link","label":"Thème des Notifications","href":"/docs/zUI/Themes/notifs","docId":"zUI/Themes/notifs","unlisted":false},{"type":"link","label":"Thème du Modal","href":"/docs/zUI/Themes/modal","docId":"zUI/Themes/modal","unlisted":false}],"href":"/docs/category/thèmes"},{"type":"category","label":"Fonctions","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"ShowHelpNotification","href":"/docs/zUI/Fonctions/showHelpNotification","docId":"zUI/Fonctions/showHelpNotification","unlisted":false},{"type":"link","label":"AlertInput","href":"/docs/zUI/Fonctions/alertInput","docId":"zUI/Fonctions/alertInput","unlisted":false},{"type":"link","label":"KeyboardInput","href":"/docs/zUI/Fonctions/keyboardInput","docId":"zUI/Fonctions/keyboardInput","unlisted":false},{"type":"link","label":"RenderSprite","href":"/docs/zUI/Fonctions/renderSprite","docId":"zUI/Fonctions/renderSprite","unlisted":false}],"href":"/docs/category/fonctions"},{"type":"category","label":"Méthodes","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"GoBack","href":"/docs/zUI/Methods/goBack","docId":"zUI/Methods/goBack","unlisted":false},{"type":"link","label":"Goto","href":"/docs/zUI/Methods/goTo","docId":"zUI/Methods/goTo","unlisted":false},{"type":"link","label":"IsVisible","href":"/docs/zUI/Methods/isVisible","docId":"zUI/Methods/isVisible","unlisted":false},{"type":"link","label":"OnClose","href":"/docs/zUI/Methods/onClose","docId":"zUI/Methods/onClose","unlisted":false},{"type":"link","label":"OnOpen","href":"/docs/zUI/Methods/onOpen","docId":"zUI/Methods/onOpen","unlisted":false},{"type":"link","label":"SetItems","href":"/docs/zUI/Methods/setItems","docId":"zUI/Methods/setItems","unlisted":false},{"type":"link","label":"SetVisible","href":"/docs/zUI/Methods/setVisible","docId":"zUI/Methods/setVisible","unlisted":false}],"href":"/docs/category/méthodes"},{"type":"link","label":"Menu Contextuel","href":"/docs/zUI/ContextUI","docId":"zUI/ContextUI","unlisted":false},{"type":"category","label":"Notifications","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"Pulsing Notification","href":"/docs/zUI/Notifications/pulsing","docId":"zUI/Notifications/pulsing","unlisted":false},{"type":"link","label":"Notifications","href":"/docs/zUI/Notifications/notif","docId":"zUI/Notifications/notif","unlisted":false},{"type":"link","label":"Help Notification","href":"/docs/zUI/Notifications/helpNotif","docId":"zUI/Notifications/helpNotif","unlisted":false}],"href":"/docs/category/notifications"},{"type":"link","label":"Modal","href":"/docs/zUI/modal","docId":"zUI/modal","unlisted":false}],"href":"/docs/category/zui"},{"type":"category","label":"zSleep","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"Introduction","href":"/docs/zSleep/intro","docId":"zSleep/intro","unlisted":false},{"type":"link","label":"Installation","href":"/docs/zSleep/instal","docId":"zSleep/instal","unlisted":false}]}]},"docs":{"intro":{"id":"intro","title":"Introduction","description":"Bienvenue dans la documentation officielle de toutes les ressources développées par zSquad. Ici, vous trouverez toutes les informations nécessaires pour comprendre, utiliser et tirer pleinement parti des projets, outils et technologies créés par notre équipe.","sidebar":"tutorialSidebar"},"zSleep/instal":{"id":"zSleep/instal","title":"Installation","description":"Ce guide d\'installation de zSleep s\'adresse aux administrateurs de serveurs FiveM et détaille les étapes nécessaires pour installer et configurer le script selon vos besoins.","sidebar":"tutorialSidebar"},"zSleep/intro":{"id":"zSleep/intro","title":"Introduction","description":"Bienvenue dans la documentation officielle de zSleep, le script de sommeil ultime pour les administrateurs de serveurs FiveM. Avec zSleep, offrez à votre communauté de nouvelles possibilités immersives grâce à une mécanique de sommeil réaliste et intuitive.","sidebar":"tutorialSidebar"},"zUI/ContextUI":{"id":"zUI/ContextUI","title":"Menu Contextuel","description":"Les menus contextuels dans zUI permettent d\'afficher des actions spécifiques en fonction de l\'élément ou de la situation sur laquelle l\'utilisateur interagit. Ces menus sont polyvalents et peuvent être adaptés à différents types d\'entités comme des véhicules, des objets, des personnages, ou même des emplacements spécifiques.","sidebar":"tutorialSidebar"},"zUI/Fonctions/alertInput":{"id":"zUI/Fonctions/alertInput","title":"AlertInput","description":"La fonction AlertInput est utile lorsque vous devez demander une confirmation au joueur.","sidebar":"tutorialSidebar"},"zUI/Fonctions/keyboardInput":{"id":"zUI/Fonctions/keyboardInput","title":"KeyboardInput","description":"La fonction KeyboardInput est utile lorsque vous devez demander une saisie de texte à l\'utilisateur via un clavier virtuel.","sidebar":"tutorialSidebar"},"zUI/Fonctions/renderSprite":{"id":"zUI/Fonctions/renderSprite","title":"RenderSprite","description":"La fonction RenderSprite permet d\'afficher une image sous un menu spécifique dans l\'interface utilisateur.","sidebar":"tutorialSidebar"},"zUI/Fonctions/showHelpNotification":{"id":"zUI/Fonctions/showHelpNotification","title":"ShowHelpNotification","description":"La fonction ShowHelpNotification est utile dans le cas où vous devriez indiquer au joueur sur quelle touche il devra appuyer pour interagir avec votre script.","sidebar":"tutorialSidebar"},"zUI/installation":{"id":"zUI/installation","title":"Installation","description":"zUI est une bibliothèque avancée qui s\'intègre directement dans une resource existante sur votre serveur FiveM. Suivez les étapes ci-dessous pour l\'installer correctement et vous assurer qu\'elle fonctionne de manière optimale.","sidebar":"tutorialSidebar"},"zUI/Items/button":{"id":"zUI/Items/button","title":"Bouton","description":"Les boutons dans zUI sont des éléments interactifs essentiels qui permettent aux utilisateurs de réaliser des actions lorsqu\'ils sont cliqués. Vous pouvez ajouter des boutons à vos menus en utilisant la fonction Items:AddButton. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/checkbox":{"id":"zUI/Items/checkbox","title":"Checkbox","description":"Les checkboxes dans zUI permettent aux utilisateurs de sélectionner ou désélectionner des options, offrant ainsi un moyen interactif pour gérer les états binaires dans vos menus. Vous pouvez ajouter des checkboxes à vos menus en utilisant la fonction zUI:AddCheckbox. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/colorList":{"id":"zUI/Items/colorList","title":"Liste de Couleurs","description":"La fonction AddColorList dans zUI permet d\'ajouter une liste de couleurs personnalisable à vos menus. Cette fonctionnalité est idéale pour offrir des options colorées, telles que des thèmes ou des choix de personnalisation visuelle. Voici comment utiliser cette fonction pour enrichir vos menus.","sidebar":"tutorialSidebar"},"zUI/Items/features":{"id":"zUI/Items/features","title":"Features","description":"Badges","sidebar":"tutorialSidebar"},"zUI/Items/line":{"id":"zUI/Items/line","title":"Ligne","description":"Les lignes dans zUI sont des éléments visuels utilisés pour ajouter des séparations horizontales dans vos menus. Elles peuvent être utilisées pour séparer visuellement les différentes sections ou pour améliorer l\'organisation de l\'interface utilisateur. Vous pouvez ajouter des lignes à vos menus en utilisant la fonction zUI:AddLine. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/linkButton":{"id":"zUI/Items/linkButton","title":"Bouton Lien","description":"Les boutons lien dans zUI sont des éléments interactifs qui redirigent les utilisateurs vers une URL lorsqu\'ils sont cliqués. Ils sont utiles pour ajouter des liens externes ou des pages web à vos menus. Vous pouvez ajouter des boutons lien à vos menus en utilisant la fonction zUI:AddLinkButton. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/list":{"id":"zUI/Items/list","title":"Liste","description":"Les listes dans zUI permettent aux utilisateurs de sélectionner parmi plusieurs options. Elles sont idéales pour offrir des choix dynamiques ou pour afficher des éléments dans vos menus. Vous pouvez ajouter des listes à vos menus en utilisant la fonction zUI:AddList. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/separator":{"id":"zUI/Items/separator","title":"Séparateur","description":"Les séparateurs dans zUI sont des éléments visuels utilisés pour diviser et organiser les éléments dans un menu. Ils aident à améliorer la lisibilité et à structurer l\'interface utilisateur. Vous pouvez ajouter des séparateurs à vos menus en utilisant la fonction zUI:AddSeparator. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/slider":{"id":"zUI/Items/slider","title":"Slider","description":"Les curseurs dans zUI permettent d’ajouter des contrôles de type slider à vos menus, offrant une manière intuitive d’ajuster des valeurs numériques, telles que des volumes, des niveaux ou des options de personnalisation. Voici comment configurer et utiliser la fonction AddSlider.","sidebar":"tutorialSidebar"},"zUI/menu":{"id":"zUI/menu","title":"Menu","description":"Dans cette section, nous allons explorer comment utiliser zUI pour créer et gérer des menus NUI dans FiveM. Vous apprendrez à créer des menus et des sous-menus, à ajouter des éléments, et à gérer leur visibilité.","sidebar":"tutorialSidebar"},"zUI/Methods/goBack":{"id":"zUI/Methods/goBack","title":"GoBack","description":"La méthode GoBack est utile lorsque vous souhaitez revenir à un menu parent dans l\'interface utilisateur.","sidebar":"tutorialSidebar"},"zUI/Methods/goTo":{"id":"zUI/Methods/goTo","title":"Goto","description":"La méthode Goto est utilisée pour naviguer vers un menu spécifique dans l\'interface utilisateur.","sidebar":"tutorialSidebar"},"zUI/Methods/isVisible":{"id":"zUI/Methods/isVisible","title":"IsVisible","description":"La méthode IsVisible est utilisée pour vérifier si un menu principal est actuellement visible.","sidebar":"tutorialSidebar"},"zUI/Methods/onClose":{"id":"zUI/Methods/onClose","title":"OnClose","description":"La méthode OnClose est utilisée pour définir une fonction à exécuter lors de la fermeture d\'un menu principal.","sidebar":"tutorialSidebar"},"zUI/Methods/onOpen":{"id":"zUI/Methods/onOpen","title":"OnOpen","description":"La méthode OnOpen est utilisée pour définir une fonction à exécuter lors de l\'ouverture d\'un menu principal.","sidebar":"tutorialSidebar"},"zUI/Methods/setItems":{"id":"zUI/Methods/setItems","title":"SetItems","description":"La méthode SetItems est utilisée pour définir les éléments d\'un menu.","sidebar":"tutorialSidebar"},"zUI/Methods/setVisible":{"id":"zUI/Methods/setVisible","title":"SetVisible","description":"La méthode SetVisible est utilisée pour afficher ou masquer un menu principal.","sidebar":"tutorialSidebar"},"zUI/modal":{"id":"zUI/modal","title":"Modal","description":"Les modals dans zUI permettent d\'afficher des fenêtres interactives contenant des champs de saisie pour recueillir des informations de l\'utilisateur. Ces fenêtres sont généralement utilisées pour obtenir des données spécifiques dans des scénarios nécessitant plusieurs options de saisie.","sidebar":"tutorialSidebar"},"zUI/Notifications/helpNotif":{"id":"zUI/Notifications/helpNotif","title":"Help Notification","description":"Les notifications d\'aide dans zUI sont des messages visuels destinés à fournir des instructions ou des informations supplémentaires à l\'utilisateur, généralement sous la forme d\'une notification pulsante. Elles sont utiles pour guider l\'utilisateur à travers des actions spécifiques.","sidebar":"tutorialSidebar"},"zUI/Notifications/notif":{"id":"zUI/Notifications/notif","title":"Notifications","description":"Les notifications dans zUI permettent d\'afficher des messages à l\'utilisateur pour signaler des événements, des informations ou des alertes. Ces notifications peuvent inclure un titre, un message, une icône et une bannière pour personnaliser l\'expérience utilisateur.","sidebar":"tutorialSidebar"},"zUI/Notifications/pulsing":{"id":"zUI/Notifications/pulsing","title":"Pulsing Notification","description":"Les notifications pulsatiles dans zUI permettent d\'afficher des messages visuels qui attirent l\'attention de l\'utilisateur grâce à un effet pulsant. Cela peut être utilisé pour signaler des événements importants ou attirer l\'attention sur un élément spécifique.","sidebar":"tutorialSidebar"},"zUI/presentation":{"id":"zUI/presentation","title":"Présentation","description":"zUI est une bibliothèque avancée dédiée à la création de menus NUI pour FiveM, qui allie sobriété, optimisation et esthétique. Ce projet vise à moderniser la création de menus tout en facilitant le travail des développeurs grâce à une interface intuitive et performante.","sidebar":"tutorialSidebar"},"zUI/Themes/context":{"id":"zUI/Themes/context","title":"Thème du ContextUI","description":"Le ContextUI de zUI permet de personnaliser l\'apparence des éléments de l\'interface en fonction du contexte. Vous pouvez ajuster les couleurs, les animations, et les styles pour créer une expérience utilisateur cohérente et interactive.","sidebar":"tutorialSidebar"},"zUI/Themes/introduction":{"id":"zUI/Themes/introduction","title":"Introduction","description":"Le fichier theme.json vous permet de personnaliser l\'apparence de zUI en ajustant divers paramètres du menu. Vous pouvez modifier la position, les couleurs, les styles et plus encore pour adapter l\'interface à vos besoins spécifiques.","sidebar":"tutorialSidebar"},"zUI/Themes/menu":{"id":"zUI/Themes/menu","title":"Thème du Menu","description":"Le menu dans zUI est un élément essentiel pour créer une interface interactive. Vous pouvez personnaliser son apparence, sa position, et ajouter des animations pour améliorer l\'expérience utilisateur.","sidebar":"tutorialSidebar"},"zUI/Themes/modal":{"id":"zUI/Themes/modal","title":"Thème du Modal","description":"Le Thème de Personnalisation vous permet d\'ajuster l\'apparence de l\'interface en fonction de vos préférences. Vous pouvez modifier les couleurs, les animations, les polices, et bien plus pour créer une expérience utilisateur unique.","sidebar":"tutorialSidebar"},"zUI/Themes/notifs":{"id":"zUI/Themes/notifs","title":"Thème des Notifications","description":"Les notifications de zUI permettent de personnaliser les messages affichés à l\'utilisateur en fonction de l\'événement ou du contexte. Elles peuvent être configurées pour s\'afficher avec différentes couleurs, animations et polices, offrant ainsi une expérience utilisateur plus interactive et esthétique.","sidebar":"tutorialSidebar"}}}}');
 
 /***/ }),
 
@@ -45456,7 +46074,7 @@ module.exports = /*#__PURE__*/JSON.parse('{"categoryGeneratedIndex":{"title":"No
 /***/ ((module) => {
 
 "use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"categoryGeneratedIndex":{"title":"Thèmes","slug":"/category/thèmes","permalink":"/docs/category/thèmes","sidebar":"tutorialSidebar","navigation":{"previous":{"title":"Checkbox","permalink":"/docs/zUI/Items/checkbox"},"next":{"title":"Introduction","permalink":"/docs/zUI/Themes/introduction"}}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"categoryGeneratedIndex":{"title":"Thèmes","slug":"/category/thèmes","permalink":"/docs/category/thèmes","sidebar":"tutorialSidebar","navigation":{"previous":{"title":"Slider","permalink":"/docs/zUI/Items/slider"},"next":{"title":"Introduction","permalink":"/docs/zUI/Themes/introduction"}}}}');
 
 /***/ }),
 
