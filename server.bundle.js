@@ -567,8 +567,8 @@ const metadata = {
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "SetVisible",
-    "permalink": "/docs/zUI/Methods/setVisible"
+    "title": "Modal",
+    "permalink": "/docs/zUI/modal"
   },
   "next": {
     "title": "Installation",
@@ -663,6 +663,325 @@ function _createMdxContent(props) {
       children: "Suivez les Mises à Jour"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: "Nous mettons régulièrement à jour cette documentation pour intégrer les retours de la communauté et les nouvelles fonctionnalités de zSleep. Pensez à consulter cette page fréquemment pour rester à jour et tirer le meilleur parti de votre script."
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
+    ...props,
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+
+
+
+/***/ }),
+
+/***/ 9743:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   assets: () => (/* binding */ assets),
+/* harmony export */   contentTitle: () => (/* binding */ contentTitle),
+/* harmony export */   "default": () => (/* binding */ MDXContent),
+/* harmony export */   frontMatter: () => (/* binding */ frontMatter),
+/* harmony export */   metadata: () => (/* binding */ metadata),
+/* harmony export */   toc: () => (/* binding */ toc)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4848);
+/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8453);
+
+
+const frontMatter = {
+	sidebar_position: 8
+};
+const contentTitle = 'Menu Contextuel';
+const metadata = {
+  "id": "zUI/ContextUI",
+  "title": "Menu Contextuel",
+  "description": "Les menus contextuels dans zUI permettent d'afficher des actions spécifiques en fonction de l'élément ou de la situation sur laquelle l'utilisateur interagit. Ces menus sont polyvalents et peuvent être adaptés à différents types d'entités comme des véhicules, des objets, des personnages, ou même des emplacements spécifiques.",
+  "source": "@site/docs/zUI/ContextUI.md",
+  "sourceDirName": "zUI",
+  "slug": "/zUI/ContextUI",
+  "permalink": "/docs/zUI/ContextUI",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "sidebar_position": 8
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "SetVisible",
+    "permalink": "/docs/zUI/Methods/setVisible"
+  },
+  "next": {
+    "title": "Notifications",
+    "permalink": "/docs/category/notifications"
+  }
+};
+const assets = {
+
+};
+
+
+
+const toc = [{
+  "value": "Fonction <code>CreateContext</code>",
+  "id": "fonction-createcontext",
+  "level": 2
+}, {
+  "value": "Paramètres",
+  "id": "paramètres",
+  "level": 3
+}, {
+  "value": "Contextes Disponibles",
+  "id": "contextes-disponibles",
+  "level": 2
+}, {
+  "value": "1. <strong>Vehicle</strong>",
+  "id": "1-vehicle",
+  "level": 3
+}, {
+  "value": "2. <strong>Props</strong>",
+  "id": "2-props",
+  "level": 3
+}, {
+  "value": "3. <strong>Ped</strong>",
+  "id": "3-ped",
+  "level": 3
+}, {
+  "value": "4. <strong>Vector</strong>",
+  "id": "4-vector",
+  "level": 3
+}, {
+  "value": "5. <strong>Other</strong>",
+  "id": "5-other",
+  "level": 3
+}, {
+  "value": "Résumé",
+  "id": "résumé",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    blockquote: "blockquote",
+    code: "code",
+    em: "em",
+    h1: "h1",
+    h2: "h2",
+    h3: "h3",
+    header: "header",
+    hr: "hr",
+    img: "img",
+    li: "li",
+    ol: "ol",
+    p: "p",
+    pre: "pre",
+    strong: "strong",
+    ul: "ul",
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.header, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h1, {
+        id: "menu-contextuel",
+        children: "Menu Contextuel"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Les menus contextuels dans ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "zUI"
+      }), " permettent d'afficher des actions spécifiques en fonction de l'élément ou de la situation sur laquelle l'utilisateur interagit. Ces menus sont polyvalents et peuvent être adaptés à différents types d'entités comme des véhicules, des objets, des personnages, ou même des emplacements spécifiques."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h2, {
+      id: "fonction-createcontext",
+      children: ["Fonction ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "CreateContext"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "La syntaxe pour créer un menu contextuel est la suivante :"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-lua",
+        children: "zUI.CreateContext(ContextID, Callback)\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "paramètres",
+      children: "Paramètres"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "ContextID"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[string]"
+        }), " : L'identifiant unique du menu contextuel. Cet ID est utilisé pour référencer et déclencher ce menu dans votre code."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Callback"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[function(Items, coords3D, Entity)]"
+        }), " : Une fonction appelée pour générer les éléments du menu. Elle reçoit trois paramètres :", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.blockquote, {
+          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+            children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+                children: "Items"
+              }), " : Un gestionnaire pour ajouter des éléments (boutons, séparateurs, etc.) au menu contextuel."]
+            }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+                children: "coords3D"
+              }), " : Les coordonnées 3D où le menu est ouvert."]
+            }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+                children: "Entity"
+              }), " : L'entité liée à l'interaction (si applicable)."]
+            }), "\n"]
+          }), "\n"]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "contextes-disponibles",
+      children: "Contextes Disponibles"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Vous pouvez définir des menus contextuels pour plusieurs types d'entités ou situations spécifiques :"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "1-vehicle",
+      children: ["1. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Vehicle"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Conçu pour interagir avec des véhicules, par exemple ouvrir, verrouiller, ou réparer un véhicule."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Exemple :"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-lua",
+        children: "zUI.CreateContext(\"vehicle\", function(Items, coords3D, Entity)\r\n    Items:AddSeparator(\"Options du véhicule\")\r\n    Items:AddButton(\"Démarrer\", \"Démarrez ce véhicule.\", nil, function(onSelected)\r\n        if onSelected then\r\n            print(\"Véhicule démarré !\")\r\n        end\r\n    end)\r\nend)\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
+        src: (__webpack_require__(8253)/* ["default"] */ .A) + "",
+        width: "2559",
+        height: "1439"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.hr, {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "2-props",
+      children: ["2. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Props"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Pour interagir avec des objets physiques (props), comme les ramasser ou les examiner."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Exemple :"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-lua",
+        children: "zUI.CreateContext(\"props\", function(Items, coords3D, Entity)\r\n    Items:AddSeparator(\"Options des objets\")\r\n    Items:AddButton(\"Ramasser\", \"Ramassez cet objet.\", nil, function(onSelected)\r\n        if onSelected then\r\n            print(\"Objet ramassé !\")\r\n        end\r\n    end)\r\nend)\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
+        src: (__webpack_require__(3514)/* ["default"] */ .A) + "",
+        width: "2559",
+        height: "1434"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.hr, {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "3-ped",
+      children: ["3. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Ped"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Conçu pour interagir avec des personnages ou PNJ (Peds)."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Exemple :"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-lua",
+        children: "zUI.CreateContext(\"ped\", function(Items, coords3D, Entity)\r\n    Items:AddSeparator(\"Options du personnage\")\r\n    Items:AddButton(\"Parler\", \"Engagez une conversation.\", nil, function(onSelected)\r\n        if onSelected then\r\n            print(\"Conversation commencée !\")\r\n        end\r\n    end)\r\nend)\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
+        src: (__webpack_require__(4015)/* ["default"] */ .A) + "",
+        width: "2557",
+        height: "1434"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.hr, {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "4-vector",
+      children: ["4. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Vector"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Pour interagir avec un point spécifique dans l'espace (par exemple, un lieu marqué)."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Exemple :"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-lua",
+        children: "zUI.CreateContext(\"vector\", function(Items, coords3D)\r\n    Items:AddSeparator(\"Options de position\")\r\n    Items:AddButton(\"Explorer\", \"Explorez cet endroit.\", nil, function(onSelected)\r\n        if onSelected then\r\n            print(\"Lieu exploré !\")\r\n        end\r\n    end)\r\nend)\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
+        src: (__webpack_require__(1407)/* ["default"] */ .A) + "",
+        width: "2559",
+        height: "1439"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.hr, {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "5-other",
+      children: ["5. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Other"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Un contexte générique pour des situations ou entités non couvertes par les catégories ci-dessus."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Exemple :"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-lua",
+        children: "zUI.CreateContext(\"other\", function(Items, coords3D, Entity)\r\n    Items:AddSeparator(\"Options diverses\")\r\n    Items:AddButton(\"Action personnalisée\", \"Réalisez une action spécifique.\", nil, function(onSelected)\r\n        if onSelected then\r\n            print(\"Action personnalisée exécutée !\")\r\n        end\r\n    end)\r\nend)\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
+        src: (__webpack_require__(7458)/* ["default"] */ .A) + "",
+        width: "2558",
+        height: "1439"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.hr, {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "résumé",
+      children: "Résumé"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Pour utiliser les menus contextuels dans ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "zUI"
+      }), " :"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["Utilisez ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "zUI.CreateContext"
+        }), " pour définir un menu contextuel en fonction d'un type d'entité ou d'un scénario."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+        children: "Personnalisez les éléments du menu en ajoutant des boutons, séparateurs, ou styles spécifiques."
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["Adaptez vos menus à différents types d'interaction grâce aux contextes ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "Vehicle"
+        }), ", ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "Props"
+        }), ", ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "Ped"
+        }), ", ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "Vector"
+        }), ", ou ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "Other"
+        }), "."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Ces menus permettent de créer une expérience utilisateur riche et fluide, essentielle pour vos projets interactifs."
     })]
   });
 }
@@ -839,7 +1158,7 @@ function _createMdxContent(props) {
       children: "Aperçu de l'exemple"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
-        src: (__webpack_require__(1793)/* ["default"] */ .A) + "",
+        src: (__webpack_require__(9636)/* ["default"] */ .A) + "",
         width: "1919",
         height: "1079"
       })
@@ -1048,7 +1367,7 @@ function _createMdxContent(props) {
       children: "Aperçu de l'exemple"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
-        src: (__webpack_require__(2209)/* ["default"] */ .A) + "",
+        src: (__webpack_require__(9310)/* ["default"] */ .A) + "",
         width: "1919",
         height: "1079"
       })
@@ -1233,7 +1552,7 @@ function _createMdxContent(props) {
       children: "Aperçu de l'exemple"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
-        src: (__webpack_require__(5980)/* ["default"] */ .A) + "",
+        src: (__webpack_require__(1017)/* ["default"] */ .A) + "",
         width: "2559",
         height: "1439"
       })
@@ -1447,7 +1766,7 @@ function _createMdxContent(props) {
       }), ":"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
-        src: (__webpack_require__(4355)/* ["default"] */ .A) + "",
+        src: (__webpack_require__(2140)/* ["default"] */ .A) + "",
         width: "1919",
         height: "1079"
       })
@@ -1457,7 +1776,7 @@ function _createMdxContent(props) {
       }), ":"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
-        src: (__webpack_require__(9784)/* ["default"] */ .A) + "",
+        src: (__webpack_require__(9031)/* ["default"] */ .A) + "",
         width: "1919",
         height: "1079"
       })
@@ -1752,7 +2071,7 @@ function _createMdxContent(props) {
       }), " :"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
-        src: (__webpack_require__(9496)/* ["default"] */ .A) + "",
+        src: (__webpack_require__(1625)/* ["default"] */ .A) + "",
         width: "1500",
         height: "500"
       })
@@ -1838,8 +2157,8 @@ const metadata = {
     "permalink": "/docs/zUI/Items/list"
   },
   "next": {
-    "title": "Thème",
-    "permalink": "/docs/zUI/theme"
+    "title": "Thèmes",
+    "permalink": "/docs/category/thèmes"
   }
 };
 const assets = {
@@ -2015,7 +2334,7 @@ function _createMdxContent(props) {
       }), " :"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
-        src: (__webpack_require__(8107)/* ["default"] */ .A) + "",
+        src: (__webpack_require__(6442)/* ["default"] */ .A) + "",
         width: "1500",
         height: "500"
       })
@@ -2389,7 +2708,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/arrowleft.png&quot;",
-          src: (__webpack_require__(7177)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(444)/* ["default"] */ .A) + "",
           width: "32",
           height: "32"
         })
@@ -2403,7 +2722,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/arrowright.png&quot;",
-          src: (__webpack_require__(5394)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(4201)/* ["default"] */ .A) + "",
           width: "32",
           height: "32"
         })
@@ -2417,7 +2736,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/bettingbox_centre.png&quot;",
-          src: (__webpack_require__(5819)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(5322)/* ["default"] */ .A) + "",
           width: "4",
           height: "4"
         })
@@ -2431,7 +2750,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/bettingbox_left.png&quot;",
-          src: (__webpack_require__(9965)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(880)/* ["default"] */ .A) + "",
           width: "8",
           height: "16"
         })
@@ -2445,7 +2764,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/bettingbox_right.png&quot;",
-          src: (__webpack_require__(7598)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(7765)/* ["default"] */ .A) + "",
           width: "8",
           height: "16"
         })
@@ -2459,7 +2778,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/card_suit_clubs.png&quot;",
-          src: (__webpack_require__(9037)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(3740)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -2473,7 +2792,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/card_suit_diamonds.png&quot;",
-          src: (__webpack_require__(3479)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(2932)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -2487,7 +2806,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/card_suit_hearts.png&quot;",
-          src: (__webpack_require__(2723)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(8924)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -2501,7 +2820,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/card_suit_spades.png&quot;",
-          src: (__webpack_require__(7770)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(6913)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -2515,7 +2834,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/medal_silver.png&quot;",
-          src: (__webpack_require__(9918)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(3513)/* ["default"] */ .A) + "",
           width: "32",
           height: "32"
         })
@@ -2529,7 +2848,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/mp_alerttriangle.png&quot;",
-          src: (__webpack_require__(6833)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(7398)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -2543,7 +2862,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/mp_hostcrown.png&quot;",
-          src: (__webpack_require__(9604)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(303)/* ["default"] */ .A) + "",
           width: "32",
           height: "32"
         })
@@ -2557,7 +2876,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/mp_medal_bronze.png&quot;",
-          src: (__webpack_require__(9263)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(4494)/* ["default"] */ .A) + "",
           width: "32",
           height: "32"
         })
@@ -2571,7 +2890,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/mp_medal_gold.png&quot;",
-          src: (__webpack_require__(9493)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(108)/* ["default"] */ .A) + "",
           width: "32",
           height: "32"
         })
@@ -2585,7 +2904,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/mp_specitem_cash.png&quot;",
-          src: (__webpack_require__(3041)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(530)/* ["default"] */ .A) + "",
           width: "32",
           height: "32"
         })
@@ -2599,7 +2918,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/mp_specitem_coke.png&quot;",
-          src: (__webpack_require__(4670)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(7669)/* ["default"] */ .A) + "",
           width: "32",
           height: "32"
         })
@@ -2613,7 +2932,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/mp_specitem_heroin.png&quot;",
-          src: (__webpack_require__(3113)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(7374)/* ["default"] */ .A) + "",
           width: "32",
           height: "32"
         })
@@ -2627,7 +2946,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/mp_specitem_meth.png&quot;",
-          src: (__webpack_require__(2046)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(2813)/* ["default"] */ .A) + "",
           width: "32",
           height: "32"
         })
@@ -2641,7 +2960,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/mp_specitem_weed.png&quot;",
-          src: (__webpack_require__(3767)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(5296)/* ["default"] */ .A) + "",
           width: "32",
           height: "32"
         })
@@ -2655,7 +2974,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_ammo_icon_a.png&quot;",
-          src: (__webpack_require__(4234)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(3841)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -2669,7 +2988,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_ammo_icon_b.png&quot;",
-          src: (__webpack_require__(1665)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(4858)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -2683,7 +3002,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_armour_icon_a.png&quot;",
-          src: (__webpack_require__(3700)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(1007)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -2697,7 +3016,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_armour_icon_b.png&quot;",
-          src: (__webpack_require__(2607)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(9380)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -2711,7 +3030,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_arrows_upanddown.png&quot;",
-          src: (__webpack_require__(2679)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(4422)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -2725,7 +3044,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_art_icon_a.png&quot;",
-          src: (__webpack_require__(1271)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(7794)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -2739,7 +3058,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_art_icon_b.png&quot;",
-          src: (__webpack_require__(1212)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(1801)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -2753,7 +3072,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_barber_icon_a.png&quot;",
-          src: (__webpack_require__(4590)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(1609)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -2767,7 +3086,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_barber_icon_b.png&quot;",
-          src: (__webpack_require__(4965)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(5026)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -2781,7 +3100,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_box_blank.png&quot;",
-          src: (__webpack_require__(4276)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(8943)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -2795,7 +3114,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_box_blankb.png&quot;",
-          src: (__webpack_require__(5692)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(973)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -2809,7 +3128,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_box_crossb.png&quot;",
-          src: (__webpack_require__(182)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(2135)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -2823,7 +3142,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_box_tick.png&quot;",
-          src: (__webpack_require__(5003)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(4130)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -2837,7 +3156,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_box_tickb.png&quot;",
-          src: (__webpack_require__(9585)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(5786)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -2851,7 +3170,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_chips_a.png&quot;",
-          src: (__webpack_require__(5193)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(6850)/* ["default"] */ .A) + "",
           width: "32",
           height: "32"
         })
@@ -2865,7 +3184,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_chips_b.png&quot;",
-          src: (__webpack_require__(1186)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(857)/* ["default"] */ .A) + "",
           width: "32",
           height: "32"
         })
@@ -2879,7 +3198,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_clothing_icon_a.png&quot;",
-          src: (__webpack_require__(2684)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(135)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -2893,7 +3212,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_clothing_icon_b.png&quot;",
-          src: (__webpack_require__(3367)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(76)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -2907,7 +3226,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_franklin_icon_a.png&quot;",
-          src: (__webpack_require__(1439)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(5884)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -2921,7 +3240,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_franklin_icon_b.png&quot;",
-          src: (__webpack_require__(6324)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(3463)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -2935,7 +3254,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_garage_bike_icon_a.png&quot;",
-          src: (__webpack_require__(9973)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(9728)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -2949,7 +3268,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_garage_bike_icon_b.png&quot;",
-          src: (__webpack_require__(2622)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(9579)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -2963,7 +3282,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_garage_icon_a.png&quot;",
-          src: (__webpack_require__(2733)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(7314)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -2977,7 +3296,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_garage_icon_b.png&quot;",
-          src: (__webpack_require__(1526)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(1849)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -2991,7 +3310,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_gunclub_icon_a.png&quot;",
-          src: (__webpack_require__(736)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(1913)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -3005,7 +3324,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_gunclub_icon_b.png&quot;",
-          src: (__webpack_require__(2027)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(1202)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -3019,7 +3338,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_health_icon_a.png&quot;",
-          src: (__webpack_require__(6614)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(8057)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -3033,7 +3352,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_health_icon_b.png&quot;",
-          src: (__webpack_require__(589)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(3442)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -3047,7 +3366,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_lock.png&quot;",
-          src: (__webpack_require__(1367)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(6498)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -3061,7 +3380,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_lock_arena.png&quot;",
-          src: (__webpack_require__(5255)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(7810)/* ["default"] */ .A) + "",
           width: "32",
           height: "32"
         })
@@ -3075,7 +3394,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_makeup_icon_a.png&quot;",
-          src: (__webpack_require__(2707)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(9164)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -3089,7 +3408,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_makeup_icon_b.png&quot;",
-          src: (__webpack_require__(728)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(7895)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -3103,7 +3422,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_mask_icon_a.png&quot;",
-          src: (__webpack_require__(3472)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(6699)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -3117,7 +3436,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_mask_icon_b.png&quot;",
-          src: (__webpack_require__(1803)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(8368)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -3131,7 +3450,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_michael_icon_a.png&quot;",
-          src: (__webpack_require__(823)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(5030)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -3145,7 +3464,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_michael_icon_b.png&quot;",
-          src: (__webpack_require__(764)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(6653)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -3159,7 +3478,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_new_star.png&quot;",
-          src: (__webpack_require__(5423)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(938)/* ["default"] */ .A) + "",
           width: "32",
           height: "32"
         })
@@ -3173,7 +3492,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_tattoos_icon_a.png&quot;",
-          src: (__webpack_require__(6996)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(5693)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -3187,7 +3506,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_tattoos_icon_b.png&quot;",
-          src: (__webpack_require__(5295)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(5014)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -3201,7 +3520,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_tick_icon.png&quot;",
-          src: (__webpack_require__(5657)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(2574)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -3215,7 +3534,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_trevor_icon_a.png&quot;",
-          src: (__webpack_require__(3856)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(4555)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -3229,7 +3548,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
           alt: "&quot;./img/badges/shop_trevor_icon_b.png&quot;",
-          src: (__webpack_require__(8891)/* ["default"] */ .A) + "",
+          src: (__webpack_require__(9152)/* ["default"] */ .A) + "",
           width: "64",
           height: "64"
         })
@@ -3424,7 +3743,7 @@ function _createMdxContent(props) {
       }), " :"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
-        src: (__webpack_require__(38)/* ["default"] */ .A) + "",
+        src: (__webpack_require__(5431)/* ["default"] */ .A) + "",
         width: "1500",
         height: "500"
       })
@@ -3679,7 +3998,7 @@ function _createMdxContent(props) {
       }), " :"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
-        src: (__webpack_require__(6420)/* ["default"] */ .A) + "",
+        src: (__webpack_require__(5441)/* ["default"] */ .A) + "",
         width: "1500",
         height: "500"
       })
@@ -3982,7 +4301,7 @@ function _createMdxContent(props) {
       }), " :"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
-        src: (__webpack_require__(8672)/* ["default"] */ .A) + "",
+        src: (__webpack_require__(685)/* ["default"] */ .A) + "",
         width: "1500",
         height: "500"
       })
@@ -4219,7 +4538,7 @@ function _createMdxContent(props) {
       }), " :"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
-        src: (__webpack_require__(1359)/* ["default"] */ .A) + "",
+        src: (__webpack_require__(9672)/* ["default"] */ .A) + "",
         width: "1500",
         height: "500"
       })
@@ -5271,8 +5590,8 @@ const metadata = {
     "permalink": "/docs/zUI/Methods/setItems"
   },
   "next": {
-    "title": "Introduction",
-    "permalink": "/docs/zSleep/intro"
+    "title": "Menu Contextuel",
+    "permalink": "/docs/zUI/ContextUI"
   }
 };
 const assets = {
@@ -5402,6 +5721,2443 @@ function MDXContent(props = {}) {
 
 /***/ }),
 
+/***/ 9158:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   assets: () => (/* binding */ assets),
+/* harmony export */   contentTitle: () => (/* binding */ contentTitle),
+/* harmony export */   "default": () => (/* binding */ MDXContent),
+/* harmony export */   frontMatter: () => (/* binding */ frontMatter),
+/* harmony export */   metadata: () => (/* binding */ metadata),
+/* harmony export */   toc: () => (/* binding */ toc)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4848);
+/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8453);
+
+
+const frontMatter = {
+	sidebar_position: 3
+};
+const contentTitle = 'Help Notification';
+const metadata = {
+  "id": "zUI/Notifications/helpNotif",
+  "title": "Help Notification",
+  "description": "Les notifications d'aide dans zUI sont des messages visuels destinés à fournir des instructions ou des informations supplémentaires à l'utilisateur, généralement sous la forme d'une notification pulsante. Elles sont utiles pour guider l'utilisateur à travers des actions spécifiques.",
+  "source": "@site/docs/zUI/Notifications/helpNotif.md",
+  "sourceDirName": "zUI/Notifications",
+  "slug": "/zUI/Notifications/helpNotif",
+  "permalink": "/docs/zUI/Notifications/helpNotif",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Notifications",
+    "permalink": "/docs/zUI/Notifications/notif"
+  },
+  "next": {
+    "title": "Modal",
+    "permalink": "/docs/zUI/modal"
+  }
+};
+const assets = {
+
+};
+
+
+
+const toc = [{
+  "value": "Fonction <code>ShowHelpNotification</code>",
+  "id": "fonction-showhelpnotification",
+  "level": 2
+}, {
+  "value": "Paramètres",
+  "id": "paramètres",
+  "level": 3
+}, {
+  "value": "Exemple d&#39;utilisation",
+  "id": "exemple-dutilisation",
+  "level": 2
+}, {
+  "value": "Résumé",
+  "id": "résumé",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    code: "code",
+    em: "em",
+    h1: "h1",
+    h2: "h2",
+    h3: "h3",
+    header: "header",
+    img: "img",
+    li: "li",
+    ol: "ol",
+    p: "p",
+    pre: "pre",
+    strong: "strong",
+    ul: "ul",
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.header, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h1, {
+        id: "help-notification",
+        children: "Help Notification"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Les notifications d'aide dans ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "zUI"
+      }), " sont des messages visuels destinés à fournir des instructions ou des informations supplémentaires à l'utilisateur, généralement sous la forme d'une notification pulsante. Elles sont utiles pour guider l'utilisateur à travers des actions spécifiques."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h2, {
+      id: "fonction-showhelpnotification",
+      children: ["Fonction ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "ShowHelpNotification"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "La syntaxe pour afficher une notification d'aide est la suivante :"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-lua",
+        children: "zUI.ShowHelpNotification(content, styles)\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "paramètres",
+      children: "Paramètres"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "content"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[string]"
+        }), " : Le texte affiché dans la notification, généralement une instruction ou un conseil (par exemple, \"Appuyer sur E pour interagir\")."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "styles"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[table]"
+        }), " : Un tableau définissant les styles de la notification. Il peut inclure les éléments suivants :", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+              children: "Color"
+            }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+              children: "[string]"
+            }), " : La couleur de la notification (en format hexadécimal ou autre format valide)."]
+          }), "\n"]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "exemple-dutilisation",
+      children: "Exemple d'utilisation"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Voici un exemple d'utilisation de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "ShowHelpNotification"
+      }), " :"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-lua",
+        children: "zUI.ShowHelpNotification(\"Appuyer sur E pour interagir\", { Color = \"#faad2c\" })\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
+        src: (__webpack_require__(5624)/* ["default"] */ .A) + "",
+        width: "2559",
+        height: "1439"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Cela affichera une notification pulsante de couleur orange (#faad2c) avec le texte \"Appuyer sur E pour interagir\"."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "résumé",
+      children: "Résumé"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Pour utiliser la fonction ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "ShowHelpNotification"
+      }), " dans ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "zUI"
+      }), " :"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["Utilisez ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "zUI.ShowHelpNotification"
+        }), " pour afficher une notification d'aide."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+        children: "Personnalisez le texte de la notification pour donner des instructions ou des informations à l'utilisateur."
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+        children: "Ajustez les styles de la notification en modifiant la couleur pour l'adapter à votre interface."
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+        children: "Ces notifications sont idéales pour guider l'utilisateur dans des actions spécifiques ou fournir des conseils utiles dans votre application."
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Les notifications d'aide permettent d'améliorer l'expérience utilisateur en fournissant des informations contextuelles importantes de manière visuelle et claire."
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
+    ...props,
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+
+
+
+/***/ }),
+
+/***/ 907:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   assets: () => (/* binding */ assets),
+/* harmony export */   contentTitle: () => (/* binding */ contentTitle),
+/* harmony export */   "default": () => (/* binding */ MDXContent),
+/* harmony export */   frontMatter: () => (/* binding */ frontMatter),
+/* harmony export */   metadata: () => (/* binding */ metadata),
+/* harmony export */   toc: () => (/* binding */ toc)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4848);
+/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8453);
+
+
+const frontMatter = {
+	sidebar_position: 2
+};
+const contentTitle = 'Notifications';
+const metadata = {
+  "id": "zUI/Notifications/notif",
+  "title": "Notifications",
+  "description": "Les notifications dans zUI permettent d'afficher des messages à l'utilisateur pour signaler des événements, des informations ou des alertes. Ces notifications peuvent inclure un titre, un message, une icône et une bannière pour personnaliser l'expérience utilisateur.",
+  "source": "@site/docs/zUI/Notifications/notif.md",
+  "sourceDirName": "zUI/Notifications",
+  "slug": "/zUI/Notifications/notif",
+  "permalink": "/docs/zUI/Notifications/notif",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Pulsing Notification",
+    "permalink": "/docs/zUI/Notifications/pulsing"
+  },
+  "next": {
+    "title": "Help Notification",
+    "permalink": "/docs/zUI/Notifications/helpNotif"
+  }
+};
+const assets = {
+
+};
+
+
+
+const toc = [{
+  "value": "Fonction <code>SendNotification</code>",
+  "id": "fonction-sendnotification",
+  "level": 2
+}, {
+  "value": "Paramètres",
+  "id": "paramètres",
+  "level": 3
+}, {
+  "value": "Exemple d&#39;utilisation",
+  "id": "exemple-dutilisation",
+  "level": 2
+}, {
+  "value": "Résumé",
+  "id": "résumé",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    code: "code",
+    em: "em",
+    h1: "h1",
+    h2: "h2",
+    h3: "h3",
+    header: "header",
+    img: "img",
+    li: "li",
+    ol: "ol",
+    p: "p",
+    pre: "pre",
+    strong: "strong",
+    ul: "ul",
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.header, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h1, {
+        id: "notifications",
+        children: "Notifications"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Les notifications dans ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "zUI"
+      }), " permettent d'afficher des messages à l'utilisateur pour signaler des événements, des informations ou des alertes. Ces notifications peuvent inclure un titre, un message, une icône et une bannière pour personnaliser l'expérience utilisateur."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h2, {
+      id: "fonction-sendnotification",
+      children: ["Fonction ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "SendNotification"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "La syntaxe pour envoyer une notification est la suivante :"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-lua",
+        children: "zUI.SendNotification(title, message, type, icon, banner, time)\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "paramètres",
+      children: "Paramètres"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "title"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[string]"
+        }), " : Le titre de la notification."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "message"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[string]"
+        }), " : Le message affiché dans la notification."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "type"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[table]"
+        }), " : Le type de la notification. Il peut contenir les éléments suivants :", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+              children: "color"
+            }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+              children: "[string, optional]"
+            }), " : La couleur de la notification (en format hexadécimal ou autre format valide)."]
+          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+              children: "content"
+            }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+              children: "[string, optional]"
+            }), " : Un texte supplémentaire ou un contenu à afficher dans la notification."]
+          }), "\n"]
+        }), "\n"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "icon"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[string, optional]"
+        }), " : L'URL de l'icône de la notification (par exemple, une image ou un logo)."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "banner"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[string, optional]"
+        }), " : L'URL de la bannière qui accompagne la notification."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "time"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[string, optional]"
+        }), " : La durée d'affichage de la notification. Par défaut, une durée déterminée est utilisée si ce paramètre n'est pas fourni."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "exemple-dutilisation",
+      children: "Exemple d'utilisation"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Voici un exemple d'utilisation de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "SendNotification"
+      }), " :"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-lua",
+        children: "zUI.SendNotification(\"Alerte\", \"Une nouvelle mise à jour est disponible.\", { color = \"#FF0000\", content = \"Cliquez ici pour en savoir plus.\" }, \"https://i.postimg.cc/jSs6YGNh/ZProject-4.jpg\", \"https://i.postimg.cc/pdrDpzsh/ZBanner-Paypal.png\", \"5000\")\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
+        src: (__webpack_require__(5579)/* ["default"] */ .A) + "",
+        width: "2556",
+        height: "1439"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Cela affichera une notification rouge avec un titre, un message et une icône, ainsi qu'une bannière et une durée de 5 secondes."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "résumé",
+      children: "Résumé"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Pour utiliser la fonction ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "SendNotification"
+      }), " dans ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "zUI"
+      }), " :"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["Utilisez ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "zUI.SendNotification"
+        }), " pour envoyer une notification avec un titre, un message, et des éléments visuels comme une icône et une bannière."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+        children: "Personnalisez la notification avec des types (couleur, contenu) et définissez la durée d'affichage."
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+        children: "Cette fonction permet d'informer l'utilisateur de manière visuelle et interactive."
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Les notifications sont un excellent moyen de communiquer des informations importantes à l'utilisateur dans des applications interactives."
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
+    ...props,
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+
+
+
+/***/ }),
+
+/***/ 2611:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   assets: () => (/* binding */ assets),
+/* harmony export */   contentTitle: () => (/* binding */ contentTitle),
+/* harmony export */   "default": () => (/* binding */ MDXContent),
+/* harmony export */   frontMatter: () => (/* binding */ frontMatter),
+/* harmony export */   metadata: () => (/* binding */ metadata),
+/* harmony export */   toc: () => (/* binding */ toc)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4848);
+/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8453);
+
+
+const frontMatter = {
+	sidebar_position: 1
+};
+const contentTitle = 'Pulsing Notification';
+const metadata = {
+  "id": "zUI/Notifications/pulsing",
+  "title": "Pulsing Notification",
+  "description": "Les notifications pulsatiles dans zUI permettent d'afficher des messages visuels qui attirent l'attention de l'utilisateur grâce à un effet pulsant. Cela peut être utilisé pour signaler des événements importants ou attirer l'attention sur un élément spécifique.",
+  "source": "@site/docs/zUI/Notifications/pulsing.md",
+  "sourceDirName": "zUI/Notifications",
+  "slug": "/zUI/Notifications/pulsing",
+  "permalink": "/docs/zUI/Notifications/pulsing",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Notifications",
+    "permalink": "/docs/category/notifications"
+  },
+  "next": {
+    "title": "Notifications",
+    "permalink": "/docs/zUI/Notifications/notif"
+  }
+};
+const assets = {
+
+};
+
+
+
+const toc = [{
+  "value": "Fonction <code>DisplayPulsingNotification</code>",
+  "id": "fonction-displaypulsingnotification",
+  "level": 2
+}, {
+  "value": "Paramètres",
+  "id": "paramètres",
+  "level": 3
+}, {
+  "value": "Exemple d&#39;utilisation",
+  "id": "exemple-dutilisation",
+  "level": 2
+}, {
+  "value": "Résumé",
+  "id": "résumé",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    code: "code",
+    em: "em",
+    h1: "h1",
+    h2: "h2",
+    h3: "h3",
+    header: "header",
+    img: "img",
+    li: "li",
+    ol: "ol",
+    p: "p",
+    pre: "pre",
+    strong: "strong",
+    ul: "ul",
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.header, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h1, {
+        id: "pulsing-notification",
+        children: "Pulsing Notification"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Les notifications pulsatiles dans ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "zUI"
+      }), " permettent d'afficher des messages visuels qui attirent l'attention de l'utilisateur grâce à un effet pulsant. Cela peut être utilisé pour signaler des événements importants ou attirer l'attention sur un élément spécifique."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h2, {
+      id: "fonction-displaypulsingnotification",
+      children: ["Fonction ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "DisplayPulsingNotification"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "La syntaxe pour afficher une notification pulsante est la suivante :"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-lua",
+        children: "zUI.DisplayPulsingNotification(key, description, coords, styles)\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "paramètres",
+      children: "Paramètres"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "key"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[string]"
+        }), " : La clé unique associée à la notification. Elle peut être utilisée pour identifier et référencer la notification dans le code."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "description"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[string]"
+        }), " : Le texte décrivant l'action ou l'événement signalé par la notification."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "coords"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[vector3]"
+        }), " : Les coordonnées 3D où la notification sera affichée."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "styles"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[table]"
+        }), " : Un tableau définissant les styles de la notification. Il peut inclure les propriétés suivantes :", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+              children: "Color"
+            }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+              children: "[string]"
+            }), " : La couleur de la notification (en format hexadécimal ou autre format valide)."]
+          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+              children: "IsDisabled"
+            }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+              children: "[boolean]"
+            }), " : Indique si la notification doit être désactivée ou non (par défaut, ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+              children: "false"
+            }), ")."]
+          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+              children: "Scale"
+            }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+              children: "[number]"
+            }), " : La taille de la notification (par défaut, ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+              children: "1"
+            }), ")."]
+          }), "\n"]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "exemple-dutilisation",
+      children: "Exemple d'utilisation"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Voici un exemple d'utilisation de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "DisplayPulsingNotification"
+      }), " :"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-lua",
+        children: "zUI.DisplayPulsingNotification(\"\", \"Voici un exemple de notification pulsante\", vector3(100.0, 200.0, 300.0), { Color = \"#FF0000\", IsDisabled = false, Scale = 1.5 })\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
+        src: (__webpack_require__(3619)/* ["default"] */ .A) + "",
+        width: "2559",
+        height: "1439"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Cela affichera une notification pulsante rouge à l'emplacement spécifié avec une taille de 1.5."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "résumé",
+      children: "Résumé"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Pour utiliser la fonction ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "DisplayPulsingNotification"
+      }), " dans ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "zUI"
+      }), " :"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["Utilisez ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "zUI.DisplayPulsingNotification"
+        }), " pour afficher une notification pulsante à un emplacement spécifique."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+        children: "Personnalisez le texte, la couleur, l'échelle et l'état de la notification grâce aux paramètres de style."
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+        children: "Cette fonction permet d'attirer l'attention de l'utilisateur sur des événements ou des éléments importants dans votre application."
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Les notifications pulsatiles sont idéales pour signaler des actions ou des alertes dans des environnements interactifs."
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
+    ...props,
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+
+
+
+/***/ }),
+
+/***/ 3082:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   assets: () => (/* binding */ assets),
+/* harmony export */   contentTitle: () => (/* binding */ contentTitle),
+/* harmony export */   "default": () => (/* binding */ MDXContent),
+/* harmony export */   frontMatter: () => (/* binding */ frontMatter),
+/* harmony export */   metadata: () => (/* binding */ metadata),
+/* harmony export */   toc: () => (/* binding */ toc)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4848);
+/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8453);
+
+
+const frontMatter = {
+	sidebar_position: 3
+};
+const contentTitle = 'Thème du ContextUI';
+const metadata = {
+  "id": "zUI/Themes/context",
+  "title": "Thème du ContextUI",
+  "description": "Le ContextUI de zUI permet de personnaliser l'apparence des éléments de l'interface en fonction du contexte. Vous pouvez ajuster les couleurs, les animations, et les styles pour créer une expérience utilisateur cohérente et interactive.",
+  "source": "@site/docs/zUI/Themes/context.md",
+  "sourceDirName": "zUI/Themes",
+  "slug": "/zUI/Themes/context",
+  "permalink": "/docs/zUI/Themes/context",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Thème du Menu",
+    "permalink": "/docs/zUI/Themes/menu"
+  },
+  "next": {
+    "title": "Thème des Notifications",
+    "permalink": "/docs/zUI/Themes/notifs"
+  }
+};
+const assets = {
+
+};
+
+
+
+const toc = [{
+  "value": "Personnalisation du ContextUI",
+  "id": "personnalisation-du-contextui",
+  "level": 2
+}, {
+  "value": "1. <strong>Couleurs</strong>",
+  "id": "1-couleurs",
+  "level": 3
+}, {
+  "value": "2. <strong>Animations</strong>",
+  "id": "2-animations",
+  "level": 3
+}, {
+  "value": "Animations d&#39;Entrée",
+  "id": "animations-dentrée",
+  "level": 4
+}, {
+  "value": "Animations de Sortie",
+  "id": "animations-de-sortie",
+  "level": 4
+}, {
+  "value": "Exemple d&#39;Animation d&#39;Entrée et de Sortie",
+  "id": "exemple-danimation-dentrée-et-de-sortie",
+  "level": 4
+}, {
+  "value": "3. <strong>Polices</strong>",
+  "id": "3-polices",
+  "level": 3
+}, {
+  "value": "4. <strong>Coins Arrondis</strong>",
+  "id": "4-coins-arrondis",
+  "level": 3
+}, {
+  "value": "5. <strong>Padding</strong>",
+  "id": "5-padding",
+  "level": 3
+}, {
+  "value": "6. <strong>Éléments du ContextUI</strong>",
+  "id": "6-éléments-du-contextui",
+  "level": 3
+}, {
+  "value": "Exemple de <code>theme.json</code> pour le ContextUI",
+  "id": "exemple-de-themejson-pour-le-contextui",
+  "level": 2
+}, {
+  "value": "Résumé",
+  "id": "résumé",
+  "level": 2
+}, {
+  "value": "Information complémentaire",
+  "id": "information-complémentaire",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    a: "a",
+    code: "code",
+    h1: "h1",
+    h2: "h2",
+    h3: "h3",
+    h4: "h4",
+    header: "header",
+    li: "li",
+    p: "p",
+    pre: "pre",
+    strong: "strong",
+    ul: "ul",
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.header, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h1, {
+        id: "thème-du-contextui",
+        children: "Thème du ContextUI"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Le ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "ContextUI"
+      }), " de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "zUI"
+      }), " permet de personnaliser l'apparence des éléments de l'interface en fonction du contexte. Vous pouvez ajuster les couleurs, les animations, et les styles pour créer une expérience utilisateur cohérente et interactive."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "personnalisation-du-contextui",
+      children: "Personnalisation du ContextUI"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Le fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "theme.json"
+      }), " vous permet de configurer plusieurs aspects du ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "ContextUI"
+      }), ", notamment les couleurs, les animations, les polices, et les autres options d'affichage. Vous pouvez ajuster les paramètres suivants pour personnaliser l'interface selon vos préférences."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "1-couleurs",
+      children: ["1. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Couleurs"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Vous pouvez personnaliser les couleurs du ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "ContextUI"
+      }), " avec les options suivantes :"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "background"
+        }), " : La couleur de fond du ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "ContextUI"
+        }), " (ex : ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "\"rgba(18, 18, 18, 0.5)\""
+        }), ")."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "item"
+        }), " : La couleur des éléments du ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "ContextUI"
+        }), " (ex : ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "\"#faad2c\""
+        }), ")."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "2-animations",
+      children: ["2. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Animations"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Le ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "ContextUI"
+      }), " peut comporter des animations pour son entrée et sa sortie. Voici les animations disponibles dans le fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "theme.json"
+      }), " :"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h4, {
+      id: "animations-dentrée",
+      children: "Animations d'Entrée"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "fadeIn"
+        }), " : Fait apparaître l'élément en augmentant son opacité de 0 à 1."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "popIn"
+        }), " : Fait apparaître l'élément avec un effet de zoom, passant d'un état de scale de 0 à 1."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h4, {
+      id: "animations-de-sortie",
+      children: "Animations de Sortie"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "fadeOut"
+        }), " : Fait disparaître l'élément en diminuant son opacité de 1 à 0."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "popOut"
+        }), " : Fait disparaître l'élément avec un effet de zoom, passant d'un état de scale de 1 à 0."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h4, {
+      id: "exemple-danimation-dentrée-et-de-sortie",
+      children: "Exemple d'Animation d'Entrée et de Sortie"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-json",
+        children: "\"animations\": {\r\n  \"entry\": \"popIn\",\r\n  \"exit\": \"popOut\"\r\n}\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "3-polices",
+      children: ["3. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Polices"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Le ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "ContextUI"
+      }), " utilise plusieurs polices, toutes spécifiées via l'API ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Google Fonts"
+      }), ". Voici les options de polices que vous pouvez personnaliser :"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "title"
+        }), " : La police pour les titres."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "subtitle"
+        }), " : La police pour les sous-titres."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "description"
+        }), " : La police pour les descriptions des éléments."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "counter"
+        }), " : La police pour les compteurs."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "itemTitle"
+        }), " : La police pour les titres des éléments."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "itemRightLabel"
+        }), " : La police pour les labels des éléments."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Exemple d'utilisation d'une police depuis Google Fonts :"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-json",
+        children: "\"title\": \"https://fonts.googleapis.com/css2?family=Doto:wght@900&display=swap\"\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "4-coins-arrondis",
+      children: ["4. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Coins Arrondis"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Vous pouvez définir le rayon des coins du ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "ContextUI"
+      }), " avec l'option ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "cornersRadius"
+      }), ". Une valeur de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "0.5"
+      }), " donne des coins légèrement arrondis."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "5-padding",
+      children: ["5. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Padding"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Vous pouvez activer ou désactiver l'espace intérieur des éléments du ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "ContextUI"
+      }), " avec l'option ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "padding"
+      }), " :"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "\"true\""
+        }), " : Ajoute de l'espace autour des éléments."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "\"false\""
+        }), " : Aucune marge autour des éléments."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "6-éléments-du-contextui",
+      children: ["6. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Éléments du ContextUI"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Vous pouvez personnaliser les éléments du ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "ContextUI"
+      }), " avec les paramètres suivants :"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "hoverStyle"
+        }), " : Le style à appliquer lors du survol des éléments (par exemple, ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "\"complete\""
+        }), ")."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "hoverColor"
+        }), " : La couleur des éléments lors du survol (par exemple, ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "\"#FAAD2C\""
+        }), ")."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "lineIsRounded"
+        }), " : Définissez sur ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "true"
+        }), " pour des bordures arrondies sur les éléments du ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "ContextUI"
+        }), "."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h2, {
+      id: "exemple-de-themejson-pour-le-contextui",
+      children: ["Exemple de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "theme.json"
+      }), " pour le ContextUI"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-json",
+        children: "{\r\n  \"colors\": {\r\n    \"background\": \"rgba(18, 18, 18, 0.5)\",\r\n    \"item\": \"#faad2c\"\r\n  },\r\n  \"animations\": {\r\n    \"entry\": \"popIn\",\r\n    \"exit\": \"popOut\"\r\n  },\r\n  \"fonts\": {\r\n    \"title\": \"https://fonts.googleapis.com/css2?family=Doto:wght@900&display=swap\",\r\n    \"subtitle\": \"https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap\",\r\n    \"description\": \"https://fonts.googleapis.com/css2?family=Roboto:ital,wght@700&display=swap\",\r\n    \"counter\": \"https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@400&display=swap\",\r\n    \"itemTitle\": \"https://fonts.googleapis.com/css2?family=Lexend:wght@500&display=swap\",\r\n    \"itemRightLabel\": \"https://fonts.googleapis.com/css2?family=Lexend:wght@200&display=swap\"\r\n  },\r\n  \"cornersRadius\": 0.5,\r\n  \"padding\": false,\r\n  \"items\": {\r\n    \"hoverStyle\": \"complete\",\r\n    \"hoverColor\": \"#FAAD2C\",\r\n    \"lineIsRounded\": true\r\n  }\r\n}\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "résumé",
+      children: "Résumé"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Le ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "ContextUI"
+      }), " vous permet de personnaliser l'apparence et le comportement des éléments contextuels dans ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "zUI"
+      }), ". Vous pouvez ajuster des paramètres comme les couleurs, les animations, les polices (via Google Fonts), et les bordures arrondies pour créer une interface optimale et engageante."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "information-complémentaire",
+      children: "Information complémentaire"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["N'oubliez pas de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "partager votre thème personnalisé"
+      }), " dans notre ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+        href: "https://discord.gg/zproject",
+        children: "Serveur Discord Support"
+      }), " pour permettre à d'autres utilisateurs de l'adopter. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Devenez créateur de thème et gagnez l'appréciation de la communauté"
+      }), " !"]
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
+    ...props,
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+
+
+
+/***/ }),
+
+/***/ 5229:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   assets: () => (/* binding */ assets),
+/* harmony export */   contentTitle: () => (/* binding */ contentTitle),
+/* harmony export */   "default": () => (/* binding */ MDXContent),
+/* harmony export */   frontMatter: () => (/* binding */ frontMatter),
+/* harmony export */   metadata: () => (/* binding */ metadata),
+/* harmony export */   toc: () => (/* binding */ toc)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4848);
+/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8453);
+
+
+const frontMatter = {
+	sidebar_position: 1
+};
+const contentTitle = 'Introduction';
+const metadata = {
+  "id": "zUI/Themes/introduction",
+  "title": "Introduction",
+  "description": "Le fichier theme.json vous permet de personnaliser l'apparence de zUI en ajustant divers paramètres du menu. Vous pouvez modifier la position, les couleurs, les styles et plus encore pour adapter l'interface à vos besoins spécifiques.",
+  "source": "@site/docs/zUI/Themes/introduction.md",
+  "sourceDirName": "zUI/Themes",
+  "slug": "/zUI/Themes/introduction",
+  "permalink": "/docs/zUI/Themes/introduction",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Thèmes",
+    "permalink": "/docs/category/thèmes"
+  },
+  "next": {
+    "title": "Thème du Menu",
+    "permalink": "/docs/zUI/Themes/menu"
+  }
+};
+const assets = {
+
+};
+
+
+
+const toc = [{
+  "value": "Résumé",
+  "id": "résumé",
+  "level": 2
+}, {
+  "value": "Information complémentaire",
+  "id": "information-complémentaire",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    a: "a",
+    code: "code",
+    h1: "h1",
+    h2: "h2",
+    header: "header",
+    hr: "hr",
+    li: "li",
+    ol: "ol",
+    p: "p",
+    strong: "strong",
+    ul: "ul",
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.header, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h1, {
+        id: "introduction",
+        children: "Introduction"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Le fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "theme.json"
+      }), " vous permet de personnaliser l'apparence de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "zUI"
+      }), " en ajustant divers paramètres du menu. Vous pouvez modifier la position, les couleurs, les styles et plus encore pour adapter l'interface à vos besoins spécifiques."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.hr, {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h1, {
+      id: "theme",
+      children: "Theme"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Le fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "theme.json"
+      }), " vous permet de personnaliser l'apparence de la bibliothèque ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "zUI"
+      }), " en ajustant divers paramètres. Vous pouvez ajuster les paramètres suivants pour chaque composant de l'interface :"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+            children: "ContextUI"
+          })
+        }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+            children: "Personnalisation des paramètres relatifs aux menus contextuels (position, apparence)."
+          }), "\n"]
+        }), "\n"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+            children: "Menu"
+          })
+        }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+            children: "Ajustez la présentation du menu principal, y compris sa position, ses couleurs, et les styles des éléments."
+          }), "\n"]
+        }), "\n"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+            children: "Modal"
+          })
+        }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+            children: "Paramétrez l'apparence des modals, comme leur disposition, les champs d’entrée, et la manière dont ils sont affichés."
+          }), "\n"]
+        }), "\n"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+            children: "Notifications"
+          })
+        }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+            children: "Personnalisation des notifications : durée d'affichage, styles (normales, pulsantes, d’aide), et position à l'écran."
+          }), "\n"]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.hr, {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "résumé",
+      children: "Résumé"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Le fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "theme.json"
+      }), " vous permet de personnaliser l'apparence de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "zUI"
+      }), " en ajustant des éléments clés comme la couleur, la position, et les styles. Utilisez-le pour créer une interface qui correspond parfaitement à vos préférences visuelles et fonctionnelles."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "information-complémentaire",
+      children: "Information complémentaire"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Désormais, vous pouvez ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "partager votre thème personnalisé"
+      }), " dans le salon dédié sur notre ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+        href: "https://discord.gg/zproject",
+        children: "Serveur Discord Support"
+      }), ", permettant ainsi à d'autres utilisateurs de l'adopter. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Devenez créateur de thème et gagnez l'appréciation de la communauté"
+      }), " !"]
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
+    ...props,
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+
+
+
+/***/ }),
+
+/***/ 4358:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   assets: () => (/* binding */ assets),
+/* harmony export */   contentTitle: () => (/* binding */ contentTitle),
+/* harmony export */   "default": () => (/* binding */ MDXContent),
+/* harmony export */   frontMatter: () => (/* binding */ frontMatter),
+/* harmony export */   metadata: () => (/* binding */ metadata),
+/* harmony export */   toc: () => (/* binding */ toc)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4848);
+/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8453);
+
+
+const frontMatter = {
+	sidebar_position: 2
+};
+const contentTitle = 'Thème du Menu';
+const metadata = {
+  "id": "zUI/Themes/menu",
+  "title": "Thème du Menu",
+  "description": "Le menu dans zUI est un élément essentiel pour créer une interface interactive. Vous pouvez personnaliser son apparence, sa position, et ajouter des animations pour améliorer l'expérience utilisateur.",
+  "source": "@site/docs/zUI/Themes/menu.md",
+  "sourceDirName": "zUI/Themes",
+  "slug": "/zUI/Themes/menu",
+  "permalink": "/docs/zUI/Themes/menu",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/docs/zUI/Themes/introduction"
+  },
+  "next": {
+    "title": "Thème du ContextUI",
+    "permalink": "/docs/zUI/Themes/context"
+  }
+};
+const assets = {
+
+};
+
+
+
+const toc = [{
+  "value": "Personnalisation du Menu",
+  "id": "personnalisation-du-menu",
+  "level": 2
+}, {
+  "value": "1. <strong>Position</strong>",
+  "id": "1-position",
+  "level": 3
+}, {
+  "value": "2. <strong>Affichage de la Description</strong>",
+  "id": "2-affichage-de-la-description",
+  "level": 3
+}, {
+  "value": "3. <strong>Affichage de l&#39;Indicateur de Contrôles</strong>",
+  "id": "3-affichage-de-lindicateur-de-contrôles",
+  "level": 3
+}, {
+  "value": "4. <strong>Couleurs</strong>",
+  "id": "4-couleurs",
+  "level": 3
+}, {
+  "value": "5. <strong>Animations</strong>",
+  "id": "5-animations",
+  "level": 3
+}, {
+  "value": "Animations d&#39;Entrée",
+  "id": "animations-dentrée",
+  "level": 4
+}, {
+  "value": "Animations de Sortie",
+  "id": "animations-de-sortie",
+  "level": 4
+}, {
+  "value": "Paramètres de Défilement",
+  "id": "paramètres-de-défilement",
+  "level": 4
+}, {
+  "value": "6. <strong>Polices</strong>",
+  "id": "6-polices",
+  "level": 3
+}, {
+  "value": "7. <strong>Bannière</strong>",
+  "id": "7-bannière",
+  "level": 3
+}, {
+  "value": "8. <strong>Coins Arrondis</strong>",
+  "id": "8-coins-arrondis",
+  "level": 3
+}, {
+  "value": "9. <strong>Perspective</strong>",
+  "id": "9-perspective",
+  "level": 3
+}, {
+  "value": "10. <strong>Padding</strong>",
+  "id": "10-padding",
+  "level": 3
+}, {
+  "value": "11. <strong>Éléments du Menu</strong>",
+  "id": "11-éléments-du-menu",
+  "level": 3
+}, {
+  "value": "Exemple de <code>theme.json</code> pour le Menu",
+  "id": "exemple-de-themejson-pour-le-menu",
+  "level": 2
+}, {
+  "value": "Résumé",
+  "id": "résumé",
+  "level": 2
+}, {
+  "value": "Information complémentaire",
+  "id": "information-complémentaire",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    a: "a",
+    code: "code",
+    h1: "h1",
+    h2: "h2",
+    h3: "h3",
+    h4: "h4",
+    header: "header",
+    li: "li",
+    p: "p",
+    pre: "pre",
+    strong: "strong",
+    ul: "ul",
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.header, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h1, {
+        id: "thème-du-menu",
+        children: "Thème du Menu"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Le menu dans ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "zUI"
+      }), " est un élément essentiel pour créer une interface interactive. Vous pouvez personnaliser son apparence, sa position, et ajouter des animations pour améliorer l'expérience utilisateur."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "personnalisation-du-menu",
+      children: "Personnalisation du Menu"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Le fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "theme.json"
+      }), " vous permet de configurer plusieurs aspects du menu, notamment sa position, son style, ses couleurs, et ses animations. Vous pouvez aussi ajuster les paramètres des éléments comme les titres, les descriptions, et les contrôles."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "1-position",
+      children: ["1. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Position"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Vous pouvez définir la position du menu à l'aide de l'option ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "position"
+      }), " :"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "\"left\""
+        }), " : Le menu apparaît à gauche de l'écran."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "\"right\""
+        }), " : Le menu apparaît à droite de l'écran."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "2-affichage-de-la-description",
+      children: ["2. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Affichage de la Description"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["L'option ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "displayDescription"
+      }), " permet d'afficher ou de masquer la description du menu. Définissez-le comme suit :"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "\"true\""
+        }), " : Afficher la description."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "\"false\""
+        }), " : Masquer la description."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "3-affichage-de-lindicateur-de-contrôles",
+      children: ["3. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Affichage de l'Indicateur de Contrôles"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["L'option ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "displayControlsIndicator"
+      }), " permet d'afficher ou de masquer l'indicateur de contrôles pour les éléments interactifs."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "4-couleurs",
+      children: ["4. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Couleurs"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Vous pouvez personnaliser les couleurs de différents éléments du menu en ajustant les paramètres suivants :"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "background"
+        }), " : La couleur de fond du menu (ex : ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "\"rgba(18, 18, 18, 0.5)\""
+        }), ")."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "description"
+        }), " : La couleur de la description du menu (ex : ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "\"#121212\""
+        }), ")."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "controlsIndicator"
+        }), " : La couleur de l'indicateur de contrôles (ex : ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "\"#121212\""
+        }), ")."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "item"
+        }), " : La couleur des éléments du menu (ex : ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "\"#faad2c\""
+        }), ")."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "5-animations",
+      children: ["5. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Animations"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Le menu peut comporter des animations pour son entrée, sa sortie et son comportement au défilement. Voici les options d'animations disponibles dans le fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "theme.json"
+      }), " :"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h4, {
+      id: "animations-dentrée",
+      children: "Animations d'Entrée"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "fadeIn"
+        }), " : Fait apparaître le menu en augmentant progressivement son opacité de 0 à 1."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "slideInHorizontal"
+        }), " : Fait glisser le menu horizontalement, depuis la gauche ou la droite, selon la position."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "slideInVertical"
+        }), " : Fait glisser le menu verticalement, depuis le haut."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h4, {
+      id: "animations-de-sortie",
+      children: "Animations de Sortie"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "fadeOut"
+        }), " : Fait disparaître le menu en diminuant progressivement son opacité."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "slideOutHorizontal"
+        }), " : Fait glisser le menu horizontalement, depuis la gauche ou la droite, selon la position."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "slideOutVertical"
+        }), " : Fait glisser le menu verticalement vers le haut."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h4, {
+      id: "paramètres-de-défilement",
+      children: "Paramètres de Défilement"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "onScroll"
+        }), " : Définissez-le sur ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "true"
+        }), " pour activer une animation lors du défilement du menu."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "6-polices",
+      children: ["6. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Polices"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Le menu utilise différentes polices pour ses titres, descriptions, et éléments. Ces polices doivent être spécifiées ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "exclusivement via l'API de Google Fonts"
+      }), ". Vous pouvez personnaliser les polices comme suit :"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "title"
+        }), " : La police pour le titre du menu."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "subtitle"
+        }), " : La police pour les sous-titres."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "description"
+        }), " : La police pour la description des éléments du menu."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "counter"
+        }), " : La police pour les compteurs affichés."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "itemTitle"
+        }), " : La police pour le titre des éléments du menu."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "itemRightLabel"
+        }), " : La police pour les labels des éléments du menu."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "info"
+        }), " : La police pour les informations supplémentaires."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "infoPanelTitle"
+        }), " : La police pour les titres du panneau d'informations."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Exemple d'utilisation d'une police depuis Google Fonts :"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-json",
+        children: "\"title\": \"https://fonts.googleapis.com/css2?family=Lexend:wght@900&display=swap\"\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "7-bannière",
+      children: ["7. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Bannière"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Vous pouvez définir la couleur de la bannière du menu avec l'option ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "banner"
+      }), ". Par exemple, utilisez ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "\"#FAAD2C\""
+      }), " pour une couleur orange."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "8-coins-arrondis",
+      children: ["8. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Coins Arrondis"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["L'option ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "cornersRadius"
+      }), " permet de définir le rayon des coins du menu. Une valeur de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "1"
+      }), " donne des coins légèrement arrondis."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "9-perspective",
+      children: ["9. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Perspective"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["L'option ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "perspective"
+      }), " permet d'ajouter une perspective 3D au menu si vous définissez cette option sur ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "true"
+      }), "."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "10-padding",
+      children: ["10. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Padding"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Vous pouvez définir l'option ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "padding"
+      }), " sur ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "true"
+      }), " pour ajouter de l'espace entre les éléments du menu et ses bords."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "11-éléments-du-menu",
+      children: ["11. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Éléments du Menu"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Vous pouvez personnaliser les éléments du menu avec les paramètres suivants :"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "maxItems"
+        }), " : Le nombre maximum d'éléments à afficher dans le menu."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "hoverStyle"
+        }), " : Le style à appliquer aux éléments du menu lors du survol (par exemple, ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "\"complete\""
+        }), ")."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "hoverColor"
+        }), " : La couleur des éléments lors du survol (par exemple, ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "\"#FAAD2C\""
+        }), ")."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "lineIsRounded"
+        }), " : Définissez sur ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "true"
+        }), " pour des bordures arrondies sur les lignes d'éléments."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h2, {
+      id: "exemple-de-themejson-pour-le-menu",
+      children: ["Exemple de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "theme.json"
+      }), " pour le Menu"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-json",
+        children: "{\r\n  \"position\": \"left\",\r\n  \"displayDescription\": true,\r\n  \"displayControlsIndicator\": true,\r\n  \"colors\": {\r\n    \"background\": \"rgba(18, 18, 18, 0.5)\",\r\n    \"description\": \"#121212\",\r\n    \"controlsIndicator\": \"#121212\",\r\n    \"item\": \"#faad2c\"\r\n  },\r\n  \"animations\": {\r\n    \"entry\": \"fadeIn\",\r\n    \"exit\": \"fadeOut\",\r\n    \"onScroll\": true\r\n  },\r\n  \"fonts\": {\r\n    \"title\": \"https://fonts.googleapis.com/css2?family=Lexend:wght@900&display=swap\",\r\n    \"subtitle\": \"https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap\",\r\n    \"description\": \"https://fonts.googleapis.com/css2?family=Roboto:ital,wght@700&display=swap\",\r\n    \"counter\": \"https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@400&display=swap\",\r\n    \"itemTitle\": \"https://fonts.googleapis.com/css2?family=Lexend:wght@500&display=swap\",\r\n    \"itemRightLabel\": \"https://fonts.googleapis.com/css2?family=Lexend:wght@200&display=swap\",\r\n    \"info\": \"https://fonts.googleapis.com/css2?family=Lexend:wght@200&display=swap\",\r\n    \"infoPanelTitle\": \"https://fonts.googleapis.com/css2?family=Lexend:wght@500&display=swap\"\r\n  },\r\n  \"banner\": \"#FAAD2C\",\r\n  \"cornersRadius\": 1,\r\n  \"perspective\": false,\r\n  \"padding\": false,\r\n  \"items\": {\r\n    \"maxItems\": 10,\r\n    \"hoverStyle\": \"complete\",\r\n    \"hoverColor\": \"#FAAD2C\",\r\n    \"lineIsRounded\": true\r\n  }\r\n}\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "résumé",
+      children: "Résumé"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Vous avez la possibilité de personnaliser entièrement l'apparence et le comportement du menu de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "zUI"
+      }), " en ajustant des paramètres tels que la position, les couleurs, les animations, et les polices (exclusivement via Google Fonts). Ce niveau de personnalisation vous permet de créer une interface unique et engageante pour vos utilisateurs."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "information-complémentaire",
+      children: "Information complémentaire"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["N'oubliez pas de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "partager votre thème personnalisé"
+      }), " dans notre ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+        href: "https://discord.gg/zproject",
+        children: "Serveur Discord Support"
+      }), ", afin que d'autres utilisateurs puissent en profiter. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Devenez créateur de thème et gagnez l'appréciation de la communauté"
+      }), " !"]
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
+    ...props,
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+
+
+
+/***/ }),
+
+/***/ 9820:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   assets: () => (/* binding */ assets),
+/* harmony export */   contentTitle: () => (/* binding */ contentTitle),
+/* harmony export */   "default": () => (/* binding */ MDXContent),
+/* harmony export */   frontMatter: () => (/* binding */ frontMatter),
+/* harmony export */   metadata: () => (/* binding */ metadata),
+/* harmony export */   toc: () => (/* binding */ toc)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4848);
+/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8453);
+
+
+const frontMatter = {
+	sidebar_position: 5
+};
+const contentTitle = 'Thème du Modal';
+const metadata = {
+  "id": "zUI/Themes/modal",
+  "title": "Thème du Modal",
+  "description": "Le Thème de Personnalisation vous permet d'ajuster l'apparence de l'interface en fonction de vos préférences. Vous pouvez modifier les couleurs, les animations, les polices, et bien plus pour créer une expérience utilisateur unique.",
+  "source": "@site/docs/zUI/Themes/modal.md",
+  "sourceDirName": "zUI/Themes",
+  "slug": "/zUI/Themes/modal",
+  "permalink": "/docs/zUI/Themes/modal",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Thème des Notifications",
+    "permalink": "/docs/zUI/Themes/notifs"
+  },
+  "next": {
+    "title": "Fonctions",
+    "permalink": "/docs/category/fonctions"
+  }
+};
+const assets = {
+
+};
+
+
+
+const toc = [{
+  "value": "Personnalisation du Thème",
+  "id": "personnalisation-du-thème",
+  "level": 2
+}, {
+  "value": "1. <strong>Couleurs</strong>",
+  "id": "1-couleurs",
+  "level": 3
+}, {
+  "value": "2. <strong>Animations</strong>",
+  "id": "2-animations",
+  "level": 3
+}, {
+  "value": "Animations d&#39;Entrée",
+  "id": "animations-dentrée",
+  "level": 4
+}, {
+  "value": "Animations de Sortie",
+  "id": "animations-de-sortie",
+  "level": 4
+}, {
+  "value": "Exemple d&#39;Animation d&#39;Entrée et de Sortie",
+  "id": "exemple-danimation-dentrée-et-de-sortie",
+  "level": 4
+}, {
+  "value": "3. <strong>Polices</strong>",
+  "id": "3-polices",
+  "level": 3
+}, {
+  "value": "4. <strong>Rayon des Coins</strong>",
+  "id": "4-rayon-des-coins",
+  "level": 3
+}, {
+  "value": "Exemple de <code>theme.json</code> pour le Thème de Personnalisation",
+  "id": "exemple-de-themejson-pour-le-thème-de-personnalisation",
+  "level": 3
+}, {
+  "value": "Résumé",
+  "id": "résumé",
+  "level": 2
+}, {
+  "value": "Information complémentaire",
+  "id": "information-complémentaire",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    a: "a",
+    code: "code",
+    h1: "h1",
+    h2: "h2",
+    h3: "h3",
+    h4: "h4",
+    header: "header",
+    hr: "hr",
+    li: "li",
+    p: "p",
+    pre: "pre",
+    strong: "strong",
+    ul: "ul",
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.header, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h1, {
+        id: "thème-du-modal",
+        children: "Thème du Modal"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Le ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Thème de Personnalisation"
+      }), " vous permet d'ajuster l'apparence de l'interface en fonction de vos préférences. Vous pouvez modifier les couleurs, les animations, les polices, et bien plus pour créer une expérience utilisateur unique."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "personnalisation-du-thème",
+      children: "Personnalisation du Thème"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Le fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "theme.json"
+      }), " est utilisé pour personnaliser divers aspects du thème, tels que les couleurs, les animations et les polices. Vous pouvez ajuster les paramètres suivants pour adapter l'interface à vos besoins."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "1-couleurs",
+      children: ["1. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Couleurs"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Vous pouvez personnaliser les couleurs du thème avec les options suivantes :"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "backgroundColor"
+        }), " : La couleur de fond principale de l'interface (ex : ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "\"#121212\""
+        }), ")."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "inputColor"
+        }), " : La couleur de fond des champs de saisie (ex : ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "\"#222222\""
+        }), ")."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "inputTextColor"
+        }), " : La couleur du texte dans les champs de saisie (ex : ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "\"white\""
+        }), ")."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "color"
+        }), " : La couleur principale utilisée pour les éléments de l'interface (ex : ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "\"#faad2c\""
+        }), ")."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "2-animations",
+      children: ["2. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Animations"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Les animations permettent de créer des effets visuels lors de l'entrée et de la sortie des éléments de l'interface. Voici les animations disponibles dans le fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "theme.json"
+      }), " :"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h4, {
+      id: "animations-dentrée",
+      children: "Animations d'Entrée"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "fadeIn"
+        }), " : L'élément apparaît en augmentant son opacité de 0 à 1."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "slideInHorizontal"
+        }), " : L'élément glisse horizontalement de la gauche vers sa position initiale."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h4, {
+      id: "animations-de-sortie",
+      children: "Animations de Sortie"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "fadeOut"
+        }), " : L'élément disparaît en diminuant son opacité de 1 à 0."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "slideOutHorizontal"
+        }), " : L'élément glisse horizontalement vers la gauche en sortant de la vue."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h4, {
+      id: "exemple-danimation-dentrée-et-de-sortie",
+      children: "Exemple d'Animation d'Entrée et de Sortie"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-json",
+        children: "\"animations\": {\r\n  \"entry\": \"fadeIn\",\r\n  \"exit\": \"fadeOut\"\r\n}\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "3-polices",
+      children: ["3. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Polices"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Le ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Thème de Personnalisation"
+      }), " utilise des polices spécifiées via ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Google Fonts"
+      }), ". Vous pouvez personnaliser les polices utilisées dans l'interface avec les options suivantes :"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "title"
+        }), " : La police utilisée pour les titres."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "names"
+        }), " : La police utilisée pour les noms ou autres éléments similaires."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "descriptions"
+        }), " : La police utilisée pour les descriptions ou explications."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "inputsContent"
+        }), " : La police utilisée pour le contenu des champs de saisie."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Exemple d'utilisation d'une police depuis Google Fonts :"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-json",
+        children: "\"title\": \"https://fonts.googleapis.com/css2?family=Lexend:wght@900&display=swap\"\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "4-rayon-des-coins",
+      children: ["4. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Rayon des Coins"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Le ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Thème de Personnalisation"
+      }), " vous permet de définir le rayon des coins des éléments avec l'option ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "borderRadius"
+      }), ". Une valeur de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "0.5"
+      }), " donnera des coins légèrement arrondis."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "exemple-de-themejson-pour-le-thème-de-personnalisation",
+      children: ["Exemple de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "theme.json"
+      }), " pour le Thème de Personnalisation"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-json",
+        children: "{\r\n  \"backgroundColor\": \"#121212\",\r\n  \"inputColor\": \"#222222\",\r\n  \"inputTextColor\": \"white\",\r\n  \"color\": \"#faad2c\",\r\n  \"borderRadius\": 0.5,\r\n  \"animations\": {\r\n    \"entry\": \"fadeIn\",\r\n    \"exit\": \"fadeOut\"\r\n  },\r\n  \"fonts\": {\r\n    \"title\": \"https://fonts.googleapis.com/css2?family=Lexend:wght@900&display=swap\",\r\n    \"names\": \"https://fonts.googleapis.com/css2?family=Lexend:wght@500&display=swap\",\r\n    \"descriptions\": \"https://fonts.googleapis.com/css2?family=Lexend:wght@200&display=swap\",\r\n    \"inputsContent\": \"https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap\"\r\n  }\r\n}\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "résumé",
+      children: "Résumé"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Le ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Thème du Modal"
+      }), " vous permet d'ajuster l'apparence et le comportement des éléments de l'interface. Vous pouvez modifier les couleurs, choisir des animations, et personnaliser les polices afin d'offrir une expérience utilisateur fluide et agréable."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "information-complémentaire",
+      children: "Information complémentaire"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Partagez vos thèmes personnalisés dans notre ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+        href: "https://discord.gg/zproject",
+        children: "Serveur Discord Support"
+      }), " pour permettre à d'autres utilisateurs de les découvrir et les adopter. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Devenez créateur de thème et gagnez l'appréciation de la communauté"
+      }), " !"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.hr, {})]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
+    ...props,
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+
+
+
+/***/ }),
+
+/***/ 4850:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   assets: () => (/* binding */ assets),
+/* harmony export */   contentTitle: () => (/* binding */ contentTitle),
+/* harmony export */   "default": () => (/* binding */ MDXContent),
+/* harmony export */   frontMatter: () => (/* binding */ frontMatter),
+/* harmony export */   metadata: () => (/* binding */ metadata),
+/* harmony export */   toc: () => (/* binding */ toc)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4848);
+/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8453);
+
+
+const frontMatter = {
+	sidebar_position: 4
+};
+const contentTitle = 'Thème des Notifications';
+const metadata = {
+  "id": "zUI/Themes/notifs",
+  "title": "Thème des Notifications",
+  "description": "Les notifications de zUI permettent de personnaliser les messages affichés à l'utilisateur en fonction de l'événement ou du contexte. Elles peuvent être configurées pour s'afficher avec différentes couleurs, animations et polices, offrant ainsi une expérience utilisateur plus interactive et esthétique.",
+  "source": "@site/docs/zUI/Themes/notifs.md",
+  "sourceDirName": "zUI/Themes",
+  "slug": "/zUI/Themes/notifs",
+  "permalink": "/docs/zUI/Themes/notifs",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Thème du ContextUI",
+    "permalink": "/docs/zUI/Themes/context"
+  },
+  "next": {
+    "title": "Thème du Modal",
+    "permalink": "/docs/zUI/Themes/modal"
+  }
+};
+const assets = {
+
+};
+
+
+
+const toc = [{
+  "value": "Personnalisation des Notifications",
+  "id": "personnalisation-des-notifications",
+  "level": 2
+}, {
+  "value": "1. <strong>Couleurs</strong>",
+  "id": "1-couleurs",
+  "level": 3
+}, {
+  "value": "2. <strong>Animations</strong>",
+  "id": "2-animations",
+  "level": 3
+}, {
+  "value": "HelpNotifications",
+  "id": "helpnotifications",
+  "level": 3
+}, {
+  "value": "Animation d&#39;Entrée",
+  "id": "animation-dentrée",
+  "level": 5
+}, {
+  "value": "Animations de Sortie",
+  "id": "animations-de-sortie",
+  "level": 5
+}, {
+  "value": "Notifications",
+  "id": "notifications",
+  "level": 3
+}, {
+  "value": "Animation d&#39;Entrée",
+  "id": "animation-dentrée-1",
+  "level": 5
+}, {
+  "value": "Animations de Sortie",
+  "id": "animations-de-sortie-1",
+  "level": 5
+}, {
+  "value": "PulsingNotifications",
+  "id": "pulsingnotifications",
+  "level": 3
+}, {
+  "value": "Animation d&#39;Entrée",
+  "id": "animation-dentrée-2",
+  "level": 5
+}, {
+  "value": "Animations de Sortie",
+  "id": "animations-de-sortie-2",
+  "level": 5
+}, {
+  "value": "Exemple d&#39;Animation de Notification",
+  "id": "exemple-danimation-de-notification",
+  "level": 4
+}, {
+  "value": "3. <strong>Polices</strong>",
+  "id": "3-polices",
+  "level": 3
+}, {
+  "value": "4. <strong>Notifications Pulsantes</strong>",
+  "id": "4-notifications-pulsantes",
+  "level": 3
+}, {
+  "value": "5. <strong>Notifications d&#39;Aide</strong>",
+  "id": "5-notifications-daide",
+  "level": 3
+}, {
+  "value": "Exemple de <code>theme.json</code> pour les Notifications",
+  "id": "exemple-de-themejson-pour-les-notifications",
+  "level": 2
+}, {
+  "value": "Résumé",
+  "id": "résumé",
+  "level": 2
+}, {
+  "value": "Information complémentaire",
+  "id": "information-complémentaire",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    a: "a",
+    code: "code",
+    h1: "h1",
+    h2: "h2",
+    h3: "h3",
+    h4: "h4",
+    h5: "h5",
+    header: "header",
+    hr: "hr",
+    li: "li",
+    p: "p",
+    pre: "pre",
+    strong: "strong",
+    ul: "ul",
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.header, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h1, {
+        id: "thème-des-notifications",
+        children: "Thème des Notifications"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Les ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "notifications"
+      }), " de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "zUI"
+      }), " permettent de personnaliser les messages affichés à l'utilisateur en fonction de l'événement ou du contexte. Elles peuvent être configurées pour s'afficher avec différentes couleurs, animations et polices, offrant ainsi une expérience utilisateur plus interactive et esthétique."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "personnalisation-des-notifications",
+      children: "Personnalisation des Notifications"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Le fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "theme.json"
+      }), " permet de configurer les aspects suivants des notifications : couleurs, animations, polices, et autres options spécifiques pour différents types de notifications."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "1-couleurs",
+      children: ["1. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Couleurs"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Vous pouvez personnaliser les couleurs des notifications avec les options suivantes :"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "background"
+        }), " : La couleur de fond de la notification (ex : ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "\"rgba(18, 18, 18, 0.5)\""
+        }), ")."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "timer"
+        }), " : La couleur du minuteur ou de l'icône de temporisation dans la notification (ex : ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "\"white\""
+        }), ")."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "2-animations",
+      children: ["2. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Animations"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Les notifications peuvent inclure des animations d'entrée et de sortie. Voici les animations disponibles dans le fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "theme.json"
+      }), " :"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "helpnotifications",
+      children: "HelpNotifications"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h5, {
+      id: "animation-dentrée",
+      children: "Animation d'Entrée"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.hr, {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "fadeIn"
+        }), " : Fait apparaître la notification en augmentant son opacité de 0 à 1."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "slideInHorizontal"
+        }), " : Fait entrer la notification horizontalement depuis la gauche."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "slideInVertical"
+        }), " : Fait entrer la notification verticalement depuis le haut."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "popIn"
+        }), " : Fait apparaître la notification avec un effet de zoom, passant d'un état de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "scale: 0"
+        }), " à ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "scale: 1"
+        }), "."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h5, {
+      id: "animations-de-sortie",
+      children: "Animations de Sortie"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.hr, {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "fadeOut"
+        }), " : Fait disparaître la notification en diminuant son opacité de 1 à 0."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "popOut"
+        }), " : Fait disparaître la notification avec un effet de zoom, passant d'un état de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "scale: 1"
+        }), " à ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "scale: 0"
+        }), "."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "slideOutHorizontal"
+        }), " : Fait disparaître la notification horizontalement vers la gauche."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "slideOutVertical"
+        }), " : Fait disparaître la notification verticalement vers le bas."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "notifications",
+      children: "Notifications"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h5, {
+      id: "animation-dentrée-1",
+      children: "Animation d'Entrée"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.hr, {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "fadeIn"
+        }), " : Fait apparaître la notification en augmentant son opacité de 0 à 1."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "slideInHorizontal"
+        }), " : Fait entrer la notification horizontalement depuis la gauche."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h5, {
+      id: "animations-de-sortie-1",
+      children: "Animations de Sortie"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.hr, {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "fadeOut"
+        }), " : Fait disparaître la notification en diminuant son opacité de 1 à 0."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "slideOutHorizontal"
+        }), " : Fait disparaître la notification horizontalement vers la gauche."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "pulsingnotifications",
+      children: "PulsingNotifications"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h5, {
+      id: "animation-dentrée-2",
+      children: "Animation d'Entrée"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "fadeIn"
+        }), " : Fait apparaître la notification en augmentant son opacité de 0 à 1."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "popIn"
+        }), " : Fait apparaître la notification avec un effet de zoom, passant d'un état de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "scale: 0"
+        }), " à ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "scale: 1"
+        }), "."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h5, {
+      id: "animations-de-sortie-2",
+      children: "Animations de Sortie"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.hr, {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "fadeOut"
+        }), " : Fait disparaître la notification en diminuant son opacité de 1 à 0."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "popOut"
+        }), " : Fait disparaître la notification avec un effet de zoom, passant d'un état de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "scale: 1"
+        }), " à ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "scale: 0"
+        }), "."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.hr, {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h4, {
+      id: "exemple-danimation-de-notification",
+      children: "Exemple d'Animation de Notification"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-json",
+        children: "\"animations\": {\r\n  \"entry\": \"fadeIn\",\r\n  \"exit\": \"fadeOut\"\r\n}\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "3-polices",
+      children: ["3. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Polices"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Les notifications utilisent différentes polices spécifiées via l'API ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Google Fonts"
+      }), ". Voici les options de polices que vous pouvez personnaliser :"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "key"
+        }), " : La police pour les clés ou éléments principaux."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "pulsingDescription"
+        }), " : La police pour la description des notifications pulsatantes."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "notificationTitle"
+        }), " : La police pour le titre des notifications."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "notificationDescription"
+        }), " : La police pour la description des notifications."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "notificationType"
+        }), " : La police pour le type de notification (ex : ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "info"
+        }), ", ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "warning"
+        }), ")."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "helpNotification"
+        }), " : La police pour les notifications d'aide."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Exemple d'utilisation d'une police depuis Google Fonts :"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-json",
+        children: "\"notificationTitle\": \"https://fonts.googleapis.com/css2?family=Lexend:wght@900&display=swap\"\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "4-notifications-pulsantes",
+      children: ["4. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Notifications Pulsantes"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Les ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "pulsing notifications"
+      }), " sont des notifications spéciales qui attirent l'attention avec un effet de \"pulsation\". Vous pouvez personnaliser leur couleur et les animations d'entrée et de sortie comme suit :"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "defaultColor"
+        }), " : La couleur de base des notifications pulsatantes (ex : ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "\"#faad2c\""
+        }), ")."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "animations"
+        }), " : Les animations utilisées pour l'entrée et la sortie des notifications pulsatantes (par exemple, ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "popIn"
+        }), " pour l'entrée et ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "popOut"
+        }), " pour la sortie)."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "5-notifications-daide",
+      children: ["5. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Notifications d'Aide"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Les ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "help notifications"
+      }), " sont utilisées pour afficher des informations ou de l'aide à l'utilisateur. Elles utilisent des animations d'entrée et de sortie spécifiques comme ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "slideInVertical"
+      }), " et ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "slideOutVertical"
+      }), "."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h2, {
+      id: "exemple-de-themejson-pour-les-notifications",
+      children: ["Exemple de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "theme.json"
+      }), " pour les Notifications"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-json",
+        children: "{\r\n  \"notifications\": {\r\n    \"colors\": {\r\n      \"background\": \"rgba(18, 18, 18, 0.5)\",\r\n      \"timer\": \"white\"\r\n    },\r\n    \"animations\": {\r\n      \"entry\": \"fadeIn\",\r\n      \"exit\": \"fadeOut\"\r\n    }\r\n  },\r\n  \"pulsingNotifications\": {\r\n    \"defaultColor\": \"#faad2c\",\r\n    \"animations\": {\r\n      \"entry\": \"popIn\",\r\n      \"exit\": \"popOut\"\r\n    }\r\n  },\r\n  \"helpNotifications\": {\r\n    \"defaultColor\": \"#faad2c\",\r\n    \"animations\": {\r\n      \"entry\": \"slideInVertical\",\r\n      \"exit\": \"slideOutVertical\"\r\n    }\r\n  },\r\n  \"fonts\": {\r\n    \"key\": \"https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap\",\r\n    \"pulsingDescription\": \"https://fonts.googleapis.com/css2?family=Roboto:ital,wght@400&display=swap\",\r\n    \"notificationTitle\": \"https://fonts.googleapis.com/css2?family=Lexend:wght@900&display=swap\",\r\n    \"notificationDescription\": \"https://fonts.googleapis.com/css2?family=Lexend:wght@200&display=swap\",\r\n    \"notificationType\": \"https://fonts.googleapis.com/css2?family=Lexend:wght@800&display=swap\",\r\n    \"helpNotification\": \"https://fonts.googleapis.com/css2?family=Lexend:wght@500&display=swap\"\r\n  }\r\n}\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "résumé",
+      children: "Résumé"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Les ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "notifications"
+      }), " dans ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "zUI"
+      }), " offrent une flexibilité maximale en termes de personnalisation, des couleurs aux animations, en passant par les polices de caractères (toutes fournies par l'API de Google Fonts). Vous pouvez adapter l'apparence et le comportement des notifications à vos besoins pour offrir une expérience utilisateur dynamique et fluide."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "information-complémentaire",
+      children: "Information complémentaire"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Partagez vos notifications personnalisées dans notre ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+        href: "https://discord.gg/zproject",
+        children: "Serveur Discord Support"
+      }), " pour permettre à d'autres utilisateurs de les adopter. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Devenez créateur de notifications et gagnez l'appréciation de la communauté"
+      }), " !"]
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
+    ...props,
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+
+
+
+/***/ }),
+
 /***/ 6740:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -5445,8 +8201,8 @@ const metadata = {
     "permalink": "/docs/zUI/presentation"
   },
   "next": {
-    "title": "Utilisation",
-    "permalink": "/docs/zUI/utilisation"
+    "title": "Menu",
+    "permalink": "/docs/zUI/menu"
   }
 };
 const assets = {
@@ -5460,13 +8216,17 @@ const toc = [{
   "id": "1-télécharger-zui",
   "level": 2
 }, {
+  "value": "<strong>Si vous avez téléchargé le <code>.zip</code> du dépôt</strong>",
+  "id": "si-vous-avez-téléchargé-le-zip-du-dépôt",
+  "level": 2
+}, {
   "value": "2. Ajouter zUI à votre Resource",
   "id": "2-ajouter-zui-à-votre-resource",
-  "level": 2
+  "level": 3
 }, {
   "value": "3. Installer les Dépendances",
   "id": "3-installer-les-dépendances",
-  "level": 2
+  "level": 3
 }, {
   "value": "4. Compiler la Partie React",
   "id": "4-compiler-la-partie-react",
@@ -5491,6 +8251,7 @@ function _createMdxContent(props) {
     code: "code",
     h1: "h1",
     h2: "h2",
+    h3: "h3",
     header: "header",
     hr: "hr",
     li: "li",
@@ -5539,7 +8300,8 @@ function _createMdxContent(props) {
         className: "language-bash",
         children: "git clone https://github.com/ZProject-Official/zUI.git\n"
       })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "si-vous-avez-téléchargé-le-zip-du-dépôt",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.strong, {
         children: ["Si vous avez téléchargé le ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
           children: ".zip"
@@ -5556,7 +8318,7 @@ function _createMdxContent(props) {
           children: "React"
         }), " de la bibliothèque."]
       }), "\n"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
       id: "2-ajouter-zui-à-votre-resource",
       children: "2. Ajouter zUI à votre Resource"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
@@ -5574,13 +8336,13 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         className: "language-lua",
-        children: "fx_version 'cerulean'\r\ngame 'gta5'\r\n\r\n-- Assurez-vous que zUI est chargé avant votre script\r\nui_page \"zUI/web/build/index.html\"\r\n\r\nfiles {\r\n    \"zUI/theme.json\",\r\n    \"zUI/web/build/index.html\",\r\n    \"zUI/web/build/**/*\"\r\n}\r\n\r\nclient_scripts {\r\n    -- Fichiers zUI\r\n    \"zUI/init.lua\",\r\n    \"zUI/menu.lua\",\r\n    \"zUI/methods/*.lua\",\r\n    \"zUI/functions/*.lua\",\r\n    \"zUI/items/*.lua\",\r\n    -- Vos fichiers\r\n    \"script.lua\"\r\n}\r\n\r\nserver_scripts {\r\n    -- Gestion de la version\r\n    \"version.lua\",\r\n}\n"
+        children: "fx_version \"cerulean\"\r\ngame \"gta5\"\r\nlua54 \"yes\"\r\n\r\nauthor \"zSquad - Soren & Jules\"\r\ndescription \"zUI is an advanced library for creating NUI menus in FiveM, combining simplicity, optimization, and aesthetics. Built with React for the interface and Lua for scripting, it modernizes and simplifies menu creation, drawing inspiration from RageUI while enhancing the user experience.\"\r\nversion \"1.0.6\"\r\nrepository \"https://github.com/ZProject-Official/zUI\"\r\n\r\nfiles {\r\n    \"zUI/menus/theme.json\",\r\n    \"zUI/notifications/theme.json\",\r\n    \"zUI/contextMenus/theme.json\",\r\n    \"zUI/modals/theme.json\",\r\n    \"zUI/user-interface/build/index.html\",\r\n    \"zUI/user-interface/build/**/*\"\r\n}\r\n\r\nui_page \"zUI/user-interface/build/index.html\"\r\n\r\nclient_scripts {\r\n    -- [[zUI]]\r\n    \"zUI/*.lua\",\r\n    \"zUI/items/*.lua\",\r\n    \"zUI/menus/_init.lua\",\r\n    \"zUI/menus/menu.lua\",\r\n    \"zUI/menus/methods/*.lua\",\r\n    \"zUI/menus/functions/*.lua\",\r\n    \"zUI/notifications/*.lua\",\r\n    \"zUI/contextMenus/components/*.lua\",\r\n    \"zUI/contextMenus/*.lua\",\r\n    \"zUI/contextMenus/functions/*.lua\",\r\n    \"zUI/modals/*.lua\",\r\n    -- [[Script]]\r\n    \"main.lua\"\r\n}\n"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
       children: ["Cette configuration garantit que ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
         children: "zUI"
       }), " est chargé avant votre script principal, afin de permettre son utilisation dans vos menus."]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
       id: "3-installer-les-dépendances",
       children: "3. Installer les Dépendances"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
@@ -5704,6 +8466,601 @@ function _createMdxContent(props) {
       children: ["Vous êtes maintenant prêt à utiliser ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
         children: "zUI"
       }), " pour créer des menus NUI élégants et optimisés sur votre serveur FiveM !"]
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
+    ...props,
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+
+
+
+/***/ }),
+
+/***/ 6627:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   assets: () => (/* binding */ assets),
+/* harmony export */   contentTitle: () => (/* binding */ contentTitle),
+/* harmony export */   "default": () => (/* binding */ MDXContent),
+/* harmony export */   frontMatter: () => (/* binding */ frontMatter),
+/* harmony export */   metadata: () => (/* binding */ metadata),
+/* harmony export */   toc: () => (/* binding */ toc)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4848);
+/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8453);
+
+
+const frontMatter = {
+	sidebar_position: 3
+};
+const contentTitle = 'Menu';
+const metadata = {
+  "id": "zUI/menu",
+  "title": "Menu",
+  "description": "Dans cette section, nous allons explorer comment utiliser zUI pour créer et gérer des menus NUI dans FiveM. Vous apprendrez à créer des menus et des sous-menus, à ajouter des éléments, et à gérer leur visibilité.",
+  "source": "@site/docs/zUI/menu.md",
+  "sourceDirName": "zUI",
+  "slug": "/zUI/menu",
+  "permalink": "/docs/zUI/menu",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Installation",
+    "permalink": "/docs/zUI/installation"
+  },
+  "next": {
+    "title": "Items",
+    "permalink": "/docs/category/items"
+  }
+};
+const assets = {
+
+};
+
+
+
+const toc = [{
+  "value": "Création d&#39;un Menu",
+  "id": "création-dun-menu",
+  "level": 2
+}, {
+  "value": "Paramètres",
+  "id": "paramètres",
+  "level": 3
+}, {
+  "value": "Exemple",
+  "id": "exemple",
+  "level": 4
+}, {
+  "value": "Création d&#39;un Sous-Menu",
+  "id": "création-dun-sous-menu",
+  "level": 2
+}, {
+  "value": "Paramètres",
+  "id": "paramètres-1",
+  "level": 3
+}, {
+  "value": "Exemple",
+  "id": "exemple-1",
+  "level": 4
+}, {
+  "value": "Ajout d&#39;Items au Menu",
+  "id": "ajout-ditems-au-menu",
+  "level": 2
+}, {
+  "value": "Types d&#39;Items",
+  "id": "types-ditems",
+  "level": 3
+}, {
+  "value": "Gestion de la Visibilité du Menu",
+  "id": "gestion-de-la-visibilité-du-menu",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    code: "code",
+    em: "em",
+    h1: "h1",
+    h2: "h2",
+    h3: "h3",
+    h4: "h4",
+    header: "header",
+    hr: "hr",
+    li: "li",
+    p: "p",
+    pre: "pre",
+    strong: "strong",
+    ul: "ul",
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.header, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h1, {
+        id: "menu",
+        children: "Menu"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Dans cette section, nous allons explorer comment utiliser ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "zUI"
+      }), " pour créer et gérer des menus NUI dans ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "FiveM"
+      }), ". Vous apprendrez à créer des menus et des sous-menus, à ajouter des éléments, et à gérer leur visibilité."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "création-dun-menu",
+      children: "Création d'un Menu"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Pour créer un menu avec ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "zUI"
+      }), ", utilisez la fonction ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "zUI.CreateMenu"
+      }), ". Voici la syntaxe générale :"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-lua",
+        children: "local Menu = zUI.CreateMenu(Title, Subtitle, Description, Banner, Key, Description)\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "paramètres",
+      children: "Paramètres"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Title"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[string]"
+        }), " : (Optionnel) Le titre du menu qui s'affiche en haut."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Subtitle"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[string]"
+        }), " : (Optionnel) Le sous-titre du menu, affiché juste en dessous du titre."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Description"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[string]"
+        }), ": (Optionnel) La description du menu affichée dans la barre de description"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Banner"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[string]"
+        }), " : (Optionnel) Une URL vers une image qui sera utilisée comme bannière en haut du menu."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Key"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[string]"
+        }), " : (Optionnel) La touche qui, si définie, permettra d'ouvrir le menu."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Description"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[string]"
+        }), " : (Optionnel) Une description textuelle du menu qui peut être affichée à des fins d'information."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h4, {
+      id: "exemple",
+      children: "Exemple"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-lua",
+        children: "local Menu = zUI.CreateMenu(\"Mon Menu\", \"Sous-Titre\", \"Description\", \"https://example.com/banner.png\", \"F1\", \"Description de mon menu\")\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "création-dun-sous-menu",
+      children: "Création d'un Sous-Menu"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Pour créer un sous-menu, utilisez la fonction ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "zUI.CreateSubMenu"
+      }), ". Voici la syntaxe :"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-lua",
+        children: "local SubMenu = zUI.CreateSubMenu(Parent, Title, Subtitle, Description, Banner)\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "paramètres-1",
+      children: "Paramètres"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Parent"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[zUI Instance]"
+        }), " : Le menu principal auquel ce sous-menu sera rattaché."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Title"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[string]"
+        }), " : (Optionnel) Le titre du sous-menu."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Subtitle"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[string]"
+        }), " : (Optionnel) Le sous-titre du sous-menu."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Description"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[string]"
+        }), " : (Optionnel) La description du sous-menu."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Banner"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[string]"
+        }), " : (Optionnel) Une URL vers une image pour la bannière du sous-menu."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h4, {
+      id: "exemple-1",
+      children: "Exemple"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-lua",
+        children: "local SubMenu = zUI.CreateSubMenu(Menu, \"Mon Sous-Menu\", \"Sous-Titre\", \"Description\", \"https://example.com/submenu_banner.png\")\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "ajout-ditems-au-menu",
+      children: "Ajout d'Items au Menu"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Pour ajouter des éléments à votre menu, utilisez la méthode ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "SetItems"
+      }), ". Vous devez définir une fonction qui spécifie les éléments à ajouter au menu. Voici comment vous pouvez le faire :"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-lua",
+        children: "Menu:SetItems(function(Items)\r\n    Items:AddSeparator(\"Voici comment ajouter un item :)\")\r\nend)\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "types-ditems",
+      children: "Types d'Items"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Séparateur"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "AddSeparator"
+        }), " : Ajoute un séparateur visuel."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Ligne"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "AddLine"
+        }), " : Ajoute une ligne colorée."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Bouton"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "AddButton"
+        }), " : Ajoute un bouton cliquable."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Bouton Lien"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "AddLinkButton"
+        }), " : Ajoute un bouton qui redirige vers un certain lien."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Checkbox"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "AddCheckbox"
+        }), " : Ajoute une checkbox que l'utilisateur peut cocher ou décocher."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Liste"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "AddList"
+        }), " : Ajoute une liste déroulante avec des options."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Liste de couleurs"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "AddColorList"
+        }), " : Ajoute une liste de couleurs."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Slider"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "AddSlider"
+        }), " : Ajoute un slider."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "gestion-de-la-visibilité-du-menu",
+      children: "Gestion de la Visibilité du Menu"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Si vous avez défini une touche (", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "Key"
+      }), ") lors de la création du menu, vous pouvez simplement appuyer sur cette touche pour ouvrir ou fermer le menu."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Si vous n'avez pas défini de touche, vous pouvez contrôler la visibilité du menu en utilisant la méthode suivante :"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-lua",
+        children: "Menu:SetVisible(not Menu:IsVisible())\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Cette commande permet d'inverser l'état actuel de visibilité du menu : si le menu est ouvert, il sera fermé, et inversement."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.hr, {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Avec ces informations, vous êtes maintenant prêt à créer et gérer des menus interactifs dans ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "FiveM"
+      }), " en utilisant ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "zUI"
+      }), ". N'hésitez pas à explorer toutes les fonctionnalités offertes pour personnaliser vos menus selon vos besoins."]
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
+    ...props,
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+
+
+
+/***/ }),
+
+/***/ 3060:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   assets: () => (/* binding */ assets),
+/* harmony export */   contentTitle: () => (/* binding */ contentTitle),
+/* harmony export */   "default": () => (/* binding */ MDXContent),
+/* harmony export */   frontMatter: () => (/* binding */ frontMatter),
+/* harmony export */   metadata: () => (/* binding */ metadata),
+/* harmony export */   toc: () => (/* binding */ toc)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4848);
+/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8453);
+
+
+const frontMatter = {
+	sidebar_position: 10
+};
+const contentTitle = 'Modal';
+const metadata = {
+  "id": "zUI/modal",
+  "title": "Modal",
+  "description": "Les modals dans zUI permettent d'afficher des fenêtres interactives contenant des champs de saisie pour recueillir des informations de l'utilisateur. Ces fenêtres sont généralement utilisées pour obtenir des données spécifiques dans des scénarios nécessitant plusieurs options de saisie.",
+  "source": "@site/docs/zUI/modal.md",
+  "sourceDirName": "zUI",
+  "slug": "/zUI/modal",
+  "permalink": "/docs/zUI/modal",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "sidebar_position": 10
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Help Notification",
+    "permalink": "/docs/zUI/Notifications/helpNotif"
+  },
+  "next": {
+    "title": "Introduction",
+    "permalink": "/docs/zSleep/intro"
+  }
+};
+const assets = {
+
+};
+
+
+
+const toc = [{
+  "value": "Fonction <code>ShowModal</code>",
+  "id": "fonction-showmodal",
+  "level": 2
+}, {
+  "value": "Paramètres",
+  "id": "paramètres",
+  "level": 3
+}, {
+  "value": "Exemple d&#39;utilisation",
+  "id": "exemple-dutilisation",
+  "level": 3
+}, {
+  "value": "Résumé",
+  "id": "résumé",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    code: "code",
+    em: "em",
+    h1: "h1",
+    h2: "h2",
+    h3: "h3",
+    header: "header",
+    img: "img",
+    li: "li",
+    ol: "ol",
+    p: "p",
+    pre: "pre",
+    strong: "strong",
+    ul: "ul",
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.header, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h1, {
+        id: "modal",
+        children: "Modal"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Les modals dans ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "zUI"
+      }), " permettent d'afficher des fenêtres interactives contenant des champs de saisie pour recueillir des informations de l'utilisateur. Ces fenêtres sont généralement utilisées pour obtenir des données spécifiques dans des scénarios nécessitant plusieurs options de saisie."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h2, {
+      id: "fonction-showmodal",
+      children: ["Fonction ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "ShowModal"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "La syntaxe pour afficher un modal est la suivante :"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-lua",
+        children: "zUI.ShowModal(Title, Inputs, Styles)\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "paramètres",
+      children: "Paramètres"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Title"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[string]"
+        }), " : Le titre de la fenêtre modale (par exemple, \"Paramètres\", \"Formulaire d'inscription\")."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Inputs"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[table]"
+        }), " : Une table définissant les champs de saisie que l'utilisateur peut remplir. Chaque champ est défini par plusieurs propriétés :", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+              children: "type"
+            }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+              children: "[string]"
+            }), " : Le type du champ d'entrée (ex : \"text\", \"number\", \"checkbox\", \"colorpicker\", \"date\")."]
+          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+              children: "name"
+            }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+              children: "[string]"
+            }), " : Le nom du champ d'entrée (par exemple, \"Nom\", \"Date de naissance\")."]
+          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+              children: "description"
+            }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+              children: "[string]"
+            }), " : La description affichée sous le champ d'entrée (par exemple, \"Entrez votre nom\")."]
+          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+              children: "isRequired"
+            }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+              children: "[boolean]"
+            }), " : Indique si le champ est obligatoire."]
+          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+              children: "minLength"
+            }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+              children: "[int]"
+            }), " : La longueur minimale (si applicable pour le champ)."]
+          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+              children: "maxLength"
+            }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+              children: "[int]"
+            }), " : La longueur maximale (si applicable pour le champ)."]
+          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+              children: "format"
+            }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+              children: "[string]"
+            }), " : Le format de la saisie (par exemple, pour une date \"DD/MM/YYYY\")."]
+          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+              children: "defaultValue"
+            }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+              children: "[string]"
+            }), " : La valeur par défaut du champ (si applicable)."]
+          }), "\n"]
+        }), "\n"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Styles"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          children: "[table]"
+        }), " : Un tableau définissant les styles du modal, par exemple la couleur principale (", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "PrincipalColor"
+        }), ")."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "exemple-dutilisation",
+      children: "Exemple d'utilisation"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Voici un exemple d'utilisation de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "ShowModal"
+      }), " :"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-lua",
+        children: "zUI.ShowModal(\"Formulaire de soumission\", {\r\n    { type = \"text\",        name = \"Nom\",            description = \"Entrez votre nom\", isRequired = true, minLength = 4, maxLength = 15 },\r\n    { type = \"number\",      name = \"Âge\",            description = \"Entrez votre âge\", isRequired = false },\r\n    { type = \"checkbox\",    name = \"Accepter les termes\", description = \"Acceptez-vous les termes ?\", defaultValue = true },\r\n    { type = \"colorpicker\", name = \"Couleur préférée\", defaultValue = \"#faad2c\" },\r\n    { type = \"date\",        name = \"Date de naissance\", description = \"Entrez votre date de naissance\", format = \"DD/MM/YYYY\" }\r\n}, { PrincipalColor = \"#faad2c\" })\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
+        src: (__webpack_require__(755)/* ["default"] */ .A) + "",
+        width: "2559",
+        height: "1439"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Cela affichera un modal intitulé \"Formulaire de soumission\" avec plusieurs champs d'entrée, chacun ayant ses propres paramètres (comme des champs de texte, des cases à cocher et un sélecteur de couleur)."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "résumé",
+      children: "Résumé"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Pour utiliser un modal dans ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "zUI"
+      }), " :"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["Utilisez ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "zUI.ShowModal"
+        }), " pour créer et afficher un modal."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["Définissez les champs d'entrée dans le tableau ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Inputs"
+        }), ", en spécifiant leur type, nom, description, et autres propriétés spécifiques."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["Personnalisez les styles du modal en définissant la couleur principale ou d'autres options dans le tableau ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Styles"
+        }), "."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+        children: "Les modals sont particulièrement utiles pour collecter des informations de l'utilisateur ou guider l'utilisateur à travers un processus interactif dans votre application."
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Les modals enrichissent l'interaction utilisateur en fournissant un moyen clair et structuré pour recueillir des données dans un environnement dynamique."
     })]
   });
 }
@@ -5900,807 +9257,13 @@ function _createMdxContent(props) {
       children: ["zUI, développé par ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
         children: "zSquad"
       }), ", est un outil en constante évolution, pensé pour répondre aux besoins des développeurs de la communauté FiveM."]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.hr, {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.hr, {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
         alt: "example1",
-        src: (__webpack_require__(4188)/* ["default"] */ .A) + "",
-        width: "432",
-        height: "489"
-      }), "\r\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
-        alt: "example2",
-        src: (__webpack_require__(2919)/* ["default"] */ .A) + "",
-        width: "432",
-        height: "489"
-      })]
-    })]
-  });
-}
-function MDXContent(props = {}) {
-  const {wrapper: MDXLayout} = {
-    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
-    ...props.components
-  };
-  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
-    ...props,
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
-      ...props
-    })
-  }) : _createMdxContent(props);
-}
-
-
-
-/***/ }),
-
-/***/ 5251:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   assets: () => (/* binding */ assets),
-/* harmony export */   contentTitle: () => (/* binding */ contentTitle),
-/* harmony export */   "default": () => (/* binding */ MDXContent),
-/* harmony export */   frontMatter: () => (/* binding */ frontMatter),
-/* harmony export */   metadata: () => (/* binding */ metadata),
-/* harmony export */   toc: () => (/* binding */ toc)
-/* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4848);
-/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8453);
-
-
-const frontMatter = {
-	sidebar_position: 5
-};
-const contentTitle = 'Thème';
-const metadata = {
-  "id": "zUI/theme",
-  "title": "Thème",
-  "description": "Le fichier theme.json vous permet de personnaliser l'apparence de zUI en ajustant divers paramètres du menu. Vous pouvez modifier la position, les couleurs, les styles et plus encore pour adapter l'interface à vos besoins spécifiques.",
-  "source": "@site/docs/zUI/theme.md",
-  "sourceDirName": "zUI",
-  "slug": "/zUI/theme",
-  "permalink": "/docs/zUI/theme",
-  "draft": false,
-  "unlisted": false,
-  "tags": [],
-  "version": "current",
-  "sidebarPosition": 5,
-  "frontMatter": {
-    "sidebar_position": 5
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "Checkbox",
-    "permalink": "/docs/zUI/Items/checkbox"
-  },
-  "next": {
-    "title": "Fonctions",
-    "permalink": "/docs/category/fonctions"
-  }
-};
-const assets = {
-
-};
-
-
-
-const toc = [{
-  "value": "Exemple de Fichier <code>theme.json</code>",
-  "id": "exemple-de-fichier-themejson",
-  "level": 2
-}, {
-  "value": "Paramètres du <code>theme.json</code>",
-  "id": "paramètres-du-themejson",
-  "level": 2
-}, {
-  "value": "Paramètres de Position",
-  "id": "paramètres-de-position",
-  "level": 3
-}, {
-  "value": "Paramètres de Couleur",
-  "id": "paramètres-de-couleur",
-  "level": 3
-}, {
-  "value": "Paramètres de Texte",
-  "id": "paramètres-de-texte",
-  "level": 3
-}, {
-  "value": "Indicateur de Touches",
-  "id": "indicateur-de-touches",
-  "level": 3
-}, {
-  "value": "Paramètres de Coins",
-  "id": "paramètres-de-coins",
-  "level": 3
-}, {
-  "value": "Paramètres de Perspective",
-  "id": "paramètres-de-perspective",
-  "level": 3
-}, {
-  "value": "Paramètres des Items",
-  "id": "paramètres-des-items",
-  "level": 3
-}, {
-  "value": "Exemple de <code>theme.json</code>",
-  "id": "exemple-de-themejson",
-  "level": 2
-}, {
-  "value": "Application du Thème",
-  "id": "application-du-thème",
-  "level": 3
-}, {
-  "value": "Résumé",
-  "id": "résumé",
-  "level": 2
-}, {
-  "value": "Information complémentaire",
-  "id": "information-complémentaire",
-  "level": 2
-}];
-function _createMdxContent(props) {
-  const _components = {
-    a: "a",
-    code: "code",
-    em: "em",
-    h1: "h1",
-    h2: "h2",
-    h3: "h3",
-    header: "header",
-    hr: "hr",
-    li: "li",
-    p: "p",
-    pre: "pre",
-    strong: "strong",
-    ul: "ul",
-    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
-    ...props.components
-  };
-  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.header, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h1, {
-        id: "thème",
-        children: "Thème"
+        src: (__webpack_require__(8031)/* ["default"] */ .A) + "",
+        width: "2160",
+        height: "1500"
       })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Le fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        children: "theme.json"
-      }), " vous permet de personnaliser l'apparence de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-        children: "zUI"
-      }), " en ajustant divers paramètres du menu. Vous pouvez modifier la position, les couleurs, les styles et plus encore pour adapter l'interface à vos besoins spécifiques."]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h2, {
-      id: "exemple-de-fichier-themejson",
-      children: ["Exemple de Fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        children: "theme.json"
-      })]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "Bien entendu ! Voici la section mise à jour avec les types de paramètres et les différentes possibilités pour chaque option :"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.hr, {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h1, {
-      id: "theme",
-      children: "Theme"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Le fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        children: "theme.json"
-      }), " vous permet de personnaliser l'apparence de la bibliothèque ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-        children: "zUI"
-      }), " en ajustant divers paramètres. Voici les options disponibles et leurs significations :"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h2, {
-      id: "paramètres-du-themejson",
-      children: ["Paramètres du ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        children: "theme.json"
-      })]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "paramètres-de-position",
-      children: "Paramètres de Position"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-          children: "position"
-        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
-          children: "[string]"
-        }), " : Détermine la position du menu sur l'écran.", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-              children: "\"left\""
-            }), " : Positionne le menu à gauche de l'écran."]
-          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-              children: "\"right\""
-            }), " : Positionne le menu à droite de l'écran."]
-          }), "\n"]
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "paramètres-de-couleur",
-      children: "Paramètres de Couleur"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-          children: "colors"
-        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
-          children: "[object]"
-        }), " : Définir les couleurs de fond et secondaires du menu.", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-              children: "background"
-            }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
-              children: "[string]"
-            }), " : Couleur de fond du menu. Utilisez une couleur."]
-          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-              children: "secondary"
-            }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
-              children: "[string]"
-            }), " : Couleur secondaire du menu. Utilisez une couleur."]
-          }), "\n"]
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "paramètres-de-texte",
-      children: "Paramètres de Texte"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-            children: "stringUpper"
-          }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
-            children: "[boolean]"
-          }), " : Active ou désactive les lettres majuscules dans le texte du menu."]
-        }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-              children: "true"
-            }), " : Texte en majuscules."]
-          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-              children: "false"
-            }), " : Texte en minuscules."]
-          }), "\n"]
-        }), "\n"]
-      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-            children: "counter"
-          }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
-            children: "[boolean]"
-          }), " : Affiche ou non un compteur d'items dans le menu."]
-        }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-              children: "true"
-            }), " : Affiche le compteur."]
-          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-              children: "false"
-            }), " : Ne pas afficher le compteur."]
-          }), "\n"]
-        }), "\n"]
-      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-            children: "banner"
-          }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
-            children: "[string]"
-          }), " : Couleur ou lien d'une image pour la bannière du menu."]
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "indicateur-de-touches",
-      children: "Indicateur de Touches"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-          children: "controlsIndicator"
-        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
-          children: "[boolean]"
-        }), " : Affiche ou non un indicateur de contrôle.", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-              children: "true"
-            }), " : Affiche l'indicateur."]
-          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-              children: "false"
-            }), " : Ne pas afficher l'indicateur."]
-          }), "\n"]
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "paramètres-de-coins",
-      children: "Paramètres de Coins"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-          children: "corners"
-        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
-          children: "[object]"
-        }), " : Paramètres pour les coins du menu.", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-              children: "rounded"
-            }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
-              children: "[boolean]"
-            }), " : Active ou désactive les coins arrondis.", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-              children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-                children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-                  children: "true"
-                }), " : Coins arrondis."]
-              }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-                children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-                  children: "false"
-                }), " : Coins non arrondis."]
-              }), "\n"]
-            }), "\n"]
-          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-              children: "radius"
-            }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
-              children: "[string]"
-            }), " : Définit le rayon des coins arrondis. Valeur entre ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-              children: "0"
-            }), " et ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-              children: "100"
-            }), " (petite valeur conseillé)."]
-          }), "\n"]
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "paramètres-de-perspective",
-      children: "Paramètres de Perspective"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-          children: "perspective"
-        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
-          children: "[boolean]"
-        }), " : Active ou désactive l'effet de perspective 3D.", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-              children: "true"
-            }), " : Activer la perspective 3D."]
-          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-              children: "false"
-            }), " : Désactiver la perspective 3D."]
-          }), "\n"]
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "paramètres-des-items",
-      children: "Paramètres des Items"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-          children: "items"
-        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
-          children: "[object]"
-        }), " : Paramètres spécifiques aux items du menu.", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-              children: "defaultColor"
-            }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
-              children: "[string]"
-            }), " : Couleur par défaut des items. Utilisez une couleur en format hexadécimal."]
-          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-              children: "hoverStyle"
-            }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
-              children: "[string]"
-            }), " : Style d'affichage des items lorsqu'ils sont survolés.", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-              children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-                children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-                  children: "\"complete\""
-                }), " : Style complet."]
-              }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-                children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-                  children: "\"rod\""
-                }), " : Style en barre."]
-              }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-                children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-                  children: "\"neon\""
-                }), " : Style néon."]
-              }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-                children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-                  children: "\"lien\""
-                }), " : Lien vers une image."]
-              }), "\n"]
-            }), "\n"]
-          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-              children: "line"
-            }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
-              children: "[object]"
-            }), " : Paramètres pour les lignes dans le menu.", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-              children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-                children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-                  children: "rounded"
-                }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
-                  children: "[boolean]"
-                }), " : Active ou désactive l'arrondi des lignes.", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-                  children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-                    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-                      children: "true"
-                    }), " : Lignes arrondies."]
-                  }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-                    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-                      children: "false"
-                    }), " : Lignes non arrondies."]
-                  }), "\n"]
-                }), "\n"]
-              }), "\n"]
-            }), "\n"]
-          }), "\n"]
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h2, {
-      id: "exemple-de-themejson",
-      children: ["Exemple de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        children: "theme.json"
-      })]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Voici un exemple complet de fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        children: "theme.json"
-      }), " :"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        className: "language-json",
-        children: "{\r\n  \"position\": \"left\",\r\n  \"colors\": {\r\n    \"background\": \"rgba(18, 18, 18, 0.5)\",\r\n    \"secondary\": \"#121212\"\r\n  },\r\n  \"stringUpper\": false,\r\n  \"counter\": true,\r\n  \"banner\": \"#faad2c\",\r\n  \"controlsIndicator\": true,\r\n  \"corners\": {\r\n    \"rounded\": true,\r\n    \"radius\": \"0.5\"\r\n  },\r\n  \"perspective\": true,\r\n  \"items\": {\r\n    \"defaultColor\": \"#faad2c\",\r\n    \"hoverStyle\": \"neon\",\r\n    \"line\": {\r\n      \"rounded\": true\r\n    }\r\n  }\r\n}\n"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Ce fichier vous permet de personnaliser l'apparence de vos menus ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-        children: "zUI"
-      }), " selon vos préférences."]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.hr, {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "application-du-thème",
-      children: "Application du Thème"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Pour appliquer ces paramètres, placez votre fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        children: "theme.json"
-      }), " dans le répertoire approprié de votre projet ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-        children: "zUI"
-      }), ". Les changements seront reflétés immédiatement dans l'interface utilisateur du menu."]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "résumé",
-      children: "Résumé"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Le fichier ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        children: "theme.json"
-      }), " vous permet de personnaliser l'apparence de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-        children: "zUI"
-      }), " en ajustant des éléments clés comme la couleur, la position, et les styles. Utilisez-le pour créer une interface qui correspond parfaitement à vos préférences visuelles et fonctionnelles."]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "information-complémentaire",
-      children: "Information complémentaire"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Désormais, vous pouvez ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-        children: "partager votre thème personnalisé"
-      }), " dans le salon dédié sur notre ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
-        href: "https://discord.gg/zproject",
-        children: "Serveur Discord Support"
-      }), ", permettant ainsi à d'autres utilisateurs de l'adopter. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-        children: "Devenez créateur de thème et gagnez l'appréciation de la communauté"
-      }), " !"]
-    })]
-  });
-}
-function MDXContent(props = {}) {
-  const {wrapper: MDXLayout} = {
-    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
-    ...props.components
-  };
-  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
-    ...props,
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
-      ...props
-    })
-  }) : _createMdxContent(props);
-}
-
-
-
-/***/ }),
-
-/***/ 1427:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   assets: () => (/* binding */ assets),
-/* harmony export */   contentTitle: () => (/* binding */ contentTitle),
-/* harmony export */   "default": () => (/* binding */ MDXContent),
-/* harmony export */   frontMatter: () => (/* binding */ frontMatter),
-/* harmony export */   metadata: () => (/* binding */ metadata),
-/* harmony export */   toc: () => (/* binding */ toc)
-/* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4848);
-/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8453);
-
-
-const frontMatter = {
-	sidebar_position: 3
-};
-const contentTitle = 'Utilisation';
-const metadata = {
-  "id": "zUI/utilisation",
-  "title": "Utilisation",
-  "description": "Dans cette section, nous allons explorer comment utiliser zUI pour créer et gérer des menus NUI dans FiveM. Vous apprendrez à créer des menus et des sous-menus, à ajouter des éléments, et à gérer leur visibilité.",
-  "source": "@site/docs/zUI/utilisation.md",
-  "sourceDirName": "zUI",
-  "slug": "/zUI/utilisation",
-  "permalink": "/docs/zUI/utilisation",
-  "draft": false,
-  "unlisted": false,
-  "tags": [],
-  "version": "current",
-  "sidebarPosition": 3,
-  "frontMatter": {
-    "sidebar_position": 3
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "Installation",
-    "permalink": "/docs/zUI/installation"
-  },
-  "next": {
-    "title": "Items",
-    "permalink": "/docs/category/items"
-  }
-};
-const assets = {
-
-};
-
-
-
-const toc = [{
-  "value": "Création d&#39;un Menu",
-  "id": "création-dun-menu",
-  "level": 2
-}, {
-  "value": "Paramètres",
-  "id": "paramètres",
-  "level": 3
-}, {
-  "value": "Exemple",
-  "id": "exemple",
-  "level": 4
-}, {
-  "value": "Création d&#39;un Sous-Menu",
-  "id": "création-dun-sous-menu",
-  "level": 2
-}, {
-  "value": "Paramètres",
-  "id": "paramètres-1",
-  "level": 3
-}, {
-  "value": "Exemple",
-  "id": "exemple-1",
-  "level": 4
-}, {
-  "value": "Ajout d&#39;Items au Menu",
-  "id": "ajout-ditems-au-menu",
-  "level": 2
-}, {
-  "value": "Types d&#39;Items",
-  "id": "types-ditems",
-  "level": 3
-}, {
-  "value": "Gestion de la Visibilité du Menu",
-  "id": "gestion-de-la-visibilité-du-menu",
-  "level": 2
-}];
-function _createMdxContent(props) {
-  const _components = {
-    code: "code",
-    em: "em",
-    h1: "h1",
-    h2: "h2",
-    h3: "h3",
-    h4: "h4",
-    header: "header",
-    hr: "hr",
-    li: "li",
-    p: "p",
-    pre: "pre",
-    strong: "strong",
-    ul: "ul",
-    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
-    ...props.components
-  };
-  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.header, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h1, {
-        id: "utilisation",
-        children: "Utilisation"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Dans cette section, nous allons explorer comment utiliser ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-        children: "zUI"
-      }), " pour créer et gérer des menus NUI dans ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-        children: "FiveM"
-      }), ". Vous apprendrez à créer des menus et des sous-menus, à ajouter des éléments, et à gérer leur visibilité."]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "création-dun-menu",
-      children: "Création d'un Menu"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Pour créer un menu avec ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-        children: "zUI"
-      }), ", utilisez la fonction ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        children: "zUI.CreateMenu"
-      }), ". Voici la syntaxe générale :"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        className: "language-lua",
-        children: "local Menu = zUI.CreateMenu(Title, Subtitle, Banner, Key, Description)\n"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "paramètres",
-      children: "Paramètres"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-          children: "Title"
-        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
-          children: "[string]"
-        }), " : (Optionnel) Le titre du menu qui s'affiche en haut."]
-      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-          children: "Subtitle"
-        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
-          children: "[string]"
-        }), " : (Optionnel) Le sous-titre du menu, affiché juste en dessous du titre."]
-      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-          children: "Banner"
-        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
-          children: "[string]"
-        }), " : (Optionnel) Une URL vers une image qui sera utilisée comme bannière en haut du menu."]
-      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-          children: "Key"
-        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
-          children: "[string]"
-        }), " : (Optionnel) La touche qui, si définie, permettra d'ouvrir le menu."]
-      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-          children: "Description"
-        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
-          children: "[string]"
-        }), " : (Optionnel) Une description textuelle du menu qui peut être affichée à des fins d'information."]
-      }), "\n"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h4, {
-      id: "exemple",
-      children: "Exemple"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        className: "language-lua",
-        children: "local Menu = zUI.CreateMenu(\"Mon Menu\", \"Sous-Titre\", \"https://example.com/banner.png\", \"F1\", \"Description de mon menu\")\n"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "création-dun-sous-menu",
-      children: "Création d'un Sous-Menu"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Pour créer un sous-menu, utilisez la fonction ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        children: "zUI.CreateSubMenu"
-      }), ". Voici la syntaxe :"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        className: "language-lua",
-        children: "local SubMenu = zUI.CreateSubMenu(Parent, Title, Subtitle, Banner)\n"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "paramètres-1",
-      children: "Paramètres"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-          children: "Parent"
-        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
-          children: "[zUI Instance]"
-        }), " : Le menu principal auquel ce sous-menu sera rattaché."]
-      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-          children: "Title"
-        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
-          children: "[string]"
-        }), " : (Optionnel) Le titre du sous-menu."]
-      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-          children: "Subtitle"
-        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
-          children: "[string]"
-        }), " : (Optionnel) Le sous-titre du sous-menu."]
-      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-          children: "Banner"
-        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
-          children: "[string]"
-        }), " : (Optionnel) Une URL vers une image pour la bannière du sous-menu."]
-      }), "\n"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h4, {
-      id: "exemple-1",
-      children: "Exemple"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        className: "language-lua",
-        children: "local SubMenu = zUI.CreateSubMenu(Menu, \"Mon Sous-Menu\", \"Sous-Titre\", \"https://example.com/submenu_banner.png\")\n"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "ajout-ditems-au-menu",
-      children: "Ajout d'Items au Menu"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Pour ajouter des éléments à votre menu, utilisez la méthode ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        children: "SetItems"
-      }), ". Vous devez définir une fonction qui spécifie les éléments à ajouter au menu. Voici comment vous pouvez le faire :"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        className: "language-lua",
-        children: "Menu:SetItems(function(Items)\r\n    Items:AddSeparator(\"Voici comment ajouter un item :)\")\r\nend)\n"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "types-ditems",
-      children: "Types d'Items"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-          children: "Séparateur"
-        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-          children: "AddSeparator"
-        }), " : Ajoute un séparateur visuel."]
-      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-          children: "Ligne"
-        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-          children: "AddLine"
-        }), " : Ajoute une ligne colorée."]
-      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-          children: "Bouton"
-        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-          children: "AddButton"
-        }), " : Ajoute un bouton cliquable."]
-      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-          children: "Bouton Lien"
-        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-          children: "AddLinkButton"
-        }), " : Ajoute un bouton qui redirige vers un certain lien."]
-      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-          children: "Checkbox"
-        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-          children: "AddCheckbox"
-        }), " : Ajoute une checkbox que l'utilisateur peut cocher ou décocher."]
-      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-          children: "Liste"
-        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-          children: "AddList"
-        }), " : Ajoute une liste déroulante avec des options."]
-      }), "\n"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "gestion-de-la-visibilité-du-menu",
-      children: "Gestion de la Visibilité du Menu"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Si vous avez défini une touche (", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        children: "Key"
-      }), ") lors de la création du menu, vous pouvez simplement appuyer sur cette touche pour ouvrir ou fermer le menu."]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "Si vous n'avez pas défini de touche, vous pouvez contrôler la visibilité du menu en utilisant la méthode suivante :"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        className: "language-lua",
-        children: "Menu:SetVisible(not Menu:IsVisible())\n"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "Cette commande permet d'inverser l'état actuel de visibilité du menu : si le menu est ouvert, il sera fermé, et inversement."
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.hr, {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Avec ces informations, vous êtes maintenant prêt à créer et gérer des menus interactifs dans ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-        children: "FiveM"
-      }), " en utilisant ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-        children: "zUI"
-      }), ". N'hésitez pas à explorer toutes les fonctionnalités offertes pour personnaliser vos menus selon vos besoins."]
     })]
   });
 }
@@ -10560,9 +13123,9 @@ var interopRequireWildcard = __webpack_require__(9309);
 var lib = __webpack_require__(3259);
 var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
 ;// CONCATENATED MODULE: ./.docusaurus/routesChunkNames.json
-const routesChunkNames_namespaceObject = /*#__PURE__*/JSON.parse('{"/markdown-page-3d7":{"__comp":"1f391b9e","__context":{"plugin":"a7456010"},"content":"393be207"},"/search-822":{"__comp":"1a4e3797","__context":{"plugin":"138e0e15"}},"/tools-4ef":{"__comp":"4471e4eb","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"},"/docs-fdf":{"__comp":"5e95c892","__context":{"plugin":"aba21aa0"}},"/docs-eca":{"__comp":"a7bd4aaa","__props":"0058b4c6"},"/docs-c3e":{"__comp":"a94703ab"},"/docs/category/fonctions-7b5":{"__comp":"14eb3368","__props":"77edc38e"},"/docs/category/items-2c4":{"__comp":"14eb3368","__props":"f517399b"},"/docs/category/méthodes-d08":{"__comp":"14eb3368","__props":"86f8f604"},"/docs/category/zui-6ef":{"__comp":"14eb3368","__props":"20ddddd6"},"/docs/intro-61d":{"__comp":"17896441","content":"0e384e19"},"/docs/zSleep/instal-cdf":{"__comp":"17896441","content":"c416a5cb"},"/docs/zSleep/intro-edb":{"__comp":"17896441","content":"72b1f434"},"/docs/zUI/Fonctions/alertInput-b90":{"__comp":"17896441","content":"0c2eb47b"},"/docs/zUI/Fonctions/keyboardInput-d89":{"__comp":"17896441","content":"a03d2c35"},"/docs/zUI/Fonctions/renderSprite-d9d":{"__comp":"17896441","content":"5e283e32"},"/docs/zUI/Fonctions/showHelpNotification-303":{"__comp":"17896441","content":"a7e2b75e"},"/docs/zUI/installation-d42":{"__comp":"17896441","content":"6245e738"},"/docs/zUI/Items/button-1c7":{"__comp":"17896441","content":"48947c21"},"/docs/zUI/Items/checkbox-89f":{"__comp":"17896441","content":"d08fa093"},"/docs/zUI/Items/features-bfe":{"__comp":"17896441","content":"577f092c"},"/docs/zUI/Items/line-954":{"__comp":"17896441","content":"521c893a"},"/docs/zUI/Items/linkButton-c43":{"__comp":"17896441","content":"7c93d25a"},"/docs/zUI/Items/list-5ba":{"__comp":"17896441","content":"8df8a293"},"/docs/zUI/Items/separator-8e4":{"__comp":"17896441","content":"1b16c826"},"/docs/zUI/Methods/goBack-dc7":{"__comp":"17896441","content":"9b784c70"},"/docs/zUI/Methods/goTo-6a3":{"__comp":"17896441","content":"b821d7d8"},"/docs/zUI/Methods/isVisible-2c1":{"__comp":"17896441","content":"7df3f12d"},"/docs/zUI/Methods/onClose-ee1":{"__comp":"17896441","content":"14db5828"},"/docs/zUI/Methods/onOpen-e2e":{"__comp":"17896441","content":"93110188"},"/docs/zUI/Methods/setItems-f2b":{"__comp":"17896441","content":"7e6e0e0e"},"/docs/zUI/Methods/setVisible-036":{"__comp":"17896441","content":"d901ba3d"},"/docs/zUI/presentation-21e":{"__comp":"17896441","content":"f127a06f"},"/docs/zUI/theme-673":{"__comp":"17896441","content":"4ad557b0"},"/docs/zUI/utilisation-870":{"__comp":"17896441","content":"8d7384cd"},"/-e5f":{"__comp":"1df93b7f","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"}}');
+const routesChunkNames_namespaceObject = /*#__PURE__*/JSON.parse('{"/markdown-page-3d7":{"__comp":"1f391b9e","__context":{"plugin":"a7456010"},"content":"393be207"},"/search-822":{"__comp":"1a4e3797","__context":{"plugin":"138e0e15"}},"/tools-4ef":{"__comp":"4471e4eb","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"},"/docs-651":{"__comp":"5e95c892","__context":{"plugin":"aba21aa0"}},"/docs-72a":{"__comp":"a7bd4aaa","__props":"0058b4c6"},"/docs-467":{"__comp":"a94703ab"},"/docs/category/fonctions-7b5":{"__comp":"14eb3368","__props":"77edc38e"},"/docs/category/items-2c4":{"__comp":"14eb3368","__props":"f517399b"},"/docs/category/méthodes-d08":{"__comp":"14eb3368","__props":"86f8f604"},"/docs/category/notifications-ba9":{"__comp":"14eb3368","__props":"d0fbaa5c"},"/docs/category/thèmes-365":{"__comp":"14eb3368","__props":"24c962a7"},"/docs/category/zui-6ef":{"__comp":"14eb3368","__props":"20ddddd6"},"/docs/intro-61d":{"__comp":"17896441","content":"0e384e19"},"/docs/zSleep/instal-cdf":{"__comp":"17896441","content":"c416a5cb"},"/docs/zSleep/intro-edb":{"__comp":"17896441","content":"72b1f434"},"/docs/zUI/ContextUI-185":{"__comp":"17896441","content":"f95060f9"},"/docs/zUI/Fonctions/alertInput-b90":{"__comp":"17896441","content":"0c2eb47b"},"/docs/zUI/Fonctions/keyboardInput-d89":{"__comp":"17896441","content":"a03d2c35"},"/docs/zUI/Fonctions/renderSprite-d9d":{"__comp":"17896441","content":"5e283e32"},"/docs/zUI/Fonctions/showHelpNotification-303":{"__comp":"17896441","content":"a7e2b75e"},"/docs/zUI/installation-d42":{"__comp":"17896441","content":"6245e738"},"/docs/zUI/Items/button-1c7":{"__comp":"17896441","content":"48947c21"},"/docs/zUI/Items/checkbox-89f":{"__comp":"17896441","content":"d08fa093"},"/docs/zUI/Items/features-bfe":{"__comp":"17896441","content":"577f092c"},"/docs/zUI/Items/line-954":{"__comp":"17896441","content":"521c893a"},"/docs/zUI/Items/linkButton-c43":{"__comp":"17896441","content":"7c93d25a"},"/docs/zUI/Items/list-5ba":{"__comp":"17896441","content":"8df8a293"},"/docs/zUI/Items/separator-8e4":{"__comp":"17896441","content":"1b16c826"},"/docs/zUI/menu-7f0":{"__comp":"17896441","content":"bf310a1f"},"/docs/zUI/Methods/goBack-dc7":{"__comp":"17896441","content":"9b784c70"},"/docs/zUI/Methods/goTo-6a3":{"__comp":"17896441","content":"b821d7d8"},"/docs/zUI/Methods/isVisible-2c1":{"__comp":"17896441","content":"7df3f12d"},"/docs/zUI/Methods/onClose-ee1":{"__comp":"17896441","content":"14db5828"},"/docs/zUI/Methods/onOpen-e2e":{"__comp":"17896441","content":"93110188"},"/docs/zUI/Methods/setItems-f2b":{"__comp":"17896441","content":"7e6e0e0e"},"/docs/zUI/Methods/setVisible-036":{"__comp":"17896441","content":"d901ba3d"},"/docs/zUI/modal-8f0":{"__comp":"17896441","content":"4935dcfb"},"/docs/zUI/Notifications/helpNotif-28f":{"__comp":"17896441","content":"ad3a5a65"},"/docs/zUI/Notifications/notif-933":{"__comp":"17896441","content":"8b2e78d0"},"/docs/zUI/Notifications/pulsing-115":{"__comp":"17896441","content":"768626e0"},"/docs/zUI/presentation-21e":{"__comp":"17896441","content":"f127a06f"},"/docs/zUI/Themes/context-955":{"__comp":"17896441","content":"5cd445a3"},"/docs/zUI/Themes/introduction-b67":{"__comp":"17896441","content":"b96eb3b0"},"/docs/zUI/Themes/menu-02b":{"__comp":"17896441","content":"30592cf8"},"/docs/zUI/Themes/modal-817":{"__comp":"17896441","content":"658c47c5"},"/docs/zUI/Themes/notifs-cec":{"__comp":"17896441","content":"c206b3bb"},"/-e5f":{"__comp":"1df93b7f","__context":{"plugin":"a7456010"},"config":"5e9f5e1a"}}');
 ;// CONCATENATED MODULE: ./.docusaurus/registry.js
-/* harmony default export */ const registry = ({"0058b4c6":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(6164))),"@generated/docusaurus-plugin-content-docs/default/p/docs-175.json",/*require.resolve*/(6164)],"0c2eb47b":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7606))),"@site/docs/zUI/Fonctions/alertInput.md",/*require.resolve*/(7606)],"0e384e19":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(619))),"@site/docs/intro.md",/*require.resolve*/(619)],"138e0e15":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(1597))),"@generated/@easyops-cn/docusaurus-search-local/default/__plugin.json",/*require.resolve*/(1597)],"14db5828":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4232))),"@site/docs/zUI/Methods/onClose.md",/*require.resolve*/(4232)],"14eb3368":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8367))),"@theme/DocCategoryGeneratedIndexPage",/*require.resolve*/(8367)],"17896441":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8950))),"@theme/DocItem",/*require.resolve*/(8950)],"1a4e3797":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4809))),"@theme/SearchPage",/*require.resolve*/(4809)],"1b16c826":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(5690))),"@site/docs/zUI/Items/separator.md",/*require.resolve*/(5690)],"1df93b7f":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7988))),"@site/src/pages/index.tsx",/*require.resolve*/(7988)],"1f391b9e":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4250))),"@theme/MDXPage",/*require.resolve*/(4250)],"20ddddd6":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(6783))),"@generated/docusaurus-plugin-content-docs/default/p/docs-category-zui-6d4.json",/*require.resolve*/(6783)],"393be207":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(633))),"@site/src/pages/markdown-page.md",/*require.resolve*/(633)],"4471e4eb":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(2032))),"@site/src/pages/tools.tsx",/*require.resolve*/(2032)],"48947c21":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4721))),"@site/docs/zUI/Items/button.md",/*require.resolve*/(4721)],"4ad557b0":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(5251))),"@site/docs/zUI/theme.md",/*require.resolve*/(5251)],"521c893a":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8747))),"@site/docs/zUI/Items/line.md",/*require.resolve*/(8747)],"577f092c":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(2226))),"@site/docs/zUI/Items/features.md",/*require.resolve*/(2226)],"5e283e32":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9133))),"@site/docs/zUI/Fonctions/renderSprite.md",/*require.resolve*/(9133)],"5e95c892":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7121))),"@theme/DocsRoot",/*require.resolve*/(7121)],"5e9f5e1a":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4784))),"@generated/docusaurus.config",/*require.resolve*/(4784)],"6245e738":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(6740))),"@site/docs/zUI/installation.md",/*require.resolve*/(6740)],"72b1f434":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9681))),"@site/docs/zSleep/intro.md",/*require.resolve*/(9681)],"77edc38e":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(553))),"@generated/docusaurus-plugin-content-docs/default/p/docs-category-fonctions-5b6.json",/*require.resolve*/(553)],"7c93d25a":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7201))),"@site/docs/zUI/Items/linkButton.md",/*require.resolve*/(7201)],"7df3f12d":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(5077))),"@site/docs/zUI/Methods/isVisible.md",/*require.resolve*/(5077)],"7e6e0e0e":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4951))),"@site/docs/zUI/Methods/setItems.md",/*require.resolve*/(4951)],"86f8f604":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9599))),"@generated/docusaurus-plugin-content-docs/default/p/docs-category-methodes-d96.json",/*require.resolve*/(9599)],"8d7384cd":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(1427))),"@site/docs/zUI/utilisation.md",/*require.resolve*/(1427)],"8df8a293":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8533))),"@site/docs/zUI/Items/list.md",/*require.resolve*/(8533)],"93110188":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8002))),"@site/docs/zUI/Methods/onOpen.md",/*require.resolve*/(8002)],"9b784c70":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(3526))),"@site/docs/zUI/Methods/goBack.md",/*require.resolve*/(3526)],"a03d2c35":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7977))),"@site/docs/zUI/Fonctions/keyboardInput.md",/*require.resolve*/(7977)],"a7456010":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8552))),"@generated/docusaurus-plugin-content-pages/default/__plugin.json",/*require.resolve*/(8552)],"a7bd4aaa":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4532))),"@theme/DocVersionRoot",/*require.resolve*/(4532)],"a7e2b75e":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7073))),"@site/docs/zUI/Fonctions/showHelpNotification.md",/*require.resolve*/(7073)],"a94703ab":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8319))),"@theme/DocRoot",/*require.resolve*/(8319)],"aba21aa0":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7093))),"@generated/docusaurus-plugin-content-docs/default/__plugin.json",/*require.resolve*/(7093)],"b821d7d8":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(1056))),"@site/docs/zUI/Methods/goTo.md",/*require.resolve*/(1056)],"c416a5cb":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(2290))),"@site/docs/zSleep/instal.md",/*require.resolve*/(2290)],"d08fa093":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(3464))),"@site/docs/zUI/Items/checkbox.md",/*require.resolve*/(3464)],"d901ba3d":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(2369))),"@site/docs/zUI/Methods/setVisible.md",/*require.resolve*/(2369)],"f127a06f":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(424))),"@site/docs/zUI/presentation.md",/*require.resolve*/(424)],"f517399b":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8936))),"@generated/docusaurus-plugin-content-docs/default/p/docs-category-items-9db.json",/*require.resolve*/(8936)]});
+/* harmony default export */ const registry = ({"0058b4c6":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(6164))),"@generated/docusaurus-plugin-content-docs/default/p/docs-175.json",/*require.resolve*/(6164)],"0c2eb47b":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7606))),"@site/docs/zUI/Fonctions/alertInput.md",/*require.resolve*/(7606)],"0e384e19":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(619))),"@site/docs/intro.md",/*require.resolve*/(619)],"138e0e15":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(1597))),"@generated/@easyops-cn/docusaurus-search-local/default/__plugin.json",/*require.resolve*/(1597)],"14db5828":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4232))),"@site/docs/zUI/Methods/onClose.md",/*require.resolve*/(4232)],"14eb3368":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8367))),"@theme/DocCategoryGeneratedIndexPage",/*require.resolve*/(8367)],"17896441":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8950))),"@theme/DocItem",/*require.resolve*/(8950)],"1a4e3797":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4809))),"@theme/SearchPage",/*require.resolve*/(4809)],"1b16c826":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(5690))),"@site/docs/zUI/Items/separator.md",/*require.resolve*/(5690)],"1df93b7f":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7988))),"@site/src/pages/index.tsx",/*require.resolve*/(7988)],"1f391b9e":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4250))),"@theme/MDXPage",/*require.resolve*/(4250)],"20ddddd6":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(6783))),"@generated/docusaurus-plugin-content-docs/default/p/docs-category-zui-6d4.json",/*require.resolve*/(6783)],"24c962a7":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9075))),"@generated/docusaurus-plugin-content-docs/default/p/docs-category-themes-65a.json",/*require.resolve*/(9075)],"30592cf8":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4358))),"@site/docs/zUI/Themes/menu.md",/*require.resolve*/(4358)],"393be207":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(633))),"@site/src/pages/markdown-page.md",/*require.resolve*/(633)],"4471e4eb":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9155))),"@site/src/pages/tools.tsx",/*require.resolve*/(9155)],"48947c21":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4721))),"@site/docs/zUI/Items/button.md",/*require.resolve*/(4721)],"4935dcfb":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(3060))),"@site/docs/zUI/modal.md",/*require.resolve*/(3060)],"521c893a":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8747))),"@site/docs/zUI/Items/line.md",/*require.resolve*/(8747)],"577f092c":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(2226))),"@site/docs/zUI/Items/features.md",/*require.resolve*/(2226)],"5cd445a3":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(3082))),"@site/docs/zUI/Themes/context.md",/*require.resolve*/(3082)],"5e283e32":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9133))),"@site/docs/zUI/Fonctions/renderSprite.md",/*require.resolve*/(9133)],"5e95c892":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7121))),"@theme/DocsRoot",/*require.resolve*/(7121)],"5e9f5e1a":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4784))),"@generated/docusaurus.config",/*require.resolve*/(4784)],"6245e738":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(6740))),"@site/docs/zUI/installation.md",/*require.resolve*/(6740)],"658c47c5":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9820))),"@site/docs/zUI/Themes/modal.md",/*require.resolve*/(9820)],"72b1f434":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9681))),"@site/docs/zSleep/intro.md",/*require.resolve*/(9681)],"768626e0":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(2611))),"@site/docs/zUI/Notifications/pulsing.md",/*require.resolve*/(2611)],"77edc38e":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(553))),"@generated/docusaurus-plugin-content-docs/default/p/docs-category-fonctions-5b6.json",/*require.resolve*/(553)],"7c93d25a":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7201))),"@site/docs/zUI/Items/linkButton.md",/*require.resolve*/(7201)],"7df3f12d":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(5077))),"@site/docs/zUI/Methods/isVisible.md",/*require.resolve*/(5077)],"7e6e0e0e":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4951))),"@site/docs/zUI/Methods/setItems.md",/*require.resolve*/(4951)],"86f8f604":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9599))),"@generated/docusaurus-plugin-content-docs/default/p/docs-category-methodes-d96.json",/*require.resolve*/(9599)],"8b2e78d0":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(907))),"@site/docs/zUI/Notifications/notif.md",/*require.resolve*/(907)],"8df8a293":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8533))),"@site/docs/zUI/Items/list.md",/*require.resolve*/(8533)],"93110188":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8002))),"@site/docs/zUI/Methods/onOpen.md",/*require.resolve*/(8002)],"9b784c70":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(3526))),"@site/docs/zUI/Methods/goBack.md",/*require.resolve*/(3526)],"a03d2c35":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7977))),"@site/docs/zUI/Fonctions/keyboardInput.md",/*require.resolve*/(7977)],"a7456010":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8552))),"@generated/docusaurus-plugin-content-pages/default/__plugin.json",/*require.resolve*/(8552)],"a7bd4aaa":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4532))),"@theme/DocVersionRoot",/*require.resolve*/(4532)],"a7e2b75e":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7073))),"@site/docs/zUI/Fonctions/showHelpNotification.md",/*require.resolve*/(7073)],"a94703ab":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8319))),"@theme/DocRoot",/*require.resolve*/(8319)],"aba21aa0":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(7093))),"@generated/docusaurus-plugin-content-docs/default/__plugin.json",/*require.resolve*/(7093)],"ad3a5a65":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9158))),"@site/docs/zUI/Notifications/helpNotif.md",/*require.resolve*/(9158)],"b821d7d8":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(1056))),"@site/docs/zUI/Methods/goTo.md",/*require.resolve*/(1056)],"b96eb3b0":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(5229))),"@site/docs/zUI/Themes/introduction.md",/*require.resolve*/(5229)],"bf310a1f":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(6627))),"@site/docs/zUI/menu.md",/*require.resolve*/(6627)],"c206b3bb":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(4850))),"@site/docs/zUI/Themes/notifs.md",/*require.resolve*/(4850)],"c416a5cb":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(2290))),"@site/docs/zSleep/instal.md",/*require.resolve*/(2290)],"d08fa093":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(3464))),"@site/docs/zUI/Items/checkbox.md",/*require.resolve*/(3464)],"d0fbaa5c":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(2516))),"@generated/docusaurus-plugin-content-docs/default/p/docs-category-notifications-740.json",/*require.resolve*/(2516)],"d901ba3d":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(2369))),"@site/docs/zUI/Methods/setVisible.md",/*require.resolve*/(2369)],"f127a06f":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(424))),"@site/docs/zUI/presentation.md",/*require.resolve*/(424)],"f517399b":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(8936))),"@generated/docusaurus-plugin-content-docs/default/p/docs-category-items-9db.json",/*require.resolve*/(8936)],"f95060f9":[()=>Promise.resolve().then(()=>(0,interopRequireWildcard/* default */.A)(__webpack_require__(9743))),"@site/docs/zUI/ContextUI.md",/*require.resolve*/(9743)]});
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(4848);
 ;// CONCATENATED MODULE: ./node_modules/@docusaurus/core/lib/client/theme-fallback/Loading/index.js
@@ -10626,7 +13189,7 @@ if(typeof chunk==='object'||typeof chunk==='function'){Object.keys(loadedModule)
 let val=loadedModules;const keyPaths=keyPath.split('.');keyPaths.slice(0,-1).forEach(k=>{val=val[k];});val[keyPaths[keyPaths.length-1]]=chunk;});/* eslint-disable no-underscore-dangle */const Component=loadedModules.__comp;delete loadedModules.__comp;const routeContext=loadedModules.__context;delete loadedModules.__context;const routeProps=loadedModules.__props;delete loadedModules.__props;/* eslint-enable no-underscore-dangle */// Is there any way to put this RouteContextProvider upper in the tree?
 return/*#__PURE__*/(0,jsx_runtime.jsx)(client_routeContext/* RouteContextProvider */.W,{value:routeContext,children:/*#__PURE__*/(0,jsx_runtime.jsx)(Component,{...loadedModules,...routeProps,...props})});}});}
 ;// CONCATENATED MODULE: ./.docusaurus/routes.js
-/* harmony default export */ const routes = ([{path:'/markdown-page',component:ComponentCreator('/markdown-page','3d7'),exact:true},{path:'/search',component:ComponentCreator('/search','822'),exact:true},{path:'/tools',component:ComponentCreator('/tools','4ef'),exact:true},{path:'/docs',component:ComponentCreator('/docs','fdf'),routes:[{path:'/docs',component:ComponentCreator('/docs','eca'),routes:[{path:'/docs',component:ComponentCreator('/docs','c3e'),routes:[{path:'/docs/category/fonctions',component:ComponentCreator('/docs/category/fonctions','7b5'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/category/items',component:ComponentCreator('/docs/category/items','2c4'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/category/méthodes',component:ComponentCreator('/docs/category/méthodes','d08'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/category/zui',component:ComponentCreator('/docs/category/zui','6ef'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/intro',component:ComponentCreator('/docs/intro','61d'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zSleep/instal',component:ComponentCreator('/docs/zSleep/instal','cdf'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zSleep/intro',component:ComponentCreator('/docs/zSleep/intro','edb'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Fonctions/alertInput',component:ComponentCreator('/docs/zUI/Fonctions/alertInput','b90'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Fonctions/keyboardInput',component:ComponentCreator('/docs/zUI/Fonctions/keyboardInput','d89'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Fonctions/renderSprite',component:ComponentCreator('/docs/zUI/Fonctions/renderSprite','d9d'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Fonctions/showHelpNotification',component:ComponentCreator('/docs/zUI/Fonctions/showHelpNotification','303'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/installation',component:ComponentCreator('/docs/zUI/installation','d42'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/button',component:ComponentCreator('/docs/zUI/Items/button','1c7'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/checkbox',component:ComponentCreator('/docs/zUI/Items/checkbox','89f'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/features',component:ComponentCreator('/docs/zUI/Items/features','bfe'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/line',component:ComponentCreator('/docs/zUI/Items/line','954'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/linkButton',component:ComponentCreator('/docs/zUI/Items/linkButton','c43'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/list',component:ComponentCreator('/docs/zUI/Items/list','5ba'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/separator',component:ComponentCreator('/docs/zUI/Items/separator','8e4'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/goBack',component:ComponentCreator('/docs/zUI/Methods/goBack','dc7'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/goTo',component:ComponentCreator('/docs/zUI/Methods/goTo','6a3'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/isVisible',component:ComponentCreator('/docs/zUI/Methods/isVisible','2c1'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/onClose',component:ComponentCreator('/docs/zUI/Methods/onClose','ee1'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/onOpen',component:ComponentCreator('/docs/zUI/Methods/onOpen','e2e'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/setItems',component:ComponentCreator('/docs/zUI/Methods/setItems','f2b'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/setVisible',component:ComponentCreator('/docs/zUI/Methods/setVisible','036'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/presentation',component:ComponentCreator('/docs/zUI/presentation','21e'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/theme',component:ComponentCreator('/docs/zUI/theme','673'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/utilisation',component:ComponentCreator('/docs/zUI/utilisation','870'),exact:true,sidebar:"tutorialSidebar"}]}]}]},{path:'/',component:ComponentCreator('/','e5f'),exact:true},{path:'*',component:ComponentCreator('*')}]);
+/* harmony default export */ const routes = ([{path:'/markdown-page',component:ComponentCreator('/markdown-page','3d7'),exact:true},{path:'/search',component:ComponentCreator('/search','822'),exact:true},{path:'/tools',component:ComponentCreator('/tools','4ef'),exact:true},{path:'/docs',component:ComponentCreator('/docs','651'),routes:[{path:'/docs',component:ComponentCreator('/docs','72a'),routes:[{path:'/docs',component:ComponentCreator('/docs','467'),routes:[{path:'/docs/category/fonctions',component:ComponentCreator('/docs/category/fonctions','7b5'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/category/items',component:ComponentCreator('/docs/category/items','2c4'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/category/méthodes',component:ComponentCreator('/docs/category/méthodes','d08'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/category/notifications',component:ComponentCreator('/docs/category/notifications','ba9'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/category/thèmes',component:ComponentCreator('/docs/category/thèmes','365'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/category/zui',component:ComponentCreator('/docs/category/zui','6ef'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/intro',component:ComponentCreator('/docs/intro','61d'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zSleep/instal',component:ComponentCreator('/docs/zSleep/instal','cdf'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zSleep/intro',component:ComponentCreator('/docs/zSleep/intro','edb'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/ContextUI',component:ComponentCreator('/docs/zUI/ContextUI','185'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Fonctions/alertInput',component:ComponentCreator('/docs/zUI/Fonctions/alertInput','b90'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Fonctions/keyboardInput',component:ComponentCreator('/docs/zUI/Fonctions/keyboardInput','d89'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Fonctions/renderSprite',component:ComponentCreator('/docs/zUI/Fonctions/renderSprite','d9d'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Fonctions/showHelpNotification',component:ComponentCreator('/docs/zUI/Fonctions/showHelpNotification','303'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/installation',component:ComponentCreator('/docs/zUI/installation','d42'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/button',component:ComponentCreator('/docs/zUI/Items/button','1c7'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/checkbox',component:ComponentCreator('/docs/zUI/Items/checkbox','89f'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/features',component:ComponentCreator('/docs/zUI/Items/features','bfe'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/line',component:ComponentCreator('/docs/zUI/Items/line','954'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/linkButton',component:ComponentCreator('/docs/zUI/Items/linkButton','c43'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/list',component:ComponentCreator('/docs/zUI/Items/list','5ba'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Items/separator',component:ComponentCreator('/docs/zUI/Items/separator','8e4'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/menu',component:ComponentCreator('/docs/zUI/menu','7f0'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/goBack',component:ComponentCreator('/docs/zUI/Methods/goBack','dc7'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/goTo',component:ComponentCreator('/docs/zUI/Methods/goTo','6a3'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/isVisible',component:ComponentCreator('/docs/zUI/Methods/isVisible','2c1'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/onClose',component:ComponentCreator('/docs/zUI/Methods/onClose','ee1'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/onOpen',component:ComponentCreator('/docs/zUI/Methods/onOpen','e2e'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/setItems',component:ComponentCreator('/docs/zUI/Methods/setItems','f2b'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Methods/setVisible',component:ComponentCreator('/docs/zUI/Methods/setVisible','036'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/modal',component:ComponentCreator('/docs/zUI/modal','8f0'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Notifications/helpNotif',component:ComponentCreator('/docs/zUI/Notifications/helpNotif','28f'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Notifications/notif',component:ComponentCreator('/docs/zUI/Notifications/notif','933'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Notifications/pulsing',component:ComponentCreator('/docs/zUI/Notifications/pulsing','115'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/presentation',component:ComponentCreator('/docs/zUI/presentation','21e'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Themes/context',component:ComponentCreator('/docs/zUI/Themes/context','955'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Themes/introduction',component:ComponentCreator('/docs/zUI/Themes/introduction','b67'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Themes/menu',component:ComponentCreator('/docs/zUI/Themes/menu','02b'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Themes/modal',component:ComponentCreator('/docs/zUI/Themes/modal','817'),exact:true,sidebar:"tutorialSidebar"},{path:'/docs/zUI/Themes/notifs',component:ComponentCreator('/docs/zUI/Themes/notifs','cec'),exact:true,sidebar:"tutorialSidebar"}]}]}]},{path:'/',component:ComponentCreator('/','e5f'),exact:true},{path:'*',component:ComponentCreator('*')}]);
 
 /***/ }),
 
@@ -10695,7 +13258,7 @@ var react = __webpack_require__(6540);
 // EXTERNAL MODULE: ./.docusaurus/docusaurus.config.mjs
 var docusaurus_config = __webpack_require__(4784);
 ;// CONCATENATED MODULE: ./.docusaurus/globalData.json
-const globalData_namespaceObject = /*#__PURE__*/JSON.parse('{"docusaurus-plugin-content-docs":{"default":{"path":"/docs","versions":[{"name":"current","label":"Next","isLast":true,"path":"/docs","mainDocId":"intro","docs":[{"id":"intro","path":"/docs/intro","sidebar":"tutorialSidebar"},{"id":"zSleep/instal","path":"/docs/zSleep/instal","sidebar":"tutorialSidebar"},{"id":"zSleep/intro","path":"/docs/zSleep/intro","sidebar":"tutorialSidebar"},{"id":"zUI/Fonctions/alertInput","path":"/docs/zUI/Fonctions/alertInput","sidebar":"tutorialSidebar"},{"id":"zUI/Fonctions/keyboardInput","path":"/docs/zUI/Fonctions/keyboardInput","sidebar":"tutorialSidebar"},{"id":"zUI/Fonctions/renderSprite","path":"/docs/zUI/Fonctions/renderSprite","sidebar":"tutorialSidebar"},{"id":"zUI/Fonctions/showHelpNotification","path":"/docs/zUI/Fonctions/showHelpNotification","sidebar":"tutorialSidebar"},{"id":"zUI/installation","path":"/docs/zUI/installation","sidebar":"tutorialSidebar"},{"id":"zUI/Items/button","path":"/docs/zUI/Items/button","sidebar":"tutorialSidebar"},{"id":"zUI/Items/checkbox","path":"/docs/zUI/Items/checkbox","sidebar":"tutorialSidebar"},{"id":"zUI/Items/features","path":"/docs/zUI/Items/features","sidebar":"tutorialSidebar"},{"id":"zUI/Items/line","path":"/docs/zUI/Items/line","sidebar":"tutorialSidebar"},{"id":"zUI/Items/linkButton","path":"/docs/zUI/Items/linkButton","sidebar":"tutorialSidebar"},{"id":"zUI/Items/list","path":"/docs/zUI/Items/list","sidebar":"tutorialSidebar"},{"id":"zUI/Items/separator","path":"/docs/zUI/Items/separator","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/goBack","path":"/docs/zUI/Methods/goBack","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/goTo","path":"/docs/zUI/Methods/goTo","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/isVisible","path":"/docs/zUI/Methods/isVisible","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/onClose","path":"/docs/zUI/Methods/onClose","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/onOpen","path":"/docs/zUI/Methods/onOpen","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/setItems","path":"/docs/zUI/Methods/setItems","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/setVisible","path":"/docs/zUI/Methods/setVisible","sidebar":"tutorialSidebar"},{"id":"zUI/presentation","path":"/docs/zUI/presentation","sidebar":"tutorialSidebar"},{"id":"zUI/theme","path":"/docs/zUI/theme","sidebar":"tutorialSidebar"},{"id":"zUI/utilisation","path":"/docs/zUI/utilisation","sidebar":"tutorialSidebar"},{"id":"/category/zui","path":"/docs/category/zui","sidebar":"tutorialSidebar"},{"id":"/category/items","path":"/docs/category/items","sidebar":"tutorialSidebar"},{"id":"/category/fonctions","path":"/docs/category/fonctions","sidebar":"tutorialSidebar"},{"id":"/category/méthodes","path":"/docs/category/méthodes","sidebar":"tutorialSidebar"}],"draftIds":[],"sidebars":{"tutorialSidebar":{"link":{"path":"/docs/intro","label":"intro"}}}}],"breadcrumbs":true}}}');
+const globalData_namespaceObject = /*#__PURE__*/JSON.parse('{"docusaurus-plugin-content-docs":{"default":{"path":"/docs","versions":[{"name":"current","label":"Next","isLast":true,"path":"/docs","mainDocId":"intro","docs":[{"id":"intro","path":"/docs/intro","sidebar":"tutorialSidebar"},{"id":"zSleep/instal","path":"/docs/zSleep/instal","sidebar":"tutorialSidebar"},{"id":"zSleep/intro","path":"/docs/zSleep/intro","sidebar":"tutorialSidebar"},{"id":"zUI/ContextUI","path":"/docs/zUI/ContextUI","sidebar":"tutorialSidebar"},{"id":"zUI/Fonctions/alertInput","path":"/docs/zUI/Fonctions/alertInput","sidebar":"tutorialSidebar"},{"id":"zUI/Fonctions/keyboardInput","path":"/docs/zUI/Fonctions/keyboardInput","sidebar":"tutorialSidebar"},{"id":"zUI/Fonctions/renderSprite","path":"/docs/zUI/Fonctions/renderSprite","sidebar":"tutorialSidebar"},{"id":"zUI/Fonctions/showHelpNotification","path":"/docs/zUI/Fonctions/showHelpNotification","sidebar":"tutorialSidebar"},{"id":"zUI/installation","path":"/docs/zUI/installation","sidebar":"tutorialSidebar"},{"id":"zUI/Items/button","path":"/docs/zUI/Items/button","sidebar":"tutorialSidebar"},{"id":"zUI/Items/checkbox","path":"/docs/zUI/Items/checkbox","sidebar":"tutorialSidebar"},{"id":"zUI/Items/features","path":"/docs/zUI/Items/features","sidebar":"tutorialSidebar"},{"id":"zUI/Items/line","path":"/docs/zUI/Items/line","sidebar":"tutorialSidebar"},{"id":"zUI/Items/linkButton","path":"/docs/zUI/Items/linkButton","sidebar":"tutorialSidebar"},{"id":"zUI/Items/list","path":"/docs/zUI/Items/list","sidebar":"tutorialSidebar"},{"id":"zUI/Items/separator","path":"/docs/zUI/Items/separator","sidebar":"tutorialSidebar"},{"id":"zUI/menu","path":"/docs/zUI/menu","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/goBack","path":"/docs/zUI/Methods/goBack","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/goTo","path":"/docs/zUI/Methods/goTo","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/isVisible","path":"/docs/zUI/Methods/isVisible","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/onClose","path":"/docs/zUI/Methods/onClose","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/onOpen","path":"/docs/zUI/Methods/onOpen","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/setItems","path":"/docs/zUI/Methods/setItems","sidebar":"tutorialSidebar"},{"id":"zUI/Methods/setVisible","path":"/docs/zUI/Methods/setVisible","sidebar":"tutorialSidebar"},{"id":"zUI/modal","path":"/docs/zUI/modal","sidebar":"tutorialSidebar"},{"id":"zUI/Notifications/helpNotif","path":"/docs/zUI/Notifications/helpNotif","sidebar":"tutorialSidebar"},{"id":"zUI/Notifications/notif","path":"/docs/zUI/Notifications/notif","sidebar":"tutorialSidebar"},{"id":"zUI/Notifications/pulsing","path":"/docs/zUI/Notifications/pulsing","sidebar":"tutorialSidebar"},{"id":"zUI/presentation","path":"/docs/zUI/presentation","sidebar":"tutorialSidebar"},{"id":"zUI/Themes/context","path":"/docs/zUI/Themes/context","sidebar":"tutorialSidebar"},{"id":"zUI/Themes/introduction","path":"/docs/zUI/Themes/introduction","sidebar":"tutorialSidebar"},{"id":"zUI/Themes/menu","path":"/docs/zUI/Themes/menu","sidebar":"tutorialSidebar"},{"id":"zUI/Themes/modal","path":"/docs/zUI/Themes/modal","sidebar":"tutorialSidebar"},{"id":"zUI/Themes/notifs","path":"/docs/zUI/Themes/notifs","sidebar":"tutorialSidebar"},{"id":"/category/zui","path":"/docs/category/zui","sidebar":"tutorialSidebar"},{"id":"/category/items","path":"/docs/category/items","sidebar":"tutorialSidebar"},{"id":"/category/thèmes","path":"/docs/category/thèmes","sidebar":"tutorialSidebar"},{"id":"/category/fonctions","path":"/docs/category/fonctions","sidebar":"tutorialSidebar"},{"id":"/category/méthodes","path":"/docs/category/méthodes","sidebar":"tutorialSidebar"},{"id":"/category/notifications","path":"/docs/category/notifications","sidebar":"tutorialSidebar"}],"draftIds":[],"sidebars":{"tutorialSidebar":{"link":{"path":"/docs/intro","label":"intro"}}}}],"breadcrumbs":true}}}');
 ;// CONCATENATED MODULE: ./.docusaurus/i18n.json
 const i18n_namespaceObject = /*#__PURE__*/JSON.parse('{"defaultLocale":"fr","locales":["fr"],"path":"i18n","currentLocale":"fr","localeConfigs":{"fr":{"label":"Français","direction":"ltr","htmlLang":"fr","calendar":"gregory","path":"fr"}}}');
 // EXTERNAL MODULE: ./.docusaurus/codeTranslations.json
@@ -11428,7 +13991,7 @@ var react_router_config = __webpack_require__(2831);
  * @returns Promise object represents whether pathname has been preloaded
  */function preload(pathname){const matches=Array.from(new Set([pathname,decodeURI(pathname)])).map(p=>(0,react_router_config/* matchRoutes */.u)(routes/* default */.A,p)).flat();return Promise.all(matches.map(match=>match.route.component.preload?.()));}
 ;// CONCATENATED MODULE: ./.docusaurus/client-modules.js
-/* harmony default export */ const client_modules = ([__webpack_require__(4835),__webpack_require__(6134),__webpack_require__(6294),__webpack_require__(5101),__webpack_require__(4663),__webpack_require__(4843),__webpack_require__(5989),__webpack_require__(5748),__webpack_require__(7208),__webpack_require__(1126)]);
+/* harmony default export */ const client_modules = ([__webpack_require__(4835),__webpack_require__(6134),__webpack_require__(6294),__webpack_require__(5101),__webpack_require__(4663),__webpack_require__(4843),__webpack_require__(5989),__webpack_require__(5748),__webpack_require__(7208),__webpack_require__(93)]);
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(4848);
 ;// CONCATENATED MODULE: ./node_modules/@docusaurus/core/lib/client/theme-fallback/Root/index.js
@@ -12852,7 +15415,7 @@ var Main_styles_module_default = /*#__PURE__*/__webpack_require__.n(Main_styles_
  * LICENSE file in the root directory of this source tree.
  */function DocRootLayoutMain({hiddenSidebarContainer,children}){const sidebar=(0,docsSidebar/* useDocsSidebar */.t)();return/*#__PURE__*/(0,jsx_runtime.jsx)("main",{className:(0,clsx/* default */.A)((Main_styles_module_default()).docMainContainer,(hiddenSidebarContainer||!sidebar)&&(Main_styles_module_default()).docMainContainerEnhanced),children:/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:(0,clsx/* default */.A)('container padding-top--md padding-bottom--lg',(Main_styles_module_default()).docItemWrapper,hiddenSidebarContainer&&(Main_styles_module_default()).docItemWrapperEnhanced),children:children})});}
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocRoot/Layout/styles.module.css
-var Layout_styles_module = __webpack_require__(4988);
+var Layout_styles_module = __webpack_require__(2607);
 var Layout_styles_module_default = /*#__PURE__*/__webpack_require__.n(Layout_styles_module);
 ;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocRoot/Layout/index.js
 /**
@@ -15611,7 +18174,7 @@ __webpack_require__.d(__webpack_exports__, {
 var lunr = __webpack_require__(8291);
 var lunr_default = /*#__PURE__*/__webpack_require__.n(lunr);
 ;// CONCATENATED MODULE: ./.docusaurus/@easyops-cn/docusaurus-search-local/default/generated.js
-__webpack_require__(6121)((lunr_default()));__webpack_require__(7923)((lunr_default()));const language=["fr"];const removeDefaultStopWordFilter=false;const removeDefaultStemmer=false;const Mark=null;const searchIndexUrl="search-index{dir}.json?_=032b26d2";const searchResultLimits=8;const searchResultContextMaxLength=50;const explicitSearchResultPath=false;const searchBarShortcut=true;const searchBarShortcutHint=true;const searchBarPosition="right";const docsPluginIdForPreferredVersion=undefined;const indexDocs=true;const searchContextByPaths=null;const hideSearchBarWithNoSearchContext=false;const useAllContextsWithNoSearchContext=false;
+__webpack_require__(6121)((lunr_default()));__webpack_require__(7923)((lunr_default()));const language=["fr"];const removeDefaultStopWordFilter=false;const removeDefaultStemmer=false;const Mark=null;const searchIndexUrl="search-index{dir}.json?_=9a351d4a";const searchResultLimits=8;const searchResultContextMaxLength=50;const explicitSearchResultPath=false;const searchBarShortcut=true;const searchBarShortcutHint=true;const searchBarPosition="right";const docsPluginIdForPreferredVersion=undefined;const indexDocs=true;const searchContextByPaths=null;const hideSearchBarWithNoSearchContext=false;const useAllContextsWithNoSearchContext=false;
 ;// CONCATENATED MODULE: ./node_modules/@easyops-cn/docusaurus-search-local/dist/client/client/utils/proxiedGenerated.js
 // This file is auto generated while building.
 
@@ -15663,7 +18226,7 @@ function Home(){return/*#__PURE__*/(0,jsx_runtime.jsxs)(Layout/* default */.A,{d
 
 /***/ }),
 
-/***/ 2032:
+/***/ 9155:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -15791,35 +18354,6 @@ function MDXContent(props = {}) {
 }
 
 
-;// CONCATENATED MODULE: ./src/assets/zUI/utils/isUrl.ts
-const isUrl=str=>{try{new URL(str);return true;}catch(_){return false;}};/* harmony default export */ const utils_isUrl = (isUrl);
-;// CONCATENATED MODULE: ./src/assets/zUI/assets/icons/controls.svg
-var _path;
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
-
-const SvgControls = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", _extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 12,
-    height: 21,
-    fill: "none",
-    viewBox: "0 0 12 21",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, _path || (_path = /*#__PURE__*/react.createElement("path", {
-    stroke: "#fff",
-    strokeLinecap: "round",
-    strokeWidth: 2,
-    d: "m1 14 5 5 5-5m0-7L6 2 1 7"
-  })));
-};
-/* harmony default export */ const controls = (SvgControls);
 ;// CONCATENATED MODULE: ./node_modules/framer-motion/dist/es/context/PresenceContext.mjs
 "use client";
 
@@ -27294,14 +29828,22 @@ const motion = /*@__PURE__*/ createDOMMotionComponentProxy(createMotionComponent
 
 
 
-;// CONCATENATED MODULE: ./src/assets/zUI/assets/Fonts.ts
+;// CONCATENATED MODULE: ./src/assets/zUI/features/menu/defaultTheme.json
+const defaultTheme_namespaceObject = /*#__PURE__*/JSON.parse('{"position":"right","displayDescription":true,"displayControlsIndicator":true,"colors":{"background":"rgba(18, 18, 18, 0.5)","description":"#121212","controlsIndicator":"#121212","item":"#faad2c"},"animations":{"entry":"fadeIn","exit":"fadeOut","onScroll":true},"fonts":{"title":"https://fonts.googleapis.com/css2?family=Lexend:wght@900&display=swap","subtitle":"https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap","description":"https://fonts.googleapis.com/css2?family=Roboto:ital,wght@700&display=swap","counter":"https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@400&display=swap","itemTitle":"https://fonts.googleapis.com/css2?family=Lexend:wght@500&display=swap","itemRightLabel":"https://fonts.googleapis.com/css2?family=Lexend:wght@200&display=swap","info":"https://fonts.googleapis.com/css2?family=Lexend:wght@200&display=swap","infoPanelTitle":"https://fonts.googleapis.com/css2?family=Lexend:wght@500&display=swap"},"banner":"#FAAD2C","cornersRadius":1,"perspective":true,"padding":false,"items":{"maxItems":10,"hoverStyle":"complete","hoverColor":"#FAAD2C","lineIsRounded":true}}');
+;// CONCATENATED MODULE: ./src/assets/zUI/utils/functions/isUrl.ts
+const isUrl=str=>{try{new URL(str);return true;}catch(_){return false;}};/* harmony default export */ const functions_isUrl = (isUrl);
+;// CONCATENATED MODULE: ./src/assets/zUI/utils/functions/extractFontName.ts
+const extractFontName=url=>{if(url){const match=url.match(/family=([^&:]+)/);return match?match[1].replace(/\+/g," "):"sans-serif";}};/* harmony default export */ const functions_extractFontName = (extractFontName);
+;// CONCATENATED MODULE: ./src/assets/zUI/utils/functions/extractFontWeight.ts
+function extractFontWeight(fontUrl){if(fontUrl){const weightMatch=fontUrl.match(/wght@(\d+)(?:;(\d+))?/);if(weightMatch){const minWeight=parseInt(weightMatch[1],10);const maxWeight=weightMatch[2]?parseInt(weightMatch[2],10):minWeight;if(minWeight<maxWeight){return 500;}return minWeight;}return 400;}}/* harmony default export */ const functions_extractFontWeight = (extractFontWeight);
+;// CONCATENATED MODULE: ./src/assets/zUI/utils/data/fontsModifiers.ts
 const fontsModifier={h:"font-weight: bold",i:"font-style:italic"};const textColor={w:"white",s:"white",u:"black",r:"red",o:"orange",y:"yellow",g:"green",c:"cyan",b:"blue",bl:"rgb(102, 170, 255)",m:"darkgray",HUD_COLOUR_PURE_WHITE:"rgba(255, 255, 255, 255)",HUD_COLOUR_WHITE:"rgba(255, 255, 255, 255)",HUD_COLOUR_BLACK:"rgba(0, 0, 0, 255)",HUD_COLOUR_GREY:"rgba(127, 127, 127, 255)",HUD_COLOUR_GREYLIGHT:"rgba(190, 190, 190, 255)",HUD_COLOUR_GREYDARK:"rgba(64, 64, 64, 255)",HUD_COLOUR_RED:"rgba(255, 0, 0, 255)",HUD_COLOUR_REDLIGHT:"rgba(255, 102, 102, 255)",HUD_COLOUR_REDDARK:"rgba(153, 0, 0, 255)",HUD_COLOUR_BLUE:"rgba(0, 0, 255, 255)",HUD_COLOUR_BLUELIGHT:"rgba(102, 102, 255, 255)",HUD_COLOUR_BLUEDARK:"rgba(0, 0, 153, 255)",HUD_COLOUR_YELLOW:"rgba(255, 255, 0, 255)",HUD_COLOUR_YELLOWLIGHT:"rgba(255, 255, 102, 255)",HUD_COLOUR_YELLOWDARK:"rgba(153, 153, 0, 255)",HUD_COLOUR_ORANGE:"rgba(255, 128, 0, 255)",HUD_COLOUR_ORANGELIGHT:"rgba(255, 178, 102, 255)",HUD_COLOUR_ORANGEDARK:"rgba(153, 76, 0, 255)",HUD_COLOUR_GREEN:"rgba(0, 255, 0, 255)",HUD_COLOUR_GREENLIGHT:"rgba(102, 255, 102, 255)",HUD_COLOUR_GREENDARK:"rgba(0, 153, 0, 255)",HUD_COLOUR_PURPLE:"rgba(153, 0, 153, 255)",HUD_COLOUR_PURPLELIGHT:"rgba(204, 102, 255, 255)",HUD_COLOUR_PURPLEDARK:"rgba(102, 0, 102, 255)",HUD_COLOUR_PINK:"rgba(255, 0, 255, 255)",HUD_COLOUR_RADAR_HEALTH:"rgba(114, 204, 114, 255)",HUD_COLOUR_RADAR_ARMOUR:"rgba(159, 159, 255, 255)",HUD_COLOUR_RADAR_DAMAGE:"rgba(214, 93, 14, 255)",HUD_COLOUR_NET_PLAYER1:"rgba(159, 212, 104, 255)",HUD_COLOUR_NET_PLAYER2:"rgba(159, 159, 255, 255)",HUD_COLOUR_NET_PLAYER3:"rgba(255, 212, 104, 255)",HUD_COLOUR_NET_PLAYER4:"rgba(255, 159, 104, 255)",HUD_COLOUR_NET_PLAYER5:"rgba(255, 104, 159, 255)",HUD_COLOUR_NET_PLAYER6:"rgba(212, 104, 159, 255)",HUD_COLOUR_NET_PLAYER7:"rgba(159, 104, 212, 255)",HUD_COLOUR_NET_PLAYER8:"rgba(104, 159, 212, 255)",HUD_COLOUR_NET_PLAYER9:"rgba(104, 212, 159, 255)",HUD_COLOUR_NET_PLAYER10:"rgba(212, 159, 104, 255)",HUD_COLOUR_NET_PLAYER11:"rgba(212, 104, 104, 255)",HUD_COLOUR_NET_PLAYER12:"rgba(104, 212, 104, 255)",HUD_COLOUR_NET_PLAYER13:"rgba(104, 104, 212, 255)",HUD_COLOUR_NET_PLAYER14:"rgba(159, 212, 159, 255)",HUD_COLOUR_NET_PLAYER15:"rgba(159, 159, 212, 255)",HUD_COLOUR_NET_PLAYER16:"rgba(212, 159, 159, 255)",HUD_COLOUR_NET_PLAYER17:"rgba(212, 212, 104, 255)",HUD_COLOUR_NET_PLAYER18:"rgba(212, 104, 212, 255)",HUD_COLOUR_NET_PLAYER19:"rgba(104, 212, 212, 255)",HUD_COLOUR_NET_PLAYER20:"rgba(159, 104, 104, 255)",HUD_COLOUR_NET_PLAYER21:"rgba(104, 159, 104, 255)",HUD_COLOUR_NET_PLAYER22:"rgba(104, 104, 159, 255)",HUD_COLOUR_NET_PLAYER23:"rgba(206, 169, 13, 255)",HUD_COLOUR_NET_PLAYER24:"rgba(71, 99, 173, 255)",HUD_COLOUR_NET_PLAYER25:"rgba(42, 166, 185, 255)",HUD_COLOUR_NET_PLAYER26:"rgba(186, 157, 125, 255)",HUD_COLOUR_NET_PLAYER27:"rgba(201, 225, 255, 255)",HUD_COLOUR_NET_PLAYER28:"rgba(240, 240, 150, 255)",HUD_COLOUR_NET_PLAYER29:"rgba(237, 140, 161, 255)",HUD_COLOUR_NET_PLAYER30:"rgba(249, 138, 138, 255)",HUD_COLOUR_NET_PLAYER31:"rgba(252, 239, 166, 255)",HUD_COLOUR_NET_PLAYER32:"rgba(240, 240, 240, 255)",HUD_COLOUR_SIMPLEBLIP_DEFAULT:"rgba(159, 201, 166, 255)",HUD_COLOUR_MENU_BLUE:"rgba(140, 140, 140, 255)",HUD_COLOUR_MENU_BLUE_EXTRA_DARK:"rgba(40, 40, 40, 255)",HUD_COLOUR_MENU_YELLOW:"rgba(240, 160, 0, 255)",HUD_COLOUR_MENU_GREY:"rgba(140, 140, 140, 255)",HUD_COLOUR_MENU_GREY_DARK:"rgba(60, 60, 60, 255)",HUD_COLOUR_MENU_HIGHLIGHT:"rgba(30, 30, 30, 255)",HUD_COLOUR_MENU_STANDARD:"rgba(140, 140, 140, 255)",HUD_COLOUR_MENU_DIMMED:"rgba(75, 75, 75, 255)",HUD_COLOUR_MENU_EXTRA_DIMMED:"rgba(50, 50, 50, 255)",HUD_COLOUR_BRIEF_TITLE:"rgba(95, 95, 95, 255)",HUD_COLOUR_MID_GREY_MP:"rgba(100, 100, 100, 255)",HUD_COLOUR_NET_PLAYER1_DARK:"rgba(93, 39, 39, 255)",HUD_COLOUR_NET_PLAYER2_DARK:"rgba(77, 55, 89, 255)",HUD_COLOUR_NET_PLAYER3_DARK:"rgba(124, 62, 99, 255)",HUD_COLOUR_NET_PLAYER4_DARK:"rgba(120, 80, 80, 255)",HUD_COLOUR_NET_PLAYER5_DARK:"rgba(87, 72, 66, 255)",HUD_COLOUR_NET_PLAYER6_DARK:"rgba(74, 103, 83, 255)",HUD_COLOUR_NET_PLAYER7_DARK:"rgba(60, 85, 88, 255)",HUD_COLOUR_NET_PLAYER8_DARK:"rgba(105, 105, 64, 255)",HUD_COLOUR_NET_PLAYER9_DARK:"rgba(72, 63, 76, 255)",HUD_COLOUR_NET_PLAYER10_DARK:"rgba(53, 98, 95, 255)",HUD_COLOUR_NET_PLAYER11_DARK:"rgba(107, 98, 76, 255)",HUD_COLOUR_NET_PLAYER12_DARK:"rgba(117, 71, 40, 255)",HUD_COLOUR_NET_PLAYER13_DARK:"rgba(76, 101, 117, 255)",HUD_COLOUR_NET_PLAYER14_DARK:"rgba(65, 35, 47, 255)",HUD_COLOUR_NET_PLAYER15_DARK:"rgba(72, 71, 61, 255)",HUD_COLOUR_NET_PLAYER16_DARK:"rgba(85, 58, 47, 255)",HUD_COLOUR_NET_PLAYER17_DARK:"rgba(87, 84, 84, 255)",HUD_COLOUR_NET_PLAYER18_DARK:"rgba(116, 71, 77, 255)",HUD_COLOUR_NET_PLAYER19_DARK:"rgba(93, 107, 45, 255)",HUD_COLOUR_NET_PLAYER20_DARK:"rgba(6, 61, 43, 255)",HUD_COLOUR_NET_PLAYER21_DARK:"rgba(61, 98, 127, 255)",HUD_COLOUR_NET_PLAYER22_DARK:"rgba(85, 30, 115, 255)",HUD_COLOUR_NET_PLAYER23_DARK:"rgba(103, 84, 6, 255)",HUD_COLOUR_NET_PLAYER24_DARK:"rgba(35, 49, 86, 255)",HUD_COLOUR_NET_PLAYER25_DARK:"rgba(21, 83, 92, 255)",HUD_COLOUR_NET_PLAYER26_DARK:"rgba(93, 98, 62, 255)",HUD_COLOUR_NET_PLAYER27_DARK:"rgba(100, 112, 127, 255)",HUD_COLOUR_NET_PLAYER28_DARK:"rgba(120, 120, 75, 255)",HUD_COLOUR_NET_PLAYER29_DARK:"rgba(152, 76, 93, 255)",HUD_COLOUR_NET_PLAYER30_DARK:"rgba(124, 69, 69, 255)",HUD_COLOUR_NET_PLAYER31_DARK:"rgba(10, 43, 50, 255)",HUD_COLOUR_NET_PLAYER32_DARK:"rgba(95, 95, 10, 255)",HUD_COLOUR_BRONZE:"rgba(180, 130, 97, 255)",HUD_COLOUR_SILVER:"rgba(150, 153, 161, 255)",HUD_COLOUR_GOLD:"rgba(214, 181, 99, 255)",HUD_COLOUR_PLATINUM:"rgba(166, 221, 190, 255)",HUD_COLOUR_GANG1:"rgba(29, 100, 153, 255)",HUD_COLOUR_GANG2:"rgba(214, 116, 15, 255)",HUD_COLOUR_GANG3:"rgba(135, 125, 142, 255)",HUD_COLOUR_GANG4:"rgba(229, 119, 185, 255)",HUD_COLOUR_SAME_CREW:"rgba(252, 239, 166, 255)",HUD_COLOUR_FREEMODE:"rgba(45, 110, 185, 255)",HUD_COLOUR_PAUSE_BG:"rgba(0, 0, 0, 186)",HUD_COLOUR_FRIENDLY:"rgba(93, 182, 229, 255)",HUD_COLOUR_ENEMY:"rgba(194, 80, 80, 255)",HUD_COLOUR_FREEMODE_DARK:"rgba(22, 55, 92, 255)",HUD_COLOUR_INACTIVE_MISSION:"rgba(154, 154, 154, 255)",HUD_COLOUR_DAMAGE:"rgba(194, 80, 80, 255)",HUD_COLOUR_PINKLIGHT:"rgba(252, 115, 201, 255)",HUD_COLOUR_PM_MITEM_HIGHLIGHT:"rgba(252, 177, 49, 255)",HUD_COLOUR_SCRIPT_VARIABLE:"rgba(0, 0, 0, 255)",HUD_COLOUR_YOGA:"rgba(109, 247, 204, 255)",HUD_COLOUR_TENNIS:"rgba(241, 101, 34, 255)",HUD_COLOUR_GOLF:"rgba(214, 189, 97, 255)",HUD_COLOUR_SOCIAL_CLUB:"rgba(234, 153, 28, 255)",HUD_COLOUR_PLATFORM_BLUE:"rgba(11, 55, 123, 255)",HUD_COLOUR_PLATFORM_GREEN:"rgba(146, 200, 62, 255)",HUD_COLOUR_PLATFORM_GREY:"rgba(234, 153, 28, 255)",HUD_COLOUR_FACEBOOK_BLUE:"rgba(66, 89, 148, 255)",HUD_COLOUR_INGAME_BG:"rgba(0, 0, 0, 186)",HUD_COLOUR_WAYPOINT:"rgba(164, 76, 242, 255)",HUD_COLOUR_MICHAEL:"rgba(101, 180, 212, 255)",HUD_COLOUR_FRANKLIN:"rgba(171, 237, 171, 255)",HUD_COLOUR_TREVOR:"rgba(255, 163, 87, 255)",HUD_COLOUR_GOLF_P2:"rgba(235, 239, 30, 255)",HUD_COLOUR_GOLF_P3:"rgba(255, 149, 14, 255)",HUD_COLOUR_GOLF_P4:"rgba(246, 60, 161, 255)",HUD_COLOUR_WAYPOINTLIGHT:"rgba(210, 166, 249, 255)",HUD_COLOUR_WAYPOINTDARK:"rgba(82, 38, 121, 255)",HUD_COLOUR_PANEL_LIGHT:"rgba(0, 0, 0, 77)",HUD_COLOUR_MICHAEL_DARK:"rgba(72, 103, 116, 255)",HUD_COLOUR_FRANKLIN_DARK:"rgba(85, 118, 85, 255)",HUD_COLOUR_TREVOR_DARK:"rgba(127, 81, 43, 255)",HUD_COLOUR_PAUSEMAP_TINT:"rgba(0, 0, 0, 215)",HUD_COLOUR_PAUSE_DESELECT:"rgba(100, 100, 100, 127)",HUD_COLOUR_PM_WEAPONS_LOCKED:"rgba(240, 240, 240, 191)",HUD_COLOUR_PAUSEMAP_TINT_HALF:"rgba(0, 0, 0, 215)",HUD_COLOUR_NORTH_BLUE_OFFICIAL:"rgba(0, 71, 133, 255)",HUD_COLOUR_SCRIPT_VARIABLE_2:"rgba(0, 0, 0, 255)",HUD_COLOUR_H:"rgba(33, 118, 37, 255)",HUD_COLOUR_HDARK:"rgba(37, 102, 40, 255)",HUD_COLOUR_T:"rgba(234, 153, 28, 255)",HUD_COLOUR_TDARK:"rgba(225, 140, 8, 255)",HUD_COLOUR_HSHARD:"rgba(20, 40, 0, 255)",HUD_COLOUR_CONTROLLER_MICHAEL:"rgba(48, 255, 255, 255)",HUD_COLOUR_CONTROLLER_FRANKLIN:"rgba(48, 255, 0, 255)",HUD_COLOUR_CONTROLLER_TREVOR:"rgba(176, 80, 0, 255)",HUD_COLOUR_CONTROLLER_CHOP:"rgba(127, 0, 0, 255)",HUD_COLOUR_VIDEO_EDITOR_VIDEO:"rgba(53, 166, 224, 255)",HUD_COLOUR_VIDEO_EDITOR_AUDIO:"rgba(162, 79, 157, 255)",HUD_COLOUR_VIDEO_EDITOR_TEXT:"rgba(104, 192, 141, 255)",HUD_COLOUR_HB_BLUE:"rgba(29, 100, 153, 255)",HUD_COLOUR_HB_YELLOW:"rgba(234, 153, 28, 255)",HUD_COLOUR_VIDEO_EDITOR_SCORE:"rgba(240, 160, 1, 255)",HUD_COLOUR_VIDEO_EDITOR_AUDIO_FADEOUT:"rgba(59, 34, 57, 255)",HUD_COLOUR_VIDEO_EDITOR_TEXT_FADEOUT:"rgba(41, 68, 53, 255)",HUD_COLOUR_VIDEO_EDITOR_SCORE_FADEOUT:"rgba(82, 58, 10, 255)",HUD_COLOUR_HEIST_BACKGROUND:"rgba(37, 102, 40, 186)",HUD_COLOUR_VIDEO_EDITOR_AMBIENT_FADEOUT:"rgba(80, 70, 34, 255)",HUD_COLOUR_G1:"rgba(247, 159, 123, 255)",HUD_COLOUR_G2:"rgba(226, 134, 187, 255)",HUD_COLOUR_G3:"rgba(239, 238, 151, 255)",HUD_COLOUR_G4:"rgba(113, 169, 175, 255)",HUD_COLOUR_G5:"rgba(160, 140, 193, 255)",HUD_COLOUR_G6:"rgba(141, 206, 167, 255)",HUD_COLOUR_G7:"rgba(181, 214, 234, 255)",HUD_COLOUR_G8:"rgba(178, 144, 132, 255)",HUD_COLOUR_G9:"rgba(0, 132, 114, 255)",HUD_COLOUR_G10:"rgba(216, 85, 117, 255)",HUD_COLOUR_G11:"rgba(30, 100, 152, 255)",HUD_COLOUR_G12:"rgba(43, 181, 117, 255)",HUD_COLOUR_G13:"rgba(233, 141, 79, 255)",HUD_COLOUR_G14:"rgba(137, 210, 215, 255)",HUD_COLOUR_G15:"rgba(134, 125, 141, 255)",HUD_COLOUR_ADVERSARY:"rgba(109, 34, 33, 255)",HUD_COLOUR_DEGEN_RED:"rgba(255, 0, 0, 255)",HUD_COLOUR_DEGEN_YELLOW:"rgba(255, 255, 0, 255)",HUD_COLOUR_DEGEN_GREEN:"rgba(0, 255, 0, 255)",HUD_COLOUR_DEGEN_CYAN:"rgba(0, 255, 255, 255)",HUD_COLOUR_DEGEN_BLUE:"rgba(0, 0, 255, 255)",HUD_COLOUR_DEGEN_MAGENTA:"rgba(255, 0, 255, 255)",HUD_COLOUR_STUNT_1:"rgba(38, 136, 234, 255)",HUD_COLOUR_SPECIAL_RACE_SERIES:"rgba(154, 178, 54, 255)",HUD_COLOUR_SPECIAL_RACE_SERIES_DARK:"rgba(93, 107, 45, 255)",HUD_COLOUR_CS:"rgba(206, 169, 13, 255)",HUD_COLOUR_CS_DARK:"rgba(103, 84, 6, 255)",HUD_COLOUR_TECH_GREEN:"rgba(0, 151, 151, 255)",HUD_COLOUR_TECH_GREEN_DARK:"rgba(5, 119, 113, 255)",HUD_COLOUR_TECH_RED:"rgba(151, 0, 0, 255)",HUD_COLOUR_TECH_GREEN_VERY_DARK:"rgba(0, 40, 40, 255)",HUD_COLOUR_PLACEHOLDER_01:"rgba(255, 255, 255, 255)",HUD_COLOUR_PLACEHOLDER_02:"rgba(255, 255, 255, 255)",HUD_COLOUR_PLACEHOLDER_03:"rgba(255, 255, 255, 255)",HUD_COLOUR_PLACEHOLDER_04:"rgba(255, 255, 255, 255)",HUD_COLOUR_PLACEHOLDER_05:"rgba(255, 255, 255, 255)",HUD_COLOUR_PLACEHOLDER_06:"rgba(255, 255, 255, 255)",HUD_COLOUR_PLACEHOLDER_07:"rgba(255, 255, 255, 255)",HUD_COLOUR_PLACEHOLDER_08:"rgba(255, 255, 255, 255)",HUD_COLOUR_PLACEHOLDER_09:"rgba(255, 255, 255, 255)",HUD_COLOUR_PLACEHOLDER_10:"rgba(255, 255, 255, 255)"};
-;// CONCATENATED MODULE: ./src/assets/zUI/utils/isDefined.ts
-const isDefined=param=>{return typeof param!=="undefined"&&param!==null;};/* harmony default export */ const utils_isDefined = (isDefined);
-;// CONCATENATED MODULE: ./src/assets/zUI/utils/isHexColor.ts
-const isHexColor=str=>/^#[0-9A-Fa-f]{6}$|^#[0-9A-Fa-f]{3}$/.test(str);/* harmony default export */ const utils_isHexColor = (isHexColor);
-;// CONCATENATED MODULE: ./src/assets/zUI/utils/formatString.tsx
-const parseText=text=>{if(typeof text==="number"){text=text.toString();}return text.split("\n");};const formatString=text=>{const lines=parseText(text);return lines.map((line,index)=>/*#__PURE__*/(0,jsx_runtime.jsxs)(react.Fragment,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("span",{dangerouslySetInnerHTML:{__html:formatMD(line)}}),index<lines.length-1&&/*#__PURE__*/(0,jsx_runtime.jsx)("br",{})]},index));};const arrowMappings=color=>({"→":`<svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+;// CONCATENATED MODULE: ./src/assets/zUI/utils/functions/isDefined.ts
+const isDefined=param=>{return typeof param!=="undefined"&&param!==null;};/* harmony default export */ const functions_isDefined = (isDefined);
+;// CONCATENATED MODULE: ./src/assets/zUI/utils/functions/isHexColor.ts
+const isHexColor=str=>/^#[0-9A-Fa-f]{6}$|^#[0-9A-Fa-f]{3}$/.test(str);/* harmony default export */ const functions_isHexColor = (isHexColor);
+;// CONCATENATED MODULE: ./src/assets/zUI/utils/functions/formatString.tsx
+const parseText=text=>{if(typeof text==="number"){text=text.toString();}return text.split("\n");};const formatString=text=>{if(text){const lines=parseText(text);return lines.map((line,index)=>/*#__PURE__*/(0,jsx_runtime.jsxs)(react.Fragment,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("span",{dangerouslySetInnerHTML:{__html:formatMD(line)}}),index<lines.length-1&&/*#__PURE__*/(0,jsx_runtime.jsx)("br",{})]},index));}else{return undefined;}};const arrowMappings=color=>({"→":`<svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1 1L4.5 4.5L1 8" stroke="${color}" stroke-width="2" stroke-linecap="round"/>
 </svg>`,"↓":`<svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1.25 1.75L4.75 5.25L8.25 1.75" stroke="${color}" stroke-width="2" stroke-linecap="round"/>
@@ -27309,45 +29851,47 @@ const parseText=text=>{if(typeof text==="number"){text=text.toString();}return t
 <path d="M5.5 1L2 4.5L5.5 8" stroke="${color}" stroke-width="2" stroke-linecap="round"/>
 </svg>`,"↑":`<svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1.25 5.25L4.75 1.75L8.25 5.25" stroke="${color}" stroke-width="2" stroke-linecap="round"/>
-</svg>`});const formatMD=text=>{let everColoring=false;let finalText="";let currentColor="white";if(text){for(let i=0;i<text.length;i++){if(text[i]==="~"){let INFO="";i++;while(text[i]!=="~"&&i<text.length){INFO+=text[i];i++;}if(utils_isDefined(textColor[INFO])){currentColor=textColor[INFO];finalText+=everColoring?`</span><span style="color: ${currentColor}">`:`<span style="color: ${currentColor}">`;everColoring=true;}else if(utils_isDefined(fontsModifier[INFO])){currentColor=fontsModifier[INFO];finalText+=everColoring?`</span><span style="${currentColor}">`:`<span style="${currentColor}">`;everColoring=true;}else if(utils_isHexColor(INFO)){currentColor=INFO;finalText+=everColoring?`</span><span style="color: ${INFO}">`:`<span style="color: ${INFO}">`;everColoring=true;}}else if(arrowMappings(currentColor)[text[i]]){finalText+=arrowMappings(currentColor)[text[i]];}else{finalText+=text[i];}}}if(everColoring){finalText+="</span>";}return finalText;};/* harmony default export */ const utils_formatString = (formatString);
-;// CONCATENATED MODULE: ./src/assets/zUI/components/items/line/line.tsx
-function Line({defaultColor,rounded,colors}){return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"zUI-Item",children:/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"zUI-Line",style:{background:colors&&colors.length>1?`linear-gradient(to right, ${colors.join(", ")})`:colors&&colors.length===1?colors[0]:defaultColor,borderRadius:rounded?"100em":"0"}})});}/* harmony default export */ const line = (Line);
-;// CONCATENATED MODULE: ./src/assets/zUI/components/items/separator/separator.tsx
-function Separator({title,position}){return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"zUI-Item",children:/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"zUI-Separator",style:{justifyContent:position},children:/*#__PURE__*/(0,jsx_runtime.jsx)("h1",{className:"zUI-ItemTitle",children:utils_formatString(title)})})});}/* harmony default export */ const separator = (Separator);
-;// CONCATENATED MODULE: ./src/assets/zUI/assets/Badges.ts
+</svg>`});const formatMD=text=>{let everColoring=false;let finalText="";let currentColor="white";if(text){for(let i=0;i<text.length;i++){if(text[i]==="~"){let INFO="";i++;while(text[i]!=="~"&&i<text.length){INFO+=text[i];i++;}if(functions_isDefined(textColor[INFO])){currentColor=textColor[INFO];finalText+=everColoring?`</span><span style="color: ${currentColor}">`:`<span style="color: ${currentColor}">`;everColoring=true;}else if(functions_isDefined(fontsModifier[INFO])){currentColor=fontsModifier[INFO];finalText+=everColoring?`</span><span style="${currentColor}">`:`<span style="${currentColor}">`;everColoring=true;}else if(functions_isHexColor(INFO)){currentColor=INFO;finalText+=everColoring?`</span><span style="color: ${INFO}">`:`<span style="color: ${INFO}">`;everColoring=true;}}else if(arrowMappings(currentColor)[text[i]]){finalText+=arrowMappings(currentColor)[text[i]];}else{finalText+=text[i];}}}if(everColoring){finalText+="</span>";}return finalText;};/* harmony default export */ const functions_formatString = (formatString);
+;// CONCATENATED MODULE: ./src/assets/zUI/utils/misc.ts
+const isEnvBrowser=()=>!window.invokeNative;const misc_noop=()=>{};
+;// CONCATENATED MODULE: ./src/assets/zUI/hooks/fetchNui.ts
+const resourceName=window.GetParentResourceName?window.GetParentResourceName():"zUI";async function fetchNui(eventName,data){if(isEnvBrowser())return undefined;try{const resp=await fetch(`https://${resourceName}/${eventName}`,{method:"post",headers:{"Content-Type":"application/json; charset=UTF-8"},body:JSON.stringify(data)});const respFormatted=await resp.json();return respFormatted;}catch(error){throw Error(`Failed to fetch NUI callback ${eventName}! (${error})`);}}/* harmony default export */ const hooks_fetchNui = (fetchNui);
+;// CONCATENATED MODULE: ./src/assets/zUI/hooks/useNuiEvent.ts
+/**
+ * A hook that manage events listeners for receiving data from the client scripts
+ * @param action The specific `action` that should be listened for.
+ * @param handler The callback function that will handle data relayed by this hook
+ *
+ * @example
+ * useNuiEvent<{visibility: true, wasVisible: 'something'}>('setVisible', (data) => {
+ *   // whatever logic you want
+ * })
+ *
+ **/const useNuiEvent=(action,handler)=>{const savedHandler=(0,react.useRef)(misc_noop);// Make sure we handle for a reactive handler
+(0,react.useEffect)(()=>{savedHandler.current=handler;},[handler]);(0,react.useEffect)(()=>{const eventListener=event=>{const{action:eventAction,data}=event.data;if(savedHandler.current){if(eventAction===action){savedHandler.current(data);}}};window.addEventListener("message",eventListener);return()=>window.removeEventListener("message",eventListener);},[action]);};/* harmony default export */ const hooks_useNuiEvent = (useNuiEvent);
+;// CONCATENATED MODULE: ./src/assets/zUI/features/menu/animations.ts
+function getAnimation({entry,exit},position){let initialAnim={};let animateAnim={};let exitAnim={};switch(entry){case"fadeIn":initialAnim={opacity:0};animateAnim={opacity:1};break;case"slideInHorizontal":initialAnim={x:position=="left"?"-150%":"150%"};animateAnim={x:"0%"};break;case"slideInVertical":initialAnim={y:"-150%"};animateAnim={y:"0%"};break;default:initialAnim={opacity:0};animateAnim={opacity:1};break;}switch(exit){case"fadeOut":exitAnim={opacity:0};break;case"slideOutHorizontal":exitAnim={x:position=="left"?"-150%":"150%"};break;case"slideOutVertical":exitAnim={y:"-150%"};break;default:exitAnim={opacity:0};break;}return{initialAnim,animateAnim,exitAnim};}
+;// CONCATENATED MODULE: ./src/assets/zUI/assets/badges/shop_lock.png
+/* harmony default export */ const shop_lock = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABo0lEQVR4nO2ZwU0CURRFzzMW4JLEBYk2oAtjIiwswAq0B5uxA23BlWFLgm6gAV2Z4NIOnpuJ+eCMYPj/XwzvJJMA8+flzAlDBjB3Z5fZUwuoiQBqATURQC2gJgKoBdREALWAmgigFlATAdQCaiKAWkBN9gBm9usG3AATwJe2CXC9xvF5fXP/INIl6e4HwBNwtmLEGLgys8+OORv5LVPlEvjDyQMMgMfmmOJUeQe4+wuLJ/8O3AHPzfNz4BY4TNaMzWzYMiub6/fAnFvL/KEvMnX3Xsu6XrMvpTVAVt8KAR6SE5q3nfxShHmy/r50gBqfAUfJ45GZfXQtbPaNkpeOi1k11AhwkTx+XWP9W8exRdjGG6Gqf1RsY4Cq7JcY6u6Djl19d79ccXi/a5aZjTdU+0H2+wBgCpzkHtowA05zDiwRoPQ1nPULwc5/BkQAtYCaCKAWUBMB1AJqIoBaQE0EUAuoiQBqATURQC2gJgIUmDkrMLPY7BK/CP0r4hJQC6iJAGoBNRFALaAmAqgF1EQAtYCaCKAWUBMB1AJqIoBaQM3OB/gC5yWLQIQYcKQAAAAASUVORK5CYII=");
+;// CONCATENATED MODULE: ./src/assets/zUI/utils/data/badges.ts
 const Badges={ARROW_LEFT:"arrowleft.png",ARROW_RIGHT:"arrowright.png",BETTING_BOX_CENTER:"bettingbox_centre.png",BETTING_BOX_LEFT:"bettingbox_left.png",BETTING_BOX_RIGHT:"bettingbox_right.png",CARD_SUIT_CLUBS:"card_suit_clubs.png",CARD_SUIT_DIAMONDS:"card_suit_diamonds.png",CARD_SUIT_HEARTS:"card_suit_hearts.png",CARD_SUIT_SPADES:"card_suit_spades.png",MEDAL_SILVER:"medal_silver.png",ALERT_TRIANGLE:"mp_alerttriangle.png",HOST_CROWN:"mp_hostcrown.png",MEDAL_BRONZE:"mp_medal_bronze.png",MEDAL_GOLD:"mp_medal_gold.png",CASH:"mp_specitem_cash.png",SPEC_ITEM_COKE:"mp_specitem_coke.png",SPEC_ITEM_HEROIN:"mp_specitem_heroin.png",SPEC_ITEM_METH:"mp_specitem_meth.png",SPEC_ITEM_WEED:"mp_specitem_weed.png",AMMO_ICON_A:"shop_ammo_icon_a.png",AMMO_ICON_B:"shop_ammo_icon_b.png",ARMOUR_ICON_A:"shop_armour_icon_a.png",ARMOUR_ICON_B:"shop_armour_icon_b.png",ARROWS_UPDOWN:"shop_arrows_upanddown.png",ART_ICON_A:"shop_art_icon_a.png",ART_ICON_B:"shop_art_icon_b.png",BARBER_ICON_A:"shop_barber_icon_a.png",BARBER_ICON_B:"shop_barber_icon_b.png",BOX_BLANK_A:"shop_box_blank.png",BOX_BLANK_B:"shop_box_blankb.png",BOX_CROSS_B:"shop_box_crossb.png",BOX_TICK_A:"shop_box_tick.png",BOX_TICK_B:"shop_box_tickb.png",CHIPS_A:"shop_chips_a.png",CHIPS_B:"shop_chips_b.png",CLOTHING_ICON_A:"shop_clothing_icon_a.png",CLOTHING_ICON_B:"shop_clothing_icon_b.png",FRANKLIN_ICON_A:"shop_franklin_icon_a.png",FRANKLIN_ICON_B:"shop_franklin_icon_b.png",GARAGE_BIKE_A:"shop_garage_bike_icon_a.png",GARAGE_BIKE_B:"shop_garage_bike_icon_b.png",GARAGE_ICON_A:"shop_garage_icon_a.png",GARAGE_ICON_B:"shop_garage_icon_b.png",GUNCLUB_ICON_A:"shop_gunclub_icon_a.png",GUNCLUB_ICON_B:"shop_gunclub_icon_b.png",HEALTH_ICON_A:"shop_health_icon_a.png",HEALTH_ICON_B:"shop_health_icon_b.png",LOCK_ICON:"shop_lock.png",LOCK_ARENA:"shop_lock_arena.png",MAKEUP_ICON_A:"shop_makeup_icon_a.png",MAKEUP_ICON_B:"shop_makeup_icon_b.png",MASK_ICON_A:"shop_mask_icon_a.png",MASK_ICON_B:"shop_mask_icon_b.png",MICHAEL_ICON_A:"shop_michael_icon_a.png",MICHAEL_ICON_B:"shop_michael_icon_b.png",NEW_STAR:"shop_new_star.png",TATTOOS_ICON_A:"shop_tattoos_icon_a.png",TATTOOS_ICON_B:"shop_tattoos_icon_b.png",TICK_ICON:"shop_tick_icon.png",TREVOR_ICON_A:"shop_trevor_icon_a.png",TREVOR_ICON_B:"shop_trevor_icon_b.png"};
-;// CONCATENATED MODULE: ./src/assets/zUI/utils/findBadge.ts
-const findBadge=id=>{if(Badges[id]){const image=new URL(`../assets/badges/${Badges[id]}`,"file:///E:/D%C3%A9veloppement/Web/zDoc-Dev/src/assets/zUI/utils/findBadge.ts").href;return image;}else if(utils_isUrl(id)){return id;}else{return undefined;}};/* harmony default export */ const utils_findBadge = (findBadge);
-;// CONCATENATED MODULE: ./src/assets/zUI/assets/icons/locked.svg
-var locked_path;
-function locked_extends() { return locked_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, locked_extends.apply(null, arguments); }
-
-const SvgLocked = _ref => {
-  let {
-    title,
-    titleId,
-    ...props
-  } = _ref;
-  return /*#__PURE__*/react.createElement("svg", locked_extends({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 558,
-    height: 800,
-    fill: "none",
-    viewBox: "0 0 558 800",
-    "aria-labelledby": titleId
-  }, props), title ? /*#__PURE__*/react.createElement("title", {
-    id: titleId
-  }, title) : null, locked_path || (locked_path = /*#__PURE__*/react.createElement("path", {
-    fill: "#fff",
-    d: "M36.576 800h484.848c20.083 0 36.364-16.281 36.364-36.364V351.515c0-20.082-16.281-36.363-36.364-36.363h-36.363V206.061C485.061 92.439 392.622 0 279 0S72.94 92.439 72.94 206.061v109.091H36.575c-20.083 0-36.364 16.281-36.364 36.363v412.121C.212 783.719 16.493 800 36.576 800m278.788-230.337v48.519c0 20.082-16.282 36.363-36.364 36.363s-36.364-16.281-36.364-36.363v-48.519c-14.71-11.067-24.242-28.664-24.242-48.451 0-33.418 27.188-60.606 60.606-60.606s60.606 27.188 60.606 60.606c0 19.787-9.532 37.384-24.242 48.451M145.667 206.061c0-73.52 59.813-133.334 133.333-133.334s133.333 59.814 133.333 133.334v109.091H145.667z"
-  })));
-};
-/* harmony default export */ const locked = (SvgLocked);
-;// CONCATENATED MODULE: ./src/assets/zUI/components/items/button/button.tsx
-function Button({title,styles,actionId,isSelected,hoverType,defaultColor}){let hoverStyle={};switch(hoverType){case"complete":hoverStyle.background=defaultColor;break;case"rod":hoverStyle.background=styles.Color;hoverStyle.borderLeft=`solid 0.25vw ${defaultColor}`;break;case"neon":hoverStyle.background=`linear-gradient(to top, ${defaultColor}, transparent)`;break;}return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-Item",style:isSelected?hoverStyle:{background:styles.Color||"none"},children:[isSelected&&utils_isUrl(hoverType)&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{className:"zUI-ImageHover",src:hoverType,alt:"hover"}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ContentWrapper",children:[/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ItemLeftZone",children:[styles.LeftBadge&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{className:"zUI-Badge",src:utils_findBadge(styles.LeftBadge),alt:"Left Badge"}),/*#__PURE__*/(0,jsx_runtime.jsx)("h1",{className:"zUI-ItemTitle",style:{color:isSelected?"white":"lightgrey"},children:title})]}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ItemRightZone",children:[styles.RightLabel&&/*#__PURE__*/(0,jsx_runtime.jsx)("h1",{className:"zUI-ItemRightLabel",style:{color:isSelected?"white":"lightgrey"},children:utils_formatString(styles.RightLabel)}),styles.RightBadge&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{className:"zUI-Badge",src:utils_findBadge(styles.RightBadge),alt:"Right Badge"}),styles.IsDisabled&&/*#__PURE__*/(0,jsx_runtime.jsx)(locked,{className:"zUI-LockedIcon"})]})]})]});}/* harmony default export */ const button_button = (Button);
+;// CONCATENATED MODULE: ./src/assets/zUI/utils/functions/findBadge.ts
+const findBadge=id=>{if(Badges[id]){const image=new URL(`../../assets/badges/${Badges[id]}`,"file:///E:/Development/Web/zDoc-Dev/src/assets/zUI/utils/functions/findBadge.ts").href;return image;}else if(functions_isUrl(id)){return id;}else{return undefined;}};/* harmony default export */ const functions_findBadge = (findBadge);
+;// CONCATENATED MODULE: ./src/assets/zUI/features/items/button/button.tsx
+// Assets
+// Props
+// Functions
+function Button({title,description,styles,actionId,isSelected,hoverType,hoverColor,paddingIsActive,rightLabelFont,titleFont,hoverEvent,setDescription}){let hoverStyle={};const[itemIsSelected,setItemIsSelected]=(0,react.useState)(isSelected);const[hoverInterval,setHoverInterval]=(0,react.useState)(null);hoverStyle.borderRadius=`${paddingIsActive?0.5:0}em`;hoverStyle.backgroundColor="rgba(0, 0, 0, 0.5)";switch(hoverType){case"complete":hoverStyle.background=hoverColor;break;case"rod":hoverStyle.background=styles.Color;hoverStyle.borderLeft=`solid 0.25vw ${hoverColor}`;break;case"neon":hoverStyle.background=`linear-gradient(to top, ${hoverColor}, transparent)`;break;}(0,react.useEffect)(()=>{setItemIsSelected(isSelected);},[isSelected]);return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{onMouseEnter:()=>{if(hoverEvent){setItemIsSelected(true);setDescription(description);hooks_fetchNui("zUI-PlaySound",{Type:"up"});const intervalId=window.setInterval(()=>{hooks_fetchNui("zUI-Hover",{actionId:actionId});},100);setHoverInterval(intervalId);}},onMouseLeave:()=>{if(hoverEvent){setDescription("");setItemIsSelected(false);if(hoverInterval){clearInterval(hoverInterval);setHoverInterval(null);}}},onClick:()=>{if(hoverEvent&&actionId){hooks_fetchNui("zUI-UseButton",actionId);hooks_fetchNui("zUI-PlaySound",{Type:"enter"});if(hoverInterval){clearInterval(hoverInterval);setHoverInterval(null);}}},className:"zUI-Item",style:itemIsSelected?hoverStyle:{background:styles.Color||`${paddingIsActive?"rgba(0, 0, 0, 0.5)":"none"}`,borderRadius:`${paddingIsActive?0.5:0}em`},children:[itemIsSelected&&functions_isUrl(hoverType)&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{className:"zUI-ImageHover",src:hoverType,alt:"hover"}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ContentWrapper",children:[/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ItemLeftZone",children:[styles.LeftBadge&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{className:"zUI-Badge",src:functions_findBadge(styles.LeftBadge),alt:"Left Badge"}),/*#__PURE__*/(0,jsx_runtime.jsx)("h1",{className:"zUI-ItemTitle",style:{color:itemIsSelected?"white":"lightgrey",fontFamily:`${functions_extractFontName(titleFont)}, sans-serif`,fontWeight:functions_extractFontWeight(titleFont)},children:functions_formatString(title)})]}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ItemRightZone",children:[styles.RightLabel&&/*#__PURE__*/(0,jsx_runtime.jsx)("h1",{className:"zUI-ItemRightLabel",style:{color:itemIsSelected?"white":"lightgrey",fontFamily:`${functions_extractFontName(rightLabelFont)}, sans-serif`,fontWeight:functions_extractFontWeight(rightLabelFont)},children:functions_formatString(styles.RightLabel)}),styles.RightBadge&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{className:"zUI-Badge",src:functions_findBadge(styles.RightBadge),alt:"Right Badge"}),styles.IsDisabled&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{src:shop_lock,className:"zUI-Badge",alt:"lock"})]})]})]});}/* harmony default export */ const button_button = (Button);
+;// CONCATENATED MODULE: ./src/assets/zUI/features/items/line/line.tsx
+// Props
+function Line({defaultColor,rounded,colors,paddingIsActive}){return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"zUI-Item",style:{justifyContent:"center",borderRadius:`${paddingIsActive?0.5:0}em`,backgroundColor:`${paddingIsActive?"rgba(0, 0, 0, 0.5)":"transparent"}`},children:/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"zUI-Line",style:{background:colors&&colors.length>1?`linear-gradient(to right, ${colors.join(", ")})`:colors&&colors.length===1?colors[0]:defaultColor,borderRadius:rounded?"100em":"none"}})});}/* harmony default export */ const line = (Line);
+;// CONCATENATED MODULE: ./src/assets/zUI/features/items/separator/separator.tsx
+// Function
+// Props
+function Separator({title,position,titleFont,paddingIsActive}){return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"zUI-Item",style:{justifyContent:"center",borderRadius:`${paddingIsActive?0.5:0}em`,backgroundColor:`${paddingIsActive?"rgba(0, 0, 0, 0.5)":"transparent"}`},children:/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"zUI-Separator",style:{justifyContent:position,fontFamily:`${functions_extractFontName(titleFont)}, sans-serif`,fontWeight:functions_extractFontWeight(titleFont)},children:/*#__PURE__*/(0,jsx_runtime.jsx)("h1",{className:"zUI-ItemTitle",children:functions_formatString(title)})})});}/* harmony default export */ const separator = (Separator);
 ;// CONCATENATED MODULE: ./src/assets/zUI/assets/icons/link.svg
-var link_path;
-function link_extends() { return link_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, link_extends.apply(null, arguments); }
+var _path;
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 
 const SvgLink = _ref => {
   let {
@@ -27355,7 +29899,7 @@ const SvgLink = _ref => {
     titleId,
     ...props
   } = _ref;
-  return /*#__PURE__*/react.createElement("svg", link_extends({
+  return /*#__PURE__*/react.createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     width: 24,
     height: 24,
@@ -27364,7 +29908,7 @@ const SvgLink = _ref => {
     "aria-labelledby": titleId
   }, props), title ? /*#__PURE__*/react.createElement("title", {
     id: titleId
-  }, title) : null, link_path || (link_path = /*#__PURE__*/react.createElement("path", {
+  }, title) : null, _path || (_path = /*#__PURE__*/react.createElement("path", {
     stroke: "#fff",
     strokeLinecap: "round",
     strokeLinejoin: "round",
@@ -27373,10 +29917,17 @@ const SvgLink = _ref => {
   })));
 };
 /* harmony default export */ const icons_link = (SvgLink);
-;// CONCATENATED MODULE: ./src/assets/zUI/components/items/linkButton/linkButton.tsx
-function LinkButton({title,styles,isSelected,hoverType,defaultColor}){let hoverStyle={};switch(hoverType){case"complete":hoverStyle.background=defaultColor;break;case"rod":hoverStyle.background=styles.Color;hoverStyle.borderLeft=`solid 0.25vw ${defaultColor}`;break;case"neon":hoverStyle.background=`linear-gradient(to top, ${defaultColor}, transparent)`;break;}return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-Item",style:isSelected?hoverStyle:{background:styles.Color||"none"},children:[isSelected&&utils_isUrl(hoverType)&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{className:"zUI-ImageHover",src:hoverType}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ContentWrapper",children:[/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ItemLeftZone",children:[styles.LeftBadge&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{className:"zUI-Badge",src:utils_findBadge(styles.LeftBadge),alt:"Left Badge"}),/*#__PURE__*/(0,jsx_runtime.jsx)("h1",{className:"zUI-ItemTitle",style:{color:isSelected?"white":"lightgrey"},children:utils_formatString(title)})]}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ItemRightZone",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(icons_link,{className:"zUI-Badge"}),styles.IsDisabled&&/*#__PURE__*/(0,jsx_runtime.jsx)(locked,{className:"zUI-LockedIcon"})]})]})]});}/* harmony default export */ const linkButton = (LinkButton);
-;// CONCATENATED MODULE: ./src/assets/zUI/components/items/checkbox/checkbox.tsx
-function Checkbox({title,styles,isSelected,state,hoverType,defaultColor}){let hoverStyle={};switch(hoverType){case"complete":hoverStyle.background=defaultColor;break;case"rod":hoverStyle.background=styles.Color;hoverStyle.borderLeft=`solid 0.25vw ${defaultColor}`;break;case"neon":hoverStyle.background=`linear-gradient(to top, ${defaultColor}, transparent)`;break;}return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-Item",style:isSelected?hoverStyle:{background:styles.Color||"none"},children:[isSelected&&utils_isUrl(hoverType)&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{className:"zUI-ImageHover",src:hoverType}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ContentWrapper",children:[/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ItemLeftZone",children:[styles.LeftBadge&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{className:"zUI-Badge",src:utils_findBadge(styles.LeftBadge),alt:"Left Badge"}),/*#__PURE__*/(0,jsx_runtime.jsx)("h1",{className:"zUI-ItemTitle",style:{color:isSelected?"white":"lightgrey"},children:utils_formatString(title)})]}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ItemRightZone",children:[/*#__PURE__*/(0,jsx_runtime.jsx)("input",{type:"checkbox",className:"zUI-Checkbox",style:state&&!styles.IsDisabled?{backgroundColor:defaultColor}:{},checked:state,disabled:styles.IsDisabled}),styles.IsDisabled&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{src:locked,className:"zUI-LockedIcon"})]})]})]});}/* harmony default export */ const checkbox_checkbox = (Checkbox);
+;// CONCATENATED MODULE: ./src/assets/zUI/features/items/linkButton/linkButton.tsx
+function LinkButton({title,description,styles,isSelected,hoverType,hoverColor,paddingIsActive,titleFont,link,setDescription}){let hoverStyle={};const[isHovered,setIsHovered]=(0,react.useState)(false);// état pour gérer le hover
+hoverStyle.borderRadius=`${paddingIsActive?0.5:0}em`;hoverStyle.backgroundColor="rgba(0, 0, 0, 0.5)";switch(hoverType){case"complete":hoverStyle.background=hoverColor;break;case"rod":hoverStyle.background=styles.Color;hoverStyle.borderLeft=`solid 0.25vw ${hoverColor}`;break;case"neon":hoverStyle.background=`linear-gradient(to top, ${hoverColor}, transparent)`;break;}const[itemIsSelected,setItemIsSelected]=(0,react.useState)(isSelected);(0,react.useEffect)(()=>{setItemIsSelected(isSelected);},[isSelected]);return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-Item",style:isHovered||itemIsSelected?hoverStyle:{background:styles.Color||`${paddingIsActive?"rgba(0, 0, 0, 0.5)":"none"}`,borderRadius:`${paddingIsActive?0.5:0}em`},onMouseEnter:()=>{setDescription(description);setIsHovered(true);hooks_fetchNui("zUI-PlaySound",{Type:"up"});},onMouseLeave:()=>{setIsHovered(false);setDescription("");},onClick:()=>{hooks_fetchNui("zUI-PlaySound",{Type:"enter"});// @ts-ignore
+window.invokeNative("openUrl",link);},children:[isHovered&&functions_isUrl(hoverType)&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{className:"zUI-ImageHover",src:hoverType}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ContentWrapper",children:[/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ItemLeftZone",children:[styles.LeftBadge&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{className:"zUI-Badge",src:functions_findBadge(styles.LeftBadge),alt:"Left Badge"}),/*#__PURE__*/(0,jsx_runtime.jsx)("h1",{className:"zUI-ItemTitle",style:{color:itemIsSelected?"white":"lightgrey",fontFamily:`${functions_extractFontName(titleFont)}, sans-serif`,fontWeight:functions_extractFontWeight(titleFont)},children:functions_formatString(title)})]}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ItemRightZone",children:[/*#__PURE__*/(0,jsx_runtime.jsx)("img",{src:icons_link,className:"zUI-Badge"}),styles.IsDisabled&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{src:shop_lock,className:"zUI-LockedIcon"})]})]})]});}/* harmony default export */ const linkButton = (LinkButton);
+;// CONCATENATED MODULE: ./src/assets/zUI/features/items/checkbox/checkbox.tsx
+function Checkbox({title,description,styles,isSelected,state,hoverType,hoverColor,paddingIsActive,titleFont,actionId,setDescription}){let hoverStyle={};const[isHovered,setIsHovered]=(0,react.useState)(false);hoverStyle.borderRadius=`${paddingIsActive?0.5:0}em`;hoverStyle.backgroundColor="rgba(0, 0, 0, 0.5)";switch(hoverType){case"complete":hoverStyle.background=hoverColor;break;case"rod":hoverStyle.background=styles.Color;hoverStyle.borderLeft=`solid 0.25vw ${hoverColor}`;break;case"neon":hoverStyle.background=`linear-gradient(to top, ${hoverColor}, transparent)`;break;}const[itemIsSelected,setItemIsSelected]=(0,react.useState)(isSelected);const[hoverInterval,setHoverInterval]=(0,react.useState)(null);(0,react.useEffect)(()=>{setItemIsSelected(isSelected);},[isSelected]);return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-Item",style:isHovered||itemIsSelected?hoverStyle:{background:styles.Color||`${paddingIsActive?"rgba(0, 0, 0, 0.5)":"none"}`,borderRadius:`${paddingIsActive?0.5:0}em`},onMouseEnter:()=>{setDescription(description);setIsHovered(true);hooks_fetchNui("zUI-PlaySound",{Type:"up"});const intervalId=window.setInterval(()=>{hooks_fetchNui("zUI-Hover",{actionId:actionId});},100);setHoverInterval(intervalId);},onMouseLeave:()=>{setIsHovered(false);setDescription("");if(hoverInterval){clearInterval(hoverInterval);setHoverInterval(null);}},onClick:()=>{hooks_fetchNui("zUI-PlaySound",{Type:"enter"});hooks_fetchNui("zUI-UseCheckbox",actionId);},children:[isHovered&&functions_isUrl(hoverType)&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{className:"zUI-ImageHover",src:hoverType}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ContentWrapper",children:[/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ItemLeftZone",children:[styles.LeftBadge&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{className:"zUI-Badge",src:functions_findBadge(styles.LeftBadge),alt:"Left Badge"}),/*#__PURE__*/(0,jsx_runtime.jsx)("h1",{className:"zUI-ItemTitle",style:{color:itemIsSelected?"white":"lightgrey",fontFamily:`${functions_extractFontName(titleFont)}, sans-serif`,fontWeight:functions_extractFontWeight(titleFont)},children:functions_formatString(title)})]}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ItemRightZone",children:[/*#__PURE__*/(0,jsx_runtime.jsx)("input",{type:"checkbox",className:"zUI-Checkbox",style:state&&!styles.IsDisabled?{backgroundColor:hoverColor}:{},checked:state,disabled:styles.IsDisabled}),styles.IsDisabled&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{src:shop_lock,className:"zUI-LockedIcon"})]})]})]});}/* harmony default export */ const checkbox_checkbox = (Checkbox);
+;// CONCATENATED MODULE: ./src/assets/zUI/features/items/slider/slider.tsx
+// Functions
+// Icons
+// Props
+function Slider({title,styles,actionId,isSelected,hoverType,hoverColor,percentage:initialPercentage,step,paddingIsActive,titleFont,rightLabelFont}){const[percentage,setPercentage]=(0,react.useState)(initialPercentage);(0,react.useEffect)(()=>{const handleMessage=event=>{if(event.data.type==="UPDATE_SLIDER"&&event.data.id===actionId){if(!styles.IsDisabled){let newPercentage=percentage;if(event.data.action==="right"){newPercentage=Math.min(percentage+step,100);}else if(event.data.action==="left"){newPercentage=Math.max(percentage-step,0);}setPercentage(newPercentage);if(event.data.action==="right"||event.data.action==="left"){hooks_fetchNui("zUI-UseSlider",{actionId:actionId,change:true,percentage:newPercentage});}else if(event.data.action==="enter"){hooks_fetchNui("zUI-UseSlider",{actionId:actionId,selected:true,percentage:newPercentage});}}}};window.addEventListener("message",handleMessage);return()=>{window.removeEventListener("message",handleMessage);};},[actionId,styles.IsDisabled,percentage,step]);let hoverStyle={};hoverStyle.borderRadius=`${paddingIsActive?0.5:0}em`;hoverStyle.backgroundColor="rgba(0, 0, 0, 0.5)";switch(hoverType){case"complete":hoverStyle.background=hoverColor;break;case"rod":hoverStyle.background=styles.Color;hoverStyle.borderLeft=`solid 0.25vw ${hoverColor}`;break;case"neon":hoverStyle.background=`linear-gradient(to top, ${hoverColor}, transparent)`;break;}return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-Item",style:isSelected?hoverStyle:{background:styles.Color||`${paddingIsActive?"rgba(0, 0, 0, 0.5)":"none"}`,borderRadius:`${paddingIsActive?0.5:0}em`},children:[isSelected&&functions_isUrl(hoverType)&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{className:"zUI-ImageHover",src:hoverType,alt:"hover"}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ContentWrapper",children:[/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"zUI-ItemLeftZone",children:/*#__PURE__*/(0,jsx_runtime.jsx)("h1",{className:"zUI-ItemTitle",style:{color:isSelected?"white":"lightgrey",fontFamily:`${functions_extractFontName(titleFont)}, sans-serif`,fontWeight:functions_extractFontWeight(titleFont)},children:functions_formatString(title)})}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ItemRightZone",children:[styles?.ShowPercentage&&/*#__PURE__*/(0,jsx_runtime.jsxs)("h1",{className:"zUI-TextPercentage",style:{color:isSelected?"white":"lightgrey",fontFamily:`${functions_extractFontName(rightLabelFont)}, sans-serif`,fontWeight:functions_extractFontWeight(rightLabelFont)},children:[percentage,"%"]}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"zUI-PercentageBar",children:/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"zUI-Percentage",style:{background:"white",height:"100%",borderRadius:"100em",width:`${percentage}%`,transition:"0.5s"}})}),styles.IsDisabled&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{src:shop_lock,className:"zUI-LockedIcon",alt:"lock"})]})]})]});}/* harmony default export */ const slider = (Slider);
 ;// CONCATENATED MODULE: ./src/assets/zUI/assets/icons/next.svg
 var next_path;
 function next_extends() { return next_extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, next_extends.apply(null, arguments); }
@@ -27431,22 +29982,36 @@ const SvgLast = _ref => {
   })));
 };
 /* harmony default export */ const last = (SvgLast);
-;// CONCATENATED MODULE: ./src/assets/zUI/components/items/list/list.tsx
+;// CONCATENATED MODULE: ./src/assets/zUI/features/items/list/list.tsx
+// Functions
 // Icons
-function List({title,styles,isSelected,hoverType,items,actionId,defaultColor}){const[CurrentIndex,SetCurrentIndex]=(0,react.useState)(0);let hoverStyle={};switch(hoverType){case"complete":hoverStyle.background=defaultColor;break;case"rod":hoverStyle.background=styles.Color;hoverStyle.borderLeft=`solid 0.25vw ${defaultColor}`;break;case"neon":hoverStyle.background=`linear-gradient(to top, ${defaultColor}, transparent)`;break;}return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-Item",style:isSelected?hoverStyle:{background:styles.Color||"none"},children:[isSelected&&utils_isUrl(hoverType)&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{className:"zUI-ImageHover",src:hoverType}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ContentWrapper",children:[/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ItemLeftZone",children:[styles.LeftBadge&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{className:"zUI-Badge",src:utils_findBadge(styles.LeftBadge),alt:"Left Badge"}),/*#__PURE__*/(0,jsx_runtime.jsx)("h1",{className:"zUI-ItemTitle",style:{color:isSelected?"white":"lightgrey"},children:utils_formatString(title)})]}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ItemRightZone",children:[/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ListCarousel",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(last,{className:"zUI-ListIcon"}),/*#__PURE__*/(0,jsx_runtime.jsx)("h1",{className:"zUI-ListItem",children:utils_formatString(items[CurrentIndex])}),/*#__PURE__*/(0,jsx_runtime.jsx)(next,{className:"zUI-ListIcon"})]}),styles.IsDisabled&&/*#__PURE__*/(0,jsx_runtime.jsx)(locked,{className:"zUI-LockedIcon"})]})]})]});}/* harmony default export */ const list = (List);
-;// CONCATENATED MODULE: ./src/assets/zUI/components/menu/menu.tsx
-// Items
 // Props
-function Menu(theme){const[visible,setVisible]=(0,react.useState)(true);const[title,setTitle]=(0,react.useState)("Titre");const[subtitle,setSubtitle]=(0,react.useState)("Sous-titre");const[description,setDescription]=(0,react.useState)("");const[items,setItems]=(0,react.useState)([{"title":"C'est un séparateur !","position":"center","type":"separator"},{"colors":["#ff0000","#00ff00","#0000ff"],"type":"line"},{"description":"Description","styles":{"RightLabel":"RightLabel"},"title":"Titre","actionId":"zUI-ButtonIdentifier:3","type":"button"},{"description":"Description","state":false,"styles":[],"title":"Titre","actionId":"zUI-CheckboxIdentifier:4","type":"checkbox"},{"description":"Description","items":["Item1","Item2","Item3","Item4","Item5"],"title":"Titre","actionId":"zUI-ListIdentifier:5","styles":[],"type":"list"},{"description":"Accéder à la ~#faa55c~documentation.","styles":[],"link":"https://zsquad.fr","title":"Documentation","type":"linkButton"}]);const[index,setIndex]=(0,react.useState)(1);const[banner,setBanner]=(0,react.useState)("");const[image,setImage]=(0,react.useState)("");// Variables
+function List({title,styles,isSelected,hoverType,items,actionId,hoverColor,paddingIsActive,titleFont,rightLabelFont,index}){const CurrentIndex=index;let hoverStyle={};hoverStyle.borderRadius=`${paddingIsActive?0.5:0}em`;hoverStyle.backgroundColor="rgba(0, 0, 0, 0.5)";switch(hoverType){case"complete":hoverStyle.background=hoverColor;break;case"rod":hoverStyle.background=styles.Color;hoverStyle.borderLeft=`solid 0.25vw ${hoverColor}`;break;case"neon":hoverStyle.background=`linear-gradient(to top, ${hoverColor}, transparent)`;break;}return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-Item",style:isSelected?hoverStyle:{background:styles.Color||`${paddingIsActive?"rgba(0, 0, 0, 0.5)":"none"}`,borderRadius:`${paddingIsActive?0.5:0}em`},children:[isSelected&&functions_isUrl(hoverType)&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{className:"zUI-ImageHover",src:hoverType}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ContentWrapper",children:[/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ItemLeftZone",children:[styles.LeftBadge&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{className:"zUI-Badge",src:functions_findBadge(styles.LeftBadge),alt:"Left Badge"}),/*#__PURE__*/(0,jsx_runtime.jsx)("h1",{className:"zUI-ItemTitle",style:{color:isSelected?"white":"lightgrey",fontFamily:`${functions_extractFontName(titleFont)}, sans-serif`,fontWeight:functions_extractFontWeight(titleFont)},children:functions_formatString(title)})]}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ItemRightZone",children:[/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ListCarousel",children:[/*#__PURE__*/(0,jsx_runtime.jsx)("img",{src:last,className:"zUI-ListIcon"}),/*#__PURE__*/(0,jsx_runtime.jsx)("h1",{style:{color:isSelected?"white":"lightgrey",fontFamily:`${functions_extractFontName(rightLabelFont)}, sans-serif`,fontWeight:functions_extractFontWeight(rightLabelFont)},children:functions_formatString(items[CurrentIndex])}),/*#__PURE__*/(0,jsx_runtime.jsx)("img",{src:next,className:"zUI-ListIcon"})]}),styles.IsDisabled&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{src:shop_lock,className:"zUI-LockedIcon"})]})]})]});}/* harmony default export */ const list = (List);
+;// CONCATENATED MODULE: ./src/assets/zUI/features/items/colorList/colorList.tsx
+// Functions
+// Icons
+// Props
+function ColorList({title,styles,isSelected,hoverType,items,actionId,hoverColor,paddingIsActive,titleFont,rightLabelFont,index}){const[CurrentIndex,SetCurrentIndex]=(0,react.useState)(index);const[selectedCircle,setSelectedCircle]=(0,react.useState)(0);const[animating,setAnimating]=(0,react.useState)(false);(0,react.useEffect)(()=>{SetCurrentIndex(index);});const displayedColors=[...items.slice(CurrentIndex,CurrentIndex+3),...items.slice(0,Math.max(0,3-(items.length-CurrentIndex)))];const handleCircleNavigation=direction=>{let newIndex=selectedCircle;if(direction==="right"){newIndex=selectedCircle<2?selectedCircle+1:2;}else if(direction==="left"){newIndex=selectedCircle>0?selectedCircle-1:0;}setSelectedCircle(newIndex);setAnimating(true);};(0,react.useEffect)(()=>{if(animating){const timeout=setTimeout(()=>{setAnimating(false);},300);return()=>clearTimeout(timeout);}},[animating]);let hoverStyle={};hoverStyle.borderRadius=`${paddingIsActive?0.5:0}em`;hoverStyle.backgroundColor="rgba(0, 0, 0, 0.5)";switch(hoverType){case"complete":hoverStyle.background=hoverColor;break;case"rod":hoverStyle.background=styles.Color;hoverStyle.borderLeft=`solid 0.25vw ${hoverColor}`;break;case"neon":hoverStyle.background=`linear-gradient(to top, ${hoverColor}, transparent)`;break;}return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-Item",style:isSelected?hoverStyle:{background:styles.Color||`${paddingIsActive?"rgba(0, 0, 0, 0.5)":"none"}`,borderRadius:`${paddingIsActive?0.5:0}em`},children:[isSelected&&functions_isUrl(hoverType)&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{className:"zUI-ImageHover",src:hoverType}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ContentWrapper",children:[/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ItemLeftZone",children:[styles.LeftBadge&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{className:"zUI-Badge",src:functions_findBadge(styles.LeftBadge),alt:"Left Badge"}),/*#__PURE__*/(0,jsx_runtime.jsx)("h1",{className:"zUI-ItemTitle",style:{color:isSelected?"white":"lightgrey",fontFamily:`${functions_extractFontName(titleFont)}, sans-serif`,fontWeight:functions_extractFontWeight(titleFont)},children:functions_formatString(title)})]}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ItemRightZone",children:[/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zUI-ListCarousel",children:[/*#__PURE__*/(0,jsx_runtime.jsx)("img",{src:last,className:"zUI-ListIcon"}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"zUI-ColorCarousel",children:displayedColors.map((color,index)=>{return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:`zUI-ColorCircle ${selectedCircle===index&&animating?"selected":""}`,style:{backgroundColor:color,width:"20px",height:"20px",borderRadius:"50%",margin:"5px",border:selectedCircle===index?"2px solid white":"none"},onClick:()=>setSelectedCircle(index)},index);})}),/*#__PURE__*/(0,jsx_runtime.jsx)("img",{src:next,className:"zUI-ListIcon"})]}),styles.IsDisabled&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{src:shop_lock,className:"zUI-LockedIcon"})]})]})]});}/* harmony default export */ const colorList = (ColorList);
+;// CONCATENATED MODULE: ./src/assets/zUI/utils/functions/sleep.ts
+function sleep(ms){return new Promise(resolve=>setTimeout(resolve,ms));}/* harmony default export */ const functions_sleep = (sleep);
+;// CONCATENATED MODULE: ./src/assets/zUI/features/menu/menu.tsx
+// Theme
+// StyleSheets
+// Props
+// Functions
+// Hooks
+// Items
+function Menu(){const[visible,setVisible]=(0,react.useState)(false);const[themeIsReceived,setThemeIsReceived]=(0,react.useState)(false);const[theme,setTheme]=(0,react.useState)(defaultTheme_namespaceObject);const[banner,setBanner]=(0,react.useState)(theme?.banner||"");const[title,setTitle]=(0,react.useState)("");const[subtitle,setSubtitle]=(0,react.useState)("");const[menuDescription,setMenuDescription]=(0,react.useState)("");const[description,setDescription]=(0,react.useState)("");const[items,setItems]=(0,react.useState)([]);const[index,setIndex]=(0,react.useState)(1);const[indexHistory,setIndexHistory]=(0,react.useState)({});const[infosIsVisible,setInfosIsVisible]=(0,react.useState)(false);const[informations,setInformations]=(0,react.useState)([]);const[infoPanelTitle,setInfoPanelTitle]=(0,react.useState)("");const[infoPanelBanner,setInfoPanelBanner]=(0,react.useState)("");// Variables
 let Items=[];let ItemIndex;let IsSelected=false;let NumberOfItems=items&&items.length>0?items.filter(item=>item.type!=="line"&&item.type!=="separator"&&!item.styles.IsDisabled).length:0;const itemsRef=(0,react.useRef)(null);// Functions
-const debounce=(func,delay)=>{let timeoutId;return(...args)=>{if(timeoutId)clearTimeout(timeoutId);timeoutId=setTimeout(()=>{func(...args);},delay);};};const handleIndexChange=(0,react.useCallback)(debounce(newIndex=>{setIndex(newIndex);},100),[]);// UseEffect
-(0,react.useEffect)(()=>{if(itemsRef.current){if(index===1){itemsRef.current.scrollTo({top:0,behavior:"smooth"});}else{const selectedItem=itemsRef.current.children[Items[index-1]];if(selectedItem){const itemRect=selectedItem.getBoundingClientRect();const parentRect=itemsRef.current.getBoundingClientRect();if(itemRect.top<parentRect.top||itemRect.bottom>parentRect.bottom){selectedItem.scrollIntoView({behavior:"smooth",block:"nearest"});}}}}},[index,Items]);(0,react.useEffect)(()=>{if(items&&items.length>0){const SelectedItem=items.find((item,id)=>{if(item.type!=="separator"&&item.type!=="line"&&!item.styles.IsDisabled){if(!Items.find(item=>item===id)){Items.push(id);}ItemIndex=Items[index-1];return ItemIndex===id;}return false;});if(SelectedItem){setDescription(SelectedItem.description);}}},[index,items]);// Events
-const SendMessageToList=(id,action)=>{window.postMessage({type:"UPDATE_LIST",id,action},"*");};const[timeout,setTimeoutId]=(0,react.useState)(null);const getPositionStyles=()=>{if(!theme)return{};let initial={};let animate={};let exit={};switch(theme.position){case"left":initial={x:"-50%"};animate={x:"0%"};exit={x:"-50%"};break;case"right":initial={x:"128%"};animate={x:"78%"};exit={x:"128%"};break;default:initial={x:"0%"};animate={x:"0%"};exit={x:"0%"};break;}return{initial,animate,exit};};const positionStyles=getPositionStyles();return/*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(AnimatePresence,{children:visible&&/*#__PURE__*/(0,jsx_runtime.jsx)(motion.div,{initial:positionStyles.initial,animate:positionStyles.animate,exit:positionStyles.exit,transition:{duration:0.6},id:"zUI-Container",children:/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{id:"zUI-Menu",style:{background:theme?.colors?.background||"rgba(18, 18, 18, 0.5)",borderRadius:theme?.corners?.rounded?`${theme?.corners?.radius}em`||"0.5em":"0",top:`${theme?.positions?.x}vh`||"1.5vh",boxShadow:theme?.perspective?theme?.position=="left"?"-0.25vw 0 10px rgba(0, 0, 0, 0.5)":"0.25vw 0 10px rgba(0, 0, 0, 0.5)":"none",transform:theme?.perspective?theme?.position=="left"?"rotateY(20deg) translateX(2vw)":"rotateY(-10deg)":"none"},children:[/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{id:"zUI-Banner",style:{minHeight:!utils_isUrl(banner)&&!utils_isUrl(theme?.banner)?"10vh":"0%",background:banner.length>1&&!utils_isUrl(banner)?banner:theme?.banner&&!utils_isUrl(theme.banner)?theme.banner:"transparent"},children:[banner.length<1&&utils_isUrl(theme?.banner)&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{id:"zUI-BannerImage",src:theme.banner}),banner.length>1&&utils_isUrl(banner)&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{id:"zUI-BannerImage",src:banner}),/*#__PURE__*/(0,jsx_runtime.jsx)("h1",{className:"zUI-BoldText",style:{position:"absolute"},children:theme?.stringUpper?title.toUpperCase():title})]}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{id:"zUI-Informations",style:{background:theme?.colors?.secondary||"transparent"},children:[/*#__PURE__*/(0,jsx_runtime.jsx)("h1",{className:"zUI-MediumText",children:theme?.stringUpper?subtitle.toUpperCase():subtitle}),theme?.counter&&/*#__PURE__*/(0,jsx_runtime.jsxs)("h1",{id:"zUI-Counter",children:[index,"/",NumberOfItems]})]}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{id:"zUI-Items",ref:itemsRef,children:items&&items.length>0&&items.map((item,id)=>{if(item.type!=="line"&&item.type!=="separator"&&!item.styles.IsDisabled){if(!Items.find(item=>item===id)){Items.push(id);}ItemIndex=Items[index-1];IsSelected=ItemIndex===id;}switch(item.type){case"line":item.rounded=theme?.items?.line?.rounded;item.defaultColor=theme?.items?.defaultColor;return/*#__PURE__*/(0,jsx_runtime.jsx)(line,{...item});case"separator":return/*#__PURE__*/(0,jsx_runtime.jsx)(separator,{...item});case"button":item.isSelected=!item.styles.IsDisabled&&IsSelected;item.defaultColor=theme?.items?.defaultColor;item.hoverType=theme?.items?.hoverStyle;return/*#__PURE__*/(0,jsx_runtime.jsx)(button_button,{...item},id);case"linkButton":item.isSelected=!item.styles.IsDisabled&&IsSelected;item.defaultColor=theme?.items?.defaultColor;item.hoverType=theme?.items?.hoverStyle;return/*#__PURE__*/(0,jsx_runtime.jsx)(linkButton,{...item},id);case"checkbox":item.isSelected=!item.styles.IsDisabled&&IsSelected;item.defaultColor=theme?.items?.defaultColor;item.hoverType=theme?.items?.hoverStyle;return/*#__PURE__*/(0,jsx_runtime.jsx)(checkbox_checkbox,{...item},id);case"list":item.isSelected=!item.styles.IsDisabled&&IsSelected;item.defaultColor=theme?.items?.defaultColor;item.hoverType=theme?.items?.hoverStyle;return/*#__PURE__*/(0,jsx_runtime.jsx)(list,{...item},id);}})}),theme?.controlsIndicator&&/*#__PURE__*/(0,jsx_runtime.jsx)("div",{id:"zUI-ControlsIndicator",style:{background:theme?.colors?.secondary||"transparent"},children:/*#__PURE__*/(0,jsx_runtime.jsx)(controls,{className:"zUI-Icon"})}),description.length>0&&/*#__PURE__*/(0,jsx_runtime.jsx)("div",{id:"description",style:!theme?.controlsIndicator?{background:theme?.colors?.secondary||"transparent"}:{},children:/*#__PURE__*/(0,jsx_runtime.jsx)("h2",{children:utils_formatString(description)})}),image.length>0&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{src:image,id:"zUI-Sprite"})]})})})});}/* harmony default export */ const menu = (Menu);
+const debounce=(func,delay)=>{let timeoutId;return(...args)=>{if(timeoutId)clearTimeout(timeoutId);timeoutId=setTimeout(()=>{func(...args);},delay);};};const handleIndexChange=(0,react.useCallback)(debounce(newIndex=>{setIndex(newIndex);},100),[]);const SendMessageToSlider=(id,action)=>{window.postMessage({type:"UPDATE_SLIDER",id,action},"*");};// UseEffects
+(0,react.useEffect)(()=>{if(itemsRef.current){if(index===1){itemsRef.current.scrollTo({top:0,behavior:theme.animations.onScroll?"smooth":"auto"});}else{const selectedItem=itemsRef.current.children[Items[index-1]];if(selectedItem){const itemRect=selectedItem.getBoundingClientRect();const parentRect=itemsRef.current.getBoundingClientRect();if(itemRect.top<parentRect.top||itemRect.bottom>parentRect.bottom){selectedItem.scrollIntoView({behavior:theme.animations.onScroll?"smooth":"auto",block:"nearest"});}}}}},[index,Items]);(0,react.useEffect)(()=>{if(items&&items.length>0){const SelectedItem=items.find((item,id)=>{if(item.type!=="separator"&&item.type!=="line"&&!item.styles.IsDisabled){if(!Items.find(item=>item===id)){Items.push(id);}ItemIndex=Items[index-1];return ItemIndex===id;}return false;});if(SelectedItem){setDescription(SelectedItem.description||"");if(SelectedItem.type!=="linkButton"){hooks_fetchNui("zUI-Hover",{actionId:SelectedItem.actionId});}}}},[index,items]);(0,react.useEffect)(()=>{if(theme&&theme?.fonts){const links=Object.values(theme.fonts).filter(fontUrl=>fontUrl).map(fontUrl=>{const link=document.createElement("link");link.href=fontUrl;link.rel="stylesheet";document.head.appendChild(link);return link;});return()=>{links.forEach(link=>{if(link)document.head.removeChild(link);});};}},[theme?.fonts]);(0,react.useEffect)(()=>{if(!themeIsReceived){hooks_fetchNui("zUI-GetMenuTheme",{});}},[themeIsReceived]);// Nui Events
+hooks_useNuiEvent("zUI-SetMenuTheme",data=>{setTheme(data);if(data!==null||data!==undefined){setThemeIsReceived(true);}});const[infoTimeout,setInfoTimeoutId]=(0,react.useState)(null);hooks_useNuiEvent("zUI-ShowInfoPanel",data=>{if(infoTimeout)clearTimeout(infoTimeout);setInfoPanelTitle(data.title);setInformations(data.infos);setInfoPanelBanner(data.banner);setInfosIsVisible(true);setInfoTimeoutId(setTimeout(()=>{setInfosIsVisible(false);setInfoPanelTitle("");setInformations([]);setInfoPanelBanner("");},100));});hooks_useNuiEvent("zUI-ManageMenu",data=>{setVisible(data.isVisible);if(data.banner&&data.banner.length>2){setBanner(data.banner);}setTitle(data.title);setSubtitle(data.subtitle);setMenuDescription(data.description);setItems(data.items);});hooks_useNuiEvent("zUI-Reset",async data=>{let LastMenu=data.lastMenu;let NewMenu=data.newMenu;setIndexHistory(prev=>({...prev,[LastMenu]:index}));handleIndexChange(indexHistory[NewMenu]||0);await functions_sleep(100);setDescription("");});hooks_useNuiEvent("zUI-Interact",data=>{if(data.type==="up"){hooks_fetchNui("zUI-PlaySound",{Type:data.type});if(index>1){handleIndexChange(index-1);}else{handleIndexChange(NumberOfItems);}}else if(data.type==="down"){hooks_fetchNui("zUI-PlaySound",{Type:data.type});if(index<NumberOfItems){handleIndexChange(index+1);}else{handleIndexChange(1);}}else if(data.type==="enter"){hooks_fetchNui("zUI-PlaySound",{Type:data.type});let item=items[ItemIndex];if(item){switch(item?.type){case"button":if(item.actionId){hooks_fetchNui("zUI-UseButton",item.actionId);}break;case"checkbox":if(item.actionId){hooks_fetchNui("zUI-UseCheckbox",item.actionId);}break;case"linkButton":if(item.link){//@ts-ignore
+window.invokeNative("openUrl",item.link);}break;case"list":if(item.actionId){hooks_fetchNui("zUI-UseList",{actionId:item.actionId,Selected:true,ListChange:false,Index:item.index});}break;case"colorList":if(item.actionId){hooks_fetchNui("zUI-UseList",{actionId:item.actionId,Selected:true,ListChange:false,Index:item.index});}break;case"slider":if(item.actionId){if(item.actionId){SendMessageToSlider(item.actionId,"enter");}}break;}}}else if(data.type==="left"||data.type==="right"){let item=items[ItemIndex];if(item.actionId){if(item.type==="list"){hooks_fetchNui("zUI-UseList",{actionId:item.actionId,ListChange:true,Index:data.type==="right"?(item.index+1)%item.items.length:item.index===0?item.items.length-1:item.index-1});hooks_fetchNui("zUI-PlaySound",{Type:data.type});}else if(item.type==="slider"){SendMessageToSlider(item.actionId,data.type);hooks_fetchNui("zUI-PlaySound",{Type:data.type});}else if(item.type==="colorList"){hooks_fetchNui("zUI-UseList",{actionId:item.actionId,ListChange:true,Index:data.type==="right"?(item.index+1)%item.items.length:item.index===0?item.items.length-1:item.index-1});hooks_fetchNui("zUI-PlaySound",{Type:data.type});}}}});return/*#__PURE__*/(0,jsx_runtime.jsx)(AnimatePresence,{children:visible&&/*#__PURE__*/(0,jsx_runtime.jsxs)(motion.div,{id:"zUI-MenuContainer",style:{flexDirection:theme?.position==="left"?"row":"row-reverse"},initial:getAnimation(theme.animations,theme.position).initialAnim,animate:getAnimation(theme.animations,theme.position).animateAnim,exit:getAnimation(theme.animations,theme.position).exitAnim,transition:{duration:0.5},children:[/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{id:"zUI-Menu",style:{padding:theme?.padding?"0.75%":"none",gap:theme?.padding?"1vh":"none",backgroundColor:theme?.colors?.background,borderRadius:`${theme?.cornersRadius}em`,boxShadow:theme?.perspective?`${theme?.position==="left"?-0.25:0.25}vw 0 10px rgba(0, 0, 0, 0.5)`:"none",transform:theme?.perspective?`rotateY(${theme?.position==="left"?20:-20}deg) translateX(${theme?.position==="left"?1:-1}vw)`:"none"},children:[/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{id:"zUI-MenuBanner",style:{minHeight:`${!functions_isUrl(banner)?"10vh":"none"}`,borderRadius:`${theme?.padding?0.5:0}em`,background:`${!functions_isUrl(banner)?banner:"transparent"}`},children:[banner&&functions_isUrl(banner)&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{src:banner,style:{width:"100%"}}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{id:"zUI-BannerTexts",children:[/*#__PURE__*/(0,jsx_runtime.jsx)("h1",{className:"zUI-BannerTitle",style:{fontFamily:`${functions_extractFontName(theme?.fonts?.title)}, sans-serif`,fontWeight:functions_extractFontWeight(theme?.fonts?.title)},children:functions_formatString(title)}),/*#__PURE__*/(0,jsx_runtime.jsx)("h2",{className:"zUI-BannerSubtitle",style:{fontFamily:`${functions_extractFontName(theme?.fonts?.subtitle)}, sans-serif`,fontWeight:functions_extractFontWeight(theme?.fonts?.subtitle)},children:functions_formatString(subtitle)})]})]}),theme?.displayDescription&&/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{id:"zUI-MenuDescriptionContainer",style:{borderRadius:`${theme?.padding?0.5:0}em`,backgroundColor:theme?.colors?.description},children:[/*#__PURE__*/(0,jsx_runtime.jsx)("h1",{className:"zUI-MenuDescription",style:{fontFamily:`${functions_extractFontName(theme?.fonts?.description)}, sans-serif`,fontWeight:functions_extractFontWeight(theme?.fonts?.description)},children:functions_formatString(menuDescription)}),/*#__PURE__*/(0,jsx_runtime.jsxs)("h1",{className:"zUI-MenuDescription",style:{fontFamily:`${functions_extractFontName(theme?.fonts?.counter)}, sans-serif`,fontWeight:functions_extractFontWeight(theme?.fonts?.counter)},children:[index,"/",NumberOfItems]})]}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{id:"zUI-MenuItemsContainer",ref:itemsRef,style:{gap:`${theme?.padding?"1vh":"0"}`,maxHeight:`${theme?.padding?(theme?.items?.maxItems||5)*5:(theme?.items?.maxItems||5)*4}vh`},children:items&&items.length>0&&items.map((item,id)=>{if(item?.type!=="line"&&item?.type!=="separator"&&!item?.styles?.IsDisabled){if(!Items.find(item=>item===id)){Items.push(id);}ItemIndex=Items[index-1];IsSelected=ItemIndex===id;}switch(item.type){case"button":item.isSelected=!item?.styles?.IsDisabled&&IsSelected;item.hoverColor=theme?.items?.hoverColor||"#FAAD2C";item.hoverType=theme?.items?.hoverStyle||"complete";item.paddingIsActive=theme?.padding||false;return/*#__PURE__*/(0,jsx_runtime.jsx)(button_button,{...item,titleFont:theme.fonts.itemTitle,rightLabelFont:theme.fonts.itemRightLabel},id);case"line":item.rounded=theme.items.lineIsRounded;item.defaultColor=theme.colors.item;item.paddingIsActive=theme?.padding||false;return/*#__PURE__*/(0,jsx_runtime.jsx)(line,{...item});case"separator":item.paddingIsActive=theme?.padding||false;return/*#__PURE__*/(0,jsx_runtime.jsx)(separator,{...item,titleFont:theme.fonts.itemTitle});case"linkButton":item.isSelected=!item?.styles?.IsDisabled&&IsSelected;item.hoverColor=theme?.items?.hoverColor||"#FAAD2C";item.hoverType=theme?.items?.hoverStyle||"complete";item.paddingIsActive=theme?.padding||false;return/*#__PURE__*/(0,jsx_runtime.jsx)(linkButton,{...item,titleFont:theme.fonts.itemTitle},id);case"checkbox":item.isSelected=!item?.styles?.IsDisabled&&IsSelected;item.hoverColor=theme?.items?.hoverColor||"#FAAD2C";item.hoverType=theme?.items?.hoverStyle||"complete";item.paddingIsActive=theme?.padding||false;return/*#__PURE__*/(0,jsx_runtime.jsx)(checkbox_checkbox,{...item,titleFont:theme.fonts.itemTitle},id);case"slider":item.isSelected=!item?.styles?.IsDisabled&&IsSelected;item.hoverColor=theme?.items?.hoverColor||"#FAAD2C";item.hoverType=theme?.items?.hoverStyle||"complete";item.paddingIsActive=theme?.padding||false;return/*#__PURE__*/(0,jsx_runtime.jsx)(slider,{...item,titleFont:theme.fonts.itemTitle,rightLabelFont:theme.fonts.itemRightLabel},id);case"list":item.isSelected=!item?.styles?.IsDisabled&&IsSelected;item.hoverColor=theme?.items?.hoverColor||"#FAAD2C";item.hoverType=theme?.items?.hoverStyle||"complete";item.paddingIsActive=theme?.padding||false;return/*#__PURE__*/(0,jsx_runtime.jsx)(list,{...item,titleFont:theme.fonts.itemTitle,rightLabelFont:theme.fonts.itemRightLabel},id);case"colorList":item.isSelected=!item?.styles?.IsDisabled&&IsSelected;item.hoverColor=theme?.items?.hoverColor||"#FAAD2C";item.hoverType=theme?.items?.hoverStyle||"complete";item.paddingIsActive=theme?.padding||false;return/*#__PURE__*/(0,jsx_runtime.jsx)(colorList,{...item,titleFont:theme.fonts.itemTitle,rightLabelFont:theme.fonts.itemRightLabel},id);}})}),theme.displayControlsIndicator&&/*#__PURE__*/(0,jsx_runtime.jsx)("div",{id:"zUI-ControlsIndicator",style:{borderRadius:`${theme?.padding?0.5:0}em`,backgroundColor:theme?.colors?.controlsIndicator},children:/*#__PURE__*/(0,jsx_runtime.jsx)("svg",{width:"12",height:"21",viewBox:"0 0 12 21",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:/*#__PURE__*/(0,jsx_runtime.jsx)("path",{d:"M1 14L6 19L11 14M11 7L6 2L1 7",stroke:"white",strokeWidth:"2",strokeLinecap:"round"})})}),/*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(AnimatePresence,{children:description&&description.length>1&&/*#__PURE__*/(0,jsx_runtime.jsx)(motion.div,{id:"zUI-MenuItemsDescription",initial:{minHeight:"0vh",maxHeight:"0vh",opacity:0,y:-20},animate:{minHeight:"4vh",maxHeight:"auto",opacity:1,y:0},exit:{minHeight:"0vh",maxHeight:"0vh",opacity:0,y:-20},transition:{duration:0.5},style:{fontFamily:`${functions_extractFontName(theme?.fonts?.counter)}, sans-serif`,fontWeight:functions_extractFontWeight(theme?.fonts?.description)},children:functions_formatString(description)},description)})})]}),infosIsVisible&&/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{id:"zUI-InfosPanel",style:{backgroundColor:theme?.colors?.background,borderRadius:`${theme?.cornersRadius}em`,boxShadow:theme?.perspective?`${theme?.position==="left"?-0.25:0.25}vw 0 10px rgba(0, 0, 0, 0.5)`:"none",transform:theme?.perspective?`rotateY(${theme?.position==="left"?20:-20}deg) translateX(${theme?.position==="left"?1:-1}vw)`:"none"},children:[infoPanelTitle&&infoPanelTitle.length>1&&/*#__PURE__*/(0,jsx_runtime.jsx)("h1",{style:{color:"white",fontFamily:`${functions_extractFontName(theme?.fonts?.infoPanelTitle)}, sans-serif`,fontWeight:functions_extractFontWeight(theme?.fonts?.infoPanelTitle)},children:functions_formatString(infoPanelTitle)}),infoPanelBanner&&functions_isUrl(infoPanelBanner)&&/*#__PURE__*/(0,jsx_runtime.jsx)("img",{src:infoPanelBanner,style:{width:"100%"}}),informations&&informations.map(info=>{return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"zUI-Info",children:info.map(content=>{return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{style:{color:"white",fontFamily:`${functions_extractFontName(theme?.fonts?.info)}, sans-serif`,fontWeight:functions_extractFontWeight(theme?.fonts?.info)},children:functions_formatString(content)});})});})]})]})});}/* harmony default export */ const menu = (Menu);
 ;// CONCATENATED MODULE: ./src/pages/tools.tsx
-const initialTheme={position:"left",colors:{background:"rgba(18, 18, 18, 0.5)",secondary:"#121212"},stringUpper:false,counter:true,banner:"#faad2c",controlsIndicator:true,corners:{rounded:true,radius:"0.5"},perspective:true,items:{defaultColor:"#faad2c",hoverStyle:"neon",line:{rounded:true}}};const initialTools=[{title:"zCustomizer",content:/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zCustomize-Content",children:[/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"zCustomize-Left",children:/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"menu-container",children:/*#__PURE__*/(0,jsx_runtime.jsx)(menu,{})})}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"zCustomize-Right"})]}),state:false}];function Tools(){const[tools,setTools]=(0,react.useState)(initialTools);const[activeTool,setActiveTool]=(0,react.useState)(null);const[isDesktop,setIsDesktop]=(0,react.useState)(window.innerWidth>1024);const[theme,setTheme]=(0,react.useState)(initialTheme);const themeToJson=data=>{const renderJson=(data,indent=0)=>{const indentation='  '.repeat(indent);// Crée l'indentation en fonction du niveau
-if(typeof data==='string'){return/*#__PURE__*/(0,jsx_runtime.jsxs)("span",{className:"json-string",style:{backgroundColor:data.startsWith('#')?data:'transparent'},children:["\"",data,"\""]});}else if(typeof data==='number'){return/*#__PURE__*/(0,jsx_runtime.jsx)("span",{className:"json-number",children:data});}else if(typeof data==='boolean'){return/*#__PURE__*/(0,jsx_runtime.jsx)("span",{className:"json-boolean",children:data?'true':'false'});}else if(data===null){return/*#__PURE__*/(0,jsx_runtime.jsx)("span",{className:"json-null",children:"null"});}else if(Array.isArray(data)){return/*#__PURE__*/(0,jsx_runtime.jsxs)("span",{children:["[",data.map((item,index)=>/*#__PURE__*/(0,jsx_runtime.jsxs)("span",{children:[renderJson(item,indent+1),index<data.length-1?', ':'']},index)),"]"]});}else if(typeof data==='object'){return/*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("span",{children:`${indentation}{`}),Object.entries(data).map(([key,value],index)=>/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("span",{className:"json-key",children:`${indentation}  "${key}": `}),renderJson(value,indent+1),index<Object.entries(data).length-1?', ':'']},key)),/*#__PURE__*/(0,jsx_runtime.jsx)("span",{children:`${indentation}}`})]});}return/*#__PURE__*/(0,jsx_runtime.jsx)("span",{children:String(data)});};return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"json-code",children:renderJson(data)});};(0,react.useEffect)(()=>{const handleResize=()=>{setIsDesktop(window.innerWidth>1024);};window.addEventListener('resize',handleResize);return()=>{window.removeEventListener('resize',handleResize);};},[]);const handleActiveTool=index=>{const updatedTools=tools.map((tool,i)=>({...tool,state:i===index?!tool.state:false}));setActiveTool(updatedTools[index].state?updatedTools[index]:null);setTools(updatedTools);};const updateTheme=(key,value)=>{setTheme(prev=>({...prev,[key]:value}));};const updateNestedTheme=(category,key,value)=>{setTheme(prev=>({...prev,[category]:{...prev[category],[key]:value}}));};// Fonction pour réinitialiser le thème
+const initialTheme={position:"left",colors:{background:"rgba(18, 18, 18, 0.5)",secondary:"#121212"},stringUpper:false,counter:true,banner:"#faad2c",controlsIndicator:true,corners:{rounded:true,radius:"0.5"},perspective:true,items:{defaultColor:"#faad2c",hoverStyle:"neon",line:{rounded:true}}};const initialTools=[{title:"zCustomizer",content:/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zCustomize-Content",children:[/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"zCustomize-Left",children:/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"menu-container",children:/*#__PURE__*/(0,jsx_runtime.jsx)(menu,{})})}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"zCustomize-Right"})]}),state:false}];function Tools(){const[tools,setTools]=(0,react.useState)(initialTools);const[activeTool,setActiveTool]=(0,react.useState)(null);const[isDesktop,setIsDesktop]=(0,react.useState)(window.innerWidth>1024);const[theme,setTheme]=(0,react.useState)(initialTheme);const themeToJson=data=>{const renderJson=(data,indent=0)=>{const indentation="  ".repeat(indent);// Crée l'indentation en fonction du niveau
+if(typeof data==="string"){return/*#__PURE__*/(0,jsx_runtime.jsxs)("span",{className:"json-string",style:{backgroundColor:data.startsWith("#")?data:"transparent"},children:["\"",data,"\""]});}else if(typeof data==="number"){return/*#__PURE__*/(0,jsx_runtime.jsx)("span",{className:"json-number",children:data});}else if(typeof data==="boolean"){return/*#__PURE__*/(0,jsx_runtime.jsx)("span",{className:"json-boolean",children:data?"true":"false"});}else if(data===null){return/*#__PURE__*/(0,jsx_runtime.jsx)("span",{className:"json-null",children:"null"});}else if(Array.isArray(data)){return/*#__PURE__*/(0,jsx_runtime.jsxs)("span",{children:["[",data.map((item,index)=>/*#__PURE__*/(0,jsx_runtime.jsxs)("span",{children:[renderJson(item,indent+1),index<data.length-1?", ":""]},index)),"]"]});}else if(typeof data==="object"){return/*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("span",{children:`${indentation}{`}),Object.entries(data).map(([key,value],index)=>/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("span",{className:"json-key",children:`${indentation}  "${key}": `}),renderJson(value,indent+1),index<Object.entries(data).length-1?", ":""]},key)),/*#__PURE__*/(0,jsx_runtime.jsx)("span",{children:`${indentation}}`})]});}return/*#__PURE__*/(0,jsx_runtime.jsx)("span",{children:String(data)});};return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"json-code",children:renderJson(data)});};(0,react.useEffect)(()=>{const handleResize=()=>{setIsDesktop(window.innerWidth>1024);};window.addEventListener("resize",handleResize);return()=>{window.removeEventListener("resize",handleResize);};},[]);const handleActiveTool=index=>{const updatedTools=tools.map((tool,i)=>({...tool,state:i===index?!tool.state:false}));setActiveTool(updatedTools[index].state?updatedTools[index]:null);setTools(updatedTools);};const updateTheme=(key,value)=>{setTheme(prev=>({...prev,[key]:value}));};const updateNestedTheme=(category,key,value)=>{setTheme(prev=>({...prev,[category]:{...prev[category],[key]:value}}));};// Fonction pour réinitialiser le thème
 const resetTheme=()=>{setTheme(initialTheme);};// Fonction pour copier le thème dans le presse-papiers
-const copyTheme=()=>{navigator.clipboard.writeText(JSON.stringify(theme,null,2)).then(()=>{alert("Thème copié dans le presse-papiers !");}).catch(err=>{console.error("Erreur lors de la copie du thème: ",err);});};const renderCustomizerControls=()=>/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zCustomize-Right",children:[/*#__PURE__*/(0,jsx_runtime.jsx)("h3",{className:"zCustomize-Title",children:"Personnalisation du Th\xE8me"}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:/*#__PURE__*/(0,jsx_runtime.jsxs)("label",{children:["Position:",/*#__PURE__*/(0,jsx_runtime.jsxs)("select",{value:theme.position,onChange:e=>updateTheme('position',e.target.value),className:"zCustomizer-Input",children:[/*#__PURE__*/(0,jsx_runtime.jsx)("option",{value:"left",children:"Gauche"}),/*#__PURE__*/(0,jsx_runtime.jsx)("option",{value:"right",children:"Droite"})]})]})}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:/*#__PURE__*/(0,jsx_runtime.jsxs)("label",{children:["Couleur de fond:",/*#__PURE__*/(0,jsx_runtime.jsx)("input",{type:"text",value:theme.colors.background,onChange:e=>updateNestedTheme('colors','background',e.target.value),className:"zCustomizer-Input"})]})}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:/*#__PURE__*/(0,jsx_runtime.jsxs)("label",{children:["Couleur secondaire:",/*#__PURE__*/(0,jsx_runtime.jsx)("input",{type:"text",value:theme.colors.secondary,onChange:e=>updateNestedTheme('colors','secondary',e.target.value),className:"zCustomizer-Input"})]})}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:/*#__PURE__*/(0,jsx_runtime.jsxs)("label",{children:["Texte en majuscules:",/*#__PURE__*/(0,jsx_runtime.jsx)("input",{type:"checkbox",checked:theme.stringUpper,onChange:e=>updateTheme('stringUpper',e.target.checked),className:"zCustomizer-Input"})]})}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:/*#__PURE__*/(0,jsx_runtime.jsxs)("label",{children:["Afficher le compteur:",/*#__PURE__*/(0,jsx_runtime.jsx)("input",{type:"checkbox",checked:theme.counter,onChange:e=>updateTheme('counter',e.target.checked),className:"zCustomizer-Input"})]})}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:/*#__PURE__*/(0,jsx_runtime.jsxs)("label",{children:["Banni\xE8re (couleur/lien):",/*#__PURE__*/(0,jsx_runtime.jsx)("input",{type:"text",value:theme.banner,onChange:e=>updateTheme('banner',e.target.value),className:"zCustomizer-Input"})]})}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:/*#__PURE__*/(0,jsx_runtime.jsxs)("label",{children:["Indicateur de contr\xF4le:",/*#__PURE__*/(0,jsx_runtime.jsx)("input",{type:"checkbox",checked:theme.controlsIndicator,onChange:e=>updateTheme('controlsIndicator',e.target.checked),className:"zCustomizer-Input"})]})}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:/*#__PURE__*/(0,jsx_runtime.jsxs)("label",{children:["Coins arrondis:",/*#__PURE__*/(0,jsx_runtime.jsx)("input",{type:"checkbox",checked:theme.corners.rounded,onChange:e=>updateNestedTheme('corners','rounded',e.target.checked),className:"zCustomizer-Input"})]})}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:/*#__PURE__*/(0,jsx_runtime.jsxs)("label",{children:["Rayon des coins:",/*#__PURE__*/(0,jsx_runtime.jsx)("input",{type:"text",value:theme.corners.radius,onChange:e=>updateNestedTheme('corners','radius',e.target.value),className:"zCustomizer-Input"})]})}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:/*#__PURE__*/(0,jsx_runtime.jsxs)("label",{children:["Perspective 3D:",/*#__PURE__*/(0,jsx_runtime.jsx)("input",{type:"checkbox",checked:theme.perspective,onChange:e=>updateTheme('perspective',e.target.checked),className:"zCustomizer-Input"})]})}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:/*#__PURE__*/(0,jsx_runtime.jsxs)("label",{children:["Couleur par d\xE9faut des items:",/*#__PURE__*/(0,jsx_runtime.jsx)("input",{type:"text",value:theme.items.defaultColor,onChange:e=>updateNestedTheme('items','defaultColor',e.target.value),className:"zCustomizer-Input"})]})}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:/*#__PURE__*/(0,jsx_runtime.jsxs)("label",{children:["Style au survol:",/*#__PURE__*/(0,jsx_runtime.jsxs)("select",{value:theme.items.hoverStyle,onChange:e=>updateNestedTheme('items','hoverStyle',e.target.value),className:"zCustomizer-Input",children:[/*#__PURE__*/(0,jsx_runtime.jsx)("option",{value:"complete",children:"Complet"}),/*#__PURE__*/(0,jsx_runtime.jsx)("option",{value:"rod",children:"Barre"}),/*#__PURE__*/(0,jsx_runtime.jsx)("option",{value:"neon",children:"N\xE9on"})]})]})}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:/*#__PURE__*/(0,jsx_runtime.jsxs)("label",{children:["Lignes arrondies:",/*#__PURE__*/(0,jsx_runtime.jsx)("input",{type:"checkbox",checked:theme.items.line.rounded,onChange:e=>updateNestedTheme('items','line',{rounded:e.target.checked}),className:"zCustomizer-Input"})]})}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"theme-json",children:[/*#__PURE__*/(0,jsx_runtime.jsx)("h3",{className:"zCustomize-Title",style:{marginTop:"5vh"},children:"Th\xE8me JSON"}),/*#__PURE__*/(0,jsx_runtime.jsx)("pre",{className:"json-code",children:/*#__PURE__*/(0,jsx_runtime.jsx)("code",{children:themeToJson(theme)})})]}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"theme-controls",children:[/*#__PURE__*/(0,jsx_runtime.jsx)("button",{onClick:resetTheme,className:"zCustomizer-Button",children:"R\xE9initialiser le Th\xE8me"}),/*#__PURE__*/(0,jsx_runtime.jsx)("button",{onClick:copyTheme,className:"zCustomizer-SecondaryButton",children:"Copier le Th\xE8me"})]})]});if(!isDesktop){return/*#__PURE__*/(0,jsx_runtime.jsx)(Layout/* default */.A,{description:"D\xE9couvrez diff\xE9rents outils d\xE9velopp\xE9s par notre \xE9quipe.",children:/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"toolsPage",children:/*#__PURE__*/(0,jsx_runtime.jsx)("h2",{className:"error-message",children:"Nos outils sont uniquement disponibles sur un ordinateur."})})});}return/*#__PURE__*/(0,jsx_runtime.jsx)(Layout/* default */.A,{description:"D\xE9couvrez diff\xE9rents outils d\xE9velopp\xE9s par notre \xE9quipe.",children:/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"toolsPage",children:[/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"toolsNav",children:tools.map((tool,index)=>/*#__PURE__*/(0,jsx_runtime.jsx)("h2",{className:`tool navbar__item navbar__link ${tool.state?"navbar__link--active":""}`,onClick:()=>handleActiveTool(index),children:tool.title},index))}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:`toolsContent ${activeTool&&activeTool.state?"":"toolsDesc"}`,children:activeTool?/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zCustomize-Content",children:[/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"zCustomize-Left",children:/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"menu-container",children:/*#__PURE__*/(0,jsx_runtime.jsx)(menu,{...theme})})}),renderCustomizerControls()]}):/*#__PURE__*/(0,jsx_runtime.jsx)(MDXContent,{})})]})});}
+const copyTheme=()=>{navigator.clipboard.writeText(JSON.stringify(theme,null,2)).then(()=>{alert("Thème copié dans le presse-papiers !");}).catch(err=>{console.error("Erreur lors de la copie du thème: ",err);});};const renderCustomizerControls=()=>/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zCustomize-Right",children:[/*#__PURE__*/(0,jsx_runtime.jsx)("h3",{className:"zCustomize-Title",children:"Personnalisation du Th\xE8me"}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:/*#__PURE__*/(0,jsx_runtime.jsxs)("label",{children:["Position:",/*#__PURE__*/(0,jsx_runtime.jsxs)("select",{value:theme.position,onChange:e=>updateTheme("position",e.target.value),className:"zCustomizer-Input",children:[/*#__PURE__*/(0,jsx_runtime.jsx)("option",{value:"left",children:"Gauche"}),/*#__PURE__*/(0,jsx_runtime.jsx)("option",{value:"right",children:"Droite"})]})]})}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:/*#__PURE__*/(0,jsx_runtime.jsxs)("label",{children:["Couleur de fond:",/*#__PURE__*/(0,jsx_runtime.jsx)("input",{type:"text",value:theme.colors.background,onChange:e=>updateNestedTheme("colors","background",e.target.value),className:"zCustomizer-Input"})]})}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:/*#__PURE__*/(0,jsx_runtime.jsxs)("label",{children:["Couleur secondaire:",/*#__PURE__*/(0,jsx_runtime.jsx)("input",{type:"text",value:theme.colors.secondary,onChange:e=>updateNestedTheme("colors","secondary",e.target.value),className:"zCustomizer-Input"})]})}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:/*#__PURE__*/(0,jsx_runtime.jsxs)("label",{children:["Texte en majuscules:",/*#__PURE__*/(0,jsx_runtime.jsx)("input",{type:"checkbox",checked:theme.stringUpper,onChange:e=>updateTheme("stringUpper",e.target.checked),className:"zCustomizer-Input"})]})}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:/*#__PURE__*/(0,jsx_runtime.jsxs)("label",{children:["Afficher le compteur:",/*#__PURE__*/(0,jsx_runtime.jsx)("input",{type:"checkbox",checked:theme.counter,onChange:e=>updateTheme("counter",e.target.checked),className:"zCustomizer-Input"})]})}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:/*#__PURE__*/(0,jsx_runtime.jsxs)("label",{children:["Banni\xE8re (couleur/lien):",/*#__PURE__*/(0,jsx_runtime.jsx)("input",{type:"text",value:theme.banner,onChange:e=>updateTheme("banner",e.target.value),className:"zCustomizer-Input"})]})}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:/*#__PURE__*/(0,jsx_runtime.jsxs)("label",{children:["Indicateur de contr\xF4le:",/*#__PURE__*/(0,jsx_runtime.jsx)("input",{type:"checkbox",checked:theme.controlsIndicator,onChange:e=>updateTheme("controlsIndicator",e.target.checked),className:"zCustomizer-Input"})]})}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:/*#__PURE__*/(0,jsx_runtime.jsxs)("label",{children:["Coins arrondis:",/*#__PURE__*/(0,jsx_runtime.jsx)("input",{type:"checkbox",checked:theme.corners.rounded,onChange:e=>updateNestedTheme("corners","rounded",e.target.checked),className:"zCustomizer-Input"})]})}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:/*#__PURE__*/(0,jsx_runtime.jsxs)("label",{children:["Rayon des coins:",/*#__PURE__*/(0,jsx_runtime.jsx)("input",{type:"text",value:theme.corners.radius,onChange:e=>updateNestedTheme("corners","radius",e.target.value),className:"zCustomizer-Input"})]})}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:/*#__PURE__*/(0,jsx_runtime.jsxs)("label",{children:["Perspective 3D:",/*#__PURE__*/(0,jsx_runtime.jsx)("input",{type:"checkbox",checked:theme.perspective,onChange:e=>updateTheme("perspective",e.target.checked),className:"zCustomizer-Input"})]})}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:/*#__PURE__*/(0,jsx_runtime.jsxs)("label",{children:["Couleur par d\xE9faut des items:",/*#__PURE__*/(0,jsx_runtime.jsx)("input",{type:"text",value:theme.items.defaultColor,onChange:e=>updateNestedTheme("items","defaultColor",e.target.value),className:"zCustomizer-Input"})]})}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:/*#__PURE__*/(0,jsx_runtime.jsxs)("label",{children:["Style au survol:",/*#__PURE__*/(0,jsx_runtime.jsxs)("select",{value:theme.items.hoverStyle,onChange:e=>updateNestedTheme("items","hoverStyle",e.target.value),className:"zCustomizer-Input",children:[/*#__PURE__*/(0,jsx_runtime.jsx)("option",{value:"complete",children:"Complet"}),/*#__PURE__*/(0,jsx_runtime.jsx)("option",{value:"rod",children:"Barre"}),/*#__PURE__*/(0,jsx_runtime.jsx)("option",{value:"neon",children:"N\xE9on"})]})]})}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:/*#__PURE__*/(0,jsx_runtime.jsxs)("label",{children:["Lignes arrondies:",/*#__PURE__*/(0,jsx_runtime.jsx)("input",{type:"checkbox",checked:theme.items.line.rounded,onChange:e=>updateNestedTheme("items","line",{rounded:e.target.checked}),className:"zCustomizer-Input"})]})}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"theme-json",children:[/*#__PURE__*/(0,jsx_runtime.jsx)("h3",{className:"zCustomize-Title",style:{marginTop:"5vh"},children:"Th\xE8me JSON"}),/*#__PURE__*/(0,jsx_runtime.jsx)("pre",{className:"json-code",children:/*#__PURE__*/(0,jsx_runtime.jsx)("code",{children:themeToJson(theme)})})]}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"theme-controls",children:[/*#__PURE__*/(0,jsx_runtime.jsx)("button",{onClick:resetTheme,className:"zCustomizer-Button",children:"R\xE9initialiser le Th\xE8me"}),/*#__PURE__*/(0,jsx_runtime.jsx)("button",{onClick:copyTheme,className:"zCustomizer-SecondaryButton",children:"Copier le Th\xE8me"})]})]});if(!isDesktop){return/*#__PURE__*/(0,jsx_runtime.jsx)(Layout/* default */.A,{description:"D\xE9couvrez diff\xE9rents outils d\xE9velopp\xE9s par notre \xE9quipe.",children:/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"toolsPage",children:/*#__PURE__*/(0,jsx_runtime.jsx)("h2",{className:"error-message",children:"Nos outils sont uniquement disponibles sur un ordinateur."})})});}return/*#__PURE__*/(0,jsx_runtime.jsx)(Layout/* default */.A,{description:"D\xE9couvrez diff\xE9rents outils d\xE9velopp\xE9s par notre \xE9quipe.",children:/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"toolsPage",children:[/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"toolsNav",children:tools.map((tool,index)=>/*#__PURE__*/(0,jsx_runtime.jsx)("h2",{className:`tool navbar__item navbar__link ${tool.state?"navbar__link--active":""}`,onClick:()=>handleActiveTool(index),children:tool.title},index))}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:`toolsContent ${activeTool&&activeTool.state?"":"toolsDesc"}`,children:activeTool?/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"zCustomize-Content",children:[/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"zCustomize-Left",children:/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"menu-container",children:/*#__PURE__*/(0,jsx_runtime.jsx)(menu,{...theme})})}),renderCustomizerControls()]}):/*#__PURE__*/(0,jsx_runtime.jsx)(MDXContent,{})})]})});}
 
 /***/ }),
 
@@ -27725,7 +30290,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 4988:
+/***/ 2607:
 /***/ ((module) => {
 
 // Exports
@@ -34198,7 +36763,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 1126:
+/***/ 93:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37662,7 +40227,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 1793:
+/***/ 9636:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37673,7 +40238,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 9784:
+/***/ 9031:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37684,7 +40249,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 4355:
+/***/ 2140:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37695,7 +40260,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 2209:
+/***/ 9310:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37706,7 +40271,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 5980:
+/***/ 1017:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37717,7 +40282,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 7177:
+/***/ 444:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37728,7 +40293,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 5394:
+/***/ 4201:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37739,7 +40304,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 5819:
+/***/ 5322:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37750,7 +40315,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 9965:
+/***/ 880:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37761,7 +40326,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 7598:
+/***/ 7765:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37772,7 +40337,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 9037:
+/***/ 3740:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37783,7 +40348,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 3479:
+/***/ 2932:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37794,7 +40359,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 2723:
+/***/ 8924:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37805,7 +40370,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 7770:
+/***/ 6913:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37816,7 +40381,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 9918:
+/***/ 3513:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37827,7 +40392,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 6833:
+/***/ 7398:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37838,7 +40403,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 9604:
+/***/ 303:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37849,7 +40414,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 9263:
+/***/ 4494:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37860,7 +40425,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 9493:
+/***/ 108:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37871,7 +40436,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 3041:
+/***/ 530:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37882,7 +40447,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 4670:
+/***/ 7669:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37893,7 +40458,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 3113:
+/***/ 7374:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37904,7 +40469,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 2046:
+/***/ 2813:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37915,7 +40480,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 3767:
+/***/ 5296:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37926,7 +40491,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 4234:
+/***/ 3841:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37937,7 +40502,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 1665:
+/***/ 4858:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37948,7 +40513,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 3700:
+/***/ 1007:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37959,7 +40524,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 2607:
+/***/ 9380:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37970,7 +40535,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 2679:
+/***/ 4422:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37981,7 +40546,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 1271:
+/***/ 7794:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37992,7 +40557,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 1212:
+/***/ 1801:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38003,7 +40568,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 4590:
+/***/ 1609:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38014,7 +40579,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 4965:
+/***/ 5026:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38025,7 +40590,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 4276:
+/***/ 8943:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38036,7 +40601,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 5692:
+/***/ 973:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38047,7 +40612,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 182:
+/***/ 2135:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38058,7 +40623,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 5003:
+/***/ 4130:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38069,7 +40634,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 9585:
+/***/ 5786:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38080,7 +40645,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 5193:
+/***/ 6850:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38091,7 +40656,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 1186:
+/***/ 857:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38102,7 +40667,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 2684:
+/***/ 135:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38113,7 +40678,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 3367:
+/***/ 76:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38124,7 +40689,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 1439:
+/***/ 5884:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38135,7 +40700,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 6324:
+/***/ 3463:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38146,7 +40711,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 9973:
+/***/ 9728:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38157,7 +40722,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 2622:
+/***/ 9579:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38168,7 +40733,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 2733:
+/***/ 7314:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38179,7 +40744,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 1526:
+/***/ 1849:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38190,7 +40755,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 736:
+/***/ 1913:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38201,7 +40766,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 2027:
+/***/ 1202:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38212,7 +40777,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 6614:
+/***/ 8057:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38223,7 +40788,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 589:
+/***/ 3442:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38234,7 +40799,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 1367:
+/***/ 6498:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38245,7 +40810,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 5255:
+/***/ 7810:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38256,7 +40821,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 2707:
+/***/ 9164:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38267,7 +40832,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 728:
+/***/ 7895:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38278,7 +40843,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 3472:
+/***/ 6699:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38289,7 +40854,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 1803:
+/***/ 8368:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38300,7 +40865,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 823:
+/***/ 5030:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38311,7 +40876,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 764:
+/***/ 6653:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38322,7 +40887,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 5423:
+/***/ 938:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38333,7 +40898,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 6996:
+/***/ 5693:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38344,7 +40909,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 5295:
+/***/ 5014:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38355,7 +40920,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 5657:
+/***/ 2574:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38366,7 +40931,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 3856:
+/***/ 4555:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38377,7 +40942,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 8891:
+/***/ 9152:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38388,7 +40953,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 9496:
+/***/ 1625:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38399,7 +40964,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 8107:
+/***/ 6442:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38410,7 +40975,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 38:
+/***/ 5431:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38421,7 +40986,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 6420:
+/***/ 5441:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38432,7 +40997,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 8672:
+/***/ 685:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38443,7 +41008,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 1359:
+/***/ 9672:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38454,25 +41019,113 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ 4188:
+/***/ 5624:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/example1-d15c9e3a967fec7a9f73a3fee0642edd.png");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/helpNotif-b4b261302a760d127bae34d8d6b77722.png");
 
 /***/ }),
 
-/***/ 2919:
+/***/ 5579:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/example2-eecf16db9a9d50268f199b4704a7b6d9.png");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/notif-8c5e8fd6925344fdfa0dc93812dfe049.png");
+
+/***/ }),
+
+/***/ 3619:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/pulsing-6d323abfa02f0ca94e84b84f254bda62.png");
+
+/***/ }),
+
+/***/ 8031:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/examples-0ec5db54d6fe4de5b92910690e51862e.png");
+
+/***/ }),
+
+/***/ 755:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/modal-844c972890380726452b3e2dc87c5b3c.png");
+
+/***/ }),
+
+/***/ 7458:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/other-3471d91b0654eb41e271239a8396ce74.png");
+
+/***/ }),
+
+/***/ 4015:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/ped-4ffba0e36d056d46ff7fbc709c1016f5.png");
+
+/***/ }),
+
+/***/ 3514:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/props-1605e033ddc7b80cb8f97486ad199c62.png");
+
+/***/ }),
+
+/***/ 1407:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/vector-792f45597087fd615771f411a02e21b8.png");
+
+/***/ }),
+
+/***/ 8253:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/vehicles-8e5c3c722014e19537ecf70614b7ab4a.png");
 
 /***/ }),
 
@@ -38538,7 +41191,7 @@ __webpack_require__.r(__webpack_exports__);
             "./src/css/header.css",
             "./src/css/navbar.css",
             "./src/pages/tools.css",
-            "./src/assets/zUI/main.css"
+            "./src/assets/zUI/index.css"
           ]
         }
       }
@@ -38546,7 +41199,7 @@ __webpack_require__.r(__webpack_exports__);
   ],
   "plugins": [
     [
-      "E:\\Développement\\Web\\zDoc-Dev\\node_modules\\@easyops-cn\\docusaurus-search-local\\dist\\server\\server\\index.js",
+      "E:\\Development\\Web\\zDoc-Dev\\node_modules\\@easyops-cn\\docusaurus-search-local\\dist\\server\\server\\index.js",
       {
         "hashed": true,
         "language": "fr"
@@ -38567,11 +41220,6 @@ __webpack_require__.r(__webpack_exports__);
           "sidebarId": "tutorialSidebar",
           "position": "right",
           "label": "Documentation"
-        },
-        {
-          "to": "/tools",
-          "position": "right",
-          "label": "Outils"
         },
         {
           "type": "search",
@@ -42768,7 +45416,7 @@ module.exports = /*#__PURE__*/JSON.parse('{"name":"docusaurus-plugin-content-doc
 /***/ ((module) => {
 
 "use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"version":{"pluginId":"default","version":"current","label":"Next","banner":null,"badge":false,"noIndex":false,"className":"docs-version-current","isLast":true,"docsSidebars":{"tutorialSidebar":[{"type":"link","label":"Introduction","href":"/docs/intro","docId":"intro","unlisted":false},{"type":"category","label":"zUI","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"Présentation","href":"/docs/zUI/presentation","docId":"zUI/presentation","unlisted":false},{"type":"link","label":"Installation","href":"/docs/zUI/installation","docId":"zUI/installation","unlisted":false},{"type":"link","label":"Utilisation","href":"/docs/zUI/utilisation","docId":"zUI/utilisation","unlisted":false},{"type":"category","label":"Items","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"Features","href":"/docs/zUI/Items/features","docId":"zUI/Items/features","unlisted":false},{"type":"link","label":"Séparateur","href":"/docs/zUI/Items/separator","docId":"zUI/Items/separator","unlisted":false},{"type":"link","label":"Ligne","href":"/docs/zUI/Items/line","docId":"zUI/Items/line","unlisted":false},{"type":"link","label":"Bouton","href":"/docs/zUI/Items/button","docId":"zUI/Items/button","unlisted":false},{"type":"link","label":"Bouton Lien","href":"/docs/zUI/Items/linkButton","docId":"zUI/Items/linkButton","unlisted":false},{"type":"link","label":"Liste","href":"/docs/zUI/Items/list","docId":"zUI/Items/list","unlisted":false},{"type":"link","label":"Checkbox","href":"/docs/zUI/Items/checkbox","docId":"zUI/Items/checkbox","unlisted":false}],"href":"/docs/category/items"},{"type":"link","label":"Thème","href":"/docs/zUI/theme","docId":"zUI/theme","unlisted":false},{"type":"category","label":"Fonctions","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"ShowHelpNotification","href":"/docs/zUI/Fonctions/showHelpNotification","docId":"zUI/Fonctions/showHelpNotification","unlisted":false},{"type":"link","label":"AlertInput","href":"/docs/zUI/Fonctions/alertInput","docId":"zUI/Fonctions/alertInput","unlisted":false},{"type":"link","label":"KeyboardInput","href":"/docs/zUI/Fonctions/keyboardInput","docId":"zUI/Fonctions/keyboardInput","unlisted":false},{"type":"link","label":"RenderSprite","href":"/docs/zUI/Fonctions/renderSprite","docId":"zUI/Fonctions/renderSprite","unlisted":false}],"href":"/docs/category/fonctions"},{"type":"category","label":"Méthodes","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"GoBack","href":"/docs/zUI/Methods/goBack","docId":"zUI/Methods/goBack","unlisted":false},{"type":"link","label":"Goto","href":"/docs/zUI/Methods/goTo","docId":"zUI/Methods/goTo","unlisted":false},{"type":"link","label":"IsVisible","href":"/docs/zUI/Methods/isVisible","docId":"zUI/Methods/isVisible","unlisted":false},{"type":"link","label":"OnClose","href":"/docs/zUI/Methods/onClose","docId":"zUI/Methods/onClose","unlisted":false},{"type":"link","label":"OnOpen","href":"/docs/zUI/Methods/onOpen","docId":"zUI/Methods/onOpen","unlisted":false},{"type":"link","label":"SetItems","href":"/docs/zUI/Methods/setItems","docId":"zUI/Methods/setItems","unlisted":false},{"type":"link","label":"SetVisible","href":"/docs/zUI/Methods/setVisible","docId":"zUI/Methods/setVisible","unlisted":false}],"href":"/docs/category/méthodes"}],"href":"/docs/category/zui"},{"type":"category","label":"zSleep","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"Introduction","href":"/docs/zSleep/intro","docId":"zSleep/intro","unlisted":false},{"type":"link","label":"Installation","href":"/docs/zSleep/instal","docId":"zSleep/instal","unlisted":false}]}]},"docs":{"intro":{"id":"intro","title":"Introduction","description":"Bienvenue dans la documentation officielle de toutes les ressources développées par zSquad. Ici, vous trouverez toutes les informations nécessaires pour comprendre, utiliser et tirer pleinement parti des projets, outils et technologies créés par notre équipe.","sidebar":"tutorialSidebar"},"zSleep/instal":{"id":"zSleep/instal","title":"Installation","description":"Ce guide d\'installation de zSleep s\'adresse aux administrateurs de serveurs FiveM et détaille les étapes nécessaires pour installer et configurer le script selon vos besoins.","sidebar":"tutorialSidebar"},"zSleep/intro":{"id":"zSleep/intro","title":"Introduction","description":"Bienvenue dans la documentation officielle de zSleep, le script de sommeil ultime pour les administrateurs de serveurs FiveM. Avec zSleep, offrez à votre communauté de nouvelles possibilités immersives grâce à une mécanique de sommeil réaliste et intuitive.","sidebar":"tutorialSidebar"},"zUI/Fonctions/alertInput":{"id":"zUI/Fonctions/alertInput","title":"AlertInput","description":"La fonction AlertInput est utile lorsque vous devez demander une confirmation au joueur.","sidebar":"tutorialSidebar"},"zUI/Fonctions/keyboardInput":{"id":"zUI/Fonctions/keyboardInput","title":"KeyboardInput","description":"La fonction KeyboardInput est utile lorsque vous devez demander une saisie de texte à l\'utilisateur via un clavier virtuel.","sidebar":"tutorialSidebar"},"zUI/Fonctions/renderSprite":{"id":"zUI/Fonctions/renderSprite","title":"RenderSprite","description":"La fonction RenderSprite permet d\'afficher une image sous un menu spécifique dans l\'interface utilisateur.","sidebar":"tutorialSidebar"},"zUI/Fonctions/showHelpNotification":{"id":"zUI/Fonctions/showHelpNotification","title":"ShowHelpNotification","description":"La fonction ShowHelpNotification est utile dans le cas où vous devriez indiquer au joueur sur quelle touche il devra appuyer pour interagir avec votre script.","sidebar":"tutorialSidebar"},"zUI/installation":{"id":"zUI/installation","title":"Installation","description":"zUI est une bibliothèque avancée qui s\'intègre directement dans une resource existante sur votre serveur FiveM. Suivez les étapes ci-dessous pour l\'installer correctement et vous assurer qu\'elle fonctionne de manière optimale.","sidebar":"tutorialSidebar"},"zUI/Items/button":{"id":"zUI/Items/button","title":"Bouton","description":"Les boutons dans zUI sont des éléments interactifs essentiels qui permettent aux utilisateurs de réaliser des actions lorsqu\'ils sont cliqués. Vous pouvez ajouter des boutons à vos menus en utilisant la fonction Items:AddButton. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/checkbox":{"id":"zUI/Items/checkbox","title":"Checkbox","description":"Les checkboxes dans zUI permettent aux utilisateurs de sélectionner ou désélectionner des options, offrant ainsi un moyen interactif pour gérer les états binaires dans vos menus. Vous pouvez ajouter des checkboxes à vos menus en utilisant la fonction zUI:AddCheckbox. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/features":{"id":"zUI/Items/features","title":"Features","description":"Badges","sidebar":"tutorialSidebar"},"zUI/Items/line":{"id":"zUI/Items/line","title":"Ligne","description":"Les lignes dans zUI sont des éléments visuels utilisés pour ajouter des séparations horizontales dans vos menus. Elles peuvent être utilisées pour séparer visuellement les différentes sections ou pour améliorer l\'organisation de l\'interface utilisateur. Vous pouvez ajouter des lignes à vos menus en utilisant la fonction zUI:AddLine. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/linkButton":{"id":"zUI/Items/linkButton","title":"Bouton Lien","description":"Les boutons lien dans zUI sont des éléments interactifs qui redirigent les utilisateurs vers une URL lorsqu\'ils sont cliqués. Ils sont utiles pour ajouter des liens externes ou des pages web à vos menus. Vous pouvez ajouter des boutons lien à vos menus en utilisant la fonction zUI:AddLinkButton. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/list":{"id":"zUI/Items/list","title":"Liste","description":"Les listes dans zUI permettent aux utilisateurs de sélectionner parmi plusieurs options. Elles sont idéales pour offrir des choix dynamiques ou pour afficher des éléments dans vos menus. Vous pouvez ajouter des listes à vos menus en utilisant la fonction zUI:AddList. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/separator":{"id":"zUI/Items/separator","title":"Séparateur","description":"Les séparateurs dans zUI sont des éléments visuels utilisés pour diviser et organiser les éléments dans un menu. Ils aident à améliorer la lisibilité et à structurer l\'interface utilisateur. Vous pouvez ajouter des séparateurs à vos menus en utilisant la fonction zUI:AddSeparator. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Methods/goBack":{"id":"zUI/Methods/goBack","title":"GoBack","description":"La méthode GoBack est utile lorsque vous souhaitez revenir à un menu parent dans l\'interface utilisateur.","sidebar":"tutorialSidebar"},"zUI/Methods/goTo":{"id":"zUI/Methods/goTo","title":"Goto","description":"La méthode Goto est utilisée pour naviguer vers un menu spécifique dans l\'interface utilisateur.","sidebar":"tutorialSidebar"},"zUI/Methods/isVisible":{"id":"zUI/Methods/isVisible","title":"IsVisible","description":"La méthode IsVisible est utilisée pour vérifier si un menu principal est actuellement visible.","sidebar":"tutorialSidebar"},"zUI/Methods/onClose":{"id":"zUI/Methods/onClose","title":"OnClose","description":"La méthode OnClose est utilisée pour définir une fonction à exécuter lors de la fermeture d\'un menu principal.","sidebar":"tutorialSidebar"},"zUI/Methods/onOpen":{"id":"zUI/Methods/onOpen","title":"OnOpen","description":"La méthode OnOpen est utilisée pour définir une fonction à exécuter lors de l\'ouverture d\'un menu principal.","sidebar":"tutorialSidebar"},"zUI/Methods/setItems":{"id":"zUI/Methods/setItems","title":"SetItems","description":"La méthode SetItems est utilisée pour définir les éléments d\'un menu.","sidebar":"tutorialSidebar"},"zUI/Methods/setVisible":{"id":"zUI/Methods/setVisible","title":"SetVisible","description":"La méthode SetVisible est utilisée pour afficher ou masquer un menu principal.","sidebar":"tutorialSidebar"},"zUI/presentation":{"id":"zUI/presentation","title":"Présentation","description":"zUI est une bibliothèque avancée dédiée à la création de menus NUI pour FiveM, qui allie sobriété, optimisation et esthétique. Ce projet vise à moderniser la création de menus tout en facilitant le travail des développeurs grâce à une interface intuitive et performante.","sidebar":"tutorialSidebar"},"zUI/theme":{"id":"zUI/theme","title":"Thème","description":"Le fichier theme.json vous permet de personnaliser l\'apparence de zUI en ajustant divers paramètres du menu. Vous pouvez modifier la position, les couleurs, les styles et plus encore pour adapter l\'interface à vos besoins spécifiques.","sidebar":"tutorialSidebar"},"zUI/utilisation":{"id":"zUI/utilisation","title":"Utilisation","description":"Dans cette section, nous allons explorer comment utiliser zUI pour créer et gérer des menus NUI dans FiveM. Vous apprendrez à créer des menus et des sous-menus, à ajouter des éléments, et à gérer leur visibilité.","sidebar":"tutorialSidebar"}}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"version":{"pluginId":"default","version":"current","label":"Next","banner":null,"badge":false,"noIndex":false,"className":"docs-version-current","isLast":true,"docsSidebars":{"tutorialSidebar":[{"type":"link","label":"Introduction","href":"/docs/intro","docId":"intro","unlisted":false},{"type":"category","label":"zUI","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"Présentation","href":"/docs/zUI/presentation","docId":"zUI/presentation","unlisted":false},{"type":"link","label":"Installation","href":"/docs/zUI/installation","docId":"zUI/installation","unlisted":false},{"type":"link","label":"Menu","href":"/docs/zUI/menu","docId":"zUI/menu","unlisted":false},{"type":"category","label":"Items","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"Features","href":"/docs/zUI/Items/features","docId":"zUI/Items/features","unlisted":false},{"type":"link","label":"Séparateur","href":"/docs/zUI/Items/separator","docId":"zUI/Items/separator","unlisted":false},{"type":"link","label":"Ligne","href":"/docs/zUI/Items/line","docId":"zUI/Items/line","unlisted":false},{"type":"link","label":"Bouton","href":"/docs/zUI/Items/button","docId":"zUI/Items/button","unlisted":false},{"type":"link","label":"Bouton Lien","href":"/docs/zUI/Items/linkButton","docId":"zUI/Items/linkButton","unlisted":false},{"type":"link","label":"Liste","href":"/docs/zUI/Items/list","docId":"zUI/Items/list","unlisted":false},{"type":"link","label":"Checkbox","href":"/docs/zUI/Items/checkbox","docId":"zUI/Items/checkbox","unlisted":false}],"href":"/docs/category/items"},{"type":"category","label":"Thèmes","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"Introduction","href":"/docs/zUI/Themes/introduction","docId":"zUI/Themes/introduction","unlisted":false},{"type":"link","label":"Thème du Menu","href":"/docs/zUI/Themes/menu","docId":"zUI/Themes/menu","unlisted":false},{"type":"link","label":"Thème du ContextUI","href":"/docs/zUI/Themes/context","docId":"zUI/Themes/context","unlisted":false},{"type":"link","label":"Thème des Notifications","href":"/docs/zUI/Themes/notifs","docId":"zUI/Themes/notifs","unlisted":false},{"type":"link","label":"Thème du Modal","href":"/docs/zUI/Themes/modal","docId":"zUI/Themes/modal","unlisted":false}],"href":"/docs/category/thèmes"},{"type":"category","label":"Fonctions","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"ShowHelpNotification","href":"/docs/zUI/Fonctions/showHelpNotification","docId":"zUI/Fonctions/showHelpNotification","unlisted":false},{"type":"link","label":"AlertInput","href":"/docs/zUI/Fonctions/alertInput","docId":"zUI/Fonctions/alertInput","unlisted":false},{"type":"link","label":"KeyboardInput","href":"/docs/zUI/Fonctions/keyboardInput","docId":"zUI/Fonctions/keyboardInput","unlisted":false},{"type":"link","label":"RenderSprite","href":"/docs/zUI/Fonctions/renderSprite","docId":"zUI/Fonctions/renderSprite","unlisted":false}],"href":"/docs/category/fonctions"},{"type":"category","label":"Méthodes","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"GoBack","href":"/docs/zUI/Methods/goBack","docId":"zUI/Methods/goBack","unlisted":false},{"type":"link","label":"Goto","href":"/docs/zUI/Methods/goTo","docId":"zUI/Methods/goTo","unlisted":false},{"type":"link","label":"IsVisible","href":"/docs/zUI/Methods/isVisible","docId":"zUI/Methods/isVisible","unlisted":false},{"type":"link","label":"OnClose","href":"/docs/zUI/Methods/onClose","docId":"zUI/Methods/onClose","unlisted":false},{"type":"link","label":"OnOpen","href":"/docs/zUI/Methods/onOpen","docId":"zUI/Methods/onOpen","unlisted":false},{"type":"link","label":"SetItems","href":"/docs/zUI/Methods/setItems","docId":"zUI/Methods/setItems","unlisted":false},{"type":"link","label":"SetVisible","href":"/docs/zUI/Methods/setVisible","docId":"zUI/Methods/setVisible","unlisted":false}],"href":"/docs/category/méthodes"},{"type":"link","label":"Menu Contextuel","href":"/docs/zUI/ContextUI","docId":"zUI/ContextUI","unlisted":false},{"type":"category","label":"Notifications","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"Pulsing Notification","href":"/docs/zUI/Notifications/pulsing","docId":"zUI/Notifications/pulsing","unlisted":false},{"type":"link","label":"Notifications","href":"/docs/zUI/Notifications/notif","docId":"zUI/Notifications/notif","unlisted":false},{"type":"link","label":"Help Notification","href":"/docs/zUI/Notifications/helpNotif","docId":"zUI/Notifications/helpNotif","unlisted":false}],"href":"/docs/category/notifications"},{"type":"link","label":"Modal","href":"/docs/zUI/modal","docId":"zUI/modal","unlisted":false}],"href":"/docs/category/zui"},{"type":"category","label":"zSleep","collapsible":true,"collapsed":true,"items":[{"type":"link","label":"Introduction","href":"/docs/zSleep/intro","docId":"zSleep/intro","unlisted":false},{"type":"link","label":"Installation","href":"/docs/zSleep/instal","docId":"zSleep/instal","unlisted":false}]}]},"docs":{"intro":{"id":"intro","title":"Introduction","description":"Bienvenue dans la documentation officielle de toutes les ressources développées par zSquad. Ici, vous trouverez toutes les informations nécessaires pour comprendre, utiliser et tirer pleinement parti des projets, outils et technologies créés par notre équipe.","sidebar":"tutorialSidebar"},"zSleep/instal":{"id":"zSleep/instal","title":"Installation","description":"Ce guide d\'installation de zSleep s\'adresse aux administrateurs de serveurs FiveM et détaille les étapes nécessaires pour installer et configurer le script selon vos besoins.","sidebar":"tutorialSidebar"},"zSleep/intro":{"id":"zSleep/intro","title":"Introduction","description":"Bienvenue dans la documentation officielle de zSleep, le script de sommeil ultime pour les administrateurs de serveurs FiveM. Avec zSleep, offrez à votre communauté de nouvelles possibilités immersives grâce à une mécanique de sommeil réaliste et intuitive.","sidebar":"tutorialSidebar"},"zUI/ContextUI":{"id":"zUI/ContextUI","title":"Menu Contextuel","description":"Les menus contextuels dans zUI permettent d\'afficher des actions spécifiques en fonction de l\'élément ou de la situation sur laquelle l\'utilisateur interagit. Ces menus sont polyvalents et peuvent être adaptés à différents types d\'entités comme des véhicules, des objets, des personnages, ou même des emplacements spécifiques.","sidebar":"tutorialSidebar"},"zUI/Fonctions/alertInput":{"id":"zUI/Fonctions/alertInput","title":"AlertInput","description":"La fonction AlertInput est utile lorsque vous devez demander une confirmation au joueur.","sidebar":"tutorialSidebar"},"zUI/Fonctions/keyboardInput":{"id":"zUI/Fonctions/keyboardInput","title":"KeyboardInput","description":"La fonction KeyboardInput est utile lorsque vous devez demander une saisie de texte à l\'utilisateur via un clavier virtuel.","sidebar":"tutorialSidebar"},"zUI/Fonctions/renderSprite":{"id":"zUI/Fonctions/renderSprite","title":"RenderSprite","description":"La fonction RenderSprite permet d\'afficher une image sous un menu spécifique dans l\'interface utilisateur.","sidebar":"tutorialSidebar"},"zUI/Fonctions/showHelpNotification":{"id":"zUI/Fonctions/showHelpNotification","title":"ShowHelpNotification","description":"La fonction ShowHelpNotification est utile dans le cas où vous devriez indiquer au joueur sur quelle touche il devra appuyer pour interagir avec votre script.","sidebar":"tutorialSidebar"},"zUI/installation":{"id":"zUI/installation","title":"Installation","description":"zUI est une bibliothèque avancée qui s\'intègre directement dans une resource existante sur votre serveur FiveM. Suivez les étapes ci-dessous pour l\'installer correctement et vous assurer qu\'elle fonctionne de manière optimale.","sidebar":"tutorialSidebar"},"zUI/Items/button":{"id":"zUI/Items/button","title":"Bouton","description":"Les boutons dans zUI sont des éléments interactifs essentiels qui permettent aux utilisateurs de réaliser des actions lorsqu\'ils sont cliqués. Vous pouvez ajouter des boutons à vos menus en utilisant la fonction Items:AddButton. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/checkbox":{"id":"zUI/Items/checkbox","title":"Checkbox","description":"Les checkboxes dans zUI permettent aux utilisateurs de sélectionner ou désélectionner des options, offrant ainsi un moyen interactif pour gérer les états binaires dans vos menus. Vous pouvez ajouter des checkboxes à vos menus en utilisant la fonction zUI:AddCheckbox. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/features":{"id":"zUI/Items/features","title":"Features","description":"Badges","sidebar":"tutorialSidebar"},"zUI/Items/line":{"id":"zUI/Items/line","title":"Ligne","description":"Les lignes dans zUI sont des éléments visuels utilisés pour ajouter des séparations horizontales dans vos menus. Elles peuvent être utilisées pour séparer visuellement les différentes sections ou pour améliorer l\'organisation de l\'interface utilisateur. Vous pouvez ajouter des lignes à vos menus en utilisant la fonction zUI:AddLine. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/linkButton":{"id":"zUI/Items/linkButton","title":"Bouton Lien","description":"Les boutons lien dans zUI sont des éléments interactifs qui redirigent les utilisateurs vers une URL lorsqu\'ils sont cliqués. Ils sont utiles pour ajouter des liens externes ou des pages web à vos menus. Vous pouvez ajouter des boutons lien à vos menus en utilisant la fonction zUI:AddLinkButton. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/list":{"id":"zUI/Items/list","title":"Liste","description":"Les listes dans zUI permettent aux utilisateurs de sélectionner parmi plusieurs options. Elles sont idéales pour offrir des choix dynamiques ou pour afficher des éléments dans vos menus. Vous pouvez ajouter des listes à vos menus en utilisant la fonction zUI:AddList. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/Items/separator":{"id":"zUI/Items/separator","title":"Séparateur","description":"Les séparateurs dans zUI sont des éléments visuels utilisés pour diviser et organiser les éléments dans un menu. Ils aident à améliorer la lisibilité et à structurer l\'interface utilisateur. Vous pouvez ajouter des séparateurs à vos menus en utilisant la fonction zUI:AddSeparator. Voici comment les créer et les personnaliser.","sidebar":"tutorialSidebar"},"zUI/menu":{"id":"zUI/menu","title":"Menu","description":"Dans cette section, nous allons explorer comment utiliser zUI pour créer et gérer des menus NUI dans FiveM. Vous apprendrez à créer des menus et des sous-menus, à ajouter des éléments, et à gérer leur visibilité.","sidebar":"tutorialSidebar"},"zUI/Methods/goBack":{"id":"zUI/Methods/goBack","title":"GoBack","description":"La méthode GoBack est utile lorsque vous souhaitez revenir à un menu parent dans l\'interface utilisateur.","sidebar":"tutorialSidebar"},"zUI/Methods/goTo":{"id":"zUI/Methods/goTo","title":"Goto","description":"La méthode Goto est utilisée pour naviguer vers un menu spécifique dans l\'interface utilisateur.","sidebar":"tutorialSidebar"},"zUI/Methods/isVisible":{"id":"zUI/Methods/isVisible","title":"IsVisible","description":"La méthode IsVisible est utilisée pour vérifier si un menu principal est actuellement visible.","sidebar":"tutorialSidebar"},"zUI/Methods/onClose":{"id":"zUI/Methods/onClose","title":"OnClose","description":"La méthode OnClose est utilisée pour définir une fonction à exécuter lors de la fermeture d\'un menu principal.","sidebar":"tutorialSidebar"},"zUI/Methods/onOpen":{"id":"zUI/Methods/onOpen","title":"OnOpen","description":"La méthode OnOpen est utilisée pour définir une fonction à exécuter lors de l\'ouverture d\'un menu principal.","sidebar":"tutorialSidebar"},"zUI/Methods/setItems":{"id":"zUI/Methods/setItems","title":"SetItems","description":"La méthode SetItems est utilisée pour définir les éléments d\'un menu.","sidebar":"tutorialSidebar"},"zUI/Methods/setVisible":{"id":"zUI/Methods/setVisible","title":"SetVisible","description":"La méthode SetVisible est utilisée pour afficher ou masquer un menu principal.","sidebar":"tutorialSidebar"},"zUI/modal":{"id":"zUI/modal","title":"Modal","description":"Les modals dans zUI permettent d\'afficher des fenêtres interactives contenant des champs de saisie pour recueillir des informations de l\'utilisateur. Ces fenêtres sont généralement utilisées pour obtenir des données spécifiques dans des scénarios nécessitant plusieurs options de saisie.","sidebar":"tutorialSidebar"},"zUI/Notifications/helpNotif":{"id":"zUI/Notifications/helpNotif","title":"Help Notification","description":"Les notifications d\'aide dans zUI sont des messages visuels destinés à fournir des instructions ou des informations supplémentaires à l\'utilisateur, généralement sous la forme d\'une notification pulsante. Elles sont utiles pour guider l\'utilisateur à travers des actions spécifiques.","sidebar":"tutorialSidebar"},"zUI/Notifications/notif":{"id":"zUI/Notifications/notif","title":"Notifications","description":"Les notifications dans zUI permettent d\'afficher des messages à l\'utilisateur pour signaler des événements, des informations ou des alertes. Ces notifications peuvent inclure un titre, un message, une icône et une bannière pour personnaliser l\'expérience utilisateur.","sidebar":"tutorialSidebar"},"zUI/Notifications/pulsing":{"id":"zUI/Notifications/pulsing","title":"Pulsing Notification","description":"Les notifications pulsatiles dans zUI permettent d\'afficher des messages visuels qui attirent l\'attention de l\'utilisateur grâce à un effet pulsant. Cela peut être utilisé pour signaler des événements importants ou attirer l\'attention sur un élément spécifique.","sidebar":"tutorialSidebar"},"zUI/presentation":{"id":"zUI/presentation","title":"Présentation","description":"zUI est une bibliothèque avancée dédiée à la création de menus NUI pour FiveM, qui allie sobriété, optimisation et esthétique. Ce projet vise à moderniser la création de menus tout en facilitant le travail des développeurs grâce à une interface intuitive et performante.","sidebar":"tutorialSidebar"},"zUI/Themes/context":{"id":"zUI/Themes/context","title":"Thème du ContextUI","description":"Le ContextUI de zUI permet de personnaliser l\'apparence des éléments de l\'interface en fonction du contexte. Vous pouvez ajuster les couleurs, les animations, et les styles pour créer une expérience utilisateur cohérente et interactive.","sidebar":"tutorialSidebar"},"zUI/Themes/introduction":{"id":"zUI/Themes/introduction","title":"Introduction","description":"Le fichier theme.json vous permet de personnaliser l\'apparence de zUI en ajustant divers paramètres du menu. Vous pouvez modifier la position, les couleurs, les styles et plus encore pour adapter l\'interface à vos besoins spécifiques.","sidebar":"tutorialSidebar"},"zUI/Themes/menu":{"id":"zUI/Themes/menu","title":"Thème du Menu","description":"Le menu dans zUI est un élément essentiel pour créer une interface interactive. Vous pouvez personnaliser son apparence, sa position, et ajouter des animations pour améliorer l\'expérience utilisateur.","sidebar":"tutorialSidebar"},"zUI/Themes/modal":{"id":"zUI/Themes/modal","title":"Thème du Modal","description":"Le Thème de Personnalisation vous permet d\'ajuster l\'apparence de l\'interface en fonction de vos préférences. Vous pouvez modifier les couleurs, les animations, les polices, et bien plus pour créer une expérience utilisateur unique.","sidebar":"tutorialSidebar"},"zUI/Themes/notifs":{"id":"zUI/Themes/notifs","title":"Thème des Notifications","description":"Les notifications de zUI permettent de personnaliser les messages affichés à l\'utilisateur en fonction de l\'événement ou du contexte. Elles peuvent être configurées pour s\'afficher avec différentes couleurs, animations et polices, offrant ainsi une expérience utilisateur plus interactive et esthétique.","sidebar":"tutorialSidebar"}}}}');
 
 /***/ }),
 
@@ -42776,7 +45424,7 @@ module.exports = /*#__PURE__*/JSON.parse('{"version":{"pluginId":"default","vers
 /***/ ((module) => {
 
 "use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"categoryGeneratedIndex":{"title":"Fonctions","slug":"/category/fonctions","permalink":"/docs/category/fonctions","sidebar":"tutorialSidebar","navigation":{"previous":{"title":"Thème","permalink":"/docs/zUI/theme"},"next":{"title":"ShowHelpNotification","permalink":"/docs/zUI/Fonctions/showHelpNotification"}}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"categoryGeneratedIndex":{"title":"Fonctions","slug":"/category/fonctions","permalink":"/docs/category/fonctions","sidebar":"tutorialSidebar","navigation":{"previous":{"title":"Thème du Modal","permalink":"/docs/zUI/Themes/modal"},"next":{"title":"ShowHelpNotification","permalink":"/docs/zUI/Fonctions/showHelpNotification"}}}}');
 
 /***/ }),
 
@@ -42784,7 +45432,7 @@ module.exports = /*#__PURE__*/JSON.parse('{"categoryGeneratedIndex":{"title":"Fo
 /***/ ((module) => {
 
 "use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"categoryGeneratedIndex":{"title":"Items","slug":"/category/items","permalink":"/docs/category/items","sidebar":"tutorialSidebar","navigation":{"previous":{"title":"Utilisation","permalink":"/docs/zUI/utilisation"},"next":{"title":"Features","permalink":"/docs/zUI/Items/features"}}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"categoryGeneratedIndex":{"title":"Items","slug":"/category/items","permalink":"/docs/category/items","sidebar":"tutorialSidebar","navigation":{"previous":{"title":"Menu","permalink":"/docs/zUI/menu"},"next":{"title":"Features","permalink":"/docs/zUI/Items/features"}}}}');
 
 /***/ }),
 
@@ -42793,6 +45441,22 @@ module.exports = /*#__PURE__*/JSON.parse('{"categoryGeneratedIndex":{"title":"It
 
 "use strict";
 module.exports = /*#__PURE__*/JSON.parse('{"categoryGeneratedIndex":{"title":"Méthodes","slug":"/category/méthodes","permalink":"/docs/category/méthodes","sidebar":"tutorialSidebar","navigation":{"previous":{"title":"RenderSprite","permalink":"/docs/zUI/Fonctions/renderSprite"},"next":{"title":"GoBack","permalink":"/docs/zUI/Methods/goBack"}}}}');
+
+/***/ }),
+
+/***/ 2516:
+/***/ ((module) => {
+
+"use strict";
+module.exports = /*#__PURE__*/JSON.parse('{"categoryGeneratedIndex":{"title":"Notifications","slug":"/category/notifications","permalink":"/docs/category/notifications","sidebar":"tutorialSidebar","navigation":{"previous":{"title":"Menu Contextuel","permalink":"/docs/zUI/ContextUI"},"next":{"title":"Pulsing Notification","permalink":"/docs/zUI/Notifications/pulsing"}}}}');
+
+/***/ }),
+
+/***/ 9075:
+/***/ ((module) => {
+
+"use strict";
+module.exports = /*#__PURE__*/JSON.parse('{"categoryGeneratedIndex":{"title":"Thèmes","slug":"/category/thèmes","permalink":"/docs/category/thèmes","sidebar":"tutorialSidebar","navigation":{"previous":{"title":"Checkbox","permalink":"/docs/zUI/Items/checkbox"},"next":{"title":"Introduction","permalink":"/docs/zUI/Themes/introduction"}}}}');
 
 /***/ }),
 
